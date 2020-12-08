@@ -14,7 +14,7 @@ LAVA=lava_corpus/LAVA-M
 BASE64=${LAVA}/base64/coreutils-8.24-lava-safe
 BASE64_DST=${AFL_FOLDER}/programs/base64
 
-(cd $BASE64 && ./wasm-compile)
+#(cd $BASE64 && ./wasm-compile)
 rm -rf ${BASE64_DST}
 mkdir -p ${BASE64_DST}
 mkdir ${BASE64_DST}/findings
