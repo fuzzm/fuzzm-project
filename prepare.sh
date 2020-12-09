@@ -10,11 +10,10 @@ INSTRUMENTER_FOLDER=wasm-project/wasm_instrumenter
 (cd wasm-project/wasm_instrumenter && cargo build --release)
 
 # compile lava benchmarks
-LAVA=lava_corpus/LAVA-M
+LAVA=LAVA-M/LAVA-M
+
 BASE64=${LAVA}/base64/coreutils-8.24-lava-safe
 BASE64_DST=${AFL_FOLDER}/programs/base64
-
-#(cd $BASE64 && ./wasm-compile)
 rm -rf ${BASE64_DST}
 mkdir -p ${BASE64_DST}
 mkdir ${BASE64_DST}/findings
@@ -23,6 +22,29 @@ cp ${BASE64}/base64.wasm ${BASE64_DST}/prog.wasm
 cp ${BASE64}/../fuzzer_input/rand.b64 ${BASE64_DST}/test-case
 eval "${INSTRUMENTER_FOLDER}/target/release/afl_branch ${BASE64_DST}/prog.wasm ${BASE64_DST}/prog.wasm"
 eval "${INSTRUMENTER_FOLDER}/target/release/canaries ${BASE64_DST}/prog.wasm ${BASE64_DST}/prog.wasm"
+
+MD5=${LAVA}/md5sum/coreutils-8.24-lava-safe
+MD5_DST=${AFL_FOLDER}/programs/md5sum
+rm -rf ${MD5_DST}
+mkdir -p ${MD5_DST}
+mkdir ${MD5_DST}/findings
+mkdir ${MD5_DST}/test-case
+cp ${MD5}/md5sum.wasm ${MD5_DST}/prog.wasm
+cp ${MD5}/../fuzzer_input/giantpanda-bin-md5s ${MD5_DST}/test-case
+eval "${INSTRUMENTER_FOLDER}/target/release/afl_branch ${MD5_DST}/prog.wasm ${MD5_DST}/prog.wasm"
+eval "${INSTRUMENTER_FOLDER}/target/release/canaries ${MD5_DST}/prog.wasm ${MD5_DST}/prog.wasm"
+
+UNIQ=${LAVA}/uniq/coreutils-8.24-lava-safe
+UNIQ_DST=${AFL_FOLDER}/programs/uniq
+rm -rf ${UNIQ_DST}
+mkdir -p ${UNIQ_DST}
+mkdir ${UNIQ_DST}/findings
+mkdir ${UNIQ_DST}/test-case
+cp ${UNIQ}/uniq.wasm ${UNIQ_DST}/prog.wasm
+cp ${UNIQ}/../fuzzer_input/TODO ${UNIQ_DST}/test-case
+eval "${INSTRUMENTER_FOLDER}/target/release/afl_branch ${UNIQ_DST}/prog.wasm ${UNIQ_DST}/prog.wasm"
+eval "${INSTRUMENTER_FOLDER}/target/release/canaries ${UNIQ_DST}/prog.wasm ${UNIQ_DST}/prog.wasm"
+
 
 
 ##### OLD MAGMA STUFF #####
