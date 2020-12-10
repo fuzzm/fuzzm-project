@@ -12,40 +12,32 @@ INSTRUMENTER_FOLDER=wasm-project/wasm_instrumenter
 # compile lava benchmarks
 LAVA=LAVA-M/LAVA-M
 
-BASE64=${LAVA}/base64/coreutils-8.24-lava-safe
-BASE64_DST=${AFL_FOLDER}/programs/base64
-rm -rf ${BASE64_DST}
-mkdir -p ${BASE64_DST}
-mkdir ${BASE64_DST}/findings
-mkdir ${BASE64_DST}/test-case
-cp ${BASE64}/base64.wasm ${BASE64_DST}/prog.wasm
-cp ${BASE64}/../fuzzer_input/rand.b64 ${BASE64_DST}/test-case
-eval "${INSTRUMENTER_FOLDER}/target/release/afl_branch ${BASE64_DST}/prog.wasm ${BASE64_DST}/prog.wasm"
-eval "${INSTRUMENTER_FOLDER}/target/release/canaries ${BASE64_DST}/prog.wasm ${BASE64_DST}/prog.wasm"
+function prepare_benchmark() {
+  SRC_LOC=$1
+  NAME=$2
+  WASM_MODE=$3
+  DST=${AFL_FOLDER}/programs/${NAME}
+  rm -rf ${DST}
+  mkdir -p ${DST}
+  mkdir ${DST}/findings
+  mkdir ${DST}/test-case
+  cp ${SRC_LOC}/${NAME} ${DST}/prog
+  cp ${SRC_LOC}/../fuzzer_input/* ${DST}/test-case
+  if [ $WASM_MODE ]
+  then
+    eval "${INSTRUMENTER_FOLDER}/target/release/afl_branch ${DST}/prog ${DST}/prog"
+    eval "${INSTRUMENTER_FOLDER}/target/release/canaries ${DST}/prog ${DST}/prog"
+  fi
+}
 
-MD5=${LAVA}/md5sum/coreutils-8.24-lava-safe
-MD5_DST=${AFL_FOLDER}/programs/md5sum
-rm -rf ${MD5_DST}
-mkdir -p ${MD5_DST}
-mkdir ${MD5_DST}/findings
-mkdir ${MD5_DST}/test-case
-cp ${MD5}/md5sum.wasm ${MD5_DST}/prog.wasm
-cp ${MD5}/../fuzzer_input/giantpanda-bin-md5s ${MD5_DST}/test-case
-eval "${INSTRUMENTER_FOLDER}/target/release/afl_branch ${MD5_DST}/prog.wasm ${MD5_DST}/prog.wasm"
-eval "${INSTRUMENTER_FOLDER}/target/release/canaries ${MD5_DST}/prog.wasm ${MD5_DST}/prog.wasm"
+BASE64_WASM=${LAVA}/base64/coreutils-8.24-lava-safe
+prepare_benchmark $BASE64_WASM "base64.wasm" 1
 
-UNIQ=${LAVA}/uniq/coreutils-8.24-lava-safe
-UNIQ_DST=${AFL_FOLDER}/programs/uniq
-rm -rf ${UNIQ_DST}
-mkdir -p ${UNIQ_DST}
-mkdir ${UNIQ_DST}/findings
-mkdir ${UNIQ_DST}/test-case
-cp ${UNIQ}/uniq.wasm ${UNIQ_DST}/prog.wasm
-cp ${UNIQ}/../fuzzer_input/TODO ${UNIQ_DST}/test-case
-eval "${INSTRUMENTER_FOLDER}/target/release/afl_branch ${UNIQ_DST}/prog.wasm ${UNIQ_DST}/prog.wasm"
-eval "${INSTRUMENTER_FOLDER}/target/release/canaries ${UNIQ_DST}/prog.wasm ${UNIQ_DST}/prog.wasm"
+MD5_WASM=${LAVA}/md5sum/coreutils-8.24-lava-safe
+prepare_benchmark $MD5_WASM "md5sum.wasm" 1
 
-
+UNIQ_WASM=${LAVA}/uniq/coreutils-8.24-lava-safe
+prepare_benchmark $UNIQ_WASM "uniq.wasm" 1
 
 ##### OLD MAGMA STUFF #####
 
