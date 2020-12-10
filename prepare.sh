@@ -16,16 +16,25 @@ function prepare_benchmark() {
   NAME=$2
   WASM_MODE=$3
   DST=${AFL_FOLDER}/programs/${NAME}
+
   rm -rf ${DST}
   mkdir -p ${DST}
   mkdir ${DST}/findings
   mkdir ${DST}/test-case
-  cp ${SRC_LOC}/${NAME} ${DST}/prog
+
+  if [ $WASM_MODE ]
+  then
+    BIN_DST=${DST}/prog.wasm
+  else
+    BIN_DST=${DST}/prog
+  fi
+
+  cp ${SRC_LOC}/${NAME} ${BIN_DST}
   cp ${SRC_LOC}/../fuzzer_input/* ${DST}/test-case
   if [ $WASM_MODE ]
   then
-    eval "${INSTRUMENTER_FOLDER}/target/release/afl_branch ${DST}/prog ${DST}/prog"
-    eval "${INSTRUMENTER_FOLDER}/target/release/canaries ${DST}/prog ${DST}/prog"
+    eval "${INSTRUMENTER_FOLDER}/target/release/afl_branch ${BIN_DST} ${BIN_DST}"
+    eval "${INSTRUMENTER_FOLDER}/target/release/canaries ${BIN_DST} ${BIN_DST}"
   fi
 }
 
