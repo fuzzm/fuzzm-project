@@ -9,8 +9,7 @@ INSTRUMENTER_FOLDER=wasm-project/wasm_instrumenter
 # compile instrumentation binaries
 (cd wasm-project/wasm_instrumenter && cargo build --release)
 
-# compile lava benchmarks
-LAVA=LAVA-M/LAVA-M
+# copy over benchmarks 
 
 function prepare_benchmark() {
   SRC_LOC=$1
@@ -30,14 +29,30 @@ function prepare_benchmark() {
   fi
 }
 
-BASE64_WASM=${LAVA}/base64/coreutils-8.24-lava-safe
+LAVA_WASM=LAVA-M/LAVA-M
+
+BASE64_WASM=${LAVA_WASM}/base64/coreutils-8.24-lava-safe
 prepare_benchmark $BASE64_WASM "base64.wasm" 1
 
-MD5_WASM=${LAVA}/md5sum/coreutils-8.24-lava-safe
+MD5_WASM=${LAVA_WASM}/md5sum/coreutils-8.24-lava-safe
 prepare_benchmark $MD5_WASM "md5sum.wasm" 1
 
-UNIQ_WASM=${LAVA}/uniq/coreutils-8.24-lava-safe
+UNIQ_WASM=${LAVA_WASM}/uniq/coreutils-8.24-lava-safe
 prepare_benchmark $UNIQ_WASM "uniq.wasm" 1
+
+LAVA_NATIVE=LAVA-native/LAVA-M
+
+BASE64_NATIVE=${LAVA_NATIVE}/base64/coreutils-8.24-lava-safe
+prepare_benchmark $BASE64_NATIVE "base64" 
+
+MD5_NATIVE=${LAVA_NATIVE}/md5sum/coreutils-8.24-lava-safe
+prepare_benchmark $MD5_NATIVE "md5sum" 
+
+UNIQ_NATIVE=${LAVA_NATIVE}/uniq/coreutils-8.24-lava-safe
+prepare_benchmark $UNIQ_NATIVE "uniq" 
+
+
+
 
 ##### OLD MAGMA STUFF #####
 
