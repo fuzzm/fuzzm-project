@@ -32,7 +32,7 @@ function prepare_benchmark() {
 
   if [ $DICTIONARY ]
   then
-    cp ${DICTIONARY}/* ${DST}/dictionary
+    cp ${DICTIONARY} ${DST}/dictionary
   fi
 
   if [ $WASM_MODE ]
@@ -84,14 +84,16 @@ prepare_benchmark $UNIQ_NATIVE "uniq" ${UNIQ_NATIVE_FUZZER_INPUT}
 VULN_BENCHMARKS=wasm-project/benchmarks
 PDF_RESURRECT=${VULN_BENCHMARKS}/pdfresurrect
 PDF_RESURRECT_FUZZER_INPUT=${AFL_FOLDER}/testcases/others/pdf
-PDF_RESURRECT_DICTIONARY=${AFL_FOLDER}/dictionaries
+PDF_RESURRECT_DICTIONARY=${AFL_FOLDER}/dictionaries/pdf.dict
 prepare_benchmark $PDF_RESURRECT "pdfresurrect.wasm" $PDF_RESURRECT_FUZZER_INPUT $PDF_RESURRECT_DICTIONARY 1
 
-PDF_RESURRECT=${VULN_BENCHMARKS}/pdfresurrect
 prepare_benchmark $PDF_RESURRECT "pdfresurrect" $PDF_RESURRECT_FUZZER_INPUT $PDF_RESURRECT_DICTIONARY
 
-
-
+OPENJPEG=${VULN_BENCHMARKS}/openjpeg/bin
+PDF_RESURRECT_FUZZER_INPUT=${AFL_FOLDER}/testcases/images/jpeg
+PDF_RESURRECT_DICTIONARY=${AFL_FOLDER}/dictionaries/jpeg.dict
+prepare_benchmark $OPENJPEG "opj_compress.wasm" $PDF_RESURRECT_FUZZER_INPUT $PDF_RESURRECT_DICTIONARY 1
+prepare_benchmark $OPENJPEG "opj_compress" $PDF_RESURRECT_FUZZER_INPUT $PDF_RESURRECT_DICTIONARY 
 
 
 ##### OLD MAGMA STUFF #####
