@@ -14,13 +14,26 @@ INSTRUMENTER_FOLDER=wasm-project/wasm_instrumenter
 function prepare_benchmark() {
   SRC_LOC=$1
   NAME=$2
-  WASM_MODE=$3
+  FUZZER_INPUT=$3
+  DICTIONARY=$4
+  WASM_MODE=$5
   DST=${AFL_FOLDER}/programs/${NAME}
 
   rm -rf ${DST}
   mkdir -p ${DST}
   mkdir ${DST}/findings
   mkdir ${DST}/test-case
+  mkdir ${DST}/dictionary
+
+  if [ $FUZZER_INPUT ]
+  then
+    cp ${FUZZER_INPUT}/* ${DST}/test-case
+  fi
+
+  if [ $DICTIONARY ]
+  then
+    cp ${DICTIONARY}/* ${DST}/dictionary
+  fi
 
   if [ $WASM_MODE ]
   then
@@ -30,7 +43,6 @@ function prepare_benchmark() {
   fi
 
   cp ${SRC_LOC}/${NAME} ${BIN_DST}
-  cp ${SRC_LOC}/../fuzzer_input/* ${DST}/test-case
   if [ $WASM_MODE ]
   then
     eval "${INSTRUMENTER_FOLDER}/target/release/afl_branch ${BIN_DST} ${BIN_DST}"
@@ -38,27 +50,46 @@ function prepare_benchmark() {
   fi
 }
 
-LAVA_WASM=LAVA-M/LAVA-M
 
+##### LAVA BENCHMARKS #####
+LAVA_WASM=LAVA-M/LAVA-M
 BASE64_WASM=${LAVA_WASM}/base64/coreutils-8.24-lava-safe
-prepare_benchmark $BASE64_WASM "base64.wasm" 1
+BASE64_FUZZER_INPUT=${LAVA_WASM}/base64/fuzzer_input
+prepare_benchmark $BASE64_WASM "base64.wasm" ${BASE64_FUZZER_INPUT} "" 1
 
 MD5_WASM=${LAVA_WASM}/md5sum/coreutils-8.24-lava-safe
-prepare_benchmark $MD5_WASM "md5sum.wasm" 1
+MD5_FUZZER_INPUT=${LAVA_WASM}/md5sum/fuzzer_input
+prepare_benchmark $MD5_WASM "md5sum.wasm" ${BASE64_FUZZER_INPUT} "" 1
 
 UNIQ_WASM=${LAVA_WASM}/uniq/coreutils-8.24-lava-safe
-prepare_benchmark $UNIQ_WASM "uniq.wasm" 1
+UNIQ_FUZZER_INPUT=${LAVA_WASM}/uniq/fuzzer_input
+prepare_benchmark $UNIQ_WASM "uniq.wasm" ${UNIQ_FUZZER_INPUT} "" 1
 
 LAVA_NATIVE=LAVA-native/LAVA-M
 
 BASE64_NATIVE=${LAVA_NATIVE}/base64/coreutils-8.24-lava-safe
-prepare_benchmark $BASE64_NATIVE "base64" 
+BASE64_NATIVE_FUZZER_INPUT=${LAVA_NATIVE}/base64/fuzzer_input
+prepare_benchmark $BASE64_NATIVE "base64" ${BASE64_NATIVE_FUZZER_INPUT} 
 
 MD5_NATIVE=${LAVA_NATIVE}/md5sum/coreutils-8.24-lava-safe
-prepare_benchmark $MD5_NATIVE "md5sum" 
+MD5_NATIVE_FUZZER_INPUT=${LAVA_NATIVE}/md5sum/fuzzer_input
+prepare_benchmark $MD5_NATIVE "md5sum" ${MD5_NATIVE_FUZZER_INPUT}
 
 UNIQ_NATIVE=${LAVA_NATIVE}/uniq/coreutils-8.24-lava-safe
-prepare_benchmark $UNIQ_NATIVE "uniq" 
+UNIQ_NATIVE_FUZZER_INPUT=${LAVA_NATIVE}/uniq/fuzzer_input
+prepare_benchmark $UNIQ_NATIVE "uniq" ${UNIQ_NATIVE_FUZZER_INPUT}
+
+
+##### VULNERABLE BENCHMARKS #####
+VULN_BENCHMARKS=wasm-project/benchmarks
+PDF_RESURRECT=${VULN_BENCHMARKS}/pdfresurrect
+PDF_RESURRECT_FUZZER_INPUT=${AFL_FOLDER}/testcases/others/pdf
+PDF_RESURRECT_DICTIONARY=${AFL_FOLDER}/dictionaries
+prepare_benchmark $PDF_RESURRECT "pdfresurrect.wasm" $PDF_RESURRECT_FUZZER_INPUT $PDF_RESURRECT_DICTIONARY 1
+
+PDF_RESURRECT=${VULN_BENCHMARKS}/pdfresurrect
+prepare_benchmark $PDF_RESURRECT "pdfresurrect" $PDF_RESURRECT_FUZZER_INPUT $PDF_RESURRECT_DICTIONARY
+
 
 
 
