@@ -90,10 +90,16 @@ prepare_benchmark $PDF_RESURRECT "pdfresurrect.wasm" $PDF_RESURRECT_FUZZER_INPUT
 prepare_benchmark $PDF_RESURRECT "pdfresurrect" $PDF_RESURRECT_FUZZER_INPUT $PDF_RESURRECT_DICTIONARY
 
 OPENJPEG=${VULN_BENCHMARKS}/openjpeg/bin
-PDF_RESURRECT_FUZZER_INPUT=${AFL_FOLDER}/testcases/images/jpeg
-PDF_RESURRECT_DICTIONARY=${AFL_FOLDER}/dictionaries/jpeg.dict
-prepare_benchmark $OPENJPEG "opj_compress.wasm" $PDF_RESURRECT_FUZZER_INPUT $PDF_RESURRECT_DICTIONARY 1
-prepare_benchmark $OPENJPEG "opj_compress" $PDF_RESURRECT_FUZZER_INPUT $PDF_RESURRECT_DICTIONARY 
+OPENJPEG_FUZZER_INPUT=${AFL_FOLDER}/testcases/images/jpeg
+OPENJPEG_DICTIONARY=${AFL_FOLDER}/dictionaries/jpeg.dict
+prepare_benchmark $OPENJPEG "opj_compress.wasm" $OPENJPEG_FUZZER_INPUT $OPENJPEG_DICTIONARY 1
+prepare_benchmark $OPENJPEG "opj_compress" $OPENJPEG_FUZZER_INPUT $OPENJPEG_DICTIONARY 
+
+TIFF=${VULN_BENCHMARKS}/tiff-4.0.9/tools
+TIFF_FUZZER_INPUT=${AFL_FOLDER}/testcases/images/tiff
+TIFF_DICTIONARY=${AFL_FOLDER}/dictionaries/tiff.dict
+prepare_benchmark $TIFF "pal2rgb.wasm" $TIFF_FUZZER_INPUT $TIFF_DICTIONARY 1
+prepare_benchmark $TIFF "pal2rgb" $TIFF_FUZZER_INPUT $TIFF_DICTIONARY
 
 
 ##### OLD MAGMA STUFF #####
