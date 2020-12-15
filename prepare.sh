@@ -32,7 +32,7 @@ function prepare_benchmark() {
 
   if [ $DICTIONARY ]
   then
-    cp ${DICTIONARY} ${DST}/dictionary
+    cp ${DICTIONARY} ${DST}/dictionary/d.dict
   fi
 
   if [ $WASM_MODE ]
