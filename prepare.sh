@@ -48,6 +48,7 @@ function prepare_benchmark() {
     INSTR_DST=${BIN_DST}.instr
     eval "${INSTRUMENTER_FOLDER}/target/release/afl_branch ${BIN_DST} ${INSTR_DST}"
     eval "${INSTRUMENTER_FOLDER}/target/release/canaries ${INSTR_DST} ${INSTR_DST}"
+    chmod +x ${INSTR_DST}
   fi
 }
 
