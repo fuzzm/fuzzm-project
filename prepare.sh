@@ -45,8 +45,9 @@ function prepare_benchmark() {
   cp ${SRC_LOC}/${NAME} ${BIN_DST}
   if [ $WASM_MODE ]
   then
-    eval "${INSTRUMENTER_FOLDER}/target/release/afl_branch ${BIN_DST} ${BIN_DST}"
-    eval "${INSTRUMENTER_FOLDER}/target/release/canaries ${BIN_DST} ${BIN_DST}"
+    INSTR_DST=${BIN_DST}.instr
+    eval "${INSTRUMENTER_FOLDER}/target/release/afl_branch ${BIN_DST} ${INSTR_DST}"
+    eval "${INSTRUMENTER_FOLDER}/target/release/canaries ${INSTR_DST} ${INSTR_DST}"
   fi
 }
 
