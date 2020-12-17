@@ -92,10 +92,10 @@ prepare_benchmark $PDF_RESURRECT "pdfresurrect.wasm" $PDF_RESURRECT_FUZZER_INPUT
 prepare_benchmark $PDF_RESURRECT "pdfresurrect" $PDF_RESURRECT_FUZZER_INPUT $PDF_RESURRECT_DICTIONARY
 
 OPENJPEG=${VULN_BENCHMARKS}/openjpeg/bin
-OPENJPEG_FUZZER_INPUT=${AFL_FOLDER}/testcases/images/jpeg
-OPENJPEG_DICTIONARY=${AFL_FOLDER}/dictionaries/jpeg.dict
-prepare_benchmark $OPENJPEG "opj_compress.wasm" $OPENJPEG_FUZZER_INPUT $OPENJPEG_DICTIONARY 1
-prepare_benchmark $OPENJPEG "opj_compress" $OPENJPEG_FUZZER_INPUT $OPENJPEG_DICTIONARY 
+OPENJPEG_FUZZER_INPUT=${AFL_FOLDER}/testcases/images/bmp
+OPENJPEG_DICTIONARY=${AFL_FOLDER}/dictionaries/bmp.dict
+prepare_benchmark $OPENJPEG "opj_compress.wasm" $OPENJPEG_FUZZER_INPUT "" 1
+prepare_benchmark $OPENJPEG "opj_compress" $OPENJPEG_FUZZER_INPUT "" 
 
 TIFF=${VULN_BENCHMARKS}/tiff-4.0.9/tools
 TIFF_FUZZER_INPUT=${AFL_FOLDER}/testcases/images/tiff
