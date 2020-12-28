@@ -17,7 +17,9 @@ function prepare_benchmark() {
   FUZZER_INPUT=$3
   DICTIONARY=$4
   WASM_MODE=$5
-  DST=${AFL_FOLDER}/programs/${NAME}
+  #replace . with - (otherwise the opj_dump will think of everything after .wasm as the extension)
+  NAME_TRANS="${NAME/\./-}" 
+  DST=${AFL_FOLDER}/programs/${NAME_TRANS}
 
   rm -rf ${DST}
   mkdir -p ${DST}
