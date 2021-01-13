@@ -105,6 +105,11 @@ TIFF_DICTIONARY=${AFL_FOLDER}/dictionaries/tiff.dict
 prepare_benchmark $TIFF "pal2rgb.wasm" $TIFF_FUZZER_INPUT $TIFF_DICTIONARY 1
 prepare_benchmark $TIFF "pal2rgb" $TIFF_FUZZER_INPUT $TIFF_DICTIONARY
 
+PNG=${VULN_BENCHMARKS}/libpng/contrib/pngminus
+PNG_FUZZER_INPUT=${AFL_FOLDER}/testcases/images/pnm
+prepare_benchmark $PNG "pnm2png.wasm" $PNG_FUZZER_INPUT "" 1
+prepare_benchmark $PNG "pnm2png" $PNG_FUZZER_INPUT ""
+
 
 ##### OLD MAGMA STUFF #####
 
