@@ -1,5 +1,5 @@
 #!/bin/bash
-cp wasm-project/fuzzing_results/opj_compress_54h/findings-wasm.zip AFL-wasm/programs/opj_compress-wasm/
+cp wasm-project/fuzzing_results/opj_compress_60h/findings-wasm.zip AFL-wasm/programs/opj_compress-wasm/
 (cd AFL-wasm/programs/opj_compress-wasm/ && unzip -o findings-wasm.zip && cp -r opj_compress-wasm/findings/* findings)
 
 cp wasm-project/fuzzing_results/libtiff_2d/findings.zip AFL-wasm/programs/pal2rgb-wasm/
