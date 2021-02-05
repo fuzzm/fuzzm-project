@@ -110,6 +110,28 @@ PNG_FUZZER_INPUT=${AFL_FOLDER}/testcases/images/pnm
 prepare_benchmark $PNG "pnm2png.wasm" $PNG_FUZZER_INPUT "" 1
 prepare_benchmark $PNG "pnm2png" $PNG_FUZZER_INPUT ""
 
+##### UBUNTU PACKAGE BENCHMARKS #####
+UBUNTU_BENCHMARKS=wasm-project/benchmarks/ubuntu-pkg-benchmarks
+
+PALBART=${UBUNTU_BENCHMARKS}/palbart
+PALBART_FUZZER_INPUT=${AFL_FOLDER}/testcases/ubuntu/palbart
+prepare_benchmark $PALBART "palbart.wasm" $PALBART_FUZZER_INPUT "" 1
+prepare_benchmark $PALBART "palbart" $PALBART_FUZZER_INPUT "" 
+
+PDI2ISO=${UBUNTU_BENCHMARKS}/pdi2iso
+PDI2ISO_FUZZER_INPUT=${AFL_FOLDER}/testcases/ubuntu/pdi2iso
+prepare_benchmark $PDI2ISO "pdi2iso.wasm" $PDI2ISO_FUZZER_INPUT "" 1
+prepare_benchmark $PDI2ISO "pdi2iso" $PDI2ISO_FUZZER_INPUT "" 
+
+QFLOW=${UBUNTU_BENCHMARKS}/qflow
+QFLOW_FUZZER_INPUT=${AFL_FOLDER}/testcases/ubuntu/qflow
+prepare_benchmark $QFLOW "blif2Verilog.wasm" $QFLOW_FUZZER_INPUT "" 1
+prepare_benchmark $QFLOW "blif2Verilog" $QFLOW_FUZZER_INPUT "" 
+
+WZIP=${UBUNTU_BENCHMARKS}/wzip
+WZIP_FUZZER_INPUT=${AFL_FOLDER}/testcases/ubuntu/wzip
+prepare_benchmark $WZIP "wzip.wasm" $WZIP_FUZZER_INPUT "" 1
+prepare_benchmark $WZIP "wzip" $WZIP_FUZZER_INPUT "" 
 
 ##### OLD MAGMA STUFF #####
 
