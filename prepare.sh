@@ -133,6 +133,12 @@ WZIP_FUZZER_INPUT=${AFL_FOLDER}/testcases/ubuntu/wzip
 prepare_benchmark $WZIP "wzip.wasm" $WZIP_FUZZER_INPUT "" 1
 prepare_benchmark $WZIP "wzip" $WZIP_FUZZER_INPUT "" 
 
+AHA=${UBUNTU_BENCHMARKS}/aha
+AHA_FUZZER_INPUT=${AFL_FOLDER}/testcases/ubuntu/aha
+prepare_benchmark $AHA "aha.wasm" $AHA_FUZZER_INPUT "" 1
+prepare_benchmark $AHA "aha" $AHA_FUZZER_INPUT "" 
+
+
 ##### OLD MAGMA STUFF #####
 
 # copy afl_wasm to magma fuzzers
