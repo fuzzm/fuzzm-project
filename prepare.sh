@@ -153,9 +153,10 @@ CODEGROUP_FUZZER_INPUT=${AFL_FOLDER}/testcases/ubuntu/codegroup
 prepare_benchmark $CODEGROUP "codegroup.wasm" $CODEGROUP_FUZZER_INPUT "" 1
 prepare_benchmark $CODEGROUP "codegroup" $CODEGROUP_FUZZER_INPUT "" 
 
-
-
-
+MIDICSV=${UBUNTU_BENCHMARKS}/midicsv
+MIDICSV_FUZZER_INPUT=${AFL_FOLDER}/testcases/ubuntu/midicsv
+prepare_benchmark $MIDICSV "midicsv.wasm" $MIDICSV_FUZZER_INPUT "" 1
+prepare_benchmark $MIDICSV "midicsv" $MIDICSV_FUZZER_INPUT "" 
 
 
 ##### OLD MAGMA STUFF #####
