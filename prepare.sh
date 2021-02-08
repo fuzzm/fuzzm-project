@@ -143,6 +143,12 @@ BASEZ_FUZZER_INPUT=${AFL_FOLDER}/testcases/ubuntu/basez
 prepare_benchmark $BASEZ "basez.wasm" $BASEZ_FUZZER_INPUT "" 1
 prepare_benchmark $BASEZ "basez" $BASEZ_FUZZER_INPUT "" 
 
+BPM=${UBUNTU_BENCHMARKS}/bpm-tools
+BPM_FUZZER_INPUT=${AFL_FOLDER}/testcases/ubuntu/bpm
+prepare_benchmark $BPM "bpm.wasm" $BPM_FUZZER_INPUT "" 1
+prepare_benchmark $BPM "bpm" $BPM_FUZZER_INPUT "" 
+
+
 
 
 ##### OLD MAGMA STUFF #####
