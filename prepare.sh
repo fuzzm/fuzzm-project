@@ -158,6 +158,13 @@ MIDICSV_FUZZER_INPUT=${AFL_FOLDER}/testcases/ubuntu/midicsv
 prepare_benchmark $MIDICSV "midicsv.wasm" $MIDICSV_FUZZER_INPUT "" 1
 prepare_benchmark $MIDICSV "midicsv" $MIDICSV_FUZZER_INPUT "" 
 
+ZENLIST=${UBUNTU_BENCHMARKS}/zenlisp
+ZENLIST_FUZZER_INPUT=${AFL_FOLDER}/testcases/ubuntu/zl
+prepare_benchmark $ZENLIST "zl.wasm" $ZENLIST_FUZZER_INPUT "" 1
+prepare_benchmark $ZENLIST "zl" $ZENLIST_FUZZER_INPUT "" 
+
+
+
 
 ##### OLD MAGMA STUFF #####
 
