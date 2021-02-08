@@ -148,6 +148,13 @@ BPM_FUZZER_INPUT=${AFL_FOLDER}/testcases/ubuntu/bpm
 prepare_benchmark $BPM "bpm.wasm" $BPM_FUZZER_INPUT "" 1
 prepare_benchmark $BPM "bpm" $BPM_FUZZER_INPUT "" 
 
+CODEGROUP=${UBUNTU_BENCHMARKS}/codegroup
+CODEGROUP_FUZZER_INPUT=${AFL_FOLDER}/testcases/ubuntu/codegroup
+prepare_benchmark $CODEGROUP "codegroup.wasm" $CODEGROUP_FUZZER_INPUT "" 1
+prepare_benchmark $CODEGROUP "codegroup" $CODEGROUP_FUZZER_INPUT "" 
+
+
+
 
 
 
