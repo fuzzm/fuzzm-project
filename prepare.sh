@@ -138,6 +138,12 @@ AHA_FUZZER_INPUT=${AFL_FOLDER}/testcases/ubuntu/aha
 prepare_benchmark $AHA "aha.wasm" $AHA_FUZZER_INPUT "" 1
 prepare_benchmark $AHA "aha" $AHA_FUZZER_INPUT "" 
 
+BASEZ=${UBUNTU_BENCHMARKS}/basez
+BASEZ_FUZZER_INPUT=${AFL_FOLDER}/testcases/ubuntu/basez
+prepare_benchmark $BASEZ "basez.wasm" $BASEZ_FUZZER_INPUT "" 1
+prepare_benchmark $BASEZ "basez" $BASEZ_FUZZER_INPUT "" 
+
+
 
 ##### OLD MAGMA STUFF #####
 
