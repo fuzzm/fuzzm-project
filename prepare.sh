@@ -56,7 +56,7 @@ function prepare_benchmark() {
 
 
 ##### LAVA BENCHMARKS #####
-LAVA_WASM=LAVA-M/LAVA-M
+LAVA_WASM=LAVA-M
 BASE64_WASM=${LAVA_WASM}/base64/coreutils-8.24-lava-safe
 BASE64_FUZZER_INPUT=${LAVA_WASM}/base64/fuzzer_input
 prepare_benchmark $BASE64_WASM "base64.wasm" ${BASE64_FUZZER_INPUT} "" 1
@@ -69,7 +69,7 @@ UNIQ_WASM=${LAVA_WASM}/uniq/coreutils-8.24-lava-safe
 UNIQ_FUZZER_INPUT=${LAVA_WASM}/uniq/fuzzer_input
 prepare_benchmark $UNIQ_WASM "uniq.wasm" ${UNIQ_FUZZER_INPUT} "" 1
 
-LAVA_NATIVE=LAVA-native/LAVA-M
+LAVA_NATIVE=LAVA-native
 
 BASE64_NATIVE=${LAVA_NATIVE}/base64/coreutils-8.24-lava-safe
 BASE64_NATIVE_FUZZER_INPUT=${LAVA_NATIVE}/base64/fuzzer_input
