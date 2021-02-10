@@ -63,7 +63,7 @@ prepare_benchmark $BASE64_WASM "base64.wasm" ${BASE64_FUZZER_INPUT} "" 1
 
 MD5_WASM=${LAVA_WASM}/md5sum/coreutils-8.24-lava-safe
 MD5_FUZZER_INPUT=${LAVA_WASM}/md5sum/fuzzer_input
-prepare_benchmark $MD5_WASM "md5sum.wasm" ${BASE64_FUZZER_INPUT} "" 1
+prepare_benchmark $MD5_WASM "md5sum.wasm" ${MD5_FUZZER_INPUT} "" 1
 
 UNIQ_WASM=${LAVA_WASM}/uniq/coreutils-8.24-lava-safe
 UNIQ_FUZZER_INPUT=${LAVA_WASM}/uniq/fuzzer_input
