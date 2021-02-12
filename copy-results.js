@@ -55,7 +55,7 @@ fs.readdir(resultsFolder, {withFileTypes: true}, (err, files) => {
       const findingsFolder = path.resolve(dstFolder, 'findings');
       fs.rmdirSync(findingsFolder, {recursive: true});
       fs.mkdirSync(findingsFolder, {recursive: true});
-      
+
       // unzip zip
       cp.execSync(`unzip -o -f ${zipName}`, {cwd: dstFolder});
 
@@ -63,6 +63,19 @@ fs.readdir(resultsFolder, {withFileTypes: true}, (err, files) => {
       // TODO always use repeat-0? 
       const unzippedContents = path.resolve(dstFolder, path.basename(zipName, ".zip"), 'repeat-0');
       cp.execSync(`cp -r ${unzippedContents}/* ${findingsFolder}`);
+
+      if (b.name.includes('opj_compress')) {
+        // add the .bmp extension to all crash files
+        const crashFolder = path.resolve(findingsFolder, 'crashes');
+        fs.readdir(crashFolder,  {withFileTypes: true}, (err, files) => {
+          files.forEach(f => {
+            const fp = path.resolve(crashFolder, f.name);
+            const fpNew = `${fp}.bmp`;
+            fs.copyFileSync(fp, fpNew);
+            fs.unlinkSync(fp);
+          });
+        });
+      }
     });
   }
 });
