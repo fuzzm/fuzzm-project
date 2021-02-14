@@ -9,6 +9,7 @@ fs.readdir(resultsFolder, {withFileTypes: true}, (err, files) => {
   const benchmarkDirectories = files.filter(f => f.isDirectory());
 
   for (const b of benchmarkDirectories) {
+    console.log(`processing ${b.name}`);
 
     const bResults = fs.readdir(path.resolve(resultsFolder, b.name), {withFileTypes: true}, (err, files) => {
       const resultFiles = files.filter(f => f.name.endsWith("zip"));
@@ -57,7 +58,7 @@ fs.readdir(resultsFolder, {withFileTypes: true}, (err, files) => {
       fs.mkdirSync(findingsFolder, {recursive: true});
 
       // unzip zip
-      cp.execSync(`unzip -o -f ${zipName}`, {cwd: dstFolder});
+      const stdout = cp.execSync(`unzip -o ${zipName}`, {cwd: dstFolder});
 
       // copy to findings
       // TODO always use repeat-0? 
