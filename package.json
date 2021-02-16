@@ -1,0 +1,22 @@
+{
+  "name": "fuzzing-workspace",
+  "version": "1.0.0",
+  "description": "",
+  "main": "copy-results.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mtorp/fuzzing-workspace.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mtorp/fuzzing-workspace/issues"
+  },
+  "homepage": "https://github.com/mtorp/fuzzing-workspace#readme",
+  "dependencies": {
+    "commander": "^7.1.0"
+  }
+}

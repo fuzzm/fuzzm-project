@@ -2,3 +2,12 @@ AFL-wasm
 magma
 wasabi
 wasm-project
+node_modules
+wasi-sdk-11.0
+wasi-sdk-12.0
+wasmtime-v0.19.0-x86_64-linux/
+wasmtime-v0.20.0-x86_64-linux/
+zlib-1.2.11/
+LAVA-M
+LAVA-native
+wasi-libc
