@@ -7,6 +7,7 @@ commander
   .arguments('')
   .description('copies the benchmarks into the AFL folder')
   .option('-n, --skip-seeds', 'does not copy over the seeds')
+  .option('-n, --skip-dics', 'does not copy over the dictionaries')
   .action(function (options) {
     const scriptDir = __dirname;
     const aflFolder = path.resolve(scriptDir, './AFL-wasm')
@@ -14,6 +15,10 @@ commander
 
     if (options.skipSeeds) {
       console.log('skipping copy of benchmark seeds');
+    }
+
+    if (options.skipDics) {
+      console.log('skipping copy of benchmark dictionaries');
     }
 
     cp.execSync('make', {cwd: aflFolder});
@@ -39,7 +44,7 @@ commander
         cp.execSync(`cp ${seedSrcFolder}/* ${seedFolder}`);
       }
 
-      if (dictionarySrcFolder) {
+      if (dictionarySrcFolder && !options.skipDics) {
         cp.execSync(`cp ${dictionarySrcFolder} ${path.resolve(dicFolder, 'd.dict')}`);
       }
 
