@@ -42,6 +42,9 @@ commander
 
       if (seedSrcFolder && !options.skipSeeds) {
         cp.execSync(`cp ${seedSrcFolder}/* ${seedFolder}`);
+      } else {
+        // use the empty seed
+        cp.execSync(`echo 0 > ${path.resolve(seedFolder, 'empty')}`);
       }
 
       if (dictionarySrcFolder && !options.skipDics) {
@@ -58,7 +61,7 @@ commander
         const instrBinDst = `${binDst}.instr`;
         const aflBranchOutput = cp.execSync(`${aflBranch} ${binDst} ${instrBinDst}`, {encoding: 'utf-8'});
         console.log(aflBranchOutput);
-        cp.execSync(`${aflBranch} ${instrBinDst} ${instrBinDst} --skip-print`);
+        cp.execSync(`${canaries} ${instrBinDst} ${instrBinDst} --skip-print`);
         cp.execSync(`chmod +x ${instrBinDst}`);
       }
     }
