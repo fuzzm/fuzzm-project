@@ -119,8 +119,13 @@ commander
     prepareBenchmark(tiff, 'pal2rgb.wasm', tiffFuzzerInput, tiffDictionary);
     prepareBenchmark(tiff, 'pal2rgb', tiffFuzzerInput, tiffDictionary);
 
-    png=path.resolve(VulnBenchDir, 'libpng/contrib/pngminus');
-    pngFuzzerInput=path.resolve(aflFolder, 'testcases/images/pnm');
+    const png=path.resolve(VulnBenchDir, 'libpng/contrib/pngminus');
+    const pngFuzzerInput=path.resolve(aflFolder, 'testcases/images/pnm');
     prepareBenchmark(png, 'pnm2png.wasm', pngFuzzerInput);
     prepareBenchmark(png, 'pnm2png', pngFuzzerInput);
+
+    const abc2mtex=path.resolve(VulnBenchDir, 'abc2mtex');
+    const abc2mtexFuzzerInput=path.resolve(aflFolder, 'testcases/others/abc');
+    prepareBenchmark(abc2mtex, 'abc2mtex.wasm', abc2mtexFuzzerInput);
+    prepareBenchmark(abc2mtex, 'abc2mtex', abc2mtexFuzzerInput);
   }).parse(process.argv);

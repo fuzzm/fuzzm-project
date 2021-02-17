@@ -79,6 +79,19 @@ fs.readdir(resultsFolder, {withFileTypes: true}, (err, files) => {
           });
         });
       }
+
+      if (b.name.includes('abc2mtex')) {
+        // add the rename files to crash-idx since abc2mtex doesn't like : in file names
+        const crashFolder = path.resolve(findingsFolder, 'crashes');
+        fs.readdir(crashFolder,  {withFileTypes: true}, (err, files) => {
+          files.forEach((f, idx) => {
+            const fp = path.resolve(crashFolder, f.name);
+            const fpNew = path.resolve(crashFolder, `crash-${idx}`);
+            fs.copyFileSync(fp, fpNew);
+            fs.unlinkSync(fp);
+          });
+        });
+      }
     });
   }
 });
