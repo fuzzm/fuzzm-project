@@ -128,4 +128,10 @@ commander
     const abc2mtexFuzzerInput=path.resolve(aflFolder, 'testcases/others/abc');
     prepareBenchmark(abc2mtex, 'abc2mtex.wasm', abc2mtexFuzzerInput);
     prepareBenchmark(abc2mtex, 'abc2mtex', abc2mtexFuzzerInput);
+
+    const flac=path.resolve(VulnBenchDir, 'flac', 'src', 'flac');
+    const flacFuzzerInput=path.resolve(aflFolder, 'testcases/multimedia/flac');
+    prepareBenchmark(flac, 'flac.wasm', flacFuzzerInput);
+    prepareBenchmark(flac, 'flac', abc2mtexFuzzerInput);
+
   }).parse(process.argv);
