@@ -132,6 +132,10 @@ commander
     const flac=path.resolve(VulnBenchDir, 'flac', 'src', 'flac');
     const flacFuzzerInput=path.resolve(aflFolder, 'testcases/multimedia/flac');
     prepareBenchmark(flac, 'flac.wasm', flacFuzzerInput);
-    prepareBenchmark(flac, 'flac', abc2mtexFuzzerInput);
+    prepareBenchmark(flac, 'flac', flacFuzzerInput);
 
+    const jbig2dec=path.resolve(VulnBenchDir, 'jbig2dec');
+    const jbig2decFuzzerInput=path.resolve(aflFolder, 'testcases/images/jbig2/');
+    prepareBenchmark(jbig2dec, 'jbig2dec.wasm', jbig2decFuzzerInput);
+    prepareBenchmark(jbig2dec, 'jbig2dec', jbig2decFuzzerInput);
   }).parse(process.argv);
