@@ -60,12 +60,12 @@ fs.readdir(resultsFolder, {withFileTypes: true}, (err, files) => {
       fs.mkdirSync(findingsFolder, {recursive: true});
 
       // unzip zip
-      const stdout = cp.execSync(`unzip -o ${zipName}`, {cwd: dstFolder});
+      const stdout = cp.execSync(`unzip -o ${zipName}`, {cwd: dstFolder, stdio: 'ignore'});
 
       // copy to findings
       // TODO always use repeat-0? 
       const unzippedContents = path.resolve(dstFolder, path.basename(zipName, ".zip"), 'repeat-0');
-      cp.execSync(`cp -r ${unzippedContents}/* ${findingsFolder}`);
+      cp.execSync(`cp -r ${unzippedContents}/* ${findingsFolder}`, {stdio: 'ignore'});
 
       if (b.name.includes('opj_compress')) {
         // add the .bmp extension to all crash files
