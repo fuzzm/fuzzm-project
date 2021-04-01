@@ -10,9 +10,3 @@ cp wasm-project/fuzzing_results/pdfresurrect-dec-27/findings-wasm.zip AFL-wasm/p
 
 cp wasm-project/fuzzing_results/libpng_27h/findings-wasm.zip AFL-wasm/programs/pnm2png-wasm
 (cd AFL-wasm/programs/pnm2png-wasm && unzip -o findings-wasm.zip && cp -r findings/* findings)
-
-## UBUNTU benchmarks ##
-cp wasm-project/fuzzing_results/palbart_64h/findings-wasm.zip AFL-wasm/programs/palbart-wasm
-(cd AFL-wasm/programs/palbart-wasm && unzip -o findings-wasm.zip && cp -r findings/* findings)
-
-
