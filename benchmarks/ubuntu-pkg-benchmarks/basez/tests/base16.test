@@ -1,0 +1,15 @@
+#
+#    base16 encoding regression test data
+#
+
+f 66
+fo 666f
+foo 666f6f
+foob 666f6f62
+fooba 666f6f6261
+foobar 666f6f626172
+QUAKEMACHINE 5155414b454d414348494e45
+Base16\ Letter 426173653136204c6574746572
+Base\ 16\ Encoding 4261736520313620456e636f64696e67
+RFC\ 4648 5246432034363438
+Никола\ Тесла d09dd0b8d0bad0bed0bbd0b020d0a2d0b5d181d0bbd0b0

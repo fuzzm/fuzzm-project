@@ -1,0 +1,4 @@
+SCRIPT=`realpath $0`
+DIR=`dirname $SCRIPT`
+emcc -g -s EXIT_RUNTIME=1 -s NODERAWFS ${DIR}/bzip2.c -o ${DIR}/bzip2.js
+echo AAAAAAAAAAAAAAAAAAAAAABBBBBBBBBBBBBBBCCCCCCCCCCCCCCCC > ${DIR}/file.txt

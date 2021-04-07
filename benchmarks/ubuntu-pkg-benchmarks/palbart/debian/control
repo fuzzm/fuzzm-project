@@ -1,0 +1,19 @@
+Source: palbart
+Section: otherosfs
+Priority: optional
+Maintainer: Andreas Bombe <aeb@debian.org>
+Standards-Version: 4.1.4
+Build-Depends: debhelper (>= 11)
+Vcs-Browser: https://salsa.debian.org/debian/palbart
+Vcs-Git: https://salsa.debian.org/debian/palbart.git
+
+Package: palbart
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Enhanced version of the PAL PDP8 assembler
+ PALBART is an enhanced version of the pdp8 PAL assembler.
+ This is a PDP8 cross assembler.  It's useful for the users of SIMH or
+ any other PDP8 emulator.
+ .
+ To quote that web page, "This enhancement was written by Gary 
+ Messenbrink to support BART's fleet of PDP-8 systems."

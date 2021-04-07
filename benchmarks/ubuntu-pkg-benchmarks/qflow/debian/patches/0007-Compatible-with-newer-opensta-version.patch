@@ -1,0 +1,24 @@
+From: Ruben Undheim <ruben.undheim@gmail.com>
+Date: Mon, 11 Nov 2019 23:10:36 +0000
+Subject: Compatible with newer opensta version
+
+---
+ scripts/opensta.sh | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/scripts/opensta.sh b/scripts/opensta.sh
+index 180f165..aef9c50 100755
+--- a/scripts/opensta.sh
++++ b/scripts/opensta.sh
+@@ -274,9 +274,9 @@ if ($dodelays == 1) then
+ else
+    echo "Running OpenSTA static timing analysis" |& tee -a ${synthlog}
+ endif
+-echo "sta ${opensta_options} -f ${rootname}.conf" |& tee -a ${synthlog}
++echo "sta ${opensta_options} ${rootname}.conf" |& tee -a ${synthlog}
+ echo ""
+-${bindir}/sta ${opensta_options} -f ${rootname}.conf |& tee -a ${synthlog}
++${bindir}/sta ${opensta_options} ${rootname}.conf |& tee -a ${synthlog}
+ echo ""
+ 
+ #------------------------------------------------------------

@@ -1,0 +1,15 @@
+#
+#    base32hex encoding regression test data
+#
+
+f co======
+fo cpng====
+foo cpnmu===
+foob cpnmuog=
+fooba cpnmuoj1
+foobar cpnmuoj1e8======
+QUAKEMACHINE a5ak2iq59l0k6i299p2g====
+Base32hex 89gn6p9j69k6au0=
+Base\ 32\ Encoding\ with\ Extended\ Hex\ Alphabet 89gn6p906cp20hbecdnm8qbecsg7eqbkd0g4au3kcln68pb44146au1085m70q31c9in8===
+RFC\ 4648 a934681k6oq3g===
+Никола\ Тесла q2et1e6gnb8btk5rq2o21k52q2qt30egnf8b0===

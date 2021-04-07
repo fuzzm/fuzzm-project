@@ -1,0 +1,17 @@
+This archive was repacked by Kamal Mostafa <kamal@debian.org> from the
+original http://www.fourmilab.ch/webtools/midicsv/midicsv-1.1.tar.gz
+in order to comply with the Debian Free Software Guidelines (DFSG).
+
+Changes from the original tarball:
+
+The pre-built .exe Windows executables were removed.
+
+The file ./test.mid (a likely copyright-restricted song) was replaced
+with the contents of a selection from http://www.piano-midi.de/midis/mozart/
+[Mozart's Sonata No. 10 C major, KV 330 (1783) part 1], redistributed
+under the "CC-BY-SA 3.0 Germany" license with attribution:
+  File: test.mid (source: http://www.piano-midi.de/midis/mozart/mz_333_1.mid)
+  License: CC-BY-SA [http://creativecommons.org/licenses/by-sa/3.0/de/deed.en]
+  Name: Bernd Krueger 
+  Source: http://www.piano-midi.de
+

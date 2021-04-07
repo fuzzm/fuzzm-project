@@ -1,0 +1,3 @@
+version=3
+opts=dversionmangle=s/\+dfsg(\.\d+)?$// \
+ http://www.fourmilab.ch/webtools/midicsv/midicsv-(.*)\.tar\.gz

@@ -1,0 +1,34 @@
+/*
+ *   Copyright (C) 2013  Milan Kupcevic
+ *
+ *   You can redistribute and/or modify this software under the
+ *   terms of the GNU General Public License version 3, or any later
+ *   version as published by the Free Software Foundation.
+ *
+ *   This program is distributed in the hope that it will be useful,
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *   GNU General Public License for more details.
+ *
+ *   You should have received a copy of the GNU General Public License
+ *   along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ *   GPLv3+
+ *
+ */
+
+#define APPNAME "_APPNAME_"
+#define VERSION "_VERSION_"
+#define PKGNAME "_PKGNAME_"
+#define COPYRIGHT_YEARS "_COPYRIGHT_YEARS_"
+#define COPYRIGHT_NAMES "_COPYRIGHT_NAMES_"
+#define TMCLAIM _TMCLAIM_
+#define TRADEMARKS "_TRADEMARKS_"
+#define EMAIL "_EMAIL_"
+#define WEB "_WEB_"
+#define AUTHORS "_AUTHORS_"
+#define HAS_ORG _HAS_ORG_
+#define ORG "_ORG_"
+#define B32 _B32_
+#define B64 _B64_
+#define UNHEX _UNHEX_

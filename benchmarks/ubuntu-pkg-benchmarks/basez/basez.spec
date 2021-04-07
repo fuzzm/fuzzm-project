@@ -1,0 +1,49 @@
+Name: basez
+Version: 1.6.2
+Release: 0%{?dist}
+Summary: base 16/32/64 encode/decode data to standard output
+License: GPLv3+ and (GPLv3+ or CC-BY-SA-3.0+)
+Group: Applications/File
+URL: http://www.quarkline.net/basez
+Source: http://www.quarkline.net/basez/download/%{name}-%{version}.tar.gz
+BuildRoot: %{_tmppath}/%{name}-buildroot-%{version}-%{release}.%{_arch}
+
+%description
+BaseZ encodes/decodes base16, base32, base32hex, base64 or base64url data
+stream per RFC 4648; MIME base64 Content-Transfer-Encoding per RFC 2045;
+or PEM Printable Encoding per RFC 1421.
+
+This binary package provides a list of commands: basez hex base16
+base32plain base32hex base64plain base64url base64mime base64pem
+
+%prep
+%setup -q
+
+%build
+%configure \
+  --disable-unhex-command \
+  --disable-base64-command \
+  --disable-base32-command \
+  CFLAGS="$CFLAGS -O3" \
+  CPPFLAGS="$CPPFLAGS" \
+  LDFLAGS="$LDFLAGS"
+make
+
+%check
+make test
+
+%install
+[ "$RPM_BUILD_ROOT" != "/" ] && rm -rf "$RPM_BUILD_ROOT"
+make DESTDIR="$RPM_BUILD_ROOT" install
+
+%clean
+make clean
+[ "$RPM_BUILD_ROOT" != "/" ] && rm -rf "$RPM_BUILD_ROOT"
+
+%files
+%{_bindir}/*
+%{_mandir}/man1/*.1*
+%{_datadir}/bash-completion/completions/*
+%{_datadir}/doc/%{name}/
+
+%changelog

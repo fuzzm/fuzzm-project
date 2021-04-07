@@ -1,0 +1,3 @@
+version=3
+opts=pgpsigurlmangle=s/$/.sig/ \
+ http://www.quarkline.net/basez/download/ basez-(\d[[:alnum:]\.]*)\.tar\.(?:gz|bz2|xz)

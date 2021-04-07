@@ -1,0 +1,18 @@
+#
+#    base64mime decoding regression test data
+#
+
+Zg== f
+Zm8= fo
+Zm9v foo
+Zm9vYg== foob
+Zm9vYmE= fooba
+Zm9vYmFy foobar
+UVVBS0VNQUNISU5F QUAKEMACHINE
+QmFzZTY0IExldHRlcg== Base64\ Letter
+QmFzZSA2NCBFbmNvZGluZw== Base\ 64\ Encoding
+UkZDIDQ2NDg= RFC\ 4648
+VG8+Z28/ To>go?
+0J3QuNC60L7Qu9CwINCi0LXRgdC70LA= Никола\ Тесла
+0J3QuNC60#L7Qu9CwINCi0LXRgdC70LA= Никола\ Тесла
+\\n\\tS\ \ W\ 4\ g\ M\ T\ k2\ MC\ wga\ W4g\ aG9\ ub3\ Igb\ 2Yg\ VGVz\ bGEsI\`H\[RoZSBH\ \ \ \ Z\ \ \ \ W\ \ \ \ \ \ 5\ lc\ mFs\ IENv\ bmZ.lc:mVuY2U\{gb24gV2Vp\\n\ Z2h0cyBhbmQgTWVhc3VyZXMgZm9yIHRoZSBJbnRlcm5hdGlvbmFsIFN5c3RlbSBvZiBVbml0cyBk\\r\\nZWRpY2F0ZWQgdGhlIHRlcm0gInRlc2xhIiB0byB0aGUgU0kgdW5pdCBtZWFzdXJlIGZvciBtYWdu\\n\ Z\ XR\ \ p\ \ Y\ \ y\ \ B\\tm\ \ aW\ \ \ Vs\ \ \ ZCB\ \ \ zdH\ \ \ Jlb\ \ \ m\ d\ 0\ a\ \ C\ \ 4\ \ =\ \\n\\n In\ 1960,\ in\ honor\ of\ Tesla,\ the\ General\ Conference\ on\ Weights\ and\ Measures\ for\ the\ International\ System\ of\ Units\ dedicated\ the\ term\ "tesla"\ to\ the\ SI\ unit\ measure\ for\ magnetic\ field\ strength.

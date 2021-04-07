@@ -1,0 +1,53 @@
+#
+#    BaseZ completion
+#
+#    Copyright (C) 2016  Milan Kupcevic
+#
+#    You can redistribute and/or modify this software under the
+#    terms of the GNU General Public License version 3, or any later
+#    version as published by the Free Software Foundation.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+#    GPLv3+
+#
+
+commands="
+basez
+base16
+hex
+base32plain
+base32hex
+base64plain
+base64url
+base64mime
+base64pem _B32CMD_ _B64CMD_ _UNHEXCMD_
+"
+
+_basez()
+{
+  local cur command list
+  cur=${COMP_WORDS[COMP_CWORD]}
+  command=${COMP_WORDS[0]##*/}
+
+  case $command,$cur in
+    hex,-*|base16,-*|base32*,-*) list="--wrap --upper-case --lower-case --decode --strict --ignore-all-space --ignore-garbage --help --version";;
+    unhex,-*) list="--strict --ignore-all-space --ignore-garbage --help --version";;
+    base64plain,-*|base64url,-*) list="--wrap --text --decode --strict --ignore-all-space --ignore-garbage --help --version";;
+    base64pem,-*|base64mime,-*) list="--text --decode --help --version";;
+    *,-*) list="--wrap --text --decode --strict --ignore-all-space --ignore-garbage --b16 --b32 --b32hex --b64 --b64url --b64mime --b64pem --upper-case --lower-case --help --version";;
+    *,*) list="";;
+  esac
+
+  COMPREPLY=( $( compgen -W "$list" -- $cur) )
+}
+
+complete -o bashdefault -o default -F _basez $commands 2>/dev/null \
+  || complete -o default -F _basez $commands
+

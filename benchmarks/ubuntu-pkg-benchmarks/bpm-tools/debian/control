@@ -1,0 +1,25 @@
+Source: bpm-tools
+Section: sound
+Priority: optional
+Maintainer: tony mancill <tmancill@debian.org>
+Build-Depends: debhelper (>= 11)
+Standards-Version: 4.2.1
+Homepage: http://www.pogo.org.uk/~mark/bpm-tools/
+Vcs-Browser: https://salsa.debian.org/debian/bpm-tools
+Vcs-Git: https://salsa.debian.org/debian/bpm-tools.git
+
+Package: bpm-tools
+Architecture: any
+Depends: sox, ${shlibs:Depends}, ${misc:Depends}
+Recommends: gnuplot, vorbis-tools, flac, id3v2
+Suggests: libsox-fmt-all
+Description: command-line tool to calculate tempo of audio
+ The bpm-tools commands are used to automatically calculate the tempo
+ (in beats-per-minute) of music, optionally displaying an  analysis and
+ adding it to file 'tags'. The data from these tags can be especially
+ useful for navigating a music library in DJ software such as xwax(1).
+ .
+ The bpm command implements the algorithm on raw data, but the most
+ commonly used command is bpm-tag to tag the file with the tempo in bpm.
+ The bpm-graph command will produce a plot of the results of the
+ autocorrelation.

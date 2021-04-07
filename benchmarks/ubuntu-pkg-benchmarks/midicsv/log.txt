@@ -1,0 +1,407 @@
+
+    	    	   MIDICSV / CSVMIDI		
+    	            Development Log
+
+2003 December 29
+
+Changed declarations from "char" to "byte" where necessary
+so everything works correctly on platforms where char is
+signed without the need to compile with an option to force
+unsigned char.
+
+Moved definitions of "byte" and "vlint" to a new types.h
+file and included it in files which need these definitions.
+
+Changed some code which used "long" where a variable length
+integer appears in the MIDI file to use "vlint" instead.  This
+doesn't change functionality, but improves documentation in
+the code.
+
+Fixed several instances in the Makefile where test cases
+assumed the current directory was on the PATH,
+
+Reversed argument order of the (presently unused) function
+writeVarLen in midio.c to agree with the other write functions
+in this file.
+
+Integrated code from XD to set the input file (midicsv.c)
+and output file (csvmidi.c) mode to binary when reading
+or writing standard input/output on a WIN32 platform.  This
+code sets the mode using the _setmode() function of the
+Microsoft Visual C library--it may have to be changed if
+you build using another WIN32 compiler.
+
+Added a -v option to csvmidi.c and verbose output of the
+file header and track information corresponding to that generated
+by midicsv.c.
+
+2003 December 30
+
+Created manual pages csvmidi.1 and midicsv.1 (first cut) for
+the programs.
+
+Added an "install" target to the Makefile with default
+installation in the /usr/local tree.
+
+Created a README file which will eventually contain all the
+gory details and dark underside of the distribution.
+
+Cleaned up the "check" case in the Makefile to use a version
+of the Mike and the Mechanics "Silent Running" sequence which
+has run the midicsv/csvmidi gauntlet and is hence invariant.
+This permits verifying both text and binary equality of the
+CSV and MIDI files from encoding and decoding this file.  If
+the check passes, the only output is now "All tests passed.".
+The check target now cleans up the temporary files it creates
+along the way.
+
+Integrated the local getopt() from Base64 to permit building
+on Win32.  I modified getopt.c to remove Autoconf trash from
+the includes.  We always use our own getopt()--never the one
+from the system (if any).
+
+Csvmidi printed nonsense track numbers in verbose output.
+Fixed.
+
+Added a version number definition in version.h and included
+the version number in the "-u" option output from midicsv.c
+and csvmidi.c.
+
+2004 January 1
+
+Fixed some harmless compiler warnings in csvmidi.c and midicsv.c
+when WIN32 binaries were built with Microsoft Visual C 5.0.
+
+Copied the built WIN32 executables: Csvmidi.exe and Midicsv.exe
+into the release directory, along with the Workspace and Project
+files: Miditools.dsw, Csvmidi.dsp, and Midicsv.dsp and added
+to the list of files included in the distribution by the Makefile.
+
+2004 January 3
+
+Text fields in file meta-events which contained zero bytes were
+incorrectly truncated at the zero byte by midicsv.c.  Since
+these fields are specified in MIDI as a length followed by
+arbitrary bytes, zero is permissible in such fields.  I modified
+textcsv() in midicsv.c to permit zero bytes, which are output as
+octal escapes like other control characters.
+
+If a MIDI text field in CSV contained a zero byte (duly quoted
+as \000), csdmidi.c would truncate the MIDI text field at the
+zero byte, interpreting it as a C string terminator.  I modified
+CSVscanField() in csv.c to store the length of the field it
+scans in a global variable CSVfieldLength and modified csvmidi.c
+to use this field to determine how many text bytes to write,
+rather than incorrectly applying strlen() to the text to
+determine its length.
+
+Modified CSVscanField() in csv.h to take a second argument which
+gives the length of the field buffer and refuse to store outside
+the buffer.  Characters which would overflow the buffer are
+discarded, and the buffer is guaranteed to be terminated by a
+zero byte for those who count on treating it as a C string.  The
+actual field length, including characters dropped, may be
+obtained from CSVfieldLength (see previous paragraph), and may
+thus be used to determine whether a truncation has occurred.
+
+Modified textcsv() in midicsv.c to quote only non-graphic
+characters in ISO 8859-1.  This permits ISO accented and
+punctuation characters to appear in text strings without being
+quoted as octal sequences.  If CSV_Quote_ISO is not defined,
+this function reverts to its previous behaviour--octal quoting
+all characters which aren't in the 7-bit ASCII graphic
+character set.
+
+Rewrote getCSVline() in csvmidi.c to dynamically allocate the
+CSV line input buffer and expand it as required to accommodate
+arbitrarily long lines (assuming they fit in available memory).
+This avoids the need for a long compiled-in input buffer and
+worries about possible truncation when reading outrageously long
+system exclusive byte dump records.
+
+2004 January 12
+
+Modified the "dist" target in the Makefile to create an
+archive whose name includes the version number (specified
+by "VERSION" in the Makefile, regrettably uncoupled to
+version.h, and which creates an eponymous directory into
+which its files are extracted.
+
+Created a logo for the Web page, which is maintained in the
+subdirectory IMGWORK.
+
+2004 January 17
+
+Ported the WIN32 build to Visual C++ .NET, building on Ovni. As
+usual, I had to add "libc.lib" to the list of explicitly
+included libraries in the
+Project/Properties/Linker/Input/Additional Dependencies item
+and "libcd.lib" to the .../Ignore Specific Libraries list to
+get around the "Library is Corrupt" dagger in the back from
+.NET.
+
+Fixed three warnings in the Meta(SetTempoMetaEvent) case
+in midicsv.c where 8 bit values weren't explicitly cast
+to byte before being stored into the temporary track item
+array.  While I was at it, I fixed several other places where
+a (char) cast was inadvertently used on a value being stored
+into a byte type.  None of these could cause any problems
+apart from compiler warnings.
+
+Imported the "Midicsv.sln" solution file and the two projects,
+"Csvmidi.vcproj" and "Midicsv.vcproj" from the .NET build
+environment, along with the generated Release executables.
+
+Modified the WIN32 file list in the Makefile to include the
+.NET .sln and .vcproj files in the distribution instead of
+the .dsw and .dsp equivalents from Visual C 5.0.
+
+Created a rudimentary round-trip test for WIN32 builds
+in W32test.bat, which I added to the WIN32 file list in
+the Makefile.
+
+2004 January 25
+
+Changed the ce3k.csv sample file to use a General MIDI organ
+patch for the track rather than a piano.
+
+Much work documenting CSV message formats in midicsv.5; much
+work remains.
+
+2004 February 6
+
+Completed documentation of CSV message formats in midicsv.5.
+
+2004 February 7
+
+Key signature meta-events for flat keys were not treated
+as signed values, but rather output as two's complement
+unsigned bytes between 128 and 255.  I fixed midicsv.c to
+output these values as signed integers.
+
+The test for major and minor key indicators in the
+Key_signature record in csvmidi.c was backwards.  In
+addition, the process of assembling the MIDI output event
+overwrote the major/minor string, causing the signature
+to always be considered as minor.  Both were fixed.
+
+2004 February 8
+
+Implemented range checking for all fields in csvmidi.c.  The
+field checking for items such as time signature and SMPTE
+offsets is permissive in the sense that any value which fits
+into the MIDI file binary field (in all such cases, as it
+happens, one byte) are accepted without warnings.  The key signature
+field is, however, required to specify a key in the range
+-7 to 7 and a major/minor indicator of "major" or
+"minor" (case-insensitive).
+
+The "install" target in the Makefile neglected to copy the file
+format document, midicsv.5, to the corresponding manual page
+directory.  I further modified the install target to use a more
+or less standard "install" command to guarantee the target directories
+are created.
+
+Added an "uninstall" target to the Makefile which deletes the
+files copied by "install".
+
+Updated the README file to reflect name changes due to the port
+of the WIN32 build to Visual Studio .NET.
+
+2004 February 9
+
+Darned if I knew you could carry a running status across
+a file meta-event or Sysex!  Well, you can, and I managed to
+stumble over a MIDI file (one, among hundreds I've tested
+with) which does it.  As I'd written the code, I preserved
+any byte with the high bit set as the running status, which
+caused the 0xFF to be saved as the running status after
+a meta-event, so if the next item didn't begin with a status
+byte, it would be misinterpreted as a meta-event, with
+disastrous consequences downstream.  I modified midicsv.c
+to only save genuine channel status events (0x00-0xEF)
+as running status.
+
+Eliminated some obsolete code in midicsv.c associated with
+the way we used to output text in meta-events before the advent
+of textcsv().
+
+2004 February 10
+
+It turns out textcsv() in midicsv.c did not actually handle
+text in meta-events with full generality (i.e. up to 2^28
+bytes in length).  I rewrote the function and code that calls
+it to entirely eliminate all intermediate memory use.  The
+revised textcsv() is passed the output stream pointer and
+writes characters directly to it, quoting as required on
+the fly.
+
+Well, csvmidi.c had its own weaknesses when it came to really
+long strings.  I modified CSVscanField() in csv.c to work
+with a dynamically allocated buffer (which can either be provided
+by that function on the first call or supplied by the caller)
+which is passed as a pointer to the pointer to the buffer, along with
+a pointer to its length.  The buffer is expanded as required,
+according to the BufferInitial and BufferExpansion definitions
+in csv.c which are set to 256 and 1024 bytes respectively.  Calls
+to CSVscanField() in csvmidi.c were modified accordingly, with
+the field buffer f now dynamically allocated and its length kept
+in flen.  To test this, I ran the entire test suite with an initial
+field buffer length of 8 bytes and expansion increment of 4 bytes
+and everything worked fine.
+
+If the realloc() to dynamically expand the track assembly buffer
+in outbyte() in csvmidi.c failed, the code would attempt to
+store through a NULL pointer.  I added a check for failure of
+the realloc() which issues a message to standard error and exits
+with a return code of 2 in case the allocation fails.  Also,
+the trackbufl (current track buffer length) was declared as
+a long, a heritage from the 1988-vintage progenitor of this
+code which ran on a 16 bit MS-DOS system.  I changed it to
+a more conventional int, which avoids worries about printf
+format phrase compatibilities.
+
+Code in csvmidi.c sloppily reused the CSV field scanning buffer
+to assemble MIDI parameter bytes for meta-events.  This actually
+did no harm, since in every case all fields have been scanned
+prior to this operation, but it's tacky and looked even worse
+now that the field buffer is dynamically allocated within
+csv.c.  I changed all the field assembly code to use a small
+static buffer of[], which is dedicated to this purpose.  Note
+that Sysex and Sequencer Specific events, which may have
+arbitrary amounts of data, do not use this static buffer but
+emit the data on the fly, avoiding worries about overflow.
+
+Rebuilt the WIN32 executables.  Everything built without any
+warnings and passed the regression test.
+
+2004 February 11
+
+Wrote the first cut of torture.pl, a program to generate the
+torture test for csvmidi and midicsv.  The test is generated
+programmatically because we want to include some very long
+byte array (Sysex, etc.) events and text strings, and cranking
+them out by a Perl program avoid the need to include a huge
+torture test CSV file in the distribution.  The current version
+of the torture test includes hard-coded examples of every kind
+of event we recognise, including an Unknown_meta_event used
+to test pass-through of unknowns and another used to fake a
+Key_signature, which confirms handling of unknown meta-events
+is compatible with known ones.
+
+The programmed part outputs a 5123 byte System_exclusive, a
+11213 byte ASCII text string, a 74219 byte arbitrary string
+(all byte values from 0 to 255), a 3497861 byte
+Sequencer_specific, and finally a 4256233 byte arbitrary
+string, all pseudorandomly generated.  The pseudorandom
+generator is seeded with a constant valuf of 1234 so the test
+is reproducible and output can be saved for regression testing.
+
+Missing or bad fields on records with an arbitrary number of
+byte srguments (such as SysEx) were erroneously reported as
+field 4 regardless of the actual field in error.  I created a
+new xfields() function in csvmidi.c which accepts the start of
+the fields to be parsed as an argument, used that for variable
+length byte argument parsing, and created a wrapper nfields()
+which passes 4 for the usual case of a fixed number of numeric
+arguments after the Type field.
+
+Added the ability to csvmidi.c to recover from missing or
+unparseable fields in CSV records which contain a variable
+number of byte arguments (SysEx for example).  The handlers for
+these events now call a new function, checkBytes(), to
+pre-parse and error check the byte list before emitting the
+event code and length to the output MIDI file.  If an error is
+detected, they can now ignore the erroneous record with no
+damage to the MIDI file.  This makes all CSV syntax errors now
+recoverable.
+
+Added a "torture" target to the Makefile to run the torture test.
+
+Included the "bad.csv" file in the distribution.  This is a
+hand-crafted CSV file full of errors to verify csvmidi's
+error detection and recovery.
+
+Modified the comment detection code in csvmidi.c to permit
+white space before the comment delimiter.  Previously, it
+had to appear in column one; now it must simply be the first
+nonblank character on the line.
+
+Added range checking for all arguments of the Header
+record in csvmidi.c.
+
+Built with GCC 3.2.2 and re-tested to make sure no warnings
+or problems were manifest.  All went well.
+
+
+The sscanf() function in the GCC library apparently calls
+the equivalent of strlen() on its argument before parsing it.
+The "sscanf(s, "%3o")" used in csv.c to parse backslash-escaped
+octal characters, and string parsing slowed down enormously
+for long strings with many escaped characters (as produced by
+the torture test).  I rewrote the octal escape parser to
+scan the digits with in-line code, and string parsing sped
+up for strings in the megabyte range by more than a factor of
+1000.
+
+2004 February 12
+
+Added documentation of CSV comment syntax to midicsv.5 file format
+manual page.
+
+Rebuilt WIN32 executables and imported Release binaries into
+development directory.
+
+2004 February 13
+
+Integrated HTML versions of manual pages produced by man2html
+(with substantial hand patching of the output) into the Web page.
+
+2004 February 14
+
+To simplify bulk (or, more precisely, near-blind) processing of
+CSV, I added a suffix of "_c" to all channel event messages (note
+on, note off, program, pitch bend, etc.) and "_t" to all meta-events
+which take a text string argument.
+
+Missing or erroneous numeric CSV fields detected by the xfields()
+function in csvmidi.c generated error messages with indentation
+inconsistent with error messages reported elsewhere.  Fixed.
+
+2004 February 17
+
+Added two targets to the Makefile which cause the build of the
+distribution archives to fail if the WIN32 executables are out
+of date with respect to the source code.
+
+Added a new general_midi.pl file to the distribution which defines
+two hashes, %GM_Patch and %GM_Percussion, which permit specifying
+General MIDI patch numbers and percussion note numbers as descriptive
+strings.
+
+Integrated two new demo programs, drummer.pl, a rudimentary
+drum machine, and acomp.pl, a moronic algorithmic composer,
+to serve as examples of ab ovo creation of MIDI files using
+Perl and csvmidi.
+
+2004 February 18
+
+Added a status check and go/no-go results report to the
+"torture" target in the Makefile.
+
+2008 January 20
+
+Updated version to "Version 1.1 (January 2008)".
+
+Both midicsv.c and csvmidi.c handled the two byte argument
+to a Pitch bend event in reverse order.  The 14 bit pitch
+bend value (with 8192 indicating no bend) is supposed to be
+sent as two 7 bit values with the least significant byte
+first, but the code processed the bytes with the most
+significant byte first.  Since both programs had the same
+error, a "round trip" from MIDI to CSV and back to MIDI would
+not damage the file.  I fixed both programs to process the
+bytes in the correct order.  (Reported by Pete Goodeve.)
+
+Fixed a GCC 4.1.2 -Wall quibble about the signedness of a
+byte pointer value in csvmidi.c.

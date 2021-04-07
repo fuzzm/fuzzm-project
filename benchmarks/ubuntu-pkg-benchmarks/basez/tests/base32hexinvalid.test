@@ -1,0 +1,21 @@
+#
+#    base32hex decoding invalid input regression test data
+#
+COi=====
+CO=i====
+CO==i===
+CO===i==
+CPNG==i=
+CPNG===i
+CPNG====i
+CPNG===
+CPNMUf==
+CPNMU=f=
+CPNMU==f
+CPNMU===f
+CPNMU====
+CPNMUOG==
+CPNMUOG
+CPNMUOJ1z
+CPNMUOJ1z8======
+A5AK2IQ59L0K6I299P2G====.

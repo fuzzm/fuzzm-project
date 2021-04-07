@@ -1,0 +1,243 @@
+From: Ruben Undheim <ruben.undheim@gmail.com>
+Date: Sun, 23 Sep 2018 09:40:08 +0200
+Subject: This patch fixes the path to the tcsh interpreter.
+
+---
+ scripts/checkdirs.sh.in | 2 +-
+ scripts/cleanup.sh      | 2 +-
+ scripts/display.sh      | 2 +-
+ scripts/drc.sh          | 2 +-
+ scripts/gdsii.sh        | 2 +-
+ scripts/lvs.sh          | 2 +-
+ scripts/makesim.sh      | 2 +-
+ scripts/migrate.sh      | 2 +-
+ scripts/opensta.sh      | 2 +-
+ scripts/opentimer.sh    | 2 +-
+ scripts/placement.sh    | 2 +-
+ scripts/qflow.in        | 2 +-
+ scripts/qflow.sh.in     | 8 ++++----
+ scripts/router.sh       | 2 +-
+ scripts/synthesize.sh   | 2 +-
+ scripts/vesta.sh        | 2 +-
+ tech/osu018/osu018.sh   | 2 +-
+ tech/osu035/osu035.sh   | 2 +-
+ tech/osu050/osu050.sh   | 2 +-
+ 19 files changed, 22 insertions(+), 22 deletions(-)
+
+diff --git a/scripts/checkdirs.sh.in b/scripts/checkdirs.sh.in
+index 3d9878b..1d222d9 100755
+--- a/scripts/checkdirs.sh.in
++++ b/scripts/checkdirs.sh.in
+@@ -1,4 +1,4 @@
+-#!/bin/tcsh -f
++#!/usr/bin/tcsh -f
+ #
+ #-------------------------------------------------------------------------
+ # checkdirs.sh
+diff --git a/scripts/cleanup.sh b/scripts/cleanup.sh
+index 99d1777..fa33102 100755
+--- a/scripts/cleanup.sh
++++ b/scripts/cleanup.sh
+@@ -1,4 +1,4 @@
+-#!/bin/tcsh -f
++#!/usr/bin/tcsh -f
+ #----------------------------------------------------------
+ # Workspace cleanup script for qflow
+ #----------------------------------------------------------
+diff --git a/scripts/display.sh b/scripts/display.sh
+index 5a4ea56..f3b397e 100755
+--- a/scripts/display.sh
++++ b/scripts/display.sh
+@@ -1,4 +1,4 @@
+-#!/bin/tcsh -f
++#!/usr/bin/tcsh -f
+ #----------------------------------------------------------
+ # Qflow layout display script using magic-8.0
+ #----------------------------------------------------------
+diff --git a/scripts/drc.sh b/scripts/drc.sh
+index 9319a88..ec596c7 100755
+--- a/scripts/drc.sh
++++ b/scripts/drc.sh
+@@ -1,4 +1,4 @@
+-#!/bin/tcsh -f
++#!/usr/bin/tcsh -f
+ #----------------------------------------------------------
+ # DRC error checking script using magic
+ #----------------------------------------------------------
+diff --git a/scripts/gdsii.sh b/scripts/gdsii.sh
+index d6ea267..4c2ac41 100755
+--- a/scripts/gdsii.sh
++++ b/scripts/gdsii.sh
+@@ -1,4 +1,4 @@
+-#!/bin/tcsh -f
++#!/usr/bin/tcsh -f
+ #----------------------------------------------------------
+ # GDSII output generating script using magic
+ #----------------------------------------------------------
+diff --git a/scripts/lvs.sh b/scripts/lvs.sh
+index 977668c..dadc591 100755
+--- a/scripts/lvs.sh
++++ b/scripts/lvs.sh
+@@ -1,4 +1,4 @@
+-#!/bin/tcsh -f
++#!/usr/bin/tcsh -f
+ #----------------------------------------------------------
+ # LVS comparison script using magic
+ #----------------------------------------------------------
+diff --git a/scripts/makesim.sh b/scripts/makesim.sh
+index db3af36..e658596 100755
+--- a/scripts/makesim.sh
++++ b/scripts/makesim.sh
+@@ -1,4 +1,4 @@
+-#!/bin/tcsh -f
++#!/usr/bin/tcsh -f
+ #
+ #  makesim.sh cellname
+ #
+diff --git a/scripts/migrate.sh b/scripts/migrate.sh
+index 9924a85..79b74b5 100755
+--- a/scripts/migrate.sh
++++ b/scripts/migrate.sh
+@@ -1,4 +1,4 @@
+-#!/bin/tcsh -f
++#!/usr/bin/tcsh -f
+ #----------------------------------------------------------
+ # Layout and netlist migration script
+ #----------------------------------------------------------
+diff --git a/scripts/opensta.sh b/scripts/opensta.sh
+index 9b71c56..4ac20f7 100755
+--- a/scripts/opensta.sh
++++ b/scripts/opensta.sh
+@@ -1,4 +1,4 @@
+-#!/bin/tcsh -f
++#!/usr/bin/tcsh -f
+ #----------------------------------------------------------
+ # Static timing analysis script using OpenSTA
+ #----------------------------------------------------------
+diff --git a/scripts/opentimer.sh b/scripts/opentimer.sh
+index d1d3c52..16acad7 100755
+--- a/scripts/opentimer.sh
++++ b/scripts/opentimer.sh
+@@ -1,4 +1,4 @@
+-#!/bin/tcsh -f
++#!/usr/bin/tcsh -f
+ #----------------------------------------------------------
+ # Static timing analysis script using OpenTimer
+ #----------------------------------------------------------
+diff --git a/scripts/placement.sh b/scripts/placement.sh
+index c05d5fa..047c11e 100755
+--- a/scripts/placement.sh
++++ b/scripts/placement.sh
+@@ -1,4 +1,4 @@
+-#!/bin/tcsh -f
++#!/usr/bin/tcsh -f
+ #----------------------------------------------------------
+ # Placement script using GrayWolf
+ #
+diff --git a/scripts/qflow.in b/scripts/qflow.in
+index 2b6dfd7..3fa2076 100755
+--- a/scripts/qflow.in
++++ b/scripts/qflow.in
+@@ -1,4 +1,4 @@
+-#!/bin/tcsh -f
++#!/usr/bin/tcsh -f
+ #
+ #------------------------------------------------------------------
+ # qflow --- main program launcher
+diff --git a/scripts/qflow.sh.in b/scripts/qflow.sh.in
+index ffa1227..4b0c15e 100644
+--- a/scripts/qflow.sh.in
++++ b/scripts/qflow.sh.in
+@@ -1,4 +1,4 @@
+-#!/bin/tcsh -f
++#!/usr/bin/tcsh -f
+ #
+ #------------------------------------------------------------------
+ # qflow.sh --- main program shell script
+@@ -379,7 +379,7 @@ if ( -f $varfile ) then
+    endif
+ endif
+ 
+-echo "#\!/bin/tcsh -f" > ${varfile}
++echo "#\!/usr/bin/tcsh -f" > ${varfile}
+ echo "#-------------------------------------------" >> ${varfile}
+ echo "# qflow variables for project ${project}" >> ${varfile}
+ echo "#-------------------------------------------" >> ${varfile}
+@@ -397,7 +397,7 @@ echo "set logdir=${projectpath}/log" >> ${varfile}
+ echo "#-------------------------------------------" >> ${varfile}
+ echo "" >> ${varfile}
+ 
+-echo "#\!/bin/tcsh -f" > ${execfile}
++echo "#\!/usr/bin/tcsh -f" > ${execfile}
+ echo "#-------------------------------------------" >> ${execfile}
+ echo "# qflow exec script for project ${project}" >> ${execfile}
+ echo "#-------------------------------------------" >> ${execfile}
+@@ -411,7 +411,7 @@ echo "" >> ${execfile}
+ #-----------------------------------------------------
+ 
+ if ( ! -f ${userfile} ) then
+-   echo "#\!/bin/tcsh -f" > ${userfile}
++   echo "#\!/usr/bin/tcsh -f" > ${userfile}
+    echo "#------------------------------------------------------------" >> ${userfile}
+    echo "# project variables for project ${project}" >> ${userfile}
+    echo "#------------------------------------------------------------" >> ${userfile}
+diff --git a/scripts/router.sh b/scripts/router.sh
+index 851f55a..6fa5081 100755
+--- a/scripts/router.sh
++++ b/scripts/router.sh
+@@ -1,4 +1,4 @@
+-#!/bin/tcsh -f
++#!/usr/bin/tcsh -f
+ #----------------------------------------------------------
+ # Route script using qrouter
+ #----------------------------------------------------------
+diff --git a/scripts/synthesize.sh b/scripts/synthesize.sh
+index 6fb3328..7ac66d5 100755
+--- a/scripts/synthesize.sh
++++ b/scripts/synthesize.sh
+@@ -1,4 +1,4 @@
+-#!/bin/tcsh -f
++#!/usr/bin/tcsh -f
+ #
+ # synthesize.sh:
+ #-------------------------------------------------------------------------
+diff --git a/scripts/vesta.sh b/scripts/vesta.sh
+index cbdc02a..5d3c467 100755
+--- a/scripts/vesta.sh
++++ b/scripts/vesta.sh
+@@ -1,4 +1,4 @@
+-#!/bin/tcsh -f
++#!/usr/bin/tcsh -f
+ #----------------------------------------------------------
+ # Static timing analysis script using vesta
+ #----------------------------------------------------------
+diff --git a/tech/osu018/osu018.sh b/tech/osu018/osu018.sh
+index 16808e8..fac486b 100644
+--- a/tech/osu018/osu018.sh
++++ b/tech/osu018/osu018.sh
+@@ -1,4 +1,4 @@
+-#!/bin/tcsh
++#!/usr/bin/tcsh
+ #---------------------------------------------------------------
+ # Shell script setting up all variables used by the qflow scripts
+ # for this project
+diff --git a/tech/osu035/osu035.sh b/tech/osu035/osu035.sh
+index a848edd..523f034 100644
+--- a/tech/osu035/osu035.sh
++++ b/tech/osu035/osu035.sh
+@@ -1,4 +1,4 @@
+-#!/bin/tcsh
++#!/usr/bin/tcsh
+ #---------------------------------------------------------------
+ # Shell script setting up all variables used by the qflow scripts
+ # for this project
+diff --git a/tech/osu050/osu050.sh b/tech/osu050/osu050.sh
+index a025c66..fe9882a 100755
+--- a/tech/osu050/osu050.sh
++++ b/tech/osu050/osu050.sh
+@@ -1,4 +1,4 @@
+-#!/bin/tcsh
++#!/usr/bin/tcsh
+ #---------------------------------------------------------------
+ # Shell script setting up all variables used by the qflow scripts
+ # for this project

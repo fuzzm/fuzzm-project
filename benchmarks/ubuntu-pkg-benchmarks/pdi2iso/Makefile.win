@@ -1,0 +1,14 @@
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before pdi2iso.exe all-after
+  
+
+pdi2iso.exe : src/pdi2iso.o
+	gcc.exe src/pdi2iso.o -o "pdi2iso.exe"
+
+src/pdi2iso.o: src/pdi2iso.c
+	gcc.exe -c src/pdi2iso.c -o src/pdi2iso.o
+ 
+
+clean: clean-custom
+	rm -f src/pdi2iso.o pdi2iso.exe

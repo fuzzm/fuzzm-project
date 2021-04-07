@@ -1,0 +1,74 @@
+codegroup (19981025-8) unstable; urgency=medium
+
+  * QA upload.
+  * Set Debian QA Group as maintainer. (see #848566)
+  * Migrated DH level to 11.
+  * debian/control: bumped Standards-Version to 4.2.1.
+
+ -- Helen Koike <helen@koikeco.de>  Mon, 03 Sep 2018 01:17:55 +0300
+
+codegroup (19981025-7) unstable; urgency=low
+
+  * Upgrade standards version from 3.9.2.0 to 3.9.5.0 in debian/control
+  * debhelper compat level 8 to 9, resulting in debian/control Build-Depends change
+  * Minor changes in Makefile and debian/rules to support hardened building
+
+ -- Vince Mulhollon <vlm@debian.org>  Fri, 14 Feb 2014 22:36:27 -0600
+
+codegroup (19981025-6) unstable; urgency=low
+
+  * Upgrade standards version from 3.9.1.0 to 3.9.2.0
+  * Redoing debian/rules into the "tiny" version.
+    The old rules file manually installed the binary into /usr/bin so I
+    added an install: stanza and BIN variable to the makefile.
+  * Minimal debian/watch file added
+  * Explicitly set source format 1.0 (for now) in debian/source/format
+    This makes lintian happy, missing-debian-source-format goes away
+    Eventually I'll switch to Quilt-3.0 format, just not today.
+
+ -- Vince Mulhollon <vlm@debian.org>  Sun, 24 Jul 2011 11:34:48 -0500
+
+codegroup (19981025-5) unstable; urgency=low
+
+  * Added Homepage line to control file
+
+ -- Vince Mulhollon <vlm@debian.org>  Tue, 01 Mar 2011 13:26:39 -0600
+
+codegroup (19981025-4) unstable; urgency=low
+
+  * Upgraded dh compat from 4 to 8.  Updated control and compat to match.
+    This fixes lintian package-uses-deprecated-debhelper-compat-version
+  * Upgrade standards version from 3.7.2 to 3.9.1.0
+    This fixes lintian ancient-standards-version
+  * Corrected misspelling in the control file.
+    This fixes lintian spelling-error-in-description
+    (Closes: #363210)
+  * Fix section name in codegroup.doc-base
+    This fixes lintian doc-base-unknown-section
+  * Cleaned up whitespace in codegroup.doc-base
+    This fixes doc-base-file-separator-extra-whitespaces
+  * Edited the manpage to not use CS
+    This fixes lintian manpage-has-errors-from-man
+  * Changed from dh_clean -k to dh_prep
+    This fixes lintian dh-clean-k-is-deprecated
+
+ -- Vince Mulhollon <vlm@debian.org>  Tue, 01 Mar 2011 12:17:48 -0600
+
+codegroup (19981025-3) unstable; urgency=low
+
+  * Update standards version from 3.6.1.1 to 3.6.2.0
+
+ -- Vince Mulhollon <vlm@debian.org>  Fri, 16 Sep 2005 21:05:13 -0500
+
+codegroup (19981025-2) unstable; urgency=low
+
+  * Fix typo in control file
+    (Closes: #277212)
+
+ -- Vince Mulhollon <vlm@debian.org>  Tue, 19 Oct 2004 19:07:55 -0500
+
+codegroup (19981025-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Vince Mulhollon <vlm@debian.org>  Sat, 21 Aug 2004 20:36:44 -0500

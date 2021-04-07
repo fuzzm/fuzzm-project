@@ -1,0 +1,26 @@
+Description: Small manpage fixes
+ Restore Vince Mulhollon's debian.org email address (not sure if that is still
+ reachable) and fix a typo.
+Author: Andreas Bombe <aeb@debian.org>
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+Index: git/palbart.1
+===================================================================
+--- git.orig/palbart.1	2017-07-09 18:04:29.540290649 +0200
++++ git/palbart.1	2017-07-09 18:08:14.444445998 +0200
+@@ -95,7 +95,7 @@
+ .SH  ADDITIONAL FEATURES
+ The additional features flag enables functions that are not compatible
+ with the PAL8 assemble. Currently only the TITLE and BANK pseudo operations
+-are enabled with this function. There are likely other incompatabilities
++are enabled with this function. There are likely other incompatibilities
+ that are not under this flag.
+ .SH  DIAGNOSTICS
+ Assembler error diagnostics are output to an error file and inserted
+@@ -216,5 +216,5 @@
+                        Used source from v2.5  03Nov07  RK and 
+                        v2.6  14Jul03  PNT. 
+ .SH AUTHOR
+-This manual page was written by Vince Mulhollon <vlm@execpc.com>,
++This manual page was written by Vince Mulhollon <vlm@debian.org>,
+ for the Debian GNU/Linux system (but may be used by others).

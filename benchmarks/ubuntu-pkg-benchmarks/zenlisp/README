@@ -1,0 +1,57 @@
+
+
+	z e n l i s p
+
+	An interpreter for symbolic LISP
+	By Nils M Holm, 2008, 2013
+	Feel free to copy, share, and modify this program.
+	See the file LICENSE for details.
+
+
+	What is zenlisp?
+
+	Zenlisp is an interpreter for a purely symbolic,
+	side effect-free, lexically scoped dialect of LISP.
+	It may be considered an implementation of pure LISP
+	plus global definitions. Zenlisp is derived from
+	ArrowLISP.
+
+
+	Installation
+
+	The interpreter is written in ANSI C (C89) and zenlisp.
+	It should compile without any modifications on a variety
+	of systems including *BSD, Linux, Plan 9 (using APE),
+	and W*ndows via MinGW or Cygwin.
+
+	On a typical post-1990 Unix system typing
+
+	make
+	su
+	make install
+	exit
+
+	should work fine.
+
+
+	Getting Started
+
+	After installing zenlisp, type "zl" to start the interpreter.
+
+	Typing "man 1 zl" will produce the zl(1) man page.
+
+	The Reference Manual can be found in the file
+
+	/usr/local/share/doc/zenlisp/zenlisp.txt
+
+	(unless you are using a different PREFIX).
+
+
+	Feedback
+
+	Please send your feedback to
+
+	Nils M Holm <nmh@t3x.org>
+
+	Thanks!
+

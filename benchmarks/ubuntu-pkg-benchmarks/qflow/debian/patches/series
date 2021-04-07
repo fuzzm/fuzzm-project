@@ -1,0 +1,7 @@
+01_fix_install_dir.patch
+permission_technology.patch
+fix_tcsh_path.patch
+yosys_version_number_minor.patch
+0005-Remove-references-to-excluded-files.patch
+0006-Fix-error-when-calling-opensta.sh.patch
+0007-Compatible-with-newer-opensta-version.patch

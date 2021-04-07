@@ -1,0 +1,31 @@
+{
+  "name": "benchmark-runner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "commander": "^7.0.0",
+    "fs-extra": "^9.1.0",
+    "lodash": "^4.17.20",
+    "tmp": "^0.2.1",
+    "winston": "^3.3.3",
+    "table": "6.0.7",
+    "data-to-latex": "0.4.3"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.6",
+    "@types/lodash": "^4.14.168",
+    "@types/node": "^14.14.25",
+    "@types/tmp": "^0.2.0",
+    "@types/table": "6.0.0",
+    "prettier": "^2.2.1",
+    "typescript": "^4.1.3"
+  }
+}

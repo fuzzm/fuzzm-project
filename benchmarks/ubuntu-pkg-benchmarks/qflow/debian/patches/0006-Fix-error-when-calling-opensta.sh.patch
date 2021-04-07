@@ -1,0 +1,35 @@
+From: Ruben Undheim <ruben.undheim@gmail.com>
+Date: Thu, 28 Mar 2019 22:28:30 +0100
+Subject: Fix error when calling opensta.sh
+
+---
+ scripts/opensta.sh   | 2 +-
+ scripts/opentimer.sh | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/scripts/opensta.sh b/scripts/opensta.sh
+index 4ac20f7..180f165 100755
+--- a/scripts/opensta.sh
++++ b/scripts/opensta.sh
+@@ -143,7 +143,7 @@ endif
+ 
+ # Add hard macros
+ 
+-hardmacrolibs = ""
++set hardmacrolibs = ""
+ if ( ${?hard_macros} ) then
+    foreach macro_path ( $hard_macros )
+       foreach file ( `ls ${sourcedir}/${macro_path}` )
+diff --git a/scripts/opentimer.sh b/scripts/opentimer.sh
+index 16acad7..d814fb3 100755
+--- a/scripts/opentimer.sh
++++ b/scripts/opentimer.sh
+@@ -143,7 +143,7 @@ endif
+ 
+ # Add hard macros
+ 
+-hardmacrolibs = ""
++set hardmacrolibs = ""
+ if ( ${?hard_macros} ) then
+    foreach macro_path ( $hard_macros )
+       foreach file ( `ls ${sourcedir}/${macro_path}` )

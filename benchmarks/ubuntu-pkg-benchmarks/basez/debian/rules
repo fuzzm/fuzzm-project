@@ -1,0 +1,19 @@
+#!/usr/bin/make -f
+
+export DH_VERBOSE=1
+
+%:
+	dh $@ 
+
+override_dh_auto_configure:
+	dh_auto_configure -- \
+          --disable-unhex-command \
+          --disable-base64-command \
+          --disable-base32-command \
+          CFLAGS="$(shell dpkg-buildflags --get CFLAGS) -O3" \
+          CPPFLAGS="$(shell dpkg-buildflags --get CPPFLAGS)" \
+          LDFLAGS="$(shell dpkg-buildflags --get LDFLAGS)"
+
+override_dh_compress:
+	rm -f debian/basez/usr/share/doc/basez/LICENSE
+	dh_compress

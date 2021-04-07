@@ -1,0 +1,62 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: qflow
+Source: http://opencircuitdesign.com/qflow/
+Files-Excluded: tech/osu018/osu018_stdcells.gds2
+                tech/osu035/osu035_stdcells.gds2
+                tech/osu050/osu05_stdcells.gds2
+                tech/gscl45nm
+
+Files: *
+Copyright: 2006-2018 Tim Edwards <tim@opencircuitdesign.com>
+License: GPL
+
+Files: src/hash.c
+Copyright: 1989,1990 Massimo A. Sivilotti
+License: GPL
+
+Files: src/blif2BSpice.c src/blif2Verilog.c
+Copyright: 2006-2013 Tim Edwards <tim@opencircuitdesign.com>
+           2009 Philipp Klaus Krause
+License: GPL
+
+Files: src/blifFanout.c
+Copyright: 2008 Steve Beccue
+           2013-2015 Tim Edwards <tim@opencircuitdesign.com>
+License: GPL
+
+Files: scripts/synthesize.sh
+Copyright: 2006 Steve Beccue
+           2006-2015 Tim Edwards <tim@opencircuitdesign.com>
+License: GPL
+
+Files: src/vesta.c
+Copyright: 2013-2017 Tim Edwards <tim@opencircuitdesign.com>
+           2017      Karl-Filip Faxen
+License: GPL
+
+Files: scripts/blif2cel.tcl.in
+Copyright: 2006-2017 Tim Edwards <tim@opencircuitdesign.com>
+           2016      David Lanzendorfer
+License: GPL
+
+Files: debian/*
+Copyright: 2014-2018 Ruben Undheim <ruben.undheim@gmail.com>
+License: GPL
+
+
+License: GPL
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation (any version).
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <http://www.gnu.org/licenses/>
+ .
+ On Debian systems, the complete text of the GNU General
+ Public License version 3 can be found in "/usr/share/common-licenses/GPL-3".
+

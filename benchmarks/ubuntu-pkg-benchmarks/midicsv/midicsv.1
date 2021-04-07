@@ -1,0 +1,82 @@
+'\" t
+.TH MIDICSV 1 "9 FEB 2004"
+.UC 4
+.SH NAME
+midicsv \- translate MIDI file to CSV
+.SH SYNOPSIS
+.B midicsv
+[
+.B \-u
+.B \-v
+] [
+.I infile
+[
+.I outfile
+] ]
+.SH DESCRIPTION
+.B midicsv
+reads a standard MIDI file and decodes it into a
+CSV (Comma-Separated Value) file which preserves all the
+information in the MIDI file.  The ASCII CSV file may be
+loaded into a spreadsheet or database application, or processed
+by a program to transform the MIDI data (for example,
+to key transpose a composition or extract a track
+from a multi-track sequence).  A CSV file
+in the format created by
+.B midicsv
+may be converted back into a standard MIDI file with the
+.B csvmidi
+program.
+.SH OPTIONS
+.TP 10
+.B \-u
+Print how-to-call information.
+.TP
+.B \-v
+Print verbose debugging information on standard
+error.  The MIDI file header is dumped, along
+with the length of each track in the file.
+.SH FILES
+If no
+.I infile
+is specified or
+.I infile
+is
+.RB `` \- '',
+.B midicsv
+reads its input from standard input; if no
+.I outfile
+is given or
+.I outfile
+is
+.RB `` \- '',
+CSV output is written  to standard output.  The input and
+output are processed in a strictly serial manner; consequently
+.B midicsv
+may be used in pipelines without restrictions.
+.SH BUGS
+.PP
+.B midicsv
+assumes its input is a well-formed standard MIDI file;
+while some error checking is performed, gross errors in
+the input file may cause
+.B midicsv
+to crash.
+.PP
+Please report problems to
+.BR bugs@fourmilab.ch .
+.SH "SEE ALSO"
+.PD
+.BR csvmidi (1),
+.BR midicsv (5)
+.ne 10
+.SH AUTHOR
+.ce 2
+John Walker
+http://www.fourmilab.ch/
+.PP
+This software is in the public domain.
+Permission to use, copy, modify, and distribute this software and its
+documentation for any purpose and without fee is hereby granted,
+without any conditions or restrictions.  This software is provided ``as
+is'' without express or implied warranty.

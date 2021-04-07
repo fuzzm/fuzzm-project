@@ -1,0 +1,315 @@
+2019-10-05  Milan Kupcevic  <milan@quarkline.net>
+
+	* configure: Release version 1.6.2
+	* Makefile.src, basez.spec.in, debian/changelog.in: Append
+	distribution id to package release version number.
+
+2019-08-03  Milan Kupcevic  <milan@quarkline.net>
+
+	* configure: Release version 1.6.1
+	* base64.c: Properly decode base64url encoded strings.
+
+2016-10-22  Milan Kupcevic  <milan@quarkline.net>
+
+	* configure: Release version 1.6
+	* INSTALL: Update.
+
+2016-10-18  Milan Kupcevic  <milan@quarkline.net>
+
+	* Makefile.src, configure: Pass LFS flags on 32-bit platforms.
+	* configure (testexec): Rewrite.
+	* Makefile.src: Increase optimization level.
+	* basez.spec.in, debian/rules: getconf flags not needed anymore.
+
+2016-10-15  Milan Kupcevic  <milan@quarkline.net>
+
+	* basez.c: New program options. Catch output errors. Update help/man
+	text accordingly.
+
+2016-10-14  Milan Kupcevic  <milan@quarkline.net>
+
+	* basez.spec.in: New file.
+	* Makefile.src, configure: Enable rpm package building.
+	* INSTALL: Update the guidelines accordingly.
+
+2016-10-09  Milan Kupcevic  <milan@quarkline.net>
+
+	* LICENSE, basez.h, base16.c, base32.c, base64.c, basez.c: New license
+	grant.
+	* basez.c: Add I/O buffer.
+	* Makefile.src, configure, base32.c, base64.c, config.h.in: Inline
+	hints. Reorder for optimized performance.
+
+2016-10-06  Milan Kupcevic  <milan@quarkline.net>
+
+	* Makefile.src, configure: Build deb packages.
+	* debian/changelog.in, debian/control.in, debian/NEWS.in, debian/rules,
+	debian/compat, debian/source/format: New files.
+	* INSTALL: Update accordingly.
+
+2016-10-04  Milan Kupcevic  <milan@quarkline.net>
+
+	* configure: Release version 1.5
+	* Makefile.src, configure, basez.c, config.h.in, basez-completion.in:
+	Optionally disable unhex command. Update help/man accordingly.
+
+2016-10-04  Milan Kupcevic  <milan@quarkline.net>
+
+	* configure: Add LDLIBS, LDADD. Release version 1.4
+	* Makefile.src: Use LDFLAGS, LDLIBS, LIBS and LDADD when linking.
+	* LICENSE: Add full license text and license grant notice.
+	* INSTALL: Remove license grant notice.
+
+2016-10-02  Milan Kupcevic  <milan@quarkline.net>
+
+	* configure: Release version 1.3
+	* basez.c, INSTALL: License text clarification.
+	* configure, basez-completion.in, Makefile.src: Apply configure options
+	to basez-completion script.
+
+2016-10-01  Milan Kupcevic  <milan@quarkline.net>
+
+	* configure: Accept standard directory options. Release version 1.2
+	* Makefile.src: Move bash-completion script to a new location.
+
+2016-09-29  Milan Kupcevic  <milan@quarkline.net>
+
+	* configure: Release version 1.1
+	* Makefile.src, configure, basez.c, config.h.in: Optionally disable
+	base32 and base64 commands. Fix typos.
+
+2016-09-28  Milan Kupcevic  <milan@quarkline.net>
+
+	* Makefile.src, configure, basez.c, config.h.in: Allow cross
+	compilation for MS Windows.
+	* basez.c: Update help/man text accordingly.
+	* INSTALL: Clarify installation procedure.
+
+2016-09-24  Milan Kupcevic  <milan@quarkline.net>
+
+	* basez.c (main, encode_b32, decode_b32): Do new options. Update
+	help/man text accordingly.
+	* basez.h, base32.c (encode_base32u, encode_base32l, encode_base32hexu)
+	(encode_base32hexl): Use unsigned char. Output either lowercase or
+	uppercase hex encodes.
+	* INSTALL: Clarify installation procedure.
+	* basez-completion: Update auto-completion arguments.
+	* configure: Update version.
+
+2016-09-17  Milan Kupcevic  <milan@quarkline.net>
+
+	* basez.c (main, encode_b64, decode_b64): Do new options. Update
+	help/man text accordingly.
+	* basez.h, base64.c (encode_base64, decode_base64, encode_base64url)
+	(decode_base64url): Use unsigned char.
+	* regtest.sh.in, base64mime.test, base64mimed.test,
+	base64mimeinvalid.test, base64plaininvaid.test, base64urld.test,
+	base64urlinvalid.test: Update regression tests accordingly.
+	* configure: Update version.
+
+2016-09-08  Milan Kupcevic  <milan@quarkline.net>
+
+	* basez.c (main, encode_b16, decode_b16): New --ignore-all-space,
+	--ignore-garbage, --strict, --upper-case and --lower-case together
+	with short options. Update help/man text accordingly.
+	* base16.c, basez.h (encode_base16u, encode_base16l, decode_base16):
+	Output either lowercase or uppercase hex encodes. Use unsigned char.
+	* basez-completion: Update auto-completion accordingly.
+	* configure: Update version.
+
+2016-09-04  Milan Kupcevic  <milan@quarkline.net>
+
+	* basez.c (main, encode_b16, set_wrap): New wrap option. New function.
+	Update help text and error warnings.
+	* basez.h, base16.c (encode_base16): Use unsigned char.
+	* see-also: Update.
+	* Makefile.src (CFLAGS): Optimize compilation.
+	* configure: Update version.
+
+2016-08-28  Milan Kupcevic  <milan@quarkline.net>
+
+	* base16.c, base32.c: Output lowercase hex encodes.
+	* base16.test, base32hex.test, base32hexd.test: Adjust encode tests
+	accordingly.
+	* basez.c: Run hex as base16, unhex as base16 -d. Update help text.
+	* Makefile.src (BINLINKS): Include hex and unhex.
+	* basez-completion: Update argument auto-completion.
+	* configure: Update version.
+
+2016-08-27  Milan Kupcevic  <milan@quarkline.net>
+
+	* basez-completion: Auto-complete command line arguments. New file.
+	* Makefile.src (install-completion, install-common, installdirs)
+	(uninstallfiles, DIST, .PHONY): Include and install autocompletion.
+	* configure: Version update.
+
+2016-08-16  Milan Kupcevic  <milan@quarkline.net>
+
+	* configure: Version update.
+	* basez.c: CRLF option could apply to base64 encodes only.
+	* basez.1: Update.
+
+2016-08-14  Milan Kupcevic  <milan@quarkline.net>
+
+	* basez.c, regtest.sh.in, Makefile.src (DIST, BINLINKS): base32plain 
+	instead of base32.
+	* base32plan.test, base32plaind.test, base32plaininvalid.test: 
+	New filenames.
+	* configure: Version update.
+	* basez.c (help): Clarification.
+	* basez.1: Update.
+
+2016-05-22  Milan Kupcevic  <milan@quarkline.net>
+
+	* configure: Release version 1.0.1
+	* basez.c: Outline bug reporting requirements.
+	* INSTALL: Add permissive license notice. Clarify installation 
+	procedure.
+	* ChangeLog: Add permissive license notice.
+
+2015-10-24  Milan Kupcevic  <milan@quarkline.net>
+
+	* configure: Release version 1.0
+	Change license notice to GPLv3+
+
+2013-02-20  Milan Kupcevic  <milan@quarkline.net>
+
+	* basez.c (encode_b16, decode_b16, encode_b32, decode_b32)
+	(encode_b64, decode_b64): User larger buffer.
+	* configure: Release version 0.99.5
+
+2013-01-31  Milan Kupcevic  <milan@quarkline.net>
+
+	* basez.c (main): Clarify error messages.
+	(main, command_name): Default name is "basez".
+	(sys_err): New argument msg.
+	(base_name): Return null.
+	* Makefile.src (basez.1): Use prebuilt manpage. 
+
+2013-01-28  Milan Kupcevic  <milan@quarkline.net>
+
+	* regtest.sh.in: Rename from regtest.sh.
+	* Makefile.src: Deal with regtest.sh.in.
+	(.in): Replace _SDIR_.
+	(test): New target.
+	(CPPFLAGS): Include current dir.
+	* INSTALL: Explain make test target.
+
+2013-01-25  Milan Kupcevic  <milan@quarkline.net>
+
+	* configure: Also try clang. Release version 0.99
+
+2013-01-22  Milan Kupcevic  <milan@quarkline.net>
+
+	* Makefile.src (install-strip): New target.
+	* configure: Release version 0.98
+
+2013-01-21  Milan Kupcevic  <milan@quarkline.net>
+
+	* basez.c (main): Input FILE option.
+	* (help): Explain it.
+
+2013-01-20  Milan Kupcevic  <milan@quarkline.net>
+
+	* basez.c (encode_b64, decode_b64): Do --crlf.
+	* regtest.sh: Use command options from test files.
+	* base64mime.test: Test --crlf option.
+
+2013-01-18  Milan Kupcevic  <milan@quarkline.net>
+
+	* basez.c (encode_b64, decode_b64): Mime and pem encode/decode.
+	(main): Use them. 
+	(sys_err, newline_out): New functions.
+	(encode_b64, decode_b64, encode_b32, decode_b32)
+	(encode_b16, decode_b16): Use them.
+	(help): Explain new options.
+	* base64mime.test, base64mimed.test, base64mimeinvalid.test: New files.
+	* regtest.sh: Use new test data.
+	* Makefile.src: Deal with the new files.
+
+2013-01-16  Milan Kupcevic  <milan@quarkline.net>
+
+	* base32.c (dec_b32, decode_base32, decode_base32hex): New functions.
+	* basez.h (decode_base32, decode_base32hex): New definitions.
+	* basez.c (decode_b32): New function.
+	(main): Use it.
+	* base32d.test, base32hexd.test: New files.
+	* base32invalid.test, base32hexinvalid.test: New files.
+
+2013-01-15  Milan Kupcevic  <milan@quarkline.net>
+
+	* base64.c (dec_b64, decode_base64, decode_base64url): New functions.
+	* basez.h (decode_base64, decode_base64url): New definitions.
+	* basez.c (decode_b64): New function.
+	(main): Use it.
+	* base64d.test, base64urld.test: New files.
+	* base64invalid.test, base64urlinvalid.test: New files.
+	* base16invalid.test: New files.
+	* regtest.sh: Use new test data.
+	* Makefile.src: Deal with the new files.
+
+2013-01-14  Milan Kupcevic  <milan@quarkline.net>
+
+	* base16.c (decode_base16): New function.
+	* basez.h (decode_base16): New definition.
+	* basez.c (decode_b16): New function.
+	(main): Use it.
+	* base16d.test: New file.
+	* regtest.sh: Use new test data.
+	* Makefile.src: Deal with the new files.
+
+2013-01-13  Milan Kupcevic  <milan@quarkline.net>
+
+	* base64.c (enc_b64): New function.
+	(encode_base64, encode_base64url): New functions.
+	* basez.c (encode_b64): New function.
+	(main): Use it.
+	* base64.test, base64url.test: New files.
+	* regtest.sh: Use new test data.
+	* Makefile.src: Deal with the new files.
+
+2013-01-12  Milan Kupcevic  <milan@quarkline.net>
+
+	* base16.c (encode_base16): New function.
+	* basez.c (encode_b16): New function.
+	(main): Use it.
+	* base16.test: New file.
+	* regtest.sh: Use new test data.
+	* Makefile.src: Deal with the new files.
+
+2013-01-10  Milan Kupcevic  <milan@quarkline.net>
+
+	* regtest.sh: New file.
+	* base32.test, base32hex.test: New files.
+	* Makefile.src: Deal with the new files.
+
+2013-01-09  Milan Kupcevic  <milan@quarkline.net>
+
+	* base32.c (enc_b32, encode_base32, encode_base32hex): New functions.
+	* basez.c (encode_b32, help, version, b_name): New functions.
+	(main): Use the new functions.
+	(invalid_input, internal_error): New functions.
+	* basez.h: New definitions.
+	* see-also: New file.
+	* Makefile.src: Deal with the new files.
+
+2013-01-08  Milan Kupcevic  <milan@quarkline.net>
+
+	* Makefile.src: New file.
+	* config.h.in: New file.
+	* configure: New file.
+	* TODO: New file.
+
+2013-01-05  Milan Kupcevic  <milan@quarkline.net>
+
+	* basez.c (main): New function.
+	* LICENSE: GPLv3.
+	* INSTALL: New file.
+	* ChangeLog: New file.
+
+Copyright (C) 2013, 2015, 2016  Milan Kupcevic
+==============================================
+Copying and distribution of this file, with or without modification, 
+are permitted in any medium without royalty provided the copyright 
+notice and this notice are preserved.  This file is offered as-is, 
+without any warranty.

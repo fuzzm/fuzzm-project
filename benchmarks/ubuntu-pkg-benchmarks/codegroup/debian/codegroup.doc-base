@@ -1,0 +1,9 @@
+Document: codegroup
+Title: Codegroup Manual
+Author: John Walker
+Abstract: Codegroup encodes and decodes five letter format files.
+Section: Text
+
+Format: HTML
+Index: /usr/share/doc/codegroup/codegroup.html
+Files: /usr/share/doc/codegroup/codegroup.html

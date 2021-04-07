@@ -1,0 +1,11 @@
+basez (1.5-1) unstable; urgency=medium
+
+  To avoid conflicts with other debian packages the unhex, base32 and base64
+  commands have been disabled by default. Create a symlink to the basez
+  executable to enable the missing command functionality. For example:
+
+    ln -s /usr/bin/basez /usr/local/bin/unhex
+
+  would provide the unhex command of the basez package.
+
+ -- Milan Kupcevic <milan@debian.org>  Tue, 04 Oct 2016 18:57:14 -0400

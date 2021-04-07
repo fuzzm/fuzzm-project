@@ -1,3 +1,13 @@
+*.iml
+.idea
+*.swp
+*.log
+*.afl
+*.all
+*.can
+*.stack
+*.heap
+*.wasm.instr
 AFL-wasm
 magma
 wasabi

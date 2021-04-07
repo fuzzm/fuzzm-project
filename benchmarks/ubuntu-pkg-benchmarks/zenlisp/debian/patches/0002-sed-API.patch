@@ -1,0 +1,21 @@
+From: "Barak A. Pearlmutter" <barak+git@cs.nuim.ie>
+Date: Mon, 20 Jan 2014 19:12:01 +0000
+Subject: sed API
+
+---
+ Makefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Makefile b/Makefile
+index d37f875..9e838ff 100644
+--- a/Makefile
++++ b/Makefile
+@@ -31,7 +31,7 @@ zenlisp:	zl base.l
+ test:	zl
+ 	rm -f delete-me
+ 	ZENSRC=. ./zl -i <test.l | tee _test
+-	sed -i '' -e 's/^\* [0-9]*: /\* /' _test
++	sed -i -e 's/^\* [0-9]*: /\* /' _test
+ 	diff test.OK _test && rm _test delete-me
+ 
+ # Set $C to -c, if your system does not copy files by default.

@@ -1,0 +1,74 @@
+H:This file contains some example
+  English tunes for abc2mtex
+
+O:E                   % mark all tunes with an E (English) for the index
+
+X:1                   % tune no 1
+T:Dusty Miller, The   % title
+T:Binny's Jig         % an alternative title
+C:Trad.               % traditional
+R:DH                  % double hornpipe
+M:3/4                 % meter
+E:8                   % note spacing
+I:speed 300           % speed for playabc
+K:G                   % key
+B>cd BAG|FA Ac BA|B>cd BAG|DG GB AG:|\
+Bdd gfg|aA Ac BA|Bdd gfa|gG GB AG:|
+BG G/2G/2G BG|FA Ac BA|BG G/2G/2G BG|DG GB AG:|
+W:Hey, the dusty miller, and his dusty coat;
+W:He will win a shilling, or he spend a groat.
+W:Dusty was the coat, dusty was the colour;
+W:Dusty was the kiss, that I got frae the miller.
+
+\bigskip              % a bit of space
+
+M:6/8                 % default meter for the following tunes
+R:J                   % mark following tunes with a J (jig) for the index
+
+X:2
+T:Old Sir Simon the King
+C:Trad.
+S:Offord MSS          % from Offord manuscript
+N:see also Playford   % notes
+M:9/8
+R:SJ                  % slip jig
+Q:C3=120              % tempo
+Z:originally in C     % transcription notes
+K:G
+D|GFG GAG G2D|GFG GAG F2D|EFE EFE EFG|A2G F2E D2:|
+D|GAG GAB d2D|GAG GAB c2D|[1 EFE EFE EFG|A2G F2E D2:|\
+M:12/8                % change meter for a bar
+[2 E2E EFE E2E EFG|\
+M:9/8                 % change back again
+A2G F2E D2|]
+
+X:3
+T:William and Nancy
+T:New Mown Hay
+T:Legacy, The
+C:Trad.
+A:Bledington          % from Bledington in Gloucestershire
+B:Sussex Tune Book    % also in these books
+B:Mally's Cotswold Morris vol.1 2
+D:Morris On           % you can hear it on this record
+P:(AB)2(AC)2A         % play the parts in this order
+M:6/8
+K:G
+P:A                   % part A
+D|"G"G2G GBd|"C"e2e "G"dBG|"D7"A2d "G"BAG|"C"E2"D7"F "G"G2:|
+P:B                   % part B
+d|"G"e2d B2d|"C"gfe "G"d2d| "G"e2d    B2d|"C"gfe    "D7"d2c|\
+  "G"B2B Bcd|"C"e2e "G"dBG|"D7"A2d "G"BAG|"C"E2"D7"F "G"G2:|
+T:Slows
+M:4/4                 % change meter
+L:1/4                 % and default note length
+P:C                   % part C
+"G"d2|"C"e2 "G"d2|B2 d2|"Em"gf "A7"e2|"D7"d2 "G"d2|"C"e2 "G"d2|\
+M:3/8
+L:1/8
+"G"B2d|\
+M:6/8
+"C"gfe "D7"d2c|\
+I:nobarcheck
+  "G"B2B Bcd|"C"e2e "G"dBG|"D7"A2d "G"BAG|"C"E2"D7"F "G"G2:|
+

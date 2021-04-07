@@ -1,0 +1,31 @@
+pdi2iso (0.1-0ubuntu3) bionic; urgency=high
+
+  * No change rebuild to pick up -fPIE compiler default
+
+ -- Balint Reczey <rbalint@ubuntu.com>  Tue, 03 Apr 2018 12:38:50 +0000
+
+pdi2iso (0.1-0ubuntu2) xenial; urgency=medium
+
+  * debian/watch: Add.
+  * debian/control:
+    - Update Maintainer to more recent Ubuntu Developers email.
+    - Build-depend on debhelper (>= 9).
+    - Remove build dependency on cdbs.
+    - Move Homepage to its own field.
+    - Bump Standards-Version to 3.9.6.
+  * debian/compat: Bump to 9.
+  * debian/copyright: Change to DEP-5 format.
+  * debian/rules: Modernize, use dh sequencer instead of CDBS.
+  * debian/source/format: Indicate 3.0 (quilt) format.
+  * debian/docs: Remove.
+  * debian/patches/makefile.diff: Add variables for CC and flags to correctly
+    use Ubuntu build flags.
+
+ -- Logan Rosen <logan@ubuntu.com>  Fri, 04 Dec 2015 08:24:14 -0500
+
+pdi2iso (0.1-0ubuntu1) gutsy; urgency=low
+
+  * Initial release
+
+ -- Cyrille Grosdemange <ze.cyrilou@gmail.com>  Sun, 15 Apr 2007 03:04:06 +0200
+

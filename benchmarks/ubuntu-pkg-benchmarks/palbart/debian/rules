@@ -1,0 +1,11 @@
+#!/usr/bin/make -f
+
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
+%:
+	dh $@
+
+get-orig-source:
+	debian/get-orig-source
+
+.PHONY: get-orig-source

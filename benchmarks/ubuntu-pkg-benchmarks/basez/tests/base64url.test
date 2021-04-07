@@ -1,0 +1,16 @@
+#
+#    base64url encoding regression test data
+#
+
+f Zg==
+fo Zm8=
+foo Zm9v
+foob Zm9vYg==
+fooba Zm9vYmE=
+foobar Zm9vYmFy
+QUAKEMACHINE UVVBS0VNQUNISU5F
+Base64 QmFzZTY0
+Base\ 64\ Encoding\ with\ URL\ and\ Filename\ Safe\ Alphabet QmFzZSA2NCBFbmNvZGluZyB3aXRoIFVSTCBhbmQgRmlsZW5hbWUgU2FmZSBBbHBoYWJldA==
+RFC\ 4648 UkZDIDQ2NDg=
+To>go? VG8-Z28_
+Никола\ Тесла 0J3QuNC60L7Qu9CwINCi0LXRgdC70LA=

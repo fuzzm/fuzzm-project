@@ -1,0 +1,1217 @@
+
+
+	zenlisp reference
+
+	By Nils M Holm, 2007, 2008
+	Feel free to copy, share, and modify this document.
+	See the file LICENSE for details.
+
+
+	0 Contents
+
+	1   . . . . . . . . . . . . . .  Forms
+	1.1 . . . . . . . . . .  Abbreviations
+	1.2 . . . . . . . . . . . . . Comments
+	1.3 . . . . . . . . . Unreadable Forms
+	2   . . . . . . . . . . .  Expressions
+	2.1 . . . . . . . . . . . . .  Symbols
+	2.2 . . . . . . . . . . . .  Functions
+	3   . . . . . . . . . . .  Some Theory
+	3.1 . . . . . . . . . Lambda Functions
+	3.2 . . . . . . . Function Application
+	4   . . . . . . .  Primitive Functions
+	4.1 . .  Composition and Decomposition
+	4.2 . . . . . . .  Binding Constructcs
+	4.3 . . . . . . . . . . . . Predicates
+	4.4 . . . . . . . . . . . Control Flow
+	4.5 . . . . . . . . . . REPL Functions
+	4.6 . . . . . . . . . . Meta Functions
+	5   . . . . . . . .  Utility Functions
+	5.1 . . . . . . . . . . List Functions
+	5.2 . . . . . . . . . . . . Predicates
+	5.3 . . . . . . . . . . . Control Flow
+	5.4 . . . . . . . . . . . . . Packages
+	6   . . . . . . . . . . Math Functions
+	6.1 . . . . . . . . . . . . .  Summary
+	7   . . . . . . . . . . .  Miscellanea
+	7.1 . . . . . . . .  Naming Convention
+	7.2 . . . . . . . . Evaluation History
+	7.3 . . . . . . . . . . .  Source Path
+
+
+	1 Forms
+
+	A Symbol is any combination of these characters:
+
+	a b c d e f g h i j k l m n o p q r s t u v w x y z
+	0 1 2 3 4 5 6 7 8 9 0
+	* + - / < = >
+
+	An Atom is either a symbol or () (pronounced NIL).
+
+	A Pair is a concatenation of two forms:
+
+	(car-part . cdr-part)
+
+	A pair may contain other pairs:
+
+	((a . b) . c)
+	(a . (b . c))
+	((a . b) (c . d))
+
+	Each Form is either an atom or a pair.
+
+
+	1.1 Abbreviations
+
+	Some pairs may be abbreviated:
+
+	     (a . ())  =  (a)
+	    (a . (b))  =  (a b)
+	(a . (b . c))  =  (a b . c)
+
+	A List is a pair whose innermost cdr part is ():
+
+	List = () or (form . list).
+
+	These are Lists:
+
+	()
+	(foo)
+	(foo bar baz)
+	((a . b) foo (nested list))
+
+	A list whose innermost cdr part is a symbol is called
+	a Dotted List. These are dotted lists:
+
+	(a b . c)
+	((foo bar) . baz)
+
+	Lists of single-character symbols can be condensed:
+
+	      (a)  =  '#a
+	  (a b c)  =  '#abc
+	(- 2 5 7)  =  '#-257
+
+
+	1.2 Comments
+
+	A comment may be inserted anywhere (even inside of a form)
+	by including a semicolon (;). Comments extend to the end of
+	the current line.
+
+	Example:
+
+	(define (f x)  ; this is a comment
+	  (cons x x))
+
+
+	1.3 Unreadable Forms
+
+	A form that is delimited by curly braces is unreadable:
+
+	{no matter what} => undefined
+
+	Unreadable forms are used to represent data that have no
+	unambiguous textual representation.
+
+
+	2 Expressions
+
+	An Expression is a form with a meaning.
+
+	x => y  denotes that x reduces to y;
+	        y is the normal form of x.
+	bottom  denotes an undefined value.
+
+
+	2.1 Symbols
+
+	Each symbol reduces to the value bound to it:
+
+	Symbol => value of symbol
+
+	Undefined-Symbol => bottom
+
+	A symbol that is bound to itself is called a Constant,
+	symbols bound to other values are called Variables.
+
+
+	2.2 Functions
+
+	(F x) denotes the application of f to x. F is called a
+	Function. X is called an Argument.
+
+	         (function) => normal form
+	    (function form) => normal form
+	(function form ...) => normal form
+
+	Function applications are reduced by first reducing arguments
+	to their normal forms and then applying the Function to the
+	resulting normal forms.
+
+	Pseudo Functions are constructs that are applied in the same
+	way as functions but do not reduce their arguments.
+
+
+	3 Some Theory
+
+
+	3.1 Lambda Functions
+
+	(Lambda (x) e) is a Lambda Function.
+
+	X is a variable of that function and E is the Term of that
+	function. Lambda functions are anonymous.
+
+	If X does not occur in E, the function is constant.
+
+	X may occur multiple times in E.
+
+	X is bound in an expression E, if
+
+	- E is a lambda function
+	AND
+	- X is a variable of E.
+
+	Examples:
+
+	X is bound in (lambda (x) x).
+	Y is bound in (lambda (y) (lambda (x) (x y)))
+	Y is not bound in (lambda (x) (x y))
+
+	When a variable X is not bound in an expression E,
+	X is free in E; X is a free variable of E.
+
+
+	3.2 Function Application
+
+	A lambda function is applied to an expression using
+	Beta Reduction.
+
+	e[x/v] means: replace each X that is free in E with V.
+
+	Beta reduction:
+	((lambda (x) e) v) => e[x/v]
+
+	Examples:
+
+	a --> b  denotes a partial reduction; b is not the normal
+	         form of a, because it can be reduced further.
+
+	    ((lambda (x) x) :t)  => :t       ; identity
+	((lambda (x) (x x)) :t) --> (:t :t)  ; self-application
+	((lambda (x) (f x)) :t) --> (f :t)   ; f is free
+	   ((lambda (x) ()) :t)  => ()       ; constant function
+
+	Functions of multiple variables bind arguments by position:
+
+	((lambda (x y z) (list x y z)) 'first 'second 'third)
+	  => '(first second third)
+
+
+	4 Primitive Functions
+
+	The following definitions apply:
+
+	symbol   denotes a variable.
+	'symbol  denotes a constant.
+	eval[x]  denotes the normal form of x.
+	x ...    denotes zero or more appearances of x.
+	x | y    denotes either x or y.
+
+	Variables become constants when passed as arguments to pseudo
+	functions.
+
+	A list of pairs is called an Association List (or Alist).
+	The car part of each pair of an alist is called its key and
+	its cdr part is called its value.
+
+
+	4.1 Composition and Decomposition
+
+
+	4.1.1 CAR
+
+	(car pair) => form
+
+	Extract the car part of a pair.
+
+	Examples:
+
+	    (car '(a.b) => 'a
+	     (car '(a)) => 'a
+	   (car '#abc)) => 'a
+	(car '((ab) c)) => '(ab)
+	      (car 'a)  => bottom
+	       (car ()) => bottom
+
+
+	4.1.2 CDR
+
+	(cdr pair) => form
+
+	Extract the cdr part of a pair.
+
+	Examples:
+
+	    (cdr '(a.b) => 'b
+	     (cdr '(a)) => ()
+	   (cdr '#abc)) => '#bc
+	(cdr '((ab) c)) => '(c)
+	      (cdr 'a)  => bottom
+	       (cdr ()) => bottom
+
+
+	4.1.3 CONS
+
+	(cons form form) => pair
+
+	Construct a fresh pair.
+
+	Examples:
+
+	    (cons 'foo 'bar) => '(foo . bar)
+	      (cons 'foo ()) => '(foo)
+	  (cons 'foo '(bar)) => '(foo bar)
+	   (cons 'a '(b . c) => '(a b . c)
+	         (cons () () => (())
+	(cons '(foo) '(bar)) => '((foo) bar)
+
+
+	4.1.4 EXPLODE
+
+	(explode symbol) => list
+
+	Explode a symbol to a list of single-character symbols. If
+	the argument is (), return ().
+
+	Examples:
+
+	  (explode 'foo) => '(f o o) = '#foo
+	    (explode 'x) => '(x)     = '#x
+	    (explode ()) => ()
+	(explode '(a.b)) => bottom
+
+
+	4.1.5 IMPLODE
+
+	(implode list) => symbol
+
+	Implode a list of single-character symbols to a symbol. If
+	the argument is (), return ().
+
+	Examples:
+
+	  (implode '(f o o)) => 'foo
+	     (implode '#foo) => 'foo
+	      (implode '(x)) => 'x
+	        (implode ()) => ()
+	(implode '(a (b.c))) => bottom  ; non-atom in list
+	   (implode '(a bc)) => bottom  ; symbol BC too long
+
+
+	4.1.6 QUOTE
+
+	(quote form) => 'form
+
+	Indicate normal form.
+
+	Examples:
+
+	                 foo => eval[foo]
+	         (quote foo) => 'foo
+	        (cons :t :t) => '(:t . :t)
+	(quote (cons :t :t)) => '(cons :t :t)
+
+	Note: 'foo is just an abbreviation of (quote foo).
+
+
+	4.2 Binding Constructcs
+
+
+	4.2.1 DEFINE (pseudo function)
+
+	(define symbol form) => 'symbol
+
+	Bind eval[form] to symbol.
+
+	Examples:
+
+	        (define foo 'bar) => 'foo ; bind foo to 'bar
+	(define f (lambda (x) x)) => 'f   ; bind f to (lambda (x) x)
+	         (define (f x) x) => 'f   ; bind f to (lambda (x) x)
+	     (define (f x . y) y) => 'f   ; bind f to (lambda (x . y) y)
+	       (define (f . x) x) => 'f   ; bind f to (lambda x x)
+
+
+	4.2.2 LAMBDA (pseudo function)
+
+	(lambda (symbol ...) form) => (closure (symbol ...) form env)
+
+	Create a closure from a lambda expression.
+
+	A Closure is a snapshot of a lambda function at a given time.
+	In fact, only closures are valid function in zenlisp while
+	lambda expressions merely create closures.
+
+	The snapshot is taken by capturing the names and values of
+	all free variables of the term of the lambda function and
+	storing them in an alist. This alist is attached to the
+	closure as the ENV argument.
+
+	When a closure is applied, the captured bindings be will
+	re-established during the application.
+
+	Lambda may have zero arguments or more than a single argument:
+
+	             ((lambda () :t)) => :t
+	((lambda (x y z) z) 'a 'b 'c) => 'c
+
+	Variadic arguments are implemented using dotted argument
+	lists:
+
+	      ((lambda (x . y) y) 'a) => ()
+	   ((lambda (x . y) y) 'a 'b) => '(b)
+	((lambda (x . y) y) 'a 'b 'c) => '(b c)
+
+	When the argument list is atomic, all arguments are bound
+	to that atom:
+
+	       ((lambda x x)) => ()
+	    ((lambda x x) 'a) => '(a)
+	((lambda x x) 'a b c) => '(a b c)
+
+	Examples:
+
+	(lambda (x) x) => (closure (x) x ())
+	(lambda (x) (lambda (y) (cons x y)))
+	  => (closure (x) (lambda (y) (cons x y)) ())
+	((lambda (x) (lambda (y) (x y))) 'foo)
+	  => (closure (y) (x y) ((x . foo)))
+
+
+	4.2.3 LET (pseudo function)
+
+	(let ((symbol form) ...) term) => eval[term]
+
+	LET is an alternative syntax for the application of a
+	lambda function:
+
+	(let ((f1 a1) ... (fN aN)) expr)
+
+	equals
+
+	((lambda (f1 ... fN) expr) a1 ... aN)
+
+	The first argument of LET is called its environment. It is
+	a list of two-element lists called bindings. The first
+	element of each binding holds the name of the symbol to
+	bind and the second element holds the value to be bound.
+
+	The term of LET is reduced in the local context created by
+	establishing the bindings of the environment. The context
+	ceases to exist after reducing the term to its normal form.
+
+	The purpose of LET is to name intermediate results in
+	expressions:
+
+	(let ((f (lambda (x) (cons x x)))
+	      (v 'foo))
+	  (f v))
+	=> '(foo . foo)
+
+	LET first reduces all values of the environment before
+	it binds any symbols. Therefore,
+
+	(let ((v :f))
+	  (let ((v :t)
+	        (u v))  ; U is bound to the outer value of V
+	    u))
+	=> :f
+
+
+	4.2.4 LETREC (pseudo function)
+
+	(letrec ((symbol form) ...) term) => eval[term]
+
+	LETREC works like LET, but in addition it fixes recursive
+	bindings using RECURSIVE-BIND (see below).
+
+	Therefore LETREC can be used to bind recursive functions
+	(even mutually recursive ones) to symbols.
+
+
+	4.2.5 RECURSIVE-BIND
+
+	(recursive-bind '((symbol . form) ...))
+
+	RECURSIVE-BIND fixes recursive references in environments.
+	Its argument is an environment represented by an alist.
+
+	A recursive reference occurs when a closure closes over
+	the symbol it is bound to:
+
+	((f . (closure (x) (f x) ((f . void)))))
+
+	Because F is closed over before it is bound to the closure,
+	F cannot recurse. Passing above environment to RECURSIVE-BIND
+	yields the following recursive structure:
+
+	((f . (closure (x) (f x)
+	  ((f . (closure (x) (f x)
+	    ((f . (closure (x) (f x)
+	      ((f . ...
+
+
+	4.3 Predicates
+
+
+	4.3.1 ATOM
+
+	(atom form) => :t | :f
+
+	Reduce to :t, if the given form is atomic and otherwise to :f.
+
+	Examples:
+
+	    (atom ()) => :t
+	    (atom :t) => :t
+	  (atom 'foo) => :t
+	(atom '(a.b)) => :f
+	(atom '(a b)) => :f
+	 (atom '#foo) => :f
+
+
+	4.3.2 DEFINED
+
+	(defined 'symbol) => :t | :f
+
+	Reduce to :t, if the given symbol is bound in any active
+	context (ie by DEFINE or in a surrounding LET or LETREC).
+	Otherwise reduce to :f.
+
+	Examples:
+
+	(defined 'undefined) => :f
+	  (defined 'defined) => t
+	    (defined '(a.b)) => bottom
+	     (defined '#foo) => bottom
+
+
+	4.3.3 EQ
+
+	(eq form1 form2) => :t | :f
+
+	Reduce to :t, if the given forms are identical and otherwise
+	to :f.
+
+	Two forms are identical, if they are the same symbol, bound
+	to the same symbol, or if they are both ().
+
+	Examples:
+
+	    (eq 'foo 'foo) => t
+	      (eq foo foo) => t
+	        (eq :f :f) => t
+	    (eq 'foo 'bar) => :f
+	   (eq 'foo '#foo) => :f
+	    (eq 'a '(a.b)) => :f
+	  (eq '#foo '#foo) => bottom
+	(eq '(a.b) '(a.b)) => bottom
+
+
+	4.4 Control Flow
+
+
+	4.4.1 AND (pseudo function)
+
+	(and expr ...) => form
+
+	Reduce the given expressions in sequence until one of them
+	reduces to :f. If one of the expressions reduces to :f,
+	return :f, otherwise return the normal form of the last
+	expression. If no expression is given, return :t.
+
+	Examples:
+
+	            (and) => t
+	       (and 'foo) => 'foo
+	         (and :f) => :f
+	    (and :f 'foo) => :f
+	    (and 'foo :f) => :f
+	  (and 'foo 'bar) => 'bar
+	(and 'a 'b 'c :f) => :f
+
+
+	4.4.2 APPLY
+
+	(apply fun expr ... list) => form
+
+	Apply the function fun to the given argument list, returning
+	the normal form of the application. When one or multiple
+	expressions are given between the function and the list, cons
+	their normal forms to the list before applying the function.
+
+	Note: APPLY is called by value, but fun is applied to list
+	using call by name.
+
+	Examples:
+
+	        (apply cons '(a b)) => '(a . b)
+	      (apply cons '('a 'b)) => '('a . 'b)
+	    (apply list 'a 'b '(c)) => '(a b c)
+	(apply (lambda () 'foo) ()) => 'foo
+
+
+	4.4.3 BOTTOM
+
+	(bottom form ...) => bottom
+
+	Reduce to bottom, thereby stopping the reduction in progress.
+
+	The given forms print in the resulting error message.
+
+	Examples:
+
+	               (bottom) => bottom
+	          (bottom 'foo) => bottom
+	(bottom 'foo 'bar 'baz) => bottom
+
+
+	4.4.4 COND (pseudo function)
+
+	(cond (pred expr) (pred expr) ...) => form
+
+	Reduce expressions conditionally.
+
+	Each argument of COND is a called a clause. It consists of
+	two expressions:
+
+	(predicate expression)
+
+	COND reduces the predicate of the first clause and if it
+	has a true normal form (anything but :f), the entire
+	application of COND reduces to the normal form of the
+	associated expression.
+
+	COND keeps evaluating clauses until it finds one with a
+	true predicate. At least one predicate must be true.
+
+	Examples:
+
+	(cond ('foo 'bar)) => 'bar
+	(cond (:f 'foo) (t 'bar)) => 'bar
+	(cond ((atom ()) (cons 'foo 'bar))) => '(foo . bar)
+	(cond (:f 'oops)) => bottom
+
+
+	4.4.5 OR (pseudo function)
+
+	(or expr ...) => form
+
+	Reduce the given expressions in sequence until one of them
+	reduces to :t. If one of the expressions reduces to :t,
+	return :t, otherwise return the normal form of the last
+	expression. If no expression is given, return :f.
+
+	Examples:
+
+	            (or) => :f
+	       (or 'foo) => 'foo
+	         (or :f) => :f
+	    (or :f 'foo) => 'foo
+	    (or 'foo :f) => 'foo
+	  (or 'foo 'bar) => 'foo
+	(or :f :f :f 'a) => 'a
+
+
+	4.5 EVAL
+
+	(eval expr) => form
+
+	Reduce expr and return its normal form.
+
+	Examples:
+
+	(eval '(cons 'a 'b)) => '(a . b)
+	 (eval (cons 'a 'b)) => bottom  ; = (eval '(a . b))
+
+
+	4.6 Meta Functions
+
+	These functions are designed to be applied at the REPL.
+	They are not intended for use in programs.
+
+
+	4.6.1 CLOSURE-FORM (pseudo function)
+
+	(closure-form args | body | env) => argument | :f
+
+	Preset the amount of information to be disclosed when
+	printing a closure.
+
+	(closure-form args) ; this is the default
+
+	(lambda (foo) bar) => {closure (foo)}
+
+	(closure-form body) ; also print the body
+
+	(lambda (foo) bar) => {closure (foo) bar}
+
+	(closure-form env) ; also print the environment
+
+	; given that BAR is bound to BAZ
+	(lambda (foo) bar) => (closure (foo) bar ((bar . baz)))
+
+	NOTE: (closure-form env) may cause the interpreter to emit
+	*a lot* of information. Printing recursive closures (created
+	using LETREC or RECURSIVE-BIND) may take forever. Literally.
+
+	Incomplete closures are unreadable because their textual
+	representation is ambiguous.
+
+
+	4.6.2 DUMP-IMAGE (pseudo function)
+
+	(dump-image file-name) => t
+
+	Dump an image of the interpreter workspace to the given file.
+	Reduce to :t on success and bottom in case of failure.
+
+	An image dump may be re-loaded by passing its file name to
+	the interpreter.
+
+
+	4.6.3 GC (pseudo function)
+
+	(gc) => (free-nodes max-use)
+
+	Perform a garbage collection and return some information.
+
+	Free-nodes is the amount of free nodes in the workspace.
+
+	Max-use is the maximum number of live nodes since the the
+	last application of GC.
+
+
+	4.6.4 LOAD (pseudo function)
+
+	(load file-name) => t
+
+	Read the content of the given file as if typed in at the
+	interpreter prompt. A .l suffix will be attached to the
+	given file name, so
+
+	(load foo)
+
+	will in fact load the file "foo.l".
+
+
+	4.6.5 QUIT
+
+	(quit) =>
+
+	Terminate the interpreter.
+
+
+	4.6.6 STATS (pseudo function)
+
+	(stats expr) => '(normal-form steps nodes gcs)
+
+	Reduce the given expression to its normal form. Return that
+	normal form plus some additional information.
+
+	STEPS is the number of reduction steps performed before
+	the normal form was found.
+
+	NODES is the total number of nodes allocated during the
+	reduction.
+
+	GCS is the number of garbage collections performed during
+	the reduction.
+
+	The information delivered by STATS may be used to compare
+	algorithms.
+
+
+	4.6.7 SYMBOLS
+
+	(symbols) => list
+
+	Return a list of all symbols in the symbol table.
+
+
+	4.6.8 TRACE (pseudo function)
+
+	(trace function-name) => :t
+
+	Tell the interpreter to print applications of the given
+	function before applying it.
+
+	Use (trace) to turn off tracing.
+
+
+	4.6.9 VERIFY-ARROWS
+
+	(verify-arrows :t | :f) => :t | :f
+
+	Turn verification of reduction operators on or off.
+
+	When verification is off, arrow operators (=>) at the top
+	level act as comments:
+
+	(verify-arrows :f)
+	(cons 'a 'b) => this is a comment
+	=> '(a . b)
+
+	When verification is on, zenlisp will make sure that the
+	normal form of the expression on the lefthand side of =>
+	is equal to the form on its righthand side:
+
+	(verify-arrows :t)
+	(cons 'a 'b) => '(a . b)
+	=> '(a . b)
+
+	When the verification succeeds, nothing special happens.
+	When the verification fails, an error message is issued:
+
+	(cons 'a 'b) => 'foo
+	=> '(a . b)
+	* 1: REPL: Verification failed; expected: foo
+
+
+	5 Utility Functions
+
+	5.1 List Functions
+
+
+	5.1.1 APPEND
+
+	(append list ...) => list
+
+	Concatenate lists. Appending () to a list yields the
+	original list. Appending an atom to a list yields a
+	dotted list.
+
+	Examples:
+
+	(append '(foo bar) '(baz)) => '(foo bar baz)
+	(append '#abc '#def '#xyz) => '#abcdefxyz
+	         (append () '#foo) => '#foo
+	         (append '#foo ()) => '#foo
+	    (append '(a) '(b . c)) => '(a b . c)
+	         (append '#abc 'd) => '(a b c . d)
+	            (append () ()) => ()
+	               (append ()) => ()
+	                  (append) => ()
+
+
+	5.1.2 ASSOC / ASSQ
+
+	(assoc form alist) => pair
+
+	Retrieve a pair with a given key from an association list.
+	Return :f if no pair has a matching key.
+
+	Examples:
+
+	    (assoc 'b '((a.1) (b.2))) => '(b . 2)
+	    (assoc 'x '((x.1) (x.2))) => '(x . 1)
+	    (assoc 'q '((x.1) (x.2))) => :f
+	(assoc '#foo '((#foo . bar))) => '(#foo . bar)
+
+	ASSQ is similar to ASSOC, but its first argument is limited
+	to symbols:
+
+	    (assq 'b '((a.1) (b.2))) => '(b . 2)
+	(assq '#foo '((#foo . bar))) => :f
+
+
+	5.1.3 CAAR ... CDDDDR
+
+	  (caar list) = (car (car list))
+	  (cadr list) = (car (cdr list))
+	  (cdar list) = (cdr (car list))
+	  (cddr list) = (cdr (cdr list))
+	(cddddr list) = (cdr (cdr (cdr (cdr list))))
+
+	Extract elements of nested lists:
+
+	Examples:
+
+	(caar '((key . value)) => 'key
+	(cdar '((key . value)) => 'value
+	(cadr '(first second)) => 'second
+	        (caddr '#1234) => '3
+	       (cadddr '#1234) => '4
+
+
+	5.1.4 ID
+
+	(id form) => form
+
+	Map a value to itself (identity function).
+
+	(OK, not really a list function.)
+
+	Examples:
+
+	      (id 'foo) => 'foo
+	(id (id '#foo)) => '#foo
+
+
+	5.1.5 LIST
+
+	(list expr ...) => list
+
+	Form a list from arguments. Unlike members of quoted (constant)
+	lists, the arguments of LIST are reduced before inserting them
+	in the list.
+
+	Examples:
+
+	             (list) => ()
+	        (list 'foo) => '(foo)
+	    (list 'a 'b 'c) => '#abc
+	    '((cons 'a 'b)) => '((cons 'a 'b))
+	(list (cons 'a 'b)) => '((a . b))
+
+
+	5.1.6 MEMBER / MEMQ
+
+	(member expr list) => list
+	(memq symbol list) => list
+
+	Find a member of a list.
+
+	Examples:
+
+	  (member 'bar '(foo bar baz)) => '(bar baz)
+	(member '(b.2) '((a.1) (b.2))) => '((b . 2))
+	  (member 'foo '(a b c d e f)) => :f
+
+	MEMQ is like MEMBER, but its first atgument is limited to
+	symbols:
+
+	  (memq 'bar '(foo bar baz)) => '(bar baz)
+	(memq '(b.2) '((a.1) (b.2))) => :f
+
+
+	5.1.7 REVERSE
+
+	(reverse list) => list
+
+	Create a reverse copy of a list:
+
+	Examples:
+
+	    (reverse '(foo bar)) => '(bar foo)
+	(reverse '(a b c d e f)) => '#fedcba
+	            (reverse ()) => ()
+	      (reverse '(a . b)) => bottom
+	  (reverse '(a b c . d)) => bottom
+
+
+	5.2 Predicates
+
+
+	5.2.1 EQUAL
+
+	(equal form form) => :t | :f
+
+	Return :t if the two given forms are equal and otherwise :f.
+
+	Two forms are equal, if they are both the same symbol or if
+	they are pairs containing equal car and cdr parts.
+
+	Examples:
+
+	                        (equal () ()) => t
+	                (equal '(a.b) '(a.b)) => t
+	(equal '(f (f x y) z) '(f (f x y) z)) => t
+	            (equal '#abcdef '#abcdef) => t
+	                    (equal 'foo 'bar) => :f
+	        (equal '(x (y) z) '(x (q) z)) => :f
+	                  (equal '#xxx '#xxy) => :f
+
+
+	5.2.2 LISTP
+
+	(listp form) => :t | :f
+
+	Return :t if the given form is a (non-dotted) list and
+	otherwise :f.
+
+	Examples:
+
+	        (listp ()) => t
+	  (listp '(a b c)) => t
+	  (listp '#abcdef) => t
+	  (listp '(a . b)) => :f
+	(listp '(a b . c)) => :f
+	      (listp 'foo) => :f
+
+
+	5.2.3 NEQ
+
+	(neq form form) => :t | :f
+
+	Return :t if the given forms are not identical and otherwise :f.
+
+	Examples:
+
+	    (neq 'foo 'bar) => t
+	   (neq 'foo '#foo) => t
+	    (neq 'a '(a.b)) => t
+	    (neq 'foo 'foo) => :f
+	      (neq foo foo) => :f
+	        (neq () ()) => :f
+	  (neq '#foo '#foo) => bottom
+	(neq '(a.b) '(a.b)) => bottom
+
+
+	5.2.4 NOT
+
+	(not form) => :t | :f
+
+	Check whether the given form is :f (logical negation).
+
+	Examples:
+
+	       (not :f) => :t
+	       (not ()) => :f
+	        (not t) => :f
+	     (not 'foo) => :f
+	 (not '(a b c)) => :f
+
+
+	5.2.5 NULL
+
+	(not form) => :t | :f
+	(null form) => :t | ()
+
+	Check whether the given form is ().
+
+	Examples:
+
+	      (null ()) => t
+	      (null :f) => :f
+	      (null 'x) => :f
+	(null '(a b c)) => :f
+
+
+	5.3 Control Flow
+
+
+	5.3.1 FOLD
+
+	(fold fun form list) => form
+
+	Fold the given list by combining FORM with its first element
+	using the binary function FUN. Combine the result with the
+	second member, etc:
+
+	(fold f () (a b c d))  =  (f (f (f (f () a) b) c) d)
+
+	If LIST is empty, return FORM.
+
+	Examples:
+
+	    (fold cons 'a '(b)) => '(a . b)
+	(fold cons 'a '(b c d)) => '(((a . b) . c) . d)
+	      (fold cons 'a ()) => 'a
+
+
+	5.3.2 FOLD-R
+
+	(fold-r fun form list) => form
+
+	Fold the given list by combining its head with its reduced
+	tail using the binary function FUN.
+
+	While FOLD combines its arguments left-associatively,
+	FOLD-R combines them right-associatively:
+
+	(fold-r f () (a b c d))  =  (f a (f b (f c (f d ()))))
+
+	If LIST is empty, return FORM.
+
+	Examples:
+
+	     (fold-r cons a '(b)) => '(a . b)
+	(fold-r cons 'a '(b c d)) => '(a b c . d)
+	      (fold-r cons 'a ()) => 'a
+
+
+	5.3.3 MAP
+
+	(map fun list list ...) => list
+
+	Map the given function over the given list(s). The function
+	must take the same number of arguments as there are lists.
+
+	The N'th member of the resulting list is the result of
+	applying FUN to the N'th members of all input list.
+
+	Examples:
+
+	       (map car '((a) (b) (c))) => '#abc
+	       (map cdr '((a) (b) (c))) => '(() () ())
+	   (map cons '(a b c) '(d e f)) => '((a . d) (b . e) (c . f))
+	(map list '(a b) '(c d) '(e f)) => '(#ace #bdf))
+
+
+	5.4 Packages
+
+
+	5.4.1 REQUIRE
+
+	(require 'package-name) => :t | :f
+
+	Load a package (using LOAD) if it is not already present.
+
+	REQUIRE checks the presence of a package by testing whether
+	the given package name is defined. Packages are required to
+	define that name *before* requiring other packages.
+
+	Examples:
+
+	(require 'nmath) => :t  ; load natural math functions
+	(require 'nmath) => :f  ; already loaded
+
+
+	6 Math Functions
+
+	zenlisp implements math numbers as lists of digits:
+
+	123 is written as '(1 2 3) or '#123.
+
+	Rational numbers are numbers containing a slash:
+
+	-5/4 is written as '(- 5 / 4) or '#-5/4.
+
+	Math functions are not part of the default image. To load
+	them use
+
+	(load nmath) ; load natural math functions
+	or
+	(load imath) ; load integer math functions (includes nmath)
+	or
+	(load rmath) ; load rational math functions (includes imath)
+
+	To create an image with all math functions, type
+
+	(load rmath)
+	(dump-image math-image)
+
+	and run zenlisp using
+
+	zl math-image
+
+
+	6.1 Summary
+
+	... indicates repetition.
+	[x] indicates that x is optional.
+	x|y indicates x or y.
+	x = number;
+	n = natural;
+	i = integer;
+	r = rational.
+
+	Function                   Returns...
+	(* [x ...]) => x           product
+	*epsilon* => n             log10 of precision of SQRT
+	(+ [x ...]) => x           sum
+	(- x1 x2 [...]) => x       difference
+	(- x) => x                 negative number
+	(/ x1 x2) => x             ratio
+	(< x1 x2 [...]) => :t|:f   :t for strict ascending order
+	(<= x1 x2 [...]) => :t|:f  :t for strict non-descending order
+	(= x1 x2 [...]) => :t|:f   :t for equivalence
+	(> x1 x2 [...]) => :t|:f   :t for strict descending order
+	(>= x1 x2 [...]) => :t|:f  :t for strict non-ascending order
+	(abs x) => x               absolute value
+	(denominator r) => i       denominator
+	(divide i1 i2) => (i3 i4)  quotient i3 and remainder i4
+	(even i) => :t|:f          :t, if i is even
+	(expt x i) => x            x to the power of i
+	(gcd [i1 ...]) => n        greatest common divisor
+	(integer x) => i           an integer with the value x
+	(integer-p x) => :t|:f     :t, if x is integer
+	(lcm [i1 ...]) => n        least common multiple
+	(length list) => n         length of a list
+	(limit op x1 ...) => x     find the limit of x1... under op
+	(max x1 [x2 ...]) => x     maximum value
+	(min x1 [x2 ...]) => x     minimum value
+	(modulo i1 i2) => i3       modulus
+	(natural x) => n           a natural with the value x
+	(natural-p x) => :t|:f     :t, if x is natural
+	(negate i|r) => i|r        negative value
+	(negative x) => :t|:f      :t, if x is negative
+	(number-p expr) => :t|:f   :t, if expr represents a number
+	(numerator r) => i         numerator
+	(odd i) => :t|:f           :t, if i is not even
+	(one x) => :t|:f           :t, if x equals one
+	(quotient i1 i2) => i      quotient
+	(rational x) => r          a rational with the value x
+	(rational-p x) => :t|:f    :t, if x is rational
+	(remainder i1 i2) => i     division remainder
+	(sqrt n) => x              square root, see also *espilon*
+	(zero x) => :t|:f          :t, if x equals zero
+
+	[*] The result of SQRT depends on the library in use.
+	    The natural and integer versions return the greatest
+	    natural number whose square is not larger than the
+	    argument.
+	    The rational version returns a number that differs
+	    from the actual square root of the argument by no
+	    more than (/ '#1 (expt '#10 *epsilon*)), where
+	    *epsilon* is a global variable.
+
+
+	7 Miscellanea
+
+
+	7.1 Naming convention
+
+	Symbols starting and ending with an asterisk are reserved
+	for the code implementing zenlisp. They must be avoided in
+	user-level code.
+
+
+	7.2 Evaluation History
+
+	The normal form most recently produced by the interpreter
+	is bound to the symbol **:
+
+	(car '(first second))
+	=> 'first
+	(cons ** **)
+	=> '(first . first)
+
+
+	7.3 Source Path
+
+	When loading code using LOAD or REQUIRE, the following
+	abbreviations may be used:
+
+	(load ~nmath)
+	(require '~nmath)
+
+	both load the file "nmath.l" from the directory specified in the
+	environment variable ZENSRC.
+
+	When a file "foo" that is being loaded loads another file "bar",
+	the file "bar" is assumed to reside in the same directory as
+	"foo". When "foo" is loaded using
+
+	(load /baz/foo)
+
+	the function application
+
+	(load bar)
+
+	in the file "foo" actually loads /baz/bar.
+

@@ -1,0 +1,13 @@
+wzip for DEBIAN
+----------------------
+
+wzip is a preprocessor for lossy data compression. It can also be used
+for denoising. wzip is originally written for inclusion into the
+Debian GNU/Linux system.
+
+Copyright (C) 1997 Andreas Franzen
+
+See the file copyright for details.
+
+
+Andreas Franzen <anfra@debian.org>, Wed, 24 Dec 1997 09:50:58 +0100

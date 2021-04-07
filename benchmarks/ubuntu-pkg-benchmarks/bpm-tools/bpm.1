@@ -1,0 +1,73 @@
+.TH BPM "1"
+
+.SH NAME
+bpm-tools \- calculate the tempo of music files
+
+.SH SYNOPSIS
+.B bpm-tag
+[\fIoptions\fR] \fIfile\fR
+
+.B bpm-graph
+\fIfile\fR
+
+.B bpm
+[\fIoptions\fR] < \fIfile.raw\fR
+
+.SH DESCRIPTION
+
+The
+.B bpm-tools
+commands are used to automatically calculate the tempo (in
+beats-per-minute) of music, optionally displaying an analysis
+and adding it to file 'tags'. The data from these tags can be
+especially useful for navigating a music library in DJ software
+such as
+.B xwax(1).
+
+The
+.B bpm
+command implements the algorithm on raw data, but
+the most commonly used command is
+.B bpm-tag.
+
+.SH OPTIONS
+
+Options are described by the commands themselves. Use one of the
+following for more information:
+.sp
+.RS
+bpm-tag -h
+
+bpm-graph -h
+
+bpm -h
+.RE
+
+.SH EXAMPLES
+
+.P
+Tag a file with its tempo:
+.sp
+.RS
+bpm-tag "Daft Punk - Get Lucky.mp3"
+.RE
+
+.P
+Calculate and display the tempo of a file without modifying it:
+.sp
+.RS
+bpm-tag -f -n "Gwen Guthrie - Padlock.flac"
+.RE
+
+.P
+Tag a file, with a hint to look for a fast tempo:
+.sp
+.RS
+bpm-tag -m 120 -x 200 "Roni Size - Brown Paper Bag.oga"
+.RE
+
+.SH HOMEPAGE
+http://www.pogo.org.uk/~mark/bpm-tools/
+
+.SH AUTHOR
+Mark Hills <mark@xwax.org>

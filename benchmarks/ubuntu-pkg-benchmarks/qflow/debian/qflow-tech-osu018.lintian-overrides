@@ -1,0 +1,3 @@
+# tcsh is used by most of the scripts in qflow. It would be overkill to reimplement these
+# in bash:
+qflow-tech-osu018 binary: csh-considered-harmful

@@ -1,0 +1,220 @@
+.TH CODEGROUP 1 "26 OCT 1998"
+.UC 4
+.SH NAME
+codegroup \- encode / decode binary file as five letter codegroups
+.SH SYNOPSIS
+.B codegroup
+.BR \-d | \-e 
+[
+.B \-u
+]
+[
+.I infile
+[
+.I outfile
+] ]
+.SH DESCRIPTION
+For decades, spies have written their encoded
+messages in groups of five letters.
+.PP
+.B codegroup
+encodes any binary file into this form, allowing it
+to be transmitted through any medium, and decodes files
+containing codegroups into the original input.
+Encoded files contain a
+16-bit cyclical redundancy check (CRC) and file size to verify, when decoded,
+that the message is complete and correct.
+Files being decoded may contain other information before
+and after the codegroups, allowing in-the-clear annotations
+to be included.
+.PP
+.B codegroup
+makes no attempt, on its own, to prevent your message from being read.
+Cryptographic security should be delegated to a package intended for
+that purpose, such as
+.BR pgp .
+.B codegroup
+can then be applied to the encrypted binary output, transforming it into
+easily transmitted text.  Text created by
+.B codegroup
+uses only upper case ASCII letters and spaces.
+Unlike files encoded with
+.B uuencode
+or
+.BR pgp 's
+``ASCII armour'' facility, the output
+of
+.B codegroup
+can be easily (albeit tediously) read over the telephone, broadcast
+on shortwave radio to agents in the field, or sent by telegram,
+telex, or Morse code.
+.PP
+To illustrate the difference, here are the first few lines of a binary
+file encoded by:
+.PP
+.TP 5
+.B base64:
+.nf
+H4sICFJ9MzYAA2EudGFyAOxba3faSNKer+lf0SezO3YmgLnY2I6TyQIGgwOGBTtOYjuJEMJo
+DJJGF1+ys//9rarulpqLHRi/mdk9G84JIKGuqq579eNkNn745q9sNru9tcXhs5gtFPAzm83l
+xad88WyxmNssbhe3sps8m8ttZ/M/8K1vL9oPP0RBaPggypU1vrad+59zosj0HqAj9xF//pe8
+WsaVNbTH1rfkAfoobm7ea//cZn4rtv/mNtq/kM9t/cCz31Io9foftz9nnW77oMdfcdMdWJe+
+.fi
+.TP
+.B uuencode:
+.nf
+begin 644 data.bin
+M'XL("&7._R\\  VUO;V\\ /9U+FN2XSF3G6H5OA1(?HOB<=/<7__X7TN<PJ[L&
+M=?-&1;I+) B8 0;P?_Z'?WY_-=7Q"T_JSZ_6)X9?&"$\\OU9[N'\\A[A%^L^6=
+M?^M[OOV+:9=UM9J^] MAS_ ;X0O]U];(Z?<WWE9_\\^[/]ZMM\\OO[CG'^2M\\M
+M_G(+,US/LWKZE1#C^YO?D_;O#G[7][2R^+0>XJ^&PI/\\[?7-7U]KU=]SSWQ?
+.fi
+.TP
+.B pgp:
+.nf
+-----BEGIN PGP MESSAGE-----
+Version: 2.6.2i
+
+hIwCCb8iTku3pBUBA/9oSDlfk/On9bwjmTnB98Eejr6agkPSi3n6hd8JkAtJd33f
+kzFq18Jo0xzRUWZ7Di6Jq/FXpeI1yztVDqispbcYOP0aDv4JZOSF1kRsmJ9xK9Bo
+Cv4a967IXPkkRsjIAkx0B39dYxCzf8kHUn4THmyV/b2qLUZ0cc+mr8hxFfFpuYSM
+.fi
+.TP
+.B codegroup:
+.nf
+ZZZZZ YBPIL AIAIG FMOPP CPAAA DGNGP GPGPA ADNJN ELJKO ELIMO
+GEOHF KIFGP IFBCB PKCPI YJMHE PHBHP PPOBH NCOHD AKLLL AGHFP
+DEGEF LKELC EAIJI ABAGP AHPPO IHHPH OHPDF YNFPB ALEPO KMPKP
+NGCHI GFPBI CBDML PFGHL LIHPC BOOBB HOLDO FJNHP OLHLL OPNIL
+.fi
+.PP
+Only
+.B codegroup
+conforms to the telegraphic convention of
+all upper case letters, and passes the ``telephone test'' of being
+readable without any modifiers such as ``capital'' and
+``lower-case''.
+Avoiding punctuation marks and lower case letters makes the output
+of
+.B codegroup
+much easier to transmit over a voice or traditional telegraphic
+link.
+.SH OPTIONS
+.TP 12
+.B \-decode
+Decodes the input, previously created by
+.BR codegroup ,
+to recover the original input file, and verifies it
+to detect truncation or corruption of the contents.
+.TP
+.BI \-encode
+Encodes the input into an output text file containing
+five letter code groups (default).
+.TP
+.B \-usage
+Print how-to-call information.
+.PP
+All options may be abbreviated to a single letter.
+.SH "APPLICATION NOTES"
+Encoding a binary file as ASCII characters inevitably increases
+its size.  When used in conjunction with existing compression and
+encryption tools, the resulting growth in file size is usually
+acceptable.  For example, a random extract of electronic mail 32768
+bytes in length was chosen as a test sample.  Compression with
+.B gzip
+compacted the file to 15062 bytes.  It was then encrypted for
+transmission to a single recipient with
+.BR pgp ,
+which resulted in a 15233 byte file.  (Even though
+.B pgp
+has its own compression, smaller files usually result from initial
+compression with
+.BR gzip .
+In this case,
+.B pgp
+alone would have produced a file of 15420 bytes.)
+.PP
+.B codegroup
+transforms the encrypted file into a 37296 byte text file.  Thus, due to
+compression, the code groups for the encrypted file are only a little
+larger than the original cleartext.
+.PP
+Restricting the character set and including spaces between groups
+results in substantially larger output files than those produced by
+.B uuencode
+and
+.BR pgp .
+Files encoded with
+.B codegroup
+are about 2.5 times the size of the input file, while
+.B uuencode
+and
+.B pgp
+expand the file only about 35%.
+.B codegroup
+is thus preferable only for applications
+where its limited character set is an advantage.
+.SH FILES
+If no
+.I infile
+is specified or
+.I infile
+is a single ``\-'',
+.B codegroup
+reads from standard input; if no
+.I outfile
+is given, or
+.I outfile
+is a single ``\-'',
+output is sent to standard output.  The input and
+output are processed strictly serially; consequently
+.B codegroup
+may be used in pipelines.
+.SH BUGS
+When a CRC error is detected, no indication is given of the location
+in the file where the error(s) occurred.  When sending large files,
+you may want to break them into pieces with the
+.B splits
+utility (available from the Web page cited below)
+so, in case of error, only
+the erroneous pieces have to be re-sent.
+.PP
+It might be nice to embed the original file name and modes in
+the encoded output, but this opens the door to all kinds of
+system-dependent problems.  You can always include this
+information as text before the first codegroup, or send an
+archive created with
+.B tar
+or
+.BR zip .
+.SH "SEE ALSO"
+.PD
+.BR base64 (1),
+.BR gzip (1),
+.BR pgp (1),
+.BR splits (1),
+.BR tar (1),
+.BR uuencode (1),
+.BR zip (1)
+.ne 5
+.SH EXIT STATUS
+.B codegroup
+returns status 0 if processing was completed without errors,
+1 if errors were detected in decoding a file which indicate
+the output is incorrect or incomplete, and
+2 if processing could not be performed at all due, for example, to
+a nonexistent input file or no codegroups found in the input.
+.SH AUTHOR
+.RS 5
+.nf
+John Walker
+<http://www.fourmilab.ch/>
+.fi
+.RE
+.PD
+.PP
+This software is in the public domain.
+Permission to use, copy, modify, and distribute this software and its
+documentation for any purpose and without fee is hereby granted,
+without any conditions or restrictions.  This software is provided ``as
+is'' without express or implied warranty.

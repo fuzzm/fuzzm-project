@@ -1,0 +1,23 @@
+Source: codegroup
+Section: text
+Priority: optional
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Build-Depends: debhelper (>= 11), dpkg-dev (>= 1.16.1~)
+Standards-Version: 4.2.1
+Homepage: http://www.fourmilab.ch/codegroup/
+
+Package: codegroup
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Convert any file, including binary, into 5 letter code
+ Codegroup converts any file, of any format including raw binary,
+ into a set of five letter uppercase codegroups.
+ The codegroup format includes a 16 bit CRC and file length to verify
+ message integrity.
+ Codegroup does NO CRYPTO.  It's purely a file format converter
+ much like base64 or uuencoding.
+ Unlike other traditional file encoding algorithms such as
+ base64 or uuencoding, codegroup exclusively uses the 26
+ letter alphabet.
+ Codegroup is ideal for transferring short binary files over a voice
+ or morse code channel.

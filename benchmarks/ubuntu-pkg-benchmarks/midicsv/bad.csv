@@ -1,0 +1,39 @@
+0, 0, Header, 1, 2, 480
+1, 0, Start_track
+1, 0, Title_t, "Close Encounters"
+1, 0, Text_t, "Sample for MIDIcsv Distribution"
+1, 0, Copyright_t, "This file is in the public domain"
+1, 0, Time_signature, 4, 2, 24, 8
+1, 0, Tempo, 500000
+1, 0, End_track
+2, -11, Start_track
+2, 0, Instrument_name_t, "Church Organ"
+2, 0, Program_c, 1, 19
+2, -6, Note_on_c, 1, 79, 81
+2, 100, BogusBogusBogus, 1, 111
+2, 960, Note_off_c, 1, 79, 0
+2, 960, Note_on_c, 1, 81, 81
+2, 1920, Note_off_c, 1, 81, 0
+4, 1920, Note_on_c, 1, 77, 81
+2, 2880, Note_off_c, 1, 77, 0
+2, 2880, Note_on_c, -3, 300, 81
+2, 2880, Pitch_bend_c, 1, 99999
+999, -17, Note_off_c, 1, 65, 0
+2, 3840
+2, 3840, Note_off_c, 1, 65, 0
+2, 3840, Note_on_c,
+2, 3840, Note_on_c, 1, 72
+2, 3840, Note_on_c, 1, 72, 81
+2, 3900, system_exclusive, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9
+2, 3900, system_exclusive_packet, 10, 1, 2, 3, 4, 5, 6, 7
+2, 3900, sequencer_specific, 4, 1, 2, 3, 4
+2, 3900, sequencer_specific, 4, 1, 2, 3
+2,3900, unknown_meta_event, 121, 5, 1, 2, 3, 4, 5
+2,3900, unknown_meta_event, 121, 5, 1, 2, 3
+#   The following event is actually
+#       4, 3030, Key_signature, -4, "major"
+#   coded as an Unknown_meta_event.
+2, 3900, Unknown_meta_event, 89, 2, 252, 0
+2, 4800, Note_off_c, 1, 72, 0
+2, 4800, End_track
+0, 0, End_of_file

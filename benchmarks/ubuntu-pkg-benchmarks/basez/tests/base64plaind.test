@@ -1,0 +1,16 @@
+#
+#    base64 decoding regression test data
+#
+
+Zg== f
+Zm8= fo
+Zm9v foo
+Zm9vYg== foob
+Zm9vYmE= fooba
+Zm9vYmFy foobar
+UVVBS0VNQUNISU5F QUAKEMACHINE
+QmFzZTY0IExldHRlcg== Base64\ Letter
+QmFzZSA2NCBFbmNvZGluZw== Base\ 64\ Encoding 
+UkZDIDQ2NDg= RFC\ 4648
+VG8+Z28/ To>go?
+0J3QuNC60L7Qu9CwINCi0LXRgdC70LA= Никола\ Тесла 

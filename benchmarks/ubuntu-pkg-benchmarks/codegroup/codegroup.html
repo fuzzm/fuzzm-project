@@ -1,0 +1,223 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html version="-//W3C//DTD HTML 3.2 Final//EN">
+<head>
+<title>CODEGROUP: Five-Letter Codegroup Filter</title>
+<meta name="author" content="John Walker">
+<meta name="description" content="CODEGROUP: Five-Letter Codegroup Filter">
+<meta name="keywords" content="codegroup, five, letter, filter, cryptography, espionage">
+</head>
+<body bgcolor="#FFFFFF">
+<center>
+<h1><img src="codegroup.jpg" alt="CODEGROUP" width=636 height=237></h1>
+<h2>
+Five-Letter Codegroup Filter
+</h2>
+</center>
+
+<hr>
+
+<p>
+This page describes a program, <b>codegroup</b>, which
+encodes and decodes arbitrary binary data in five-letter
+code groups, just like spies use.
+
+<p>
+
+
+<h3>NAME</h3>
+     <b>codegroup</b> - encode / decode binary file as five letter
+     codegroups
+
+<h3>SYNOPSIS</h3>
+     <b>codegroup</b> <b>-d</b>|<b>-e</b> [ <b>-u</b> ] [ <em>infile</em> [ <em>outfile</em> ] ]
+
+<h3>DESCRIPTION</h3>
+
+     For decades, spies have written their encoded messages in
+     groups of five letters.
+
+<p>
+     <b>codegroup</b> encodes any file into this form,
+     allowing it to be transmitted through any medium, and
+     decodes files containing codegroups into the original input.
+     Encoded files contain a 16-bit cyclical redundancy check
+     (CRC) and file size to verify, when decoded, that the
+     message is complete and correct.  Files being decoded may
+     contain other information before and after the codegroups,
+     allowing in-the-clear annotations to be included.
+
+<p>
+     <b>codegroup</b> makes no attempt, on its own, to prevent
+     your message from being read.  Cryptographic security should
+     be delegated to a package intended for that purpose, such as
+     <b>pgp</b>.  <b>codegroup</b> can then be applied to the
+     encrypted binary output, transforming it into easily
+     transmitted text.  Text created by <b>codegroup</b> uses
+     only upper case ASCII letters and spaces.  Unlike files
+     encoded with <b>uuencode</b> or <b>pgp</b>'s "ASCII armour"
+     facility, the output of codegroup can be easily (albeit
+     tediously) read over the telephone, broadcast by shortwave
+     radio to agents in the field, or sent by telegram, telex, or
+     Morse code.
+
+<p>
+     To illustrate the difference, here are the first few lines
+     of a binary file encoded by:
+
+<p>
+
+<dl>
+<dt><b><a href="/webtools/base64/">base64</a></b>:
+<dd>
+<small>
+<pre>
+H4sICFJ9MzYAA2EudGFyAOxba3faSNKer+lf0SezO3YmgLnY2I6TyQIGgwOGBTtOYjuJEMJo
+DJJGF1+ys//9rarulpqLHRi/mdk9G84JIKGuqq579eNkNn745q9sNru9tcXhs5gtFPAzm83l
+xad88WyxmNssbhe3sps8m8ttZ/M/8K1vL9oPP0RBaPggypU1vrad+59zosj0HqAj9xF//pe8
+WsaVNbTH1rfkAfoobm7ea//cZn4rtv/mNtq/kM9t/cCz31Io9foftz9nnW77oMdfcdMdWJe+
+</pre>
+</small>
+
+<dt><b>uuencode</b>:
+<dd>
+<small>
+<pre>
+begin 644 data.bin
+M'XL("&amp;7._R  VUO;V /9U+FN2XSF3G6H5OA1(?HOB&lt;=/&lt;7__X7TN&lt;PJ[L&amp;
+M=?-&amp;1;I+) B8 0;P?_Z'?WY_-=7Q"T_JSZ_6)X9?&amp;"$OU9[N'A[A%^L^6=
+M?^M[OOV+:9=UM9J^] MAS_ ;X0O]U];(Z?&lt;WWE9_[/]ZMMOO[CG'^2MM
+M_G(+,US/LWKZE1#C^YO?D_;O#G[7][2R^+0&gt;XJ^&amp;PI/[?7-7U]KU=]SSWQ?
+</pre>
+</small>
+
+<dt><b>pgp</b>:
+<dd>
+<small>
+<pre>
+-----BEGIN PGP MESSAGE-----
+Version: 2.6.2i
+
+hIwCCb8iTku3pBUBA/9oSDlfk/On9bwjmTnB98Eejr6agkPSi3n6hd8JkAtJd33f
+kzFq18Jo0xzRUWZ7Di6Jq/FXpeI1yztVDqispbcYOP0aDv4JZOSF1kRsmJ9xK9Bo
+Cv4a967IXPkkRsjIAkx0B39dYxCzf8kHUn4THmyV/b2qLUZ0cc+mr8hxFfFpuYSM
+</pre>
+</small>
+
+<dt><b>codegroup</b>:
+<dd>
+<small>
+<pre>
+ZZZZZ YBPIL AIAIG FMOPP CPAAA DGNGP GPGPA ADNJN ELJKO ELIMO
+GEOHF KIFGP IFBCB PKCPI YJMHE PHBHP PPOBH NCOHD AKLLL AGHFP
+DEGEF LKELC EAIJI ABAGP AHPPO IHHPH OHPDF YNFPB ALEPO KMPKP
+NGCHI GFPBI CBDML PFGHL LIHPC BOOBB HOLDO FJNHP OLHLL OPNIL
+</pre>
+</dl>
+</small>
+
+     Only <b>codegroup</b> conforms to the telegraphic convention of
+     all upper case letters, and passes the "telephone test" of being
+     readable without any modifiers such as "capital" and
+     "lower-case".  Avoiding punctuation marks and lower case letters
+     makes the output of <b>codegroup</b> much easier to transmit over
+     a voice or traditional telegraphic link.
+
+
+<h3>OPTIONS</h3>
+<dl compact>
+<dt><b>-d</b>   <dd>Decodes the input, previously created by
+                <b>codegroup</b>, to recover the original input file,
+                and verifies it to detect truncation or
+                corruption of the contents.
+
+<p>
+<dt><b>-e</b>  <dd>Encodes the input into codegroups.
+
+<p>
+<dt><b>-u</b>  <dd>Print how-to-call information.
+</dl>
+
+<h3>APPLICATION NOTES</h3>
+
+     Encoding a binary file as ASCII characters inevitably
+     increases its size.  When used in conjunction with existing
+     compression and encryption tools, the resulting growth in
+     file size is usually acceptable.  For example, a random
+     extract of electronic mail 32768 bytes in length was chosen
+     as a test sample.  Compression with <b>gzip</b> compacted the file
+     to 15062 bytes.  It was then encrypted for transmission to a
+     single recipient with <b>pgp</b>, which resulted in a 15233 byte
+     file.  (Even though <b>pgp</b> has its own compression, smaller
+     files usually result from initial compression with <b>gzip</b>.  In
+     this case, <b>pgp</b> alone would have produced a file of 15420
+     bytes.)
+
+<p>
+     <b>codegroup</b> transforms the encrypted file into a 37296
+     byte text file.  Thus, due to compression, the code groups
+     for the encrypted file are only a little larger than the
+     original cleartext.
+
+<p>
+     Restricting the character set to upper case letters and including
+     spaces between groups results in substantially larger output
+     files than those produced by <b>uuencode</b> and <b>pgp</b>.
+     Files encoded with codegroup are about 2.5 times the size of the
+     input file, while <b>uuencode</b> and <b>pgp</b> expand the file
+     only about 35%.  <b>codegroup</b> is thus preferable only for
+     applications where its limited character set is an advantage.
+
+<h3>FILES</h3>
+     If no <em>infile</em> is specified or <em>infile</em> is a single
+     "-", <b>codegroup</b> reads from standard input; if no
+     <em>outfile</em> is given, or <em>outfile</em> is a single "-",
+     output is sent to standard output.  Input and output are
+     processed strictly serially; consequently <b>codegroup</b> may be
+     used in pipelines.
+
+<h3>BUGS</h3>
+
+     When a CRC error is detected, no indication is given of the
+     location in the file where the error(s) occurred.  When
+     sending large files, you may want to break them into pieces
+     with the splits utility so, in
+     case of error, only the erroneous pieces need to be re-sent.
+
+<p>
+     It might be nice to embed the original file name and modes
+     in the encoded output, but this opens the door to all kinds
+     of system-dependent problems.  You can always include this
+     information as text before the first codegroup, or
+     send an archive created with <b>tar</b> or <b>zip</b>.
+
+<h3>SEE ALSO</h3>
+     <b>base64</b>(1),
+     <b>gzip</b>(1), <b>pgp</b>(1),
+     <b>splits</b>(1), <b>tar</b>(1),
+     <b>uuencode</b>(1), <b>zip</b>(1)
+
+<h3>EXIT STATUS</h3>
+     <b>codegroup</b> returns status 0 if processing was
+     completed without errors, 1 if errors were detected in
+     decoding a file which indicate the output is incorrect or
+     incomplete, and 2 if processing could not be performed at
+     all due, for example, to a nonexistent input file or no
+     codegroups found in the input.
+
+<h3>COPYING</h3>
+
+<blockquote>
+     This software is in the public domain.  Permission to use, copy,
+     modify, and distribute this software and its documentation for
+     any purpose and without fee is hereby granted, without any
+     conditions or restrictions.  This software is provided "as is"
+     without express or implied warranty.
+</blockquote>
+
+<hr>
+<address>
+<a href="/">by John Walker</a><br>
+October 26th, 1998
+</address>
+</body>
+</html>

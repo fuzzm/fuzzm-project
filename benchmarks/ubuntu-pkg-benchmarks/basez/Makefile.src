@@ -1,0 +1,370 @@
+#
+#    Copyright (C) 2010, 2011, 2012, 2013, 2016  Milan Kupcevic
+#
+#    You can redistribute and/or modify this software under the
+#    terms of the GNU General Public License version 3, or any later 
+#    version as published by the Free Software Foundation.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+#    GPLv3+
+#
+
+.SUFFIXES:
+.SUFFIXES: .in .sh .sh.in .c .o 
+.PHONY: all man dist clean distclean \
+        uninstall install install-strip \
+        install-mans install-docs install-completion \
+        install-common test \
+        install-unix install-windows\
+        uninstall-unix uninstall-windows\
+
+@INCLUDEOPTS@
+
+@IFNDEF@ APPNAME
+@ERROR@ APPNAME is missing)
+@ENDIF@
+
+@IFNDEF@ PKGNAME
+@ERROR@ PKGNAME is missing)
+@ENDIF@
+
+@IFNDEF@ VER
+@ERROR@ VERSION info is missing)
+@ENDIF@
+
+@IFNDEF@ VERSION
+  VERSION = $(VER)
+@ENDIF@
+
+DIST=\
+configure \
+Makefile.src \
+ChangeLog \
+LICENSE \
+INSTALL \
+config.h.in \
+see-also \
+tests/base16.test \
+tests/base16d.test \
+tests/base16invalid.test \
+tests/base32plain.test \
+tests/base32plaind.test \
+tests/base32plaininvalid.test \
+tests/base32hex.test \
+tests/base32hexd.test \
+tests/base32hexinvalid.test \
+tests/base64plain.test \
+tests/base64plaind.test \
+tests/base64plaininvalid.test \
+tests/base64url.test \
+tests/base64urld.test \
+tests/base64urlinvalid.test \
+tests/base64mime.test \
+tests/base64mimed.test \
+tests/base64mimeinvalid.test \
+regtest.sh.in \
+TODO \
+$(SRCS) \
+$(HDRS) \
+basez-completion.in \
+basez.1 \
+basez.spec.in \
+basez.spec \
+debian/NEWS.in \
+debian/changelog.in \
+debian/control.in \
+debian/rules \
+debian/compat \
+debian/source/format
+
+SRCS = $(SRCS_basez) $(SRCS_base32) $(SRCS_base16) $(SRCS_base64)
+HDRS = $(HDRS_basez) $(HDRS_base32) $(HDRS_base16) $(HDRS_base64)
+OBJS = $(OBJS_basez) $(OBJS_base32) $(OBJS_base16) $(OBJS_base64)
+
+SRCS_basez = basez.c 
+HDRS_basez = basez.h
+OBJS_basez = basez.o
+
+SRCS_base64 = base64.c
+HDRS_base64 =
+OBJS_base64 = base64.o
+
+SRCS_base32 = base32.c
+HDRS_base32 =
+OBJS_base32 = base32.o
+
+SRCS_base16 = base16.c
+HDRS_base16 =
+OBJS_base16 = base16.o
+
+basez$(EXE): $(OBJS_basez) $(OBJS_base32) $(OBJS_base16) $(OBJS_base64)
+
+INTERMEDIATE=\
+regtest.sh \
+regtest \
+basez-completion
+
+BINS=\
+basez$(EXE)
+
+BINLINKS=\
+base16 \
+hex \
+base32plain \
+base32hex \
+base64plain \
+base64url \
+base64mime \
+base64pem \
+$(B32CMD) $(B64CMD) $(UNHEXCMD)
+
+
+@IFNDEF@ INSTALL
+  INSTALL = install
+@ENDIF@
+
+@IFNDEF@ STRIP
+  STRIP = strip
+@ENDIF@
+
+INST = $(INSTALL)
+
+VPATH = $(SDIR)
+
+@IFNDEF@ DESTDIR
+  DESTDIR =
+@ENDIF@ 
+@IFNDEF@ PREFIX
+  PREFIX = /usr/local
+@ENDIF@
+@IFNDEF@ DATAROOTDIR
+  DATAROOTDIR = $(PREFIX)/share
+@ENDIF@
+@IFNDEF@ DATADIR
+  DATADIR = $(DATAROOTDIR)
+@ENDIF@
+@IFNDEF@ EXECPREFIX
+  EXECPREFIX = $(PREFIX)
+@ENDIF@
+@IFNDEF@ ETCDIR
+  ETCDIR = $(PREFIX)/etc
+@ENDIF@
+@IFNDEF@ BINDIR
+  BINDIR = $(EXECPREFIX)/bin
+@ENDIF@
+@IFNDEF@ SBINDIR
+  SBINDIR = $(EXECPREFIX)/sbin
+@ENDIF@
+@IFNDEF@ LIBDIR
+  LIBDIR = $(EXECPREFIX)/lib
+@ENDIF@
+@IFNDEF@ MANDIR
+  MANDIR = $(DATAROOTDIR)/man
+@ENDIF@
+@IFNDEF@ DOCDIR
+  DOCDIR = $(DATAROOTDIR)/doc/$(PKGNAME)
+@ENDIF@
+@IFNDEF@ CC
+  CC = gcc
+@ENDIF@
+@IFNDEF@ CFLAGS
+  CFLAGS = -O3
+@ENDIF@
+@IFDEF@ DEBUG 
+  CFLAGS = -g -W -Wall -Wmissing-declarations -Wwrite-strings -pedantic
+  CPPFLAGS += -D DEBUG
+@ENDIF@
+
+CPPFLAGS += $(LFSF)
+
+all: $(BINS)
+
+count: $(HDRS) $(SRCS)
+	wc @SRCS@
+
+$(BINS):
+	$(CC) -o $@ $(LDFLAGS) @SRCS@ $(LDLIBS) $(LIBS) $(LDADD)
+
+.c.o:
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c -o $@ $<
+
+depend: $(SRCS)
+	@[ "$(DEPEND)" != "NO" ] && { \
+          $(DEPEND) $(CPPFLAGS) $^ > .depend ; \
+        } || { \
+          echo > .depend ; \
+        }
+
+.sh:
+	@cat $< > $@
+	@chmod a+x $@
+
+.in .sh.in.sh: 
+	@sed -e "s%_PKGNAME_%$(PKGNAME)%g" \
+             -e "s%_VERSION_%$(VERSION)%g" \
+             -e "s%_SDIR_%$(SDIR)%g" \
+             -e "s%_APPNAME_%$(APPNAME)%g" \
+             -e "s%_COPYRIGHT_YEARS_%$(COPYRIGHT_YEARS)%g" \
+             -e "s%_COPYRIGHT_NAMES_%$(COPYRIGHT_NAMES)%g" \
+             -e "s%_TMCLAIM_%$(TMCLAIM)%g" \
+             -e "s%_TRADEMARKS_%$(TRADEMARKS)%g" \
+             -e "s%_EMAIL_%$(EMAIL)%g" \
+             -e "s%_WEB_%$(WEB)%g" \
+             -e "s%_AUTHORS_%$(AUTHORS)%g" \
+             -e "s%_HAS_ORG_%$(HAS_ORG)%g" \
+             -e "s%_ORG_%$(ORG)%g" \
+             -e "s%_LIBDIR_%$(LIBDIR)%g" \
+             -e "s%_ETCDIR_%$(ETCDIR)%g" \
+             -e "s%_FORCE_DEBIAN_%$(FORCE_DEBIAN)%g" \
+             -e "s%_RPM_%$(RPM)%g" \
+             -e "s%_B32CMD_%$(B32CMD)%g" \
+             -e "s%_B64CMD_%$(B64CMD)%g" \
+             -e "s%_UNHEXCMD_%$(UNHEXCMD)%g" \
+             -e "s%_B32_%$(B32)%g" \
+             -e "s%_B64_%$(B64)%g" \
+             -e "s%_UNHEX_%$(UNHEX)%g" \
+             -e "s%_DEBFULLNAME_%$(DEBFULLNAME)%g" \
+             -e "s%_DEBEMAIL_%$(DEBEMAIL)%g" \
+             -e "s%_DEBDATE_%$(DEBDATE)%g" \
+             -e "s%_DEB_DIST_ID_%$(DEB_DIST_ID)%g" \
+             -e "s%_DIST_ID_%$(DIST_ID)%g" \
+             $< > $@
+
+config.h: config.h.in configure.options
+
+basez-completion: basez-completion.in configure.options
+
+$(PKGNAME)-$(VERSION): $(DIST)
+	@for S in $(DIST) ; do \
+            T=$(PKGNAME)-$(VERSION)/$${S}; \
+            mkdir -p `dirname $${T}`; \
+            [ -f "$${S}" ] \
+            && cp -p $${S} $${T} \
+            || cp -p $(SDIR)/$${S} $${T}; \
+        done
+
+$(PKGNAME)-$(VERSION).tar.gz: $(PKGNAME)-$(VERSION)
+	@tar cf - $(PKGNAME)-$(VERSION) | gzip -c > $@
+	@rm -rf -- $(PKGNAME)-$(VERSION)/
+
+dist: $(PKGNAME)-$(VERSION).tar.gz
+
+clean:
+	@-rm -f -- $(BINS) $(INTERMEDIATE) $(OBJS) $(BINLINKS)
+
+distclean: clean
+	@-rm -f -- configure.options \
+	           configure.options.tmp \
+                   config.h \
+                   .depend \
+                   Makefile \
+                   basez.spec \
+                   $(PKGNAME)-$(VERSION).tar.gz
+
+strip: $(BINS)
+	@[ -n "${BINS}" ] && \
+          for BIN in ${BINS} ; do \
+            $(STRIP) $${BIN}; \
+          done
+
+install-strip: install
+	@[ -n "${BINS}" ] && \
+          for BIN in ${BINS} ; do \
+            $(STRIP) $(DESTDIR)$(BINDIR)/$${BIN}; \
+          done
+
+install-unix: install-common
+	@$(INST) -d $(DESTDIR)$(BINDIR)
+	@$(INST) -m 755 $(BINS) $(DESTDIR)$(BINDIR)/
+	@[ -n "${BINLINKS}" ] && \
+          for LINK in ${BINLINKS} ; do \
+            ln -s basez$(EXE) \
+                  $(DESTDIR)$(BINDIR)/$${LINK}$(EXE); \
+          done
+
+install-mans: basez.1
+	@$(INST) -d $(DESTDIR)$(MANDIR)/man1
+	@$(INST) -m 644 @SRCS@ $(DESTDIR)$(MANDIR)/man1/
+	@[ -n "${BINLINKS}" ] && \
+          for LINK in ${BINLINKS} ; do \
+            ln -s basez.1 \
+                  $(DESTDIR)$(MANDIR)/man1/$${LINK}.1; \
+          done
+
+install-docs: LICENSE
+	@$(INST) -d $(DESTDIR)$(DOCDIR)
+	@$(INST) -m 644 @SRCS@ $(DESTDIR)$(DOCDIR)/
+
+install-completion: basez-completion
+	@$(INST) -d $(DESTDIR)$(DATADIR)/bash-completion/completions
+	@$(INST) -m 644 @SRCS@ $(DESTDIR)$(DATADIR)/bash-completion/completions/
+	@[ -n "${BINLINKS}" ] && \
+          for LINK in ${BINLINKS} basez ; do \
+            ln -s basez-completion \
+                  $(DESTDIR)$(DATADIR)/bash-completion/completions/$${LINK}; \
+          done
+
+install-common: install-docs install-mans install-completion
+
+uninstallfiles:
+	@-rm -f -- \
+          $(DESTDIR)$(DOCDIR)/LICENSE \
+          $(DESTDIR)$(DATADIR)/bash-completion/completions/basez-completion \
+	@[ -n "${BINLINKS}" ] && \
+          for LINK in ${BINLINKS} basez ; do \
+            rm -f -- $(DESTDIR)$(BINDIR)/$${LINK}$(EXE) \
+            rm -f -- $(DESTDIR)$(MANDIR)/man1/$${LINK}.1; \
+            rm -f -- $(DESTDIR)$(DATADIR)/bash-completion/completions/$${LINK};\
+          done
+
+uninstalldirs: uninstallfiles
+	@-rmdir $(DESTDIR)$(DOCDIR)/ 
+
+uninstall-unix: uninstalldirs
+
+@IFDEF@ WINDOWS
+install: install-windows
+uninstall: uninstall-windows
+@ELSE@
+install: install-unix
+uninstall: uninstall-unix
+@ENDIF@
+
+basez.spec: basez.spec.in configure.options
+
+debian/changelog: debian/changelog.in configure.options Makefile
+
+debian/NEWS: debian/NEWS.in configure.options Makefile
+
+debian/control: debian/control.in configure.options Makefile
+
+debian/copyright: LICENSE
+	@cp -p LICENSE "$@"
+
+debfiles: debian/changelog debian/control debian/compat debian/rules \
+                debian/copyright debian/source/format debian/NEWS
+
+test: regtest all
+	@./regtest
+
+basez.1: basez$(EXE)
+	@[ "$(HELP2MAN)" != "NO" ] && { \
+          $(HELP2MAN) ./basez >/dev/null 2>&1 && \
+          $(HELP2MAN) --no-info --section 1 --include=$(SDIR)/see-also \
+              --source="$(FULLNAME)" \
+              --name="base 16/32/64 encode/decode data to standard output" \
+              ./basez \
+              > $@; \
+        } || { \
+          [ -f "$(SDIR)/$@" -a ! -f "$@" ] && cp "$(SDIR)/$@" $@; \
+          true; \
+        }
+
+@INCLUDEDEPS@

@@ -1,0 +1,26 @@
+#
+#    base32hex decoding regression test data
+#
+
+CO====== f
+co====== f
+CPNG==== fo
+cpng==== fo
+CPNMU=== foo
+cpnmu=== foo
+CPNMUOG= foob
+cpnmuog= foob
+CPNMUOJ1 fooba
+cpnmuoj1 fooba
+CPNMUOJ1E8====== foobar
+cpnmuoj1e8====== foobar
+A5AK2IQ59L0K6I299P2G==== QUAKEMACHINE
+a5ak2iq59l0k6i299p2g==== QUAKEMACHINE
+89GN6P9J69K6AU0= Base32hex
+89gn6p9j69k6au0= Base32hex
+89GN6P906CP20HBECDNM8QBECSG7EQBKD0G4AU3KCLN68PB44146AU1085M70Q31C9IN8=== Base\ 32\ Encoding\ with\ Extended\ Hex\ Alphabet
+89gn6p906cp20hbecdnm8qbecsg7eqbkd0g4au3kcln68pb44146au1085m70q31c9in8=== Base\ 32\ Encoding\ with\ Extended\ Hex\ Alphabet
+A934681K6OQ3G=== RFC\ 4648
+a934681k6oq3g=== RFC\ 4648
+Q2ET1E6GNB8BTK5RQ2O21K52Q2QT30EGNF8B0=== Никола\ Тесла
+q2et1e6gnb8btk5rq2o21k52q2qt30egnf8b0=== Никола\ Тесла

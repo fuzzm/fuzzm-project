@@ -1,0 +1,21 @@
+From: Ruben Undheim <ruben.undheim@gmail.com>
+Date: Sun, 23 Sep 2018 09:40:08 +0200
+Subject: qflow doesn't work with versions of yosys
+
+with a "+" in the version string. This patch fixes this.
+---
+ scripts/synthesize.sh | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/scripts/synthesize.sh b/scripts/synthesize.sh
+index 7ac66d5..4b4ec30 100755
+--- a/scripts/synthesize.sh
++++ b/scripts/synthesize.sh
+@@ -138,6 +138,7 @@ else
+    set subrevision = ${minortest}
+ 
+ endif
++set minor = `echo ${minor} | sed 's/+//'`
+ 
+ # Check if "yosys_options" specifies a script to use for yosys.
+ if ( ! ${?yosys_options} ) then

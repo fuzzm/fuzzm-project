@@ -1,0 +1,27 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Csvmidi", "Csvmidi.vcproj", "{FA22F5FC-B0B2-4626-B402-7EE4E023CA5B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Midicsv", "Midicsv.vcproj", "{2A76FE95-C368-4A6F-BFB7-EAF1DB195CCB}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{FA22F5FC-B0B2-4626-B402-7EE4E023CA5B}.Debug.ActiveCfg = Debug|Win32
+		{FA22F5FC-B0B2-4626-B402-7EE4E023CA5B}.Debug.Build.0 = Debug|Win32
+		{FA22F5FC-B0B2-4626-B402-7EE4E023CA5B}.Release.ActiveCfg = Release|Win32
+		{FA22F5FC-B0B2-4626-B402-7EE4E023CA5B}.Release.Build.0 = Release|Win32
+		{2A76FE95-C368-4A6F-BFB7-EAF1DB195CCB}.Debug.ActiveCfg = Debug|Win32
+		{2A76FE95-C368-4A6F-BFB7-EAF1DB195CCB}.Debug.Build.0 = Debug|Win32
+		{2A76FE95-C368-4A6F-BFB7-EAF1DB195CCB}.Release.ActiveCfg = Release|Win32
+		{2A76FE95-C368-4A6F-BFB7-EAF1DB195CCB}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

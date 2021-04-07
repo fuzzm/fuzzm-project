@@ -1,0 +1,71 @@
+#!/bin/sh
+#
+#    BaseZ regression test
+#
+#    Copyright (C) 2013, 2016  Milan Kupcevic
+#
+#    You can redistribute and/or modify this software under the
+#    terms of the GNU General Public License version 3, or any later 
+#    version as published by the Free Software Foundation.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+#    GPLv3+
+#
+
+[ -e base16 ] || ln -s basez base16
+[ -e base32plain ] || ln -s basez base32plain
+[ -e base32hex ] || ln -s basez base32hex
+[ -e base64plain ] || ln -s basez base64plain
+[ -e base64url ] || ln -s basez base64url
+[ -e base64mime ] || ln -s basez base64mime
+[ -e base64pem ] || ln -s basez base64pem
+
+invalid_fail()
+{
+  echo This input should have been rejected: $input
+  echo Regression test failure!
+  exit 1
+}
+
+encodetest()
+{
+echo START $1$2.test
+while read input output option ; do
+  err=0
+  case "$input" in
+    \#*) continue
+  esac
+  got="`printf "$input" | ./$1 $3 $option`" || err=1
+  [ "$err" = "0" -a "$2" = "invalid" ] && invalid_fail
+  [ "$err" = "1" -a "$2" != "invalid" ] && exit 1
+  printf "$1${3:+" $3"}${option:+" $option"}: $input --> $got\n" 
+  [ "$output" = "$got" -o "$2" = "invalid" ] || {
+    echo Not exactly. Expected output for $input is $output
+    echo Regression test failure!
+    exit 1
+  }
+done < _SDIR_/tests/$1$2.test
+[ "$?" = "0" ] || exit 1;
+}
+
+for test in base16 base32plain base32hex base64plain base64url base64mime ; do
+  encodetest $test invalid -d || exit 1
+done
+
+for test in base16 base32plain base32hex base64plain base64url base64mime ; do
+  encodetest $test || exit 1
+done
+
+for test in base16 base32plain base32hex base64plain base64url base64mime ; do
+  encodetest $test d -d || exit 1
+done
+
+echo Regression tests: OK
+

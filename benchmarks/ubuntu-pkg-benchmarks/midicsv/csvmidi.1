@@ -1,0 +1,128 @@
+'\" t
+.TH CSVMIDI 1 "9 FEB 2004"
+.UC 4
+.SH NAME
+csvmidi \- encode CSV file as MIDI
+.SH SYNOPSIS
+.B csvmidi
+[
+.B \-u
+.B \-v
+.B \-x
+.B \-z
+] [
+.I infile
+[
+.I outfile
+] ]
+.SH DESCRIPTION
+.B csvmidi
+reads a
+CSV (Comma-Separated Value) file in the format written
+by
+.B midicsv
+and creates the equivalent standard MIDI file.
+.SH OPTIONS
+.TP 10
+.B \-u
+Print how-to-call information.
+.TP
+.B \-v
+Print verbose debugging information on standard
+error.  The MIDI file header is dumped, along
+with the length of each track in the file.
+.TP
+.B \-x
+MIDI streams support a rudimentary form of compression
+in which successive events with the same ``status''
+(event type and channel) may omit the status byte.
+By default
+.B csvmidi
+avails itself of this compression.
+If the
+.B \-x
+option is specified, the status byte is emitted
+for all events\-it is never compressed even when the
+MIDI standard permits it to be.
+.TP
+.B \-z
+Most errors detected in CSV records cause a warning message
+to be displayed on standard error and the record
+ignored.  The
+.B \-z
+option causes
+.B csvmidi
+to immediately terminate processing when the first error
+is detected.
+.SH "EXIT STATUS"
+If no errors or warnings are detected
+.B csvmidi
+exits with status 0.  A status of of 1 is returned if one
+or more errors were detected in the CSV input file, while
+a status of 2 indicates a syntax error on the command line or
+inability to open the input or output file.
+.SH FILES
+If no
+.I infile
+is specified or
+.I infile
+is
+.RB `` \- '',
+.B csvmidi
+reads its input from standard input; if no
+.I outfile
+is given or
+.I outfile
+is
+.RB `` \- '',
+MIDI output is written  to standard output.  The input and
+output are processed in a strictly serial manner; consequently
+.B csvmidi
+may be used in pipelines without restrictions.
+.SH BUGS
+.PP
+.B csvmidi
+assumes its input is in the format written by
+.BR midicsv .
+If supplied a CSV file with well-formed records which
+nonetheless makes no semantic sense as a MIDI file, the results
+will, in all likelihood, simply perplex any program or instrument
+to which it's sent.
+.B csvmidi
+checks for missing fields and range checks
+all numeric values, but does not perform higher-level
+consistency checking (for example, making sure that every
+note on event is paired with a subsequent note off).  That
+level of verification, if required, should be done on the
+CSV file before it is processed by
+.BR csvmidi .
+.PP
+Exporting a file to CSV with
+.B midicsv
+and then importing it with
+.B csvmidi
+is not guaranteed to create an identical MIDI file.  MIDI
+files support compression modes which are not obligatory.
+A MIDI file exported to CSV and then re-imported should,
+however, be
+.I equivalent
+to the original file and should, if exported to CSV, be
+identical to the CSV exported from the original file.
+.PP
+Please report problems to
+.BR bugs@fourmilab.ch .
+.SH "SEE ALSO"
+.PD
+.BR midicsv (1),
+.BR midicsv (5)
+.ne 10
+.SH AUTHOR
+.ce 2
+John Walker
+http://www.fourmilab.ch/
+.PP
+This software is in the public domain.
+Permission to use, copy, modify, and distribute this software and its
+documentation for any purpose and without fee is hereby granted,
+without any conditions or restrictions.  This software is provided ``as
+is'' without express or implied warranty.

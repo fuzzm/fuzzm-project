@@ -1,0 +1,6 @@
+#!/bin/sh
+
+set -e
+
+qflow -h
+echo "run: OK"

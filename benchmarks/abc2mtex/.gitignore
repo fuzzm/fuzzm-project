@@ -1,0 +1,4 @@
+*.o
+abc2mtex
+abc2mtex.wasm
+.swp

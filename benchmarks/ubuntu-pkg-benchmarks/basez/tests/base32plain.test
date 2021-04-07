@@ -1,0 +1,15 @@
+#
+#    base32 encoding regression test data
+#
+
+f MY======
+fo MZXQ====
+foo MZXW6===
+foob MZXW6YQ=
+fooba MZXW6YTB
+foobar MZXW6YTBOI======
+QUAKEMACHINE KFKUCS2FJVAUGSCJJZCQ====
+Base32 IJQXGZJTGI======
+Base32\ Encoding IJQXGZJTGIQEK3TDN5SGS3TH
+RFC\ 4648 KJDEGIBUGY2DQ===
+Никола\ Тесла 2CO5BOGQXLIL5UF32CYCBUFC2C25DAOQXPILA===

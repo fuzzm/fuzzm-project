@@ -1,0 +1,8 @@
+*.o
+contrib/pngminus/pnm2png
+contrib/pngminus/zlib/Makefile
+contrib/pngminus/zlib/example
+contrib/pngminus/zlib/example64
+contrib/pngminus/zlib/libz.a
+contrib/pngminus/zlib/minigzip
+contrib/pngminus/zlib/minigzip64

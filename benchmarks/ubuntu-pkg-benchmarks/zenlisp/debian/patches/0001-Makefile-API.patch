@@ -1,0 +1,65 @@
+From: "Barak A. Pearlmutter" <barak+git@cs.nuim.ie>
+Date: Mon, 20 Jan 2014 19:07:17 +0000
+Subject: Makefile API
+
+---
+ Makefile | 28 ++++++++++++++--------------
+ 1 file changed, 14 insertions(+), 14 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index a092b0d..d37f875 100644
+--- a/Makefile
++++ b/Makefile
+@@ -4,7 +4,8 @@
+ 
+ V=	2
+ 
+-PREFIX?=/usr/local
++prefix?=/usr/local
++PREFIX?=$(prefix)
+ BINOWN?=bin
+ BINGRP?=bin
+ 
+@@ -16,14 +17,11 @@ IMAGE=	$(PREFIX)/share/zenlisp/zenlisp
+ 
+ LIBS=	base.l imath.l iter.l nmath.l rmath.l
+ 
+-CFLAGS=		-O -DDEFAULT_IMAGE="\"$(IMAGE)\""
++CPPFLAGS += -DDEFAULT_IMAGE="\"$(IMAGE)\""
+ LINTFLAGS=	-Wall -ansi -pedantic -Wmissing-prototypes -DLINT
+ 
+ all:	zl zenlisp
+ 
+-zl:	zl.c
+-	$(CC) $(CFLAGS) -o zl zl.c
+-
+ lint:
+ 	$(CC) $(CFLAGS) $(LINTFLAGS) -o zl zl.c
+ 
+@@ -40,15 +38,17 @@ test:	zl
+ C=
+ install: all
+ 	strip zl
+-	install -o $(BINOWN) -g $(BINGRP) -d -m 0755 $(SHRDIR)
+-	install -o $(BINOWN) -g $(BINGRP) -d -m 0755 $(DOCDIR)
+-	install -o $(BINOWN) -g $(BINGRP) $C -m 0755 zl $(BINDIR)
+-	install -o $(BINOWN) -g $(BINGRP) $C -m 0644 zenlisp $(SHRDIR)
+-	install -o $(BINOWN) -g $(BINGRP) $C -m 0644 $(LIBS) $(SHRDIR)
+-	install -o $(BINOWN) -g $(BINGRP) $C -m 0644 src/*/*.l $(SHRDIR)
+-	install -o $(BINOWN) -g $(BINGRP) $C -m 0644 zl.1 $(MANDIR)
+-	install -o $(BINOWN) -g $(BINGRP) $C -m 0644 LICENSE $(SHRDIR)
+-	install -o $(BINOWN) -g $(BINGRP) $C -m 0644 zenlisp.txt $(DOCDIR)
++	install -d -m 0755 $(DESTDIR)$(SHRDIR)
++	install -d -m 0755 $(DESTDIR)$(DOCDIR)
++	install -d -m 0755 $(DESTDIR)$(BINDIR)
++	install -d -m 0755 $(DESTDIR)$(MANDIR)
++	install $C -m 0755 zl $(DESTDIR)$(BINDIR)/
++	install $C -m 0644 zenlisp $(DESTDIR)$(SHRDIR)/
++	install $C -m 0644 $(LIBS) $(DESTDIR)$(SHRDIR)/
++	install $C -m 0644 src/*/*.l $(DESTDIR)$(SHRDIR)/
++	install $C -m 0644 zl.1 $(DESTDIR)$(MANDIR)/
++	install $C -m 0644 LICENSE $(DESTDIR)$(SHRDIR)/
++	install $C -m 0644 zenlisp.txt $(DESTDIR)$(DOCDIR)/
+ 
+ clean:
+ 	rm -f *.o *.a *.core core zl zenlisp _test delete-me \

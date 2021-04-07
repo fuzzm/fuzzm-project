@@ -1,0 +1,11 @@
+*.cmake
+libtiff
+CMakeCache.txt
+CMakeFiles
+contrib/
+build/
+html/
+man/
+port/
+test/
+zlib-1.0/

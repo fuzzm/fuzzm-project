@@ -1,0 +1,16 @@
+#
+#    base64url decoding regression test data
+#
+
+Zg== f
+Zm8= fo
+Zm9v foo
+Zm9vYg== foob
+Zm9vYmE= fooba
+Zm9vYmFy foobar
+UVVBS0VNQUNISU5F QUAKEMACHINE
+QmFzZTY0 Base64
+QmFzZSA2NCBFbmNvZGluZyB3aXRoIFVSTCBhbmQgRmlsZW5hbWUgU2FmZSBBbHBoYWJldA== Base\ 64\ Encoding\ with\ URL\ and\ Filename\ Safe\ Alphabet
+UkZDIDQ2NDg= RFC\ 4648
+VG8-Z28_ To>go?
+0J3QuNC60L7\\nQu9CwINCi0LXRgdC70LA= Никола\ Тесла

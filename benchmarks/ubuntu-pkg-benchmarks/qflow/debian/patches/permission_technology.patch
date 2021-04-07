@@ -1,0 +1,61 @@
+From: Ruben Undheim <ruben.undheim@gmail.com>
+Date: Sun, 23 Sep 2018 10:47:10 +0200
+Subject: Fix the permission on technology files
+
+---
+ tech/osu018/Makefile.in | 6 +++++-
+ tech/osu035/Makefile.in | 6 +++++-
+ tech/osu050/Makefile.in | 6 +++++-
+ 3 files changed, 15 insertions(+), 3 deletions(-)
+
+diff --git a/tech/osu018/Makefile.in b/tech/osu018/Makefile.in
+index 18b94d6..bcdf057 100644
+--- a/tech/osu018/Makefile.in
++++ b/tech/osu018/Makefile.in
+@@ -31,7 +31,11 @@ install: ${TECH_FILES}
+ 	@echo "Installing osu018 tech files"
+ 	$(INSTALL) -d $(DESTDIR)$(TECHINSTALL)/osu018
+ 	for target in $(TECH_FILES); do \
+-	   $(INSTALL) $$target $(DESTDIR)$(TECHINSTALL)/osu018 ;\
++	   if [ "$$target" = "osu018.sh" ] ; then \
++	    $(INSTALL) $$target $(DESTDIR)$(TECHINSTALL)/osu018 ;\
++	   else \
++	    $(INSTALL) --mode=644 $$target $(DESTDIR)$(TECHINSTALL)/osu018 ;\
++	   fi \
+ 	done
+ 
+ clean:
+diff --git a/tech/osu035/Makefile.in b/tech/osu035/Makefile.in
+index b6f999c..10c05fe 100644
+--- a/tech/osu035/Makefile.in
++++ b/tech/osu035/Makefile.in
+@@ -31,7 +31,11 @@ install: ${TECH_FILES}
+ 	@echo "Installing osu035 tech files"
+ 	$(INSTALL) -d $(DESTDIR)$(TECHINSTALL)/osu035
+ 	for target in $(TECH_FILES); do \
+-	   $(INSTALL) $$target $(DESTDIR)$(TECHINSTALL)/osu035 ;\
++	   if [ "$$target" = "osu035.sh" ] ; then \
++	    $(INSTALL) $$target $(DESTDIR)$(TECHINSTALL)/osu035 ;\
++	   else \
++	    $(INSTALL) --mode=644 $$target $(DESTDIR)$(TECHINSTALL)/osu035 ;\
++	   fi \
+ 	done
+ 
+ clean:
+diff --git a/tech/osu050/Makefile.in b/tech/osu050/Makefile.in
+index db3cba8..cb5118f 100644
+--- a/tech/osu050/Makefile.in
++++ b/tech/osu050/Makefile.in
+@@ -31,7 +31,11 @@ install: ${TECH_FILES}
+ 	@echo "Installing osu050 tech files"
+ 	$(INSTALL) -d $(DESTDIR)$(TECHINSTALL)/osu050
+ 	for target in $(TECH_FILES); do \
+-	   $(INSTALL) $$target $(DESTDIR)$(TECHINSTALL)/osu050 ;\
++	   if [ "$$target" = "osu050.sh" ] ; then \
++	    $(INSTALL) $$target $(DESTDIR)$(TECHINSTALL)/osu050 ;\
++	   else \
++	    $(INSTALL) --mode=644 $$target $(DESTDIR)$(TECHINSTALL)/osu050 ;\
++	   fi \
+ 	done
+ 
+ clean:

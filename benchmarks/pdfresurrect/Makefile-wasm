@@ -1,0 +1,32 @@
+APP = pdfresurrect.wasm
+MANPAGE = pdfresurrect.1
+OBJS = main.o pdf.o
+CC = wasi-clang
+CFLAGS = -g -O2 -Wall -O3  $(EXTRA_CFLAGS)
+LDFLAGS = 
+prefix = /usr/local
+exec_prefix = ${prefix}
+bindir = ${exec_prefix}/bin
+mandir = ${prefix}/share/man
+
+all: $(OBJS) $(APP)
+
+$(APP): $(OBJS)
+	$(CC) -o $@ $(OBJS) $(CFLAGS) $(LDFLAGS)
+
+%.o: %.c
+	$(CC) -o $@ -c $< $(CFLAGS)
+
+install:
+	cp $(APP) $(DESTDIR)$(bindir)
+	mkdir -p $(DESTDIR)$(mandir)/man1
+	cp $(MANPAGE) $(DESTDIR)$(mandir)/man1
+
+uninstall:
+	rm $(DESTDIR)$(bindir)/$(APP)
+	rm $(DESTDIR)$(mandir)/man1/$(MANPAGE)
+
+clean:
+	rm -rfv $(APP)
+
+.PHONY: install uninstall clean distclean

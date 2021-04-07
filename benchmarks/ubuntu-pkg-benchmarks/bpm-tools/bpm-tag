@@ -1,0 +1,135 @@
+#!/bin/sh
+#
+# Copyright (C) 2013 Mark Hills <mark@xwax.org>
+#
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# version 2, as published by the Free Software Foundation.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License version 2 for more details.
+#
+# You should have received a copy of the GNU General Public License
+# version 2 along with this program; if not, write to the Free
+# Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+# MA 02110-1301, USA.
+#
+
+#
+# Analyse an audio file and add BPM metadata
+#
+
+set -e
+
+usage()
+{
+	cat <<END
+bpm-tag (C) Copyright 2013 Mark Hills <mark@xwax.org>
+
+Usage: bpm-tag [options] <file>
+Tag an audio file with tempo (in beats-per-minute, BPM)
+
+  -f   Ignore existing BPM value
+  -n   Display BPM only, don't tag
+  -m   Minimum detected BPM
+  -x   Maximum detected BPM
+  -h   Display this help message and exit
+
+See the bpm-tag(1) man page for more information and examples.
+END
+}
+
+# Parse command line arguments
+
+FORCE=false
+WRITE=true
+ARGS=""
+
+while getopts "fhnm:x:" OPT; do
+	case "$OPT" in
+	f)
+		FORCE=true
+		;;
+	n)
+		WRITE=false
+		;;
+	m)
+		ARGS="$ARGS -m $OPTARG"
+		;;
+	x)
+		ARGS="$ARGS -x $OPTARG"
+		;;
+	h)
+		usage
+		exit 0
+		;;
+	?)
+		exit 1
+	esac
+done
+shift $((OPTIND - 1))
+
+if [ -z "$1" ]; then
+	usage >&2
+	exit 1
+fi
+
+set -u
+
+FILE="$1"
+shift
+
+# Don't overwrite an existing BPM tag
+
+case "$FILE" in
+*.flac)
+	BPM=`metaflac --show-tag=BPM "$FILE" | sed -e 's/BPM=//'`
+	;;
+*.mp3)
+	BPM=`id3v2 -R "$FILE" | sed -n 's/^TBPM.*: \([0-9\.]\+\)/\1/p'`
+	;;
+*.ogg)
+	BPM=`vorbiscomment "$FILE" | sed -n 's/^BPM=//p'`
+	;;
+*)
+	echo "$FILE: file extension not known" >&2
+	exit 1
+	;;
+esac
+
+if [ -n "$BPM" ] && ! $FORCE; then
+	echo "$FILE: already tagged, $BPM BPM" >&2
+	exit 1
+fi
+
+# Analyse the BPM
+
+BPM=`sox -V1 "$FILE" -r 44100 -e float -c 1 -t raw - | bpm $ARGS`
+if [ -z "$BPM" ]; then
+	exit 1
+fi
+
+echo "$FILE: $BPM BPM" >&2
+
+if ! $WRITE; then
+	exit 0
+fi
+
+# Write a BPM tag
+
+case "$FILE" in
+*.flac)
+	metaflac --remove-tag=BPM --set-tag="BPM=$BPM" "$FILE"
+	;;
+*.mp3)
+	id3v2 --TBPM "$BPM" "$FILE"
+	;;
+*.ogg)
+	vorbiscomment -at "BPM=$BPM" "$FILE"
+	;;
+*)
+	echo "$FILE: don't know how to tag this type of file" >&2
+	exit 1
+esac

@@ -1,0 +1,26 @@
+#
+#    base32 decoding regression test data
+#
+
+MY====== f
+my====== f
+MZXQ==== fo
+mzxq==== fo
+MZXW6=== foo
+mzxw6=== foo
+MZXW6YQ= foob
+mzxW6yq= foob
+MZXW6YTB fooba
+mzxw6ytb fooba
+MZXW6YTBOI====== foobar
+mzxw6ytboi====== foobar
+KFKUCS2FJVAUGSCJJZCQ==== QUAKEMACHINE
+kfkucs2fjvaugscjjzcq==== QUAKEMACHINE
+IJQXGZJTGI====== Base32
+ijqxgzjtgi====== Base32
+IJQXGZJTGIQEK3TDN5SGS3TH Base32\ Encoding
+ijqxgzjtgiqek3tdn5sgs3th Base32\ Encoding
+KJDEGIBUGY2DQ=== RFC\ 4648
+kjdegibugy2dq=== RFC\ 4648
+2CO5BOGQXLIL5UF32CYCBUFC2C25DAOQXPILA=== Никола\ Тесла
+2co5bogqxlil5uf32cycbufc2c25daoqxpila=== Никола\ Тесла

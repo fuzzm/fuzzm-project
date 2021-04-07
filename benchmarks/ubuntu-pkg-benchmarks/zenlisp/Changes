@@ -1,0 +1,65 @@
+2013-11-22 Fixed image generation bug (infinite loop) on various systems.
+2008-09-23 Fixed PREFIX and REGEX examples (src/compilers/).
+2008-09-19 Removed annoying copyright messages. Added "license".
+2008-09-13 Completed code of LAMBDA-RENAME (src/compilers/lv-rename.l).
+2008-08-27 Applied more cosmetical changes.
+2008-08-26 Applied some cosmetical changes.
+2008-05-03 Removed PACKAGE and EXPORT (maintain identity of symbols!).
+2008-05-03 Prefixed internal definitions with %.
+2008-05-03 Protected internal definitions using LET.
+2008-04-08 Fix: detect improper lists in function applications.
+2008-02-02 Fix: missing initialization of Batch variable.
+2008-01-31 Caught non-atoms in PACKAGE.
+2008-01-27 Optimized allocation in make_closure().
+2008-01-26 Removed TraceHandler (unused), more clean up.
+2008-01-22 More code clean up.
+2008-01-19 Code clean up.
+2007-12-30 Made '{' character a separator.
+2007-12-29 Made primitives and specials atomic in the sense of ATOM.
+2007-12-27 Added support for ~ in REQUIRE.
+2007-12-26 Changed (APPLY FN LIST) --> (APPLY FN [ARG...] LIST).
+2007-12-15 Renamed true value to :T, made T refer to :T.
+2007-12-15 Renamed = prefix in LOAD to ~, removed ~/ prefix.
+2007-12-15 Removed READ, WRITE.
+2007-12-14 Cleaned up zl.c.
+2007-12-12 Added GENSYM primitive.
+2007-12-12 Fixed N-EXPT (was slow due to wrong recursion).
+2007-12-12 Code clean-up.
+2007-12-11 Changed (REDUCE-R F A B) --> (FOLD-R F B A)
+2007-12-11 Changed (REDUCE F A B) --> (FOLD F B A)
+2007-12-11 Applied more micro optimizations.
+2007-12-10 Merged alisp.c, alisp.h, and shell.c.
+2007-12-09 Applied some micro optimizations.
+2007-12-08 Changed rational format from (/ #n #d) to #n/d.
+2007-12-08 Forked zenlisp.
+2006-09-17 Fixed false positive in test suite.
+2006-09-13 Fixed tail recursion while passing closures.
+2006-09-12 Added GENERATOR example (src/misc/gener.l)
+2006-09-12 Updated reference manual (alisp.txt) and man page (alisp.7).
+2006-09-11 Fixed natural = operator (did not normalize arguments).
+2006-09-09 Made {...} unREADable.
+2006-09-09 Changed representation of unreadable objects to {...}.
+2006-09-09 Fixed xread(): no longer returns EOT on bad pairs.
+2006-09-08 Fixed ()=>() whith VERIFY-ARROWS enabled.
+2006-09-07 Added -L option (print license).
+2006-09-07 Renamed examples/ to src/.
+2006-09-07 ALISP_RELEASE now reflects all changes (not just alisp.c).
+2006-09-04 Added a more general predicate iterator (iter.l).
+2006-08-27 Updated LVRENAME and UNLET programs (src/misc).
+2006-08-22 Made NUMBER-P catch dotted lists.
+2006-08-22 Made INTEGER reduce rationals when RMATH is loaded.
+2006-08-17 Added REDUCE-R function (right-associative REDUCE).
+2006-08-15 Closures no longer capture quoted symbols (see collect()).
+2006-07-16 Added ArrowLISP Micro KANREN and ZEBRA example.
+2006-07-13 Made ALISP restore default package when aborting evaluation.
+2006-07-01 Fixed CopyBindings() (did not copy all packages).
+2006-06-30 Changed representation of false value from () to :F.
+2006-06-30 Made :T an alias of T.
+2006-06-27 Allowed (EXPLODE ()) => () and (IMPLODE ()) => ().
+2006-06-26 Made WRITE print a leading quote.
+2006-06-16 Added QUIT primitive.
+2006-06-15 Improved some error messages.
+2006-06-14 Added -g (track GC) command line option.
+2006-06-08 Made application of CAR and CDR to internals illegal.
+2006-06-08 GC-Protected Error Context (only in case of an error).
+2006-06-08 GC-Protected expressions during EVAL. Oops.

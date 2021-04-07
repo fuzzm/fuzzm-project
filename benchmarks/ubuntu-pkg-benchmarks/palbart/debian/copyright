@@ -1,0 +1,48 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: palbart
+Upstream-Contact: David Gesswein <djg@pdp8online.com>
+Source: http://www.pdp8online.com/ftp/software/palbart/
+
+Files: palbart.c README
+Copyright: 1996-1997 Gary A. Messenbrink <gam@rahul.net>
+           2013-2015 David Gesswein <djg@pdp8online.com>
+           2007      Robert Krten
+           2003      PNT
+           2015      DPI
+Comment:
+ There are no explicit copyright lines in the source file, the above list is
+ compiled from the changes record. Unfortunately that list is signed only with
+ initials and I was not able to find the corresponding full name for some of
+ these.
+License: free-with-reciprocity
+ WARRANTY:
+    If you don't like it the way it works or if it doesn't work, that's
+    tough.  You're welcome to fix it yourself.  That's what you get for
+    using free software.
+ .
+ COPYRIGHT NOTICE:
+    This is free software.  There is no fee for using it.  You may make
+    any changes that you wish and also give it away.  If you can make
+    a commercial product out of it, fine, but do not put any limits on
+    the purchaser's right to do the same.  If you improve it or fix any
+    bugs, it would be nice if you told me and offered me a copy of the
+    new version.
+
+Files: palbart.1
+Copyright: 2000-2011 Vince Mulhollon <vlm@debian.org>
+           2013      David Gesswein <djg@pdp8online.com>
+License: man-page
+ This manual page was written by Vince Mulhollon <vlm@debian.org>,
+ for the Debian GNU/Linux system (but may be used by others).
+
+Files: debian/* Makefile
+Copyright: 2000-2011 Vince Mulhollon <vlm@debian.org>
+           2017      Andreas Bombe <aeb@debian.org>
+License: GPL-2+
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or (at
+ your option) any later version.
+ .
+ On Debian systems, the full text of the GNU General Public License
+ version 2 can be found in `/usr/share/common-licenses/GPL-2'.

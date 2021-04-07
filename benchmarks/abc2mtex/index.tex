@@ -1,0 +1,371 @@
+\documentstyle{article}
+\parskip 1ex
+\parindent 0em
+\oddsidemargin -10mm \evensidemargin -10mm
+\marginparwidth 40pt \marginparsep 5mm
+\topmargin -10mm
+%\headheight 0pt
+%\footheight 0pt
+\textheight 9in
+\textwidth 7in
+\newcommand{\abc}{{\tt abc}}
+\newcommand{\abctmtex}{{\bf ABC2M\TeX}}
+
+\begin{document}
+\title{The \abc\ Indexing Guide \\ {\it Version 1.6.1 -- January '97}}
+\author{Chris Walshaw \\
+{\it School of Maths, University of Greenwich, London, G.B.} \\
+email: {\tt C.Walshaw@gre.ac.uk}
+}
+\date{}
+
+\maketitle
+
+\section{Introduction}
+
+This document describes how to index your tunes and facilities for
+searching the database. It has been separated from the userguide
+in order to keep both documents compact and to the point. It is assumed
+that the reader is familiar with the userguide before reading this document.
+
+Those people who have used the indexing facility in versions 1.1 and previous
+will notice some major changes to this part of the package.
+There are no longer any restrictions on the tune-file names (although you will
+find it easier if all  your tune files have the extension {\tt .abc}) and
+information is no longer inferred from  these file names. In addition, the
+information put into the {\tt index} is chosen by the user and not confined to
+what the author thinks will be useful.
+
+\subsection{The format file}
+
+The essential idea behind the new formatting is that the user supplies a format
+file {\tt index.fmt} specifying exactly which fields (s)he wants to appear and
+the maximum number of characters that each should have. For example
+the `compulsory' format in versions 1.1 and previous could still be used if
+\begin{verbatim}
+F<4 X>3 O<1 R<2 T:55
+\end{verbatim}
+were the contents of {\tt index.fmt}. The letters of this format correspond
+to \abc\ fields (save {\tt F} which is the file name with the path
+and the {\tt .abc} extension removed) and imply that the first
+4 characters are the file name, followed by a space, followed by the tune
+number (3 characters), space, origin (1 character), space, tune type (2
+characters), space, title (up to 55 characters). The symbols {\tt <}, {\tt >}
+and {\tt :} mean that the text of the field is left justified \& padded with
+whitespace, right justified \& padded and left justified without padding,
+respectively. The colon, {\tt :}, can only
+be used for the last field of each line (otherwise the code won't be able to
+untangle the format).
+
+WARNING: The code looks at {\em all} the characters in the format file. If you
+are using a PC or a Mac make sure that there is
+a newline character at the end of every line including the last!
+
+A few more example formats are:--
+\begin{itemize}
+\item The format I use now is a two line format and has in addition the meter,
+default note length, key and first two bars of each tune. Its format file looks
+like
+\begin{verbatim}
+F<4 X>3 O<1 R<2 T:58
+ M>5 L>4 K<5 |:54
+\end{verbatim}
+\item If your tunes are stored one to a file there's no need to specify the
+file name or number, but you might want the composer
+\begin{verbatim}
+M>5 C<18 T:55
+\end{verbatim}
+\item If you want to use the UNIX sort facility in addition to the one provided
+here, you might want to put field delimiters, e.g. a {\tt ;}, in the index
+\begin{verbatim}
+F<4;X>3;O<1;R<2;T:58
+\end{verbatim}
+\item By default the {\tt .abc} extension is dropped from the file name. If you
+want to put it back in
+\begin{verbatim}
+F>8.abc R<8 T:50
+\end{verbatim}
+\item To output a character that is meaningful to the formatting
+code, for example to generate a listing that looks like an \abc\
+tune file, it is possible to quote the character with a \verb+\+
+\begin{verbatim}
+\X:X:8
+\T:T:55
+\O:O:10
+\R:R:10
+\M:M:5
+\L:L:4
+\K:K:5
+|:60
+
+\end{verbatim}
+\item Similarly, to include a \verb+\+ in the index, for example to embed
+\TeX\ commands, use \verb+\\+
+\begin{verbatim}
+\\texcommand F<8.abc T:50
+\end{verbatim}
+\end{itemize}
+
+\subsection{Information fields} \label{sec:info}
+
+The following information fields can be used for indexing:--
+\begin{itemize}
+\item[{\tt X}] -- tune reference number.
+\item[{\tt T}] -- tune title. For the purposes of indexing,
+definite \& indefinite articles should be placed
+at the end after a comma -- e.g. `The Tenpenny Bit' should be entered as
+{\tt T:Tenpenny Bit, The}, although this will appear as `The Tenpenny Bit'
+on the printed music sheet. The normal \TeX\ accents (such as in \verb+caf\'e+
+for producing caf\'e) are stripped out of the index.
+\item[{\tt C}] -- composer.
+\item[{\tt M}] -- meter.
+\item[{\tt L}] -- default note length.
+\item[{\tt O}] -- origin, e.g. {\tt O:I} or {\tt Irish} -- Irish, {\tt O:E} --
+English, \ldots.
+\item[{\tt R}] -- tune type, e.g. {\tt R:R} or {\tt R:reel} -- reel, {\tt R:J}
+or {\tt R:jig}
+-- jig, \ldots.
+\item[{\tt K}] -- key.
+\end{itemize}
+
+The {\tt O:} \& {\tt R:} fields can be used to create a default for
+each tune file in exactly the same way as the {\tt M:} field and can be reset
+later in the file.
+
+Two further fields can be specified in {\tt index.fmt} -- {\tt F} for referring
+to the file name and {\tt |} for putting in up to two bars from the beginning
+of the tune. The default is two bars plus leading notes, but to change this use
+
+\begin{tabular}{ll}
+{\tt |1}  & first bar without leading notes \\
+{\tt |2}  & first two bars without leading notes \\
+{\tt |01}  & first bar with leading notes \\
+{\tt |02}  & first two bars with leading notes
+\end{tabular}
+
+Note that, for the purposes of searching the index, there
+is no point in putting in the first bars without the key, {\tt K} field (unless
+all your tunes are in {\tt C}). Also grace notes will be ignored and only
+the first note of a chord will be used.
+
+\subsection{Making the Index}
+
+To make an index of all the tunes stored in {\tt .abc} files simply enter
+{\tt abc2mtex -i *.abc}. The result is stored in the file
+{\tt index} which can then be sorted alphabetically by title with
+the command {\tt sort\_in}. On a UNIX machine this can all be done
+with the command {\tt make index}.
+
+To do this manually or to select files without a {\tt .abc} extension or even
+select specific tunes run {\tt abc2mtex -i}. If you are repeating
+this operation frequently, put a list of the required files in
+another file (one per line) and then run {\tt abc2mtex -i < list}.
+
+\section{Sorting}
+
+If you have used the {\tt make index} command the index is
+automatically sorted, otherwise, enter
+{\tt make sort} or just {\tt sort\_in} if this program is already compiled.
+
+By default, {\tt sort\_in} reads in the file {\tt index} using the
+corresponding format file {\tt index.fmt}, sorts it and puts
+it back where it came from. To sort a different file, e.g.
+{\tt jigs\_index}, run {\tt sort\_in -f jigs\_index} (which will
+need to use the format file {\tt jigs\_index.fmt}). To sort the
+standard input (for example to sort the output
+of {\tt search}), run {\tt sort\_in -f -} (which will read the
+format file {\tt index.fmt}).
+
+Also, by default, {\tt sort\_in} sorts alphabetically by title and if
+two titles are identical their positioning is indeterminate. To
+change the sorted field or to specify a sorting priority, run with
+a {\tt -p} flag followed by the order in which fields should be
+sorted. For example, {\tt sort\_in -p TRFX}, will first compare
+two entries by title. If they are identical it will then compare
+tune type, then file name, then number. {\tt sort\_in -p RT} will
+sort the index by tune type, then by title. The fields that can be
+used by this option are those given in section~\ref{sec:info}.
+
+Finally, when comparing character strings, {\tt sort\_in} only
+looks at A-Z, a-z, 0-9 and whitespace characters, and folds
+upper case down into lower case.
+
+\section{Searching}
+
+Ever since development first started on \abctmtex\ I have been
+planning a facility that enables the user to search through tune
+files to look for a tune beginning with a certain sequence of notes.
+The code that has been implemented will do not only this but
+search any of the specified fields in the {\tt index} or tune files.
+
+\subsection{What to do}
+
+First make the {\tt index} as described above and compile the search code;
+{\tt make search}.
+
+The search is started by entering the command {\tt search}, followed
+by selected fields, e.g.
+\begin{verbatim}
+%search
+M:6/8
+K:D
+dff cee|def gfe|
+
+\end{verbatim}
+or
+\begin{verbatim}
+%search
+O:Irish
+R:jig
+
+\end{verbatim}
+Note that the final blank line tells the code to start the search.
+
+Alternatively the search input can be put on the command line, e.g.
+\begin{verbatim}
+%search -i M:6/8 -i K:D -i "dff cee|def gfe|"
+\end{verbatim}
+or
+\begin{verbatim}
+%search -i O:Irish -i R:jig
+\end{verbatim}
+Note the use of double quotes to enclose input with whitespace.
+
+As in the tune files, if you wish to search through the first bars of each
+tune, the {\tt K:} field should be the last and
+should immediately precede the notes. Also, chords \& leading
+notes should be left out and grace notes will be ignored.
+
+\subsection{Searching the {\tt index}}
+
+As for {\tt sort\_in}, by default, {\tt search} reads in the file {\tt index}
+using the corresponding format file {\tt index.fmt}. To search a different
+file, e.g.  {\tt jigs\_index}, run {\tt search -f jigs\_index} (which will
+need to use the format file {\tt jigs\_index.fmt}).
+
+The information fields can be used to restrict the search to particular parts
+of the index. Fields recognised by the code are the same as those allowed by
+the indexing under the following conditions:--
+\begin{itemize}
+\item[{\tt M:}] -- meter; if you use this field the code will only find
+tunes in this meter. If you leave it out the default note length
+(for the \abc\ input) is a quaver (1/8th note) although this can be reset with
+the {\tt L:} field. You can also use {\tt M:2} to search all meters divisible
+by two but not by three (e.g. {\tt M:2/2}, {\tt M:2/4},
+{\tt M:4/4}, {\tt M:C}, {\tt M:C|}) or {\tt M:3} to search all
+meters divisible by three (e.g. {\tt 3/2}, {\tt 3/4}, {\tt 6/4}, {\tt 3/8},
+{\tt 6/8}, {\tt 9/8} \& {\tt 12/8}).
+\item[{\tt L:}] -- this can be used to set the default note length
+for the \abc\ input -- it will {\em not} restrict the search to tunes with the
+same default note length.
+\item[{\tt K:}] -- key; this must be used to notify the code that the following
+line is the \abc\ input. However the search is not restricted to any
+single key.
+\item[{\tt T:}] -- title; to search for tunes by name. Note that
+this restricts the search to any tune with the entered string
+in the name. Capitals are ignored and the `.' can be used as a wildcard
+to match any letter. In addition, this field can be used more
+than once to look for more than one string. Thus the input
+\begin{verbatim}
+T:b.rwick
+T:jo...y
+
+\end{verbatim}
+would match the following strings:--
+\begin{verbatim}
+Barwick Johnny
+Go To Berwick Johnny
+Go To Berwick My Jockey
+\end{verbatim}
+\item[{\tt C:}] -- composer; restricts the search to any tune with the entered
+string in the composer field.
+\item[{\tt O:}] -- origin; restricts the search to exact matches of this field.
+\item[{\tt R:}] -- tune type; restricts the search to exact matches.
+\item[{\tt X:}] -- tune number; restricts the search to exact matches.
+\item[{\tt F:}] -- file name; restricts the search to exact matches.
+\end{itemize}
+
+There is obviously no point entering a search field that doesn't exist in
+{\tt index.fmt} and hence the {\tt index}. No matching tunes will be found.
+
+When searching for notes, the code compares the input notes with
+up to two bars (ignoring leading notes) of each entry in the {\tt index} (those
+not otherwise excluded by other fields) and calculates the `distance'
+between them -- as described below. If the distance is less than
+a certain level it then outputs the index entry. By default this level
+is set to 6, but if you find this either too restrictive
+or too generous you can alter it by calling the program with the chosen
+level as a command line input; e.g. enter {\tt search 8} to expand the
+search.
+
+\subsection{Searching the tune files}
+
+Alternatively, {\tt search} can scan the tune files directly with the command
+{\tt search -abc} followed by a list of the tune files to read
+(e.g. {\tt search -abc *.abc}). In this case there is no restriction
+on the fields that can be searched, however, the way code
+matches the input is subtly different. The {\tt M:}, {\tt L:} \&
+{\tt K:} fields all work as described above. The {\tt X:} field
+can be given a range of numbers -- e.g. {\tt X:1,3-4,7-} -- exactly
+the same as when selecting tunes for \abc2mtex. Any other fields
+behave the same way as the {\tt T:} field above. That is, the code
+tries to match the string entered with any matching field. For
+example, searching for {\tt R:jig} would match {\tt R:Jig}, {\tt R:Slip jig}
+or even {\tt R:SINGLE JIG}.
+
+The output of this type of search is standard \abc\ code (with the addition of
+an {\tt F:} field which specifies the filename) and can be piped directly into
+\abc2mtex. For example, {\tt search -abc *.abc | abc2mtex -i -}, would create an
+index of the matching tunes. Alternatively, it could be used as a
+preprocessor to select tunes for {\tt playabc}, i.e.
+{\tt search -i X:1,6,9-11 -abc Xenglish.abc | playabc | tune | play}.
+
+\subsection{How does the note matching work?}
+
+The code first rewrites the input string as a sequence of demi-semi-quavers
+(1/32th notes), ignoring grace notes, rolls, etc. and dropping the second note
+of triplets and quadruplets. Thus the input of
+\begin{verbatim}
+L:1/8
+K:G
+GFG (4ABcA B2G|
+\end{verbatim}
+would be written as
+{\tt G G G G F F F F G G G G A A A A c c c c A A A A B B B B B B B B G G G G}.
+% Next each pair of notes in this sequence is considered and the change between
+% them in semitones calculated; e.g.
+% \begin{verbatim}
+% G G  F F G G A A c c  A A B B B B  G G
+%  0 -1 0 1 0 2 0 3 0 -3 0 2 0 0 0 -4 0
+% \end{verbatim}
+Next each note in this sequence is considered and the change in semitones
+between it and the first note is calculated; e.g.
+\begin{verbatim}
+G G G G  F  F  F  F G G G G A A A A c c c c A A A A B B B B B B B B G G G G
+  0 0 0 -1 -1 -1 -1 0 0 0 0 2 2 2 2 5 5 5 5 2 2 2 2 4 4 4 4 4 4 4 4 0 0 0 0
+\end{verbatim}
+Finally two sequences of numbers are compared by taking the absolute value
+of the difference between each corresponding pair of numbers.
+
+\subsubsection{What it can do}
+
+Because notes are compared relative to the
+first
+% previous
+one and the difference expressed in semitones the code doesn't care about keys
+at all. Thus {\tt GFGB} in {\tt K:G} is identical to \verb+d^c d^f+ in
+{\tt K:C}. Also because everything is expressed as demi-semi-quavers
+(1/32th notes)
+prior to matching {\tt AB c2} in {\tt L:1/8} is the same as {\tt A2BB c2 cc}
+in {\tt L:1/16}.
+
+\subsubsection{What it can't do}
+
+Again, because everything is expressed as demi-semi-quavers, the line
+{\tt defd} in {\tt M:4/4} does not compare to the same line in {\tt M:2/4}.
+This might cause a problem if, for example, you have some reels written in
+{\tt M:C|} and some in {\tt M:2/4}. The only solution is do the search twice,
+once with {\tt L:1/8} and once with {\tt L:1/16}.
+
+\end{document}
+

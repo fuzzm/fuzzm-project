@@ -1,0 +1,5 @@
+*.o
+pdfresurrect
+*.wasm
+Makefile
+config.status

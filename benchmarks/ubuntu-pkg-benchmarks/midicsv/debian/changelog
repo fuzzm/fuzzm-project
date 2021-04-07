@@ -1,0 +1,11 @@
+midicsv (1.1+dfsg.1-1build1) bionic; urgency=high
+
+  * No change rebuild to pick up -fPIE compiler default
+
+ -- Balint Reczey <rbalint@ubuntu.com>  Tue, 03 Apr 2018 12:34:51 +0000
+
+midicsv (1.1+dfsg.1-1) unstable; urgency=medium
+
+  * Initial Debian release (Closes: #797021)
+
+ -- Kamal Mostafa <kamal@whence.com>  Wed, 26 Aug 2015 15:05:48 -0700
