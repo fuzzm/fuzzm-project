@@ -1,5 +1,5 @@
 #!/bin/bash
-export CC=../../../AFL-wasm/afl-gcc
+export CC=../../AFL-wasm/afl-gcc
 
 $CC -O2 -I. jbig2dec.c \
   sha1.c jbig2.c jbig2_page.c jbig2_segment.c\

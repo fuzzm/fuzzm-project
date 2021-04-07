@@ -1,5 +1,5 @@
 #!/bin/bash
-export CC=../../../../../AFL-wasm/afl-gcc
+export CC=../../../../AFL-wasm/afl-gcc
 export LD=ld
 
 $CC -O2 -I. -I../../include -I../libFLAC/include\

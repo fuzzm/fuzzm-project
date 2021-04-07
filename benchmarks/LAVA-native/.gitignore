@@ -1,0 +1,5 @@
+*.o
+base64
+uniq
+who
+md5sum

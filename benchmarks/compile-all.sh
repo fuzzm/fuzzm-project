@@ -6,6 +6,7 @@
 (cd abc2mtex && ./compile.sh && ./wasm-compile.sh)
 (cd flac && ./compile.sh && ./wasm-compile.sh)
 (cd jbig2dec && ./compile.sh && ./wasm-compile.sh)
+./compile-lava.sh
 #(cd ubuntu-pkg-benchmarks/palbart && ./compile.sh && ./wasm-compile.sh)
 #(cd ubuntu-pkg-benchmarks/pdi2iso && ./compile.sh && ./wasm-compile.sh)
 #(cd ubuntu-pkg-benchmarks/qflow && ./compile.sh && ./wasm-compile.sh)

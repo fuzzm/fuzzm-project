@@ -1,6 +1,6 @@
 #!/bin/bash
-export CC="../../../../../wasi-sdk-11.0/bin/clang --sysroot=../../../../../wasi-sdk-11.0/share/wasi-sysroot"
-export LD="../../../../../wasi-sdk-11.0/bin/ld"
+export CC="../../../../wasi-sdk-11.0/bin/clang --sysroot=../../../../wasi-sdk-11.0/share/wasi-sysroot"
+export LD="../../../../wasi-sdk-11.0/bin/ld"
 
 $CC -O2 -I. -I../../include -I../libFLAC/include\
   -DPACKAGE_VERSION=\"1.3.2\"\

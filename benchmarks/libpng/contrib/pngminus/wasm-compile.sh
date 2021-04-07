@@ -1,12 +1,12 @@
 #!/bin/bash
 (cd zlib && ./compile-wasm.sh)
 
-export CC=`realpath ../../../../../wasi-sdk-11.0/bin/clang`
-export CC="$CC --sysroot=../../../../../wasi-sdk-11.0/share/wasi-sysroot/"
-export AR=`realpath ../../../../../wasi-sdk-11.0/bin/ar`
-export RANLIB=`realpath ../../../../../wasi-sdk-11.0/bin/ranlib`
-export LD=`realpath ../../../../../wasi-sdk-11.0/bin/ld`
-export NM=`realpath ../../../../../wasi-sdk-11.0/bin/nm`
+export CC=`realpath ../../../../wasi-sdk-11.0/bin/clang`
+export CC="$CC --sysroot=../../../../wasi-sdk-11.0/share/wasi-sysroot/"
+export AR=`realpath ../../../../wasi-sdk-11.0/bin/ar`
+export RANLIB=`realpath ../../../../wasi-sdk-11.0/bin/ranlib`
+export LD=`realpath ../../../../wasi-sdk-11.0/bin/ld`
+export NM=`realpath ../../../../wasi-sdk-11.0/bin/nm`
 
 LIBZ_FOL=`realpath zlib`
 export LDFLAGS="-L$LIBZ_FOL $LDFLAGS"

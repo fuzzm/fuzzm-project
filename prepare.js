@@ -12,7 +12,7 @@ commander
   .action(function (options) {
     const scriptDir = __dirname;
     const aflFolder = path.resolve(scriptDir, './AFL-wasm')
-    const instrumenterFolder = path.resolve(scriptDir, './wasm-project/wasm_instrumenter');
+    const instrumenterFolder = path.resolve(scriptDir, './wasm_instrumenter');
 
     if (options.skipSeeds) {
       console.log('skipping copy of benchmark seeds');
@@ -69,7 +69,7 @@ commander
 
     /////// LAVA WASM ///////
 
-    const LavaDir="LAVA-M";
+    const LavaDir="benchmarks/LAVA-M";
     const base64Wasm=path.resolve(LavaDir, 'base64', 'coreutils-8.24-lava-safe');
     const base64FuzzerInput=path.resolve(LavaDir, 'base64', 'fuzzer_input');
     prepareBenchmark(base64Wasm, 'base64.wasm', base64FuzzerInput);
@@ -84,7 +84,7 @@ commander
 
     /////// LAVA native ///////
 
-    const LavaNativeDir = 'LAVA-native';
+    const LavaNativeDir = 'benchmarks/LAVA-native';
 
     const base64Native = path.resolve(LavaNativeDir, 'base64', 'coreutils-8.24-lava-safe');
     const base64NativeFuzzerInput = path.resolve(LavaNativeDir, 'base64', 'fuzzer_input');
@@ -100,7 +100,7 @@ commander
 
     /////// vulnerable benchmarks ///////
 
-    const VulnBenchDir = 'wasm-project/benchmarks';
+    const VulnBenchDir = 'benchmarks';
     const pdfResurrect=path.resolve(VulnBenchDir, 'pdfresurrect');
     const pdfResurrectFuzzerInput=path.resolve(aflFolder, 'testcases/others/pdf');
     const pdfResurrectDictionary=path.resolve(aflFolder, 'dictionaries/pdf.dict');

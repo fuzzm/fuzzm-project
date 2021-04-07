@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const cp = require('child_process');
 
-const resultsFolder = "./wasm-project/benchmark-runner/results";
+const resultsFolder = "./results";
 const dstFolders = "./AFL-wasm/programs"
 
 fs.readdir(resultsFolder, {withFileTypes: true}, (err, files) => {
