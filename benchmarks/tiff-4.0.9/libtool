@@ -1,6 +1,6 @@
 #! /bin/bash
 # Generated automatically by config.status (tiff) 4.0.9
-# Libtool was configured on host torp-ThinkPad-T560:
+# Libtool was configured on host foo-ThinkPad-T560:
 # NOTE: Changes made to this file will be lost: look at ltmain.sh.
 
 # Provide generalized library-building support services.

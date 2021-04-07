@@ -1,6 +1,6 @@
 #! /bin/bash
 # Generated automatically by config.status (libpng) 1.6.35
-# Libtool was configured on host torp-Ubuntu:
+# Libtool was configured on host foo-Ubuntu:
 # NOTE: Changes made to this file will be lost: look at ltmain.sh.
 
 # Provide generalized library-building support services.

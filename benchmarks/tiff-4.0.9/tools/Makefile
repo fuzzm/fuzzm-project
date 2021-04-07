@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9
+CMAKE_SOURCE_DIR = /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9
+CMAKE_BINARY_DIR = /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +137,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(CMAKE_COMMAND) -E cmake_progress_start /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9/CMakeFiles /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9/tools/CMakeFiles/progress.marks
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f CMakeFiles/Makefile2 tools/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9/CMakeFiles 0
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(CMAKE_COMMAND) -E cmake_progress_start /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9/CMakeFiles /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9/tools/CMakeFiles/progress.marks
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f CMakeFiles/Makefile2 tools/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f CMakeFiles/Makefile2 tools/clean
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f CMakeFiles/Makefile2 tools/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f CMakeFiles/Makefile2 tools/preinstall
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f CMakeFiles/Makefile2 tools/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f CMakeFiles/Makefile2 tools/preinstall
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f CMakeFiles/Makefile2 tools/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 tools/CMakeFiles/tiffsplit.dir/rule:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/tiffsplit.dir/rule
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/tiffsplit.dir/rule
 .PHONY : tools/CMakeFiles/tiffsplit.dir/rule
 
 # Convenience name for target.
@@ -179,12 +179,12 @@ tiffsplit: tools/CMakeFiles/tiffsplit.dir/rule
 
 # fast build rule for target.
 tiffsplit/fast:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffsplit.dir/build.make tools/CMakeFiles/tiffsplit.dir/build
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffsplit.dir/build.make tools/CMakeFiles/tiffsplit.dir/build
 .PHONY : tiffsplit/fast
 
 # Convenience name for target.
 tools/CMakeFiles/tiffset.dir/rule:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/tiffset.dir/rule
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/tiffset.dir/rule
 .PHONY : tools/CMakeFiles/tiffset.dir/rule
 
 # Convenience name for target.
@@ -194,12 +194,12 @@ tiffset: tools/CMakeFiles/tiffset.dir/rule
 
 # fast build rule for target.
 tiffset/fast:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffset.dir/build.make tools/CMakeFiles/tiffset.dir/build
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffset.dir/build.make tools/CMakeFiles/tiffset.dir/build
 .PHONY : tiffset/fast
 
 # Convenience name for target.
 tools/CMakeFiles/tiffmedian.dir/rule:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/tiffmedian.dir/rule
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/tiffmedian.dir/rule
 .PHONY : tools/CMakeFiles/tiffmedian.dir/rule
 
 # Convenience name for target.
@@ -209,12 +209,12 @@ tiffmedian: tools/CMakeFiles/tiffmedian.dir/rule
 
 # fast build rule for target.
 tiffmedian/fast:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffmedian.dir/build.make tools/CMakeFiles/tiffmedian.dir/build
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffmedian.dir/build.make tools/CMakeFiles/tiffmedian.dir/build
 .PHONY : tiffmedian/fast
 
 # Convenience name for target.
 tools/CMakeFiles/tiffdump.dir/rule:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/tiffdump.dir/rule
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/tiffdump.dir/rule
 .PHONY : tools/CMakeFiles/tiffdump.dir/rule
 
 # Convenience name for target.
@@ -224,12 +224,12 @@ tiffdump: tools/CMakeFiles/tiffdump.dir/rule
 
 # fast build rule for target.
 tiffdump/fast:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffdump.dir/build.make tools/CMakeFiles/tiffdump.dir/build
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffdump.dir/build.make tools/CMakeFiles/tiffdump.dir/build
 .PHONY : tiffdump/fast
 
 # Convenience name for target.
 tools/CMakeFiles/tiffdither.dir/rule:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/tiffdither.dir/rule
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/tiffdither.dir/rule
 .PHONY : tools/CMakeFiles/tiffdither.dir/rule
 
 # Convenience name for target.
@@ -239,12 +239,12 @@ tiffdither: tools/CMakeFiles/tiffdither.dir/rule
 
 # fast build rule for target.
 tiffdither/fast:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffdither.dir/build.make tools/CMakeFiles/tiffdither.dir/build
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffdither.dir/build.make tools/CMakeFiles/tiffdither.dir/build
 .PHONY : tiffdither/fast
 
 # Convenience name for target.
 tools/CMakeFiles/tiffcrop.dir/rule:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/tiffcrop.dir/rule
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/tiffcrop.dir/rule
 .PHONY : tools/CMakeFiles/tiffcrop.dir/rule
 
 # Convenience name for target.
@@ -254,12 +254,12 @@ tiffcrop: tools/CMakeFiles/tiffcrop.dir/rule
 
 # fast build rule for target.
 tiffcrop/fast:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffcrop.dir/build.make tools/CMakeFiles/tiffcrop.dir/build
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffcrop.dir/build.make tools/CMakeFiles/tiffcrop.dir/build
 .PHONY : tiffcrop/fast
 
 # Convenience name for target.
 tools/CMakeFiles/fax2ps.dir/rule:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/fax2ps.dir/rule
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/fax2ps.dir/rule
 .PHONY : tools/CMakeFiles/fax2ps.dir/rule
 
 # Convenience name for target.
@@ -269,12 +269,12 @@ fax2ps: tools/CMakeFiles/fax2ps.dir/rule
 
 # fast build rule for target.
 fax2ps/fast:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/fax2ps.dir/build.make tools/CMakeFiles/fax2ps.dir/build
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/fax2ps.dir/build.make tools/CMakeFiles/fax2ps.dir/build
 .PHONY : fax2ps/fast
 
 # Convenience name for target.
 tools/CMakeFiles/fax2tiff.dir/rule:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/fax2tiff.dir/rule
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/fax2tiff.dir/rule
 .PHONY : tools/CMakeFiles/fax2tiff.dir/rule
 
 # Convenience name for target.
@@ -284,12 +284,12 @@ fax2tiff: tools/CMakeFiles/fax2tiff.dir/rule
 
 # fast build rule for target.
 fax2tiff/fast:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/fax2tiff.dir/build.make tools/CMakeFiles/fax2tiff.dir/build
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/fax2tiff.dir/build.make tools/CMakeFiles/fax2tiff.dir/build
 .PHONY : fax2tiff/fast
 
 # Convenience name for target.
 tools/CMakeFiles/tiff2rgba.dir/rule:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/tiff2rgba.dir/rule
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/tiff2rgba.dir/rule
 .PHONY : tools/CMakeFiles/tiff2rgba.dir/rule
 
 # Convenience name for target.
@@ -299,12 +299,12 @@ tiff2rgba: tools/CMakeFiles/tiff2rgba.dir/rule
 
 # fast build rule for target.
 tiff2rgba/fast:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiff2rgba.dir/build.make tools/CMakeFiles/tiff2rgba.dir/build
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiff2rgba.dir/build.make tools/CMakeFiles/tiff2rgba.dir/build
 .PHONY : tiff2rgba/fast
 
 # Convenience name for target.
 tools/CMakeFiles/pal2rgb.dir/rule:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/pal2rgb.dir/rule
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/pal2rgb.dir/rule
 .PHONY : tools/CMakeFiles/pal2rgb.dir/rule
 
 # Convenience name for target.
@@ -314,12 +314,12 @@ pal2rgb: tools/CMakeFiles/pal2rgb.dir/rule
 
 # fast build rule for target.
 pal2rgb/fast:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/pal2rgb.dir/build.make tools/CMakeFiles/pal2rgb.dir/build
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/pal2rgb.dir/build.make tools/CMakeFiles/pal2rgb.dir/build
 .PHONY : pal2rgb/fast
 
 # Convenience name for target.
 tools/CMakeFiles/ppm2tiff.dir/rule:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/ppm2tiff.dir/rule
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/ppm2tiff.dir/rule
 .PHONY : tools/CMakeFiles/ppm2tiff.dir/rule
 
 # Convenience name for target.
@@ -329,12 +329,12 @@ ppm2tiff: tools/CMakeFiles/ppm2tiff.dir/rule
 
 # fast build rule for target.
 ppm2tiff/fast:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/ppm2tiff.dir/build.make tools/CMakeFiles/ppm2tiff.dir/build
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/ppm2tiff.dir/build.make tools/CMakeFiles/ppm2tiff.dir/build
 .PHONY : ppm2tiff/fast
 
 # Convenience name for target.
 tools/CMakeFiles/raw2tiff.dir/rule:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/raw2tiff.dir/rule
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/raw2tiff.dir/rule
 .PHONY : tools/CMakeFiles/raw2tiff.dir/rule
 
 # Convenience name for target.
@@ -344,12 +344,12 @@ raw2tiff: tools/CMakeFiles/raw2tiff.dir/rule
 
 # fast build rule for target.
 raw2tiff/fast:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/raw2tiff.dir/build.make tools/CMakeFiles/raw2tiff.dir/build
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/raw2tiff.dir/build.make tools/CMakeFiles/raw2tiff.dir/build
 .PHONY : raw2tiff/fast
 
 # Convenience name for target.
 tools/CMakeFiles/thumbnail.dir/rule:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/thumbnail.dir/rule
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/thumbnail.dir/rule
 .PHONY : tools/CMakeFiles/thumbnail.dir/rule
 
 # Convenience name for target.
@@ -359,12 +359,12 @@ thumbnail: tools/CMakeFiles/thumbnail.dir/rule
 
 # fast build rule for target.
 thumbnail/fast:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/thumbnail.dir/build.make tools/CMakeFiles/thumbnail.dir/build
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/thumbnail.dir/build.make tools/CMakeFiles/thumbnail.dir/build
 .PHONY : thumbnail/fast
 
 # Convenience name for target.
 tools/CMakeFiles/tiff2bw.dir/rule:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/tiff2bw.dir/rule
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/tiff2bw.dir/rule
 .PHONY : tools/CMakeFiles/tiff2bw.dir/rule
 
 # Convenience name for target.
@@ -374,12 +374,12 @@ tiff2bw: tools/CMakeFiles/tiff2bw.dir/rule
 
 # fast build rule for target.
 tiff2bw/fast:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiff2bw.dir/build.make tools/CMakeFiles/tiff2bw.dir/build
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiff2bw.dir/build.make tools/CMakeFiles/tiff2bw.dir/build
 .PHONY : tiff2bw/fast
 
 # Convenience name for target.
 tools/CMakeFiles/tiffinfo.dir/rule:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/tiffinfo.dir/rule
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/tiffinfo.dir/rule
 .PHONY : tools/CMakeFiles/tiffinfo.dir/rule
 
 # Convenience name for target.
@@ -389,12 +389,12 @@ tiffinfo: tools/CMakeFiles/tiffinfo.dir/rule
 
 # fast build rule for target.
 tiffinfo/fast:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffinfo.dir/build.make tools/CMakeFiles/tiffinfo.dir/build
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffinfo.dir/build.make tools/CMakeFiles/tiffinfo.dir/build
 .PHONY : tiffinfo/fast
 
 # Convenience name for target.
 tools/CMakeFiles/tiff2pdf.dir/rule:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/tiff2pdf.dir/rule
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/tiff2pdf.dir/rule
 .PHONY : tools/CMakeFiles/tiff2pdf.dir/rule
 
 # Convenience name for target.
@@ -404,12 +404,12 @@ tiff2pdf: tools/CMakeFiles/tiff2pdf.dir/rule
 
 # fast build rule for target.
 tiff2pdf/fast:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiff2pdf.dir/build.make tools/CMakeFiles/tiff2pdf.dir/build
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiff2pdf.dir/build.make tools/CMakeFiles/tiff2pdf.dir/build
 .PHONY : tiff2pdf/fast
 
 # Convenience name for target.
 tools/CMakeFiles/tiff2ps.dir/rule:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/tiff2ps.dir/rule
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/tiff2ps.dir/rule
 .PHONY : tools/CMakeFiles/tiff2ps.dir/rule
 
 # Convenience name for target.
@@ -419,12 +419,12 @@ tiff2ps: tools/CMakeFiles/tiff2ps.dir/rule
 
 # fast build rule for target.
 tiff2ps/fast:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiff2ps.dir/build.make tools/CMakeFiles/tiff2ps.dir/build
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiff2ps.dir/build.make tools/CMakeFiles/tiff2ps.dir/build
 .PHONY : tiff2ps/fast
 
 # Convenience name for target.
 tools/CMakeFiles/tiffcmp.dir/rule:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/tiffcmp.dir/rule
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/tiffcmp.dir/rule
 .PHONY : tools/CMakeFiles/tiffcmp.dir/rule
 
 # Convenience name for target.
@@ -434,12 +434,12 @@ tiffcmp: tools/CMakeFiles/tiffcmp.dir/rule
 
 # fast build rule for target.
 tiffcmp/fast:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffcmp.dir/build.make tools/CMakeFiles/tiffcmp.dir/build
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffcmp.dir/build.make tools/CMakeFiles/tiffcmp.dir/build
 .PHONY : tiffcmp/fast
 
 # Convenience name for target.
 tools/CMakeFiles/rgb2ycbcr.dir/rule:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/rgb2ycbcr.dir/rule
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/rgb2ycbcr.dir/rule
 .PHONY : tools/CMakeFiles/rgb2ycbcr.dir/rule
 
 # Convenience name for target.
@@ -449,12 +449,12 @@ rgb2ycbcr: tools/CMakeFiles/rgb2ycbcr.dir/rule
 
 # fast build rule for target.
 rgb2ycbcr/fast:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/rgb2ycbcr.dir/build.make tools/CMakeFiles/rgb2ycbcr.dir/build
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/rgb2ycbcr.dir/build.make tools/CMakeFiles/rgb2ycbcr.dir/build
 .PHONY : rgb2ycbcr/fast
 
 # Convenience name for target.
 tools/CMakeFiles/tiffcp.dir/rule:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/tiffcp.dir/rule
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/tiffcp.dir/rule
 .PHONY : tools/CMakeFiles/tiffcp.dir/rule
 
 # Convenience name for target.
@@ -464,7 +464,7 @@ tiffcp: tools/CMakeFiles/tiffcp.dir/rule
 
 # fast build rule for target.
 tiffcp/fast:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffcp.dir/build.make tools/CMakeFiles/tiffcp.dir/build
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffcp.dir/build.make tools/CMakeFiles/tiffcp.dir/build
 .PHONY : tiffcp/fast
 
 fax2ps.o: fax2ps.c.o
@@ -473,7 +473,7 @@ fax2ps.o: fax2ps.c.o
 
 # target to build an object file
 fax2ps.c.o:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/fax2ps.dir/build.make tools/CMakeFiles/fax2ps.dir/fax2ps.c.o
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/fax2ps.dir/build.make tools/CMakeFiles/fax2ps.dir/fax2ps.c.o
 .PHONY : fax2ps.c.o
 
 fax2ps.i: fax2ps.c.i
@@ -482,7 +482,7 @@ fax2ps.i: fax2ps.c.i
 
 # target to preprocess a source file
 fax2ps.c.i:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/fax2ps.dir/build.make tools/CMakeFiles/fax2ps.dir/fax2ps.c.i
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/fax2ps.dir/build.make tools/CMakeFiles/fax2ps.dir/fax2ps.c.i
 .PHONY : fax2ps.c.i
 
 fax2ps.s: fax2ps.c.s
@@ -491,7 +491,7 @@ fax2ps.s: fax2ps.c.s
 
 # target to generate assembly for a file
 fax2ps.c.s:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/fax2ps.dir/build.make tools/CMakeFiles/fax2ps.dir/fax2ps.c.s
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/fax2ps.dir/build.make tools/CMakeFiles/fax2ps.dir/fax2ps.c.s
 .PHONY : fax2ps.c.s
 
 fax2tiff.o: fax2tiff.c.o
@@ -500,7 +500,7 @@ fax2tiff.o: fax2tiff.c.o
 
 # target to build an object file
 fax2tiff.c.o:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/fax2tiff.dir/build.make tools/CMakeFiles/fax2tiff.dir/fax2tiff.c.o
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/fax2tiff.dir/build.make tools/CMakeFiles/fax2tiff.dir/fax2tiff.c.o
 .PHONY : fax2tiff.c.o
 
 fax2tiff.i: fax2tiff.c.i
@@ -509,7 +509,7 @@ fax2tiff.i: fax2tiff.c.i
 
 # target to preprocess a source file
 fax2tiff.c.i:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/fax2tiff.dir/build.make tools/CMakeFiles/fax2tiff.dir/fax2tiff.c.i
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/fax2tiff.dir/build.make tools/CMakeFiles/fax2tiff.dir/fax2tiff.c.i
 .PHONY : fax2tiff.c.i
 
 fax2tiff.s: fax2tiff.c.s
@@ -518,7 +518,7 @@ fax2tiff.s: fax2tiff.c.s
 
 # target to generate assembly for a file
 fax2tiff.c.s:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/fax2tiff.dir/build.make tools/CMakeFiles/fax2tiff.dir/fax2tiff.c.s
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/fax2tiff.dir/build.make tools/CMakeFiles/fax2tiff.dir/fax2tiff.c.s
 .PHONY : fax2tiff.c.s
 
 pal2rgb.o: pal2rgb.c.o
@@ -527,7 +527,7 @@ pal2rgb.o: pal2rgb.c.o
 
 # target to build an object file
 pal2rgb.c.o:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/pal2rgb.dir/build.make tools/CMakeFiles/pal2rgb.dir/pal2rgb.c.o
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/pal2rgb.dir/build.make tools/CMakeFiles/pal2rgb.dir/pal2rgb.c.o
 .PHONY : pal2rgb.c.o
 
 pal2rgb.i: pal2rgb.c.i
@@ -536,7 +536,7 @@ pal2rgb.i: pal2rgb.c.i
 
 # target to preprocess a source file
 pal2rgb.c.i:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/pal2rgb.dir/build.make tools/CMakeFiles/pal2rgb.dir/pal2rgb.c.i
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/pal2rgb.dir/build.make tools/CMakeFiles/pal2rgb.dir/pal2rgb.c.i
 .PHONY : pal2rgb.c.i
 
 pal2rgb.s: pal2rgb.c.s
@@ -545,7 +545,7 @@ pal2rgb.s: pal2rgb.c.s
 
 # target to generate assembly for a file
 pal2rgb.c.s:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/pal2rgb.dir/build.make tools/CMakeFiles/pal2rgb.dir/pal2rgb.c.s
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/pal2rgb.dir/build.make tools/CMakeFiles/pal2rgb.dir/pal2rgb.c.s
 .PHONY : pal2rgb.c.s
 
 ppm2tiff.o: ppm2tiff.c.o
@@ -554,7 +554,7 @@ ppm2tiff.o: ppm2tiff.c.o
 
 # target to build an object file
 ppm2tiff.c.o:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/ppm2tiff.dir/build.make tools/CMakeFiles/ppm2tiff.dir/ppm2tiff.c.o
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/ppm2tiff.dir/build.make tools/CMakeFiles/ppm2tiff.dir/ppm2tiff.c.o
 .PHONY : ppm2tiff.c.o
 
 ppm2tiff.i: ppm2tiff.c.i
@@ -563,7 +563,7 @@ ppm2tiff.i: ppm2tiff.c.i
 
 # target to preprocess a source file
 ppm2tiff.c.i:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/ppm2tiff.dir/build.make tools/CMakeFiles/ppm2tiff.dir/ppm2tiff.c.i
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/ppm2tiff.dir/build.make tools/CMakeFiles/ppm2tiff.dir/ppm2tiff.c.i
 .PHONY : ppm2tiff.c.i
 
 ppm2tiff.s: ppm2tiff.c.s
@@ -572,7 +572,7 @@ ppm2tiff.s: ppm2tiff.c.s
 
 # target to generate assembly for a file
 ppm2tiff.c.s:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/ppm2tiff.dir/build.make tools/CMakeFiles/ppm2tiff.dir/ppm2tiff.c.s
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/ppm2tiff.dir/build.make tools/CMakeFiles/ppm2tiff.dir/ppm2tiff.c.s
 .PHONY : ppm2tiff.c.s
 
 raw2tiff.o: raw2tiff.c.o
@@ -581,7 +581,7 @@ raw2tiff.o: raw2tiff.c.o
 
 # target to build an object file
 raw2tiff.c.o:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/raw2tiff.dir/build.make tools/CMakeFiles/raw2tiff.dir/raw2tiff.c.o
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/raw2tiff.dir/build.make tools/CMakeFiles/raw2tiff.dir/raw2tiff.c.o
 .PHONY : raw2tiff.c.o
 
 raw2tiff.i: raw2tiff.c.i
@@ -590,7 +590,7 @@ raw2tiff.i: raw2tiff.c.i
 
 # target to preprocess a source file
 raw2tiff.c.i:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/raw2tiff.dir/build.make tools/CMakeFiles/raw2tiff.dir/raw2tiff.c.i
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/raw2tiff.dir/build.make tools/CMakeFiles/raw2tiff.dir/raw2tiff.c.i
 .PHONY : raw2tiff.c.i
 
 raw2tiff.s: raw2tiff.c.s
@@ -599,7 +599,7 @@ raw2tiff.s: raw2tiff.c.s
 
 # target to generate assembly for a file
 raw2tiff.c.s:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/raw2tiff.dir/build.make tools/CMakeFiles/raw2tiff.dir/raw2tiff.c.s
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/raw2tiff.dir/build.make tools/CMakeFiles/raw2tiff.dir/raw2tiff.c.s
 .PHONY : raw2tiff.c.s
 
 rgb2ycbcr.o: rgb2ycbcr.c.o
@@ -608,7 +608,7 @@ rgb2ycbcr.o: rgb2ycbcr.c.o
 
 # target to build an object file
 rgb2ycbcr.c.o:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/rgb2ycbcr.dir/build.make tools/CMakeFiles/rgb2ycbcr.dir/rgb2ycbcr.c.o
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/rgb2ycbcr.dir/build.make tools/CMakeFiles/rgb2ycbcr.dir/rgb2ycbcr.c.o
 .PHONY : rgb2ycbcr.c.o
 
 rgb2ycbcr.i: rgb2ycbcr.c.i
@@ -617,7 +617,7 @@ rgb2ycbcr.i: rgb2ycbcr.c.i
 
 # target to preprocess a source file
 rgb2ycbcr.c.i:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/rgb2ycbcr.dir/build.make tools/CMakeFiles/rgb2ycbcr.dir/rgb2ycbcr.c.i
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/rgb2ycbcr.dir/build.make tools/CMakeFiles/rgb2ycbcr.dir/rgb2ycbcr.c.i
 .PHONY : rgb2ycbcr.c.i
 
 rgb2ycbcr.s: rgb2ycbcr.c.s
@@ -626,7 +626,7 @@ rgb2ycbcr.s: rgb2ycbcr.c.s
 
 # target to generate assembly for a file
 rgb2ycbcr.c.s:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/rgb2ycbcr.dir/build.make tools/CMakeFiles/rgb2ycbcr.dir/rgb2ycbcr.c.s
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/rgb2ycbcr.dir/build.make tools/CMakeFiles/rgb2ycbcr.dir/rgb2ycbcr.c.s
 .PHONY : rgb2ycbcr.c.s
 
 thumbnail.o: thumbnail.c.o
@@ -635,7 +635,7 @@ thumbnail.o: thumbnail.c.o
 
 # target to build an object file
 thumbnail.c.o:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/thumbnail.dir/build.make tools/CMakeFiles/thumbnail.dir/thumbnail.c.o
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/thumbnail.dir/build.make tools/CMakeFiles/thumbnail.dir/thumbnail.c.o
 .PHONY : thumbnail.c.o
 
 thumbnail.i: thumbnail.c.i
@@ -644,7 +644,7 @@ thumbnail.i: thumbnail.c.i
 
 # target to preprocess a source file
 thumbnail.c.i:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/thumbnail.dir/build.make tools/CMakeFiles/thumbnail.dir/thumbnail.c.i
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/thumbnail.dir/build.make tools/CMakeFiles/thumbnail.dir/thumbnail.c.i
 .PHONY : thumbnail.c.i
 
 thumbnail.s: thumbnail.c.s
@@ -653,7 +653,7 @@ thumbnail.s: thumbnail.c.s
 
 # target to generate assembly for a file
 thumbnail.c.s:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/thumbnail.dir/build.make tools/CMakeFiles/thumbnail.dir/thumbnail.c.s
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/thumbnail.dir/build.make tools/CMakeFiles/thumbnail.dir/thumbnail.c.s
 .PHONY : thumbnail.c.s
 
 tiff2bw.o: tiff2bw.c.o
@@ -662,7 +662,7 @@ tiff2bw.o: tiff2bw.c.o
 
 # target to build an object file
 tiff2bw.c.o:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiff2bw.dir/build.make tools/CMakeFiles/tiff2bw.dir/tiff2bw.c.o
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiff2bw.dir/build.make tools/CMakeFiles/tiff2bw.dir/tiff2bw.c.o
 .PHONY : tiff2bw.c.o
 
 tiff2bw.i: tiff2bw.c.i
@@ -671,7 +671,7 @@ tiff2bw.i: tiff2bw.c.i
 
 # target to preprocess a source file
 tiff2bw.c.i:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiff2bw.dir/build.make tools/CMakeFiles/tiff2bw.dir/tiff2bw.c.i
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiff2bw.dir/build.make tools/CMakeFiles/tiff2bw.dir/tiff2bw.c.i
 .PHONY : tiff2bw.c.i
 
 tiff2bw.s: tiff2bw.c.s
@@ -680,7 +680,7 @@ tiff2bw.s: tiff2bw.c.s
 
 # target to generate assembly for a file
 tiff2bw.c.s:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiff2bw.dir/build.make tools/CMakeFiles/tiff2bw.dir/tiff2bw.c.s
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiff2bw.dir/build.make tools/CMakeFiles/tiff2bw.dir/tiff2bw.c.s
 .PHONY : tiff2bw.c.s
 
 tiff2pdf.o: tiff2pdf.c.o
@@ -689,7 +689,7 @@ tiff2pdf.o: tiff2pdf.c.o
 
 # target to build an object file
 tiff2pdf.c.o:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiff2pdf.dir/build.make tools/CMakeFiles/tiff2pdf.dir/tiff2pdf.c.o
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiff2pdf.dir/build.make tools/CMakeFiles/tiff2pdf.dir/tiff2pdf.c.o
 .PHONY : tiff2pdf.c.o
 
 tiff2pdf.i: tiff2pdf.c.i
@@ -698,7 +698,7 @@ tiff2pdf.i: tiff2pdf.c.i
 
 # target to preprocess a source file
 tiff2pdf.c.i:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiff2pdf.dir/build.make tools/CMakeFiles/tiff2pdf.dir/tiff2pdf.c.i
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiff2pdf.dir/build.make tools/CMakeFiles/tiff2pdf.dir/tiff2pdf.c.i
 .PHONY : tiff2pdf.c.i
 
 tiff2pdf.s: tiff2pdf.c.s
@@ -707,7 +707,7 @@ tiff2pdf.s: tiff2pdf.c.s
 
 # target to generate assembly for a file
 tiff2pdf.c.s:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiff2pdf.dir/build.make tools/CMakeFiles/tiff2pdf.dir/tiff2pdf.c.s
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiff2pdf.dir/build.make tools/CMakeFiles/tiff2pdf.dir/tiff2pdf.c.s
 .PHONY : tiff2pdf.c.s
 
 tiff2ps.o: tiff2ps.c.o
@@ -716,7 +716,7 @@ tiff2ps.o: tiff2ps.c.o
 
 # target to build an object file
 tiff2ps.c.o:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiff2ps.dir/build.make tools/CMakeFiles/tiff2ps.dir/tiff2ps.c.o
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiff2ps.dir/build.make tools/CMakeFiles/tiff2ps.dir/tiff2ps.c.o
 .PHONY : tiff2ps.c.o
 
 tiff2ps.i: tiff2ps.c.i
@@ -725,7 +725,7 @@ tiff2ps.i: tiff2ps.c.i
 
 # target to preprocess a source file
 tiff2ps.c.i:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiff2ps.dir/build.make tools/CMakeFiles/tiff2ps.dir/tiff2ps.c.i
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiff2ps.dir/build.make tools/CMakeFiles/tiff2ps.dir/tiff2ps.c.i
 .PHONY : tiff2ps.c.i
 
 tiff2ps.s: tiff2ps.c.s
@@ -734,7 +734,7 @@ tiff2ps.s: tiff2ps.c.s
 
 # target to generate assembly for a file
 tiff2ps.c.s:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiff2ps.dir/build.make tools/CMakeFiles/tiff2ps.dir/tiff2ps.c.s
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiff2ps.dir/build.make tools/CMakeFiles/tiff2ps.dir/tiff2ps.c.s
 .PHONY : tiff2ps.c.s
 
 tiff2rgba.o: tiff2rgba.c.o
@@ -743,7 +743,7 @@ tiff2rgba.o: tiff2rgba.c.o
 
 # target to build an object file
 tiff2rgba.c.o:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiff2rgba.dir/build.make tools/CMakeFiles/tiff2rgba.dir/tiff2rgba.c.o
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiff2rgba.dir/build.make tools/CMakeFiles/tiff2rgba.dir/tiff2rgba.c.o
 .PHONY : tiff2rgba.c.o
 
 tiff2rgba.i: tiff2rgba.c.i
@@ -752,7 +752,7 @@ tiff2rgba.i: tiff2rgba.c.i
 
 # target to preprocess a source file
 tiff2rgba.c.i:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiff2rgba.dir/build.make tools/CMakeFiles/tiff2rgba.dir/tiff2rgba.c.i
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiff2rgba.dir/build.make tools/CMakeFiles/tiff2rgba.dir/tiff2rgba.c.i
 .PHONY : tiff2rgba.c.i
 
 tiff2rgba.s: tiff2rgba.c.s
@@ -761,7 +761,7 @@ tiff2rgba.s: tiff2rgba.c.s
 
 # target to generate assembly for a file
 tiff2rgba.c.s:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiff2rgba.dir/build.make tools/CMakeFiles/tiff2rgba.dir/tiff2rgba.c.s
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiff2rgba.dir/build.make tools/CMakeFiles/tiff2rgba.dir/tiff2rgba.c.s
 .PHONY : tiff2rgba.c.s
 
 tiffcmp.o: tiffcmp.c.o
@@ -770,7 +770,7 @@ tiffcmp.o: tiffcmp.c.o
 
 # target to build an object file
 tiffcmp.c.o:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffcmp.dir/build.make tools/CMakeFiles/tiffcmp.dir/tiffcmp.c.o
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffcmp.dir/build.make tools/CMakeFiles/tiffcmp.dir/tiffcmp.c.o
 .PHONY : tiffcmp.c.o
 
 tiffcmp.i: tiffcmp.c.i
@@ -779,7 +779,7 @@ tiffcmp.i: tiffcmp.c.i
 
 # target to preprocess a source file
 tiffcmp.c.i:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffcmp.dir/build.make tools/CMakeFiles/tiffcmp.dir/tiffcmp.c.i
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffcmp.dir/build.make tools/CMakeFiles/tiffcmp.dir/tiffcmp.c.i
 .PHONY : tiffcmp.c.i
 
 tiffcmp.s: tiffcmp.c.s
@@ -788,7 +788,7 @@ tiffcmp.s: tiffcmp.c.s
 
 # target to generate assembly for a file
 tiffcmp.c.s:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffcmp.dir/build.make tools/CMakeFiles/tiffcmp.dir/tiffcmp.c.s
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffcmp.dir/build.make tools/CMakeFiles/tiffcmp.dir/tiffcmp.c.s
 .PHONY : tiffcmp.c.s
 
 tiffcp.o: tiffcp.c.o
@@ -797,7 +797,7 @@ tiffcp.o: tiffcp.c.o
 
 # target to build an object file
 tiffcp.c.o:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffcp.dir/build.make tools/CMakeFiles/tiffcp.dir/tiffcp.c.o
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffcp.dir/build.make tools/CMakeFiles/tiffcp.dir/tiffcp.c.o
 .PHONY : tiffcp.c.o
 
 tiffcp.i: tiffcp.c.i
@@ -806,7 +806,7 @@ tiffcp.i: tiffcp.c.i
 
 # target to preprocess a source file
 tiffcp.c.i:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffcp.dir/build.make tools/CMakeFiles/tiffcp.dir/tiffcp.c.i
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffcp.dir/build.make tools/CMakeFiles/tiffcp.dir/tiffcp.c.i
 .PHONY : tiffcp.c.i
 
 tiffcp.s: tiffcp.c.s
@@ -815,7 +815,7 @@ tiffcp.s: tiffcp.c.s
 
 # target to generate assembly for a file
 tiffcp.c.s:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffcp.dir/build.make tools/CMakeFiles/tiffcp.dir/tiffcp.c.s
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffcp.dir/build.make tools/CMakeFiles/tiffcp.dir/tiffcp.c.s
 .PHONY : tiffcp.c.s
 
 tiffcrop.o: tiffcrop.c.o
@@ -824,7 +824,7 @@ tiffcrop.o: tiffcrop.c.o
 
 # target to build an object file
 tiffcrop.c.o:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffcrop.dir/build.make tools/CMakeFiles/tiffcrop.dir/tiffcrop.c.o
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffcrop.dir/build.make tools/CMakeFiles/tiffcrop.dir/tiffcrop.c.o
 .PHONY : tiffcrop.c.o
 
 tiffcrop.i: tiffcrop.c.i
@@ -833,7 +833,7 @@ tiffcrop.i: tiffcrop.c.i
 
 # target to preprocess a source file
 tiffcrop.c.i:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffcrop.dir/build.make tools/CMakeFiles/tiffcrop.dir/tiffcrop.c.i
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffcrop.dir/build.make tools/CMakeFiles/tiffcrop.dir/tiffcrop.c.i
 .PHONY : tiffcrop.c.i
 
 tiffcrop.s: tiffcrop.c.s
@@ -842,7 +842,7 @@ tiffcrop.s: tiffcrop.c.s
 
 # target to generate assembly for a file
 tiffcrop.c.s:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffcrop.dir/build.make tools/CMakeFiles/tiffcrop.dir/tiffcrop.c.s
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffcrop.dir/build.make tools/CMakeFiles/tiffcrop.dir/tiffcrop.c.s
 .PHONY : tiffcrop.c.s
 
 tiffdither.o: tiffdither.c.o
@@ -851,7 +851,7 @@ tiffdither.o: tiffdither.c.o
 
 # target to build an object file
 tiffdither.c.o:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffdither.dir/build.make tools/CMakeFiles/tiffdither.dir/tiffdither.c.o
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffdither.dir/build.make tools/CMakeFiles/tiffdither.dir/tiffdither.c.o
 .PHONY : tiffdither.c.o
 
 tiffdither.i: tiffdither.c.i
@@ -860,7 +860,7 @@ tiffdither.i: tiffdither.c.i
 
 # target to preprocess a source file
 tiffdither.c.i:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffdither.dir/build.make tools/CMakeFiles/tiffdither.dir/tiffdither.c.i
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffdither.dir/build.make tools/CMakeFiles/tiffdither.dir/tiffdither.c.i
 .PHONY : tiffdither.c.i
 
 tiffdither.s: tiffdither.c.s
@@ -869,7 +869,7 @@ tiffdither.s: tiffdither.c.s
 
 # target to generate assembly for a file
 tiffdither.c.s:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffdither.dir/build.make tools/CMakeFiles/tiffdither.dir/tiffdither.c.s
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffdither.dir/build.make tools/CMakeFiles/tiffdither.dir/tiffdither.c.s
 .PHONY : tiffdither.c.s
 
 tiffdump.o: tiffdump.c.o
@@ -878,7 +878,7 @@ tiffdump.o: tiffdump.c.o
 
 # target to build an object file
 tiffdump.c.o:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffdump.dir/build.make tools/CMakeFiles/tiffdump.dir/tiffdump.c.o
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffdump.dir/build.make tools/CMakeFiles/tiffdump.dir/tiffdump.c.o
 .PHONY : tiffdump.c.o
 
 tiffdump.i: tiffdump.c.i
@@ -887,7 +887,7 @@ tiffdump.i: tiffdump.c.i
 
 # target to preprocess a source file
 tiffdump.c.i:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffdump.dir/build.make tools/CMakeFiles/tiffdump.dir/tiffdump.c.i
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffdump.dir/build.make tools/CMakeFiles/tiffdump.dir/tiffdump.c.i
 .PHONY : tiffdump.c.i
 
 tiffdump.s: tiffdump.c.s
@@ -896,7 +896,7 @@ tiffdump.s: tiffdump.c.s
 
 # target to generate assembly for a file
 tiffdump.c.s:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffdump.dir/build.make tools/CMakeFiles/tiffdump.dir/tiffdump.c.s
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffdump.dir/build.make tools/CMakeFiles/tiffdump.dir/tiffdump.c.s
 .PHONY : tiffdump.c.s
 
 tiffinfo.o: tiffinfo.c.o
@@ -905,7 +905,7 @@ tiffinfo.o: tiffinfo.c.o
 
 # target to build an object file
 tiffinfo.c.o:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffinfo.dir/build.make tools/CMakeFiles/tiffinfo.dir/tiffinfo.c.o
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffinfo.dir/build.make tools/CMakeFiles/tiffinfo.dir/tiffinfo.c.o
 .PHONY : tiffinfo.c.o
 
 tiffinfo.i: tiffinfo.c.i
@@ -914,7 +914,7 @@ tiffinfo.i: tiffinfo.c.i
 
 # target to preprocess a source file
 tiffinfo.c.i:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffinfo.dir/build.make tools/CMakeFiles/tiffinfo.dir/tiffinfo.c.i
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffinfo.dir/build.make tools/CMakeFiles/tiffinfo.dir/tiffinfo.c.i
 .PHONY : tiffinfo.c.i
 
 tiffinfo.s: tiffinfo.c.s
@@ -923,7 +923,7 @@ tiffinfo.s: tiffinfo.c.s
 
 # target to generate assembly for a file
 tiffinfo.c.s:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffinfo.dir/build.make tools/CMakeFiles/tiffinfo.dir/tiffinfo.c.s
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffinfo.dir/build.make tools/CMakeFiles/tiffinfo.dir/tiffinfo.c.s
 .PHONY : tiffinfo.c.s
 
 tiffmedian.o: tiffmedian.c.o
@@ -932,7 +932,7 @@ tiffmedian.o: tiffmedian.c.o
 
 # target to build an object file
 tiffmedian.c.o:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffmedian.dir/build.make tools/CMakeFiles/tiffmedian.dir/tiffmedian.c.o
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffmedian.dir/build.make tools/CMakeFiles/tiffmedian.dir/tiffmedian.c.o
 .PHONY : tiffmedian.c.o
 
 tiffmedian.i: tiffmedian.c.i
@@ -941,7 +941,7 @@ tiffmedian.i: tiffmedian.c.i
 
 # target to preprocess a source file
 tiffmedian.c.i:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffmedian.dir/build.make tools/CMakeFiles/tiffmedian.dir/tiffmedian.c.i
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffmedian.dir/build.make tools/CMakeFiles/tiffmedian.dir/tiffmedian.c.i
 .PHONY : tiffmedian.c.i
 
 tiffmedian.s: tiffmedian.c.s
@@ -950,7 +950,7 @@ tiffmedian.s: tiffmedian.c.s
 
 # target to generate assembly for a file
 tiffmedian.c.s:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffmedian.dir/build.make tools/CMakeFiles/tiffmedian.dir/tiffmedian.c.s
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffmedian.dir/build.make tools/CMakeFiles/tiffmedian.dir/tiffmedian.c.s
 .PHONY : tiffmedian.c.s
 
 tiffset.o: tiffset.c.o
@@ -959,7 +959,7 @@ tiffset.o: tiffset.c.o
 
 # target to build an object file
 tiffset.c.o:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffset.dir/build.make tools/CMakeFiles/tiffset.dir/tiffset.c.o
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffset.dir/build.make tools/CMakeFiles/tiffset.dir/tiffset.c.o
 .PHONY : tiffset.c.o
 
 tiffset.i: tiffset.c.i
@@ -968,7 +968,7 @@ tiffset.i: tiffset.c.i
 
 # target to preprocess a source file
 tiffset.c.i:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffset.dir/build.make tools/CMakeFiles/tiffset.dir/tiffset.c.i
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffset.dir/build.make tools/CMakeFiles/tiffset.dir/tiffset.c.i
 .PHONY : tiffset.c.i
 
 tiffset.s: tiffset.c.s
@@ -977,7 +977,7 @@ tiffset.s: tiffset.c.s
 
 # target to generate assembly for a file
 tiffset.c.s:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffset.dir/build.make tools/CMakeFiles/tiffset.dir/tiffset.c.s
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffset.dir/build.make tools/CMakeFiles/tiffset.dir/tiffset.c.s
 .PHONY : tiffset.c.s
 
 tiffsplit.o: tiffsplit.c.o
@@ -986,7 +986,7 @@ tiffsplit.o: tiffsplit.c.o
 
 # target to build an object file
 tiffsplit.c.o:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffsplit.dir/build.make tools/CMakeFiles/tiffsplit.dir/tiffsplit.c.o
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffsplit.dir/build.make tools/CMakeFiles/tiffsplit.dir/tiffsplit.c.o
 .PHONY : tiffsplit.c.o
 
 tiffsplit.i: tiffsplit.c.i
@@ -995,7 +995,7 @@ tiffsplit.i: tiffsplit.c.i
 
 # target to preprocess a source file
 tiffsplit.c.i:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffsplit.dir/build.make tools/CMakeFiles/tiffsplit.dir/tiffsplit.c.i
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffsplit.dir/build.make tools/CMakeFiles/tiffsplit.dir/tiffsplit.c.i
 .PHONY : tiffsplit.c.i
 
 tiffsplit.s: tiffsplit.c.s
@@ -1004,7 +1004,7 @@ tiffsplit.s: tiffsplit.c.s
 
 # target to generate assembly for a file
 tiffsplit.c.s:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffsplit.dir/build.make tools/CMakeFiles/tiffsplit.dir/tiffsplit.c.s
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(MAKE) -f tools/CMakeFiles/tiffsplit.dir/build.make tools/CMakeFiles/tiffsplit.dir/tiffsplit.c.s
 .PHONY : tiffsplit.c.s
 
 # Help Target
@@ -1111,6 +1111,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/torp/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/foo/development/fuzzing-workspace/wasm-project/benchmarks/tiff-4.0.9 && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

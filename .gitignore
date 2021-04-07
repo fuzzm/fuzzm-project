@@ -32,6 +32,7 @@ AFL-wasm/afl-gotcpu
 AFL-wasm/afl-showmap
 AFL-wasm/afl-tmin
 AFL-wasm/as
+AFL-wasm/**/prog
 
 # Binaries produced by "make -C llvm_mode"
 AFL-wasm/afl-clang-fast

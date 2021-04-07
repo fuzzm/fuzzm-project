@@ -9,3 +9,5 @@ man/
 port/
 test/
 zlib-1.0/
+tools/pal2rgb
+*.o
