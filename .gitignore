@@ -8,6 +8,7 @@
 *.stack
 *.heap
 *.wasm.instr
+*.tar.gz
 magma
 wasabi
 wasm-project
