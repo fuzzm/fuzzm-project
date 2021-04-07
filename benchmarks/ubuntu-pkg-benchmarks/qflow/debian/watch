@@ -1,4 +1,0 @@
-version=3
-opts=dversionmangle=s/([^\+]+)(?:\+dfsg.*)?/$1/,\
-oversionmangle=s/(.*)/$1+dfsg.1/ \
-http://opencircuitdesign.com/qflow/archive/qflow-(1\.1\.\d\S+)\.tgz

@@ -1,9 +1,0 @@
-# These 4 symlinks point to files present in other packages that are dependencies
-# of qflow.
-qflow binary: package-contains-broken-symlink usr/lib/qflow/bin/graywolf ../../../bin/graywolf
-qflow binary: package-contains-broken-symlink usr/lib/qflow/bin/magic ../../../bin/magic
-qflow binary: package-contains-broken-symlink usr/lib/qflow/bin/yosys ../../../bin/yosys
-qflow binary: package-contains-broken-symlink usr/lib/qflow/bin/qrouter ../../../bin/qrouter
-# tcsh is used by most of the scripts in qflow. It would be overkill to reimplement these
-# in bash:
-qflow binary: csh-considered-harmful
