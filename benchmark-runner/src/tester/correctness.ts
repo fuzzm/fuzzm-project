@@ -14,7 +14,6 @@ import {
 (async function () {
   for (const b in benchmarks) {
     console.log(b);
-
     const bMarkInfo = (benchmarks as any)[b] as BenchmarkInfo;
     const benchmarkFolder = getBenchmarkFolder(b);
     const testFolder = getDiffTestFolder(b);
@@ -44,7 +43,7 @@ import {
 
       const instrumentedBin = `${wasmBin}.instr`;
       await insertAFLInstrumentation(wasmBin, instrumentedBin);
-      await insertCanaries(wasmBin, instrumentedBin);
+      await insertCanaries(instrumentedBin, instrumentedBin);
       const instrWasmOut = await execBench(instrumentedBin);
 
       if (wasmOutput == instrWasmOut) {
