@@ -3,7 +3,7 @@
 # set the metric using -e "metric='unique crashes'"
 # set the title using -e "metric='flac 3*24H'"
 set style fill transparent solid 0.2 noborder
-set term png font "Helvetica,20"
+set term png font "Helvetica,22"
 set output outfile
 set xlabel "Hours"
 set ylabel metric
