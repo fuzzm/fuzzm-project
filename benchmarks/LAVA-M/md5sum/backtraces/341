@@ -1,0 +1,27 @@
+Successfully triggered bug 341, crashing now!
+Successfully triggered bug 341, crashing now!
+
+Program received signal SIGSEGV, Segmentation fault.
+0xb7ef39cf in *__GI_memcpy (dstpp=dstpp@entry=0xbfffef90, srcpp=srcpp@entry=0x842d208, len=1818326344) at memcpy.c:55
+55	memcpy.c: No such file or directory.
+
+Thread 1 (process 20838):
+#0  0xb7ef39cf in *__GI_memcpy (dstpp=dstpp@entry=0xbfffef90, srcpp=srcpp@entry=0x842d208, len=1818326344) at memcpy.c:55
+        __d0 = <optimized out>
+        dstp = 3221225472
+        srcp = 138601080
+#1  0x0804c4ac in memcpy (__len=<optimized out>, __src=0x842d208, __dest=0xbfffef90) at /usr/include/i386-linux-gnu/bits/string3.h:52
+No locals.
+#2  md5_process_bytes (buffer=0x842d208, buffer@entry=0x8425c08, len=<optimized out>, ctx=ctx@entry=0xbfffef74) at lib/md5.c:286
+        left_over = 0
+#3  0x0804c90e in md5_stream (stream=0x0, resblock=0x0) at lib/md5.c:203
+        ctx = {A = 3193386616, B = 1490129533, C = 2818383893, D = 428766321, total = {30208, 0}, buflen = 0, buffer = {4408, 0, 0, 32, 0, 1, 3, 0, 0, 28908, 237, 0, 0, 1, 0 <repeats 18 times>}}
+        sum = 30268
+        buffer = 0x8425c08 "\177ELF\001\001\001"
+#4  0x00000000 in ?? ()
+No symbol table info available.
+A debugging session is active.
+
+	Inferior 1 [process 20838] will be killed.
+
+Quit anyway? (y or n) [answered Y; input not from terminal]

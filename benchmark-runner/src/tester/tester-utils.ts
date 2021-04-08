@@ -1,9 +1,17 @@
 import { BenchmarkInfo } from './benchmarks';
 import { relative, resolve } from 'path';
-import { AFL_INSTRUMENTER_BIN, BENCHMARKS_FOLDER, CANARIES_INSTRUMENTER_BIN } from '../constants';
+import {
+  AFL_INSTRUMENTER_BIN,
+  BENCHMARKS_FOLDER,
+  CANARIES_INSTRUMENTER_BIN,
+  LAVA_BENCHMARKS_FOLDER,
+} from '../constants';
 import { exec, ExecException } from 'child_process';
 
 export function getBenchmarkFolder(benchmarkName: string): string {
+  if (['base64', 'uniq', 'md5sum'].some((b) => b === benchmarkName)) {
+    return resolve(LAVA_BENCHMARKS_FOLDER, benchmarkName);
+  }
   return resolve(BENCHMARKS_FOLDER, benchmarkName);
 }
 

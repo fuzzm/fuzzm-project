@@ -1,0 +1,11 @@
+lib/c-ctype.o: /usr/lib/llvm-10/lib/clang/10.0.0/share/asan_blacklist.txt \
+  lib/c-ctype.c lib/config.h lib/c-ctype.h \
+  /usr/lib/llvm-10/lib/clang/10.0.0/include/stdbool.h
+
+/usr/lib/llvm-10/lib/clang/10.0.0/share/asan_blacklist.txt:
+
+lib/config.h:
+
+lib/c-ctype.h:
+
+/usr/lib/llvm-10/lib/clang/10.0.0/include/stdbool.h:

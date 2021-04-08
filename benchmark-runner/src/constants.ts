@@ -7,6 +7,7 @@ export const WASM_BENCHMARK_SCRIPT = resolve(AFL_FOLDER, 'wasm-benchmark.sh');
 export const NATIVE_BENCHMARK_SCRIPT = resolve(AFL_FOLDER, 'native-benchmark.sh');
 export const RESULTS_DIR = resolve(BENCHMARK_RUNNER_FOLDER, 'results');
 export const BENCHMARKS_FOLDER = resolve(PROJECT_FOLDER, 'benchmarks');
+export const LAVA_BENCHMARKS_FOLDER = resolve(BENCHMARKS_FOLDER, 'LAVA-M');
 export const INSTRUMENTER_DIST_FOLDER = resolve(PROJECT_FOLDER, 'wasm_instrumenter', 'target', 'release');
 export const CANARIES_INSTRUMENTER_BIN = resolve(INSTRUMENTER_DIST_FOLDER, 'canaries');
 export const AFL_INSTRUMENTER_BIN = resolve(INSTRUMENTER_DIST_FOLDER, 'afl_branch');

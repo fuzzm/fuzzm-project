@@ -1,0 +1,43 @@
+/home/moyix/LAVA-M/md5sum/coreutils-8.24-lava-safe/lava-install/bin/md5sum: .ual/bash: No such file or directory
+.ual/bash: FAILED open or read
+Successfully triggered bug 307, crashing now!
+Successfully triggered bug 307, crashing now!
+
+Program received signal SIGSEGV, Segmentation fault.
+hex_digits (s=0x74a3cf4e <Address 0x74a3cf4e out of bounds>) at src/md5sum.c:430
+430	      if (!isxdigit (*s))
+
+Thread 1 (process 20789):
+#0  hex_digits (s=0x74a3cf4e <Address 0x74a3cf4e out of bounds>) at src/md5sum.c:430
+        i = <optimized out>
+#1  digest_check (checkfile_name=0xbffff39b "inputs/bin-ls-md5s-fuzzed-307") at src/md5sum.c:661
+        kbcieiubweuhc1303455736 = 110
+        filename = 0x8425a42 "/bin/bunzip2"
+        binary = 0
+        hex_digest = 0x8425a20 "23e3debe890f5504315af539d75ab146"
+        line_length = <optimized out>
+        n_misformatted_lines = <optimized out>
+        line = 0x8425a20 "23e3debe890f5504315af539d75ab146"
+        line_chars_allocated = 120
+        n_properly_formatted_lines = <optimized out>
+        n_improperly_formatted_lines = <optimized out>
+        n_mismatched_checksums = <optimized out>
+        n_open_or_read_failures = <optimized out>
+        bin_buffer = 0xbffff13c "\313\016\005\b\003"
+        checkfile_stream = 0x84258b8
+        bin_buffer_unaligned = "\313\016\005\b\003\000\000\000\024\362\377\277$\362\377\277h\361\377\277"
+        line_number = <optimized out>
+        is_stdin = <optimized out>
+#2  main (argc=<optimized out>, argv=0xbffff214) at src/md5sum.c:952
+        file = 0xbffff39b "inputs/bin-ls-md5s-fuzzed-307"
+        bin_buffer_unaligned = "\300\\\374\267,\220\004\b\220\005\377\267\370@\005\bh\361\377\277"
+        do_check = true
+        opt = <optimized out>
+        ok = <optimized out>
+        binary = <optimized out>
+        prefix_tag = false
+A debugging session is active.
+
+	Inferior 1 [process 20789] will be killed.
+
+Quit anyway? (y or n) [answered Y; input not from terminal]

@@ -1,0 +1,179 @@
+/bin/bash: OK
+/bin/bunzip2: OK
+/bin/busybox: OK
+/bin/bzcat: OK
+/bin/bzcmp: OK
+/bin/bzdiff: OK
+/bin/bzegrep: OK
+/bin/bzexe: OK
+/bin/bzfgrep: OK
+/bin/bzgrep: OK
+/bin/bzip2: OK
+/bin/bzip2recover: OK
+/bin/bzless: OK
+/bin/bzmore: OK
+/bin/cat: OK
+/bin/chacl: OK
+/bin/chgrp: OK
+/bin/chmod: OK
+/bin/chown: OK
+/bin/chvt: OK
+/bin/cp: OK
+/bin/cpio: OK
+/bin/dash: OK
+/bin/date: OK
+/bin/dd: OK
+/bin/df: OK
+/bin/dir: OK
+/bin/dmesg: OK
+/bin/dnsdomainname: OK
+/bin/domainname: OK
+/bin/dumpkeys: OK
+/bin/echo: OK
+/bin/egrep: OK
+/bin/false: OK
+/bin/fgconsole: OK
+/bin/fgrep: OK
+/bin/findmnt: OK
+/bin/fuser: OK
+/bin/fusermount: OK
+/bin/getfacl: OK
+/bin/grep: OK
+/bin/gunzip: OK
+/bin/gzexe: OK
+/bin/gzip: OK
+/bin/hostname: OK
+/bin/ip: OK
+/bin/kbd_mode: OK
+/bin/kill: OK
+/bin/kmod: OK
+/bin/less: OK
+/bin/lessecho: OK
+/bin/lessfile: OK
+/bin/lesskey: OK
+/bin/lesspipe: OK
+/bin/ln: OK
+/bin/loadkeys: OK
+/bin/login: OK
+/bin/lowntfs-3g: OK
+/bin/ls: OK
+/bin/lsblk: OK
+/bin/lsmod: OK
+/bin/mkdir: OK
+/bin/mknod: OK
+/bin/mktemp: OK
+/bin/more: OK
+/bin/mount: OK
+/bin/mountpoint: OK
+/bin/mt: OK
+/bin/mt-gnu: OK
+/bin/mv: OK
+/bin/nano: OK
+/bin/nc: OK
+/bin/nc.traditional: OK
+/bin/netcat: OK
+/bin/netstat: OK
+/bin/nisdomainname: OK
+/bin/ntfs-3g: OK
+/bin/ntfs-3g.probe: OK
+/bin/ntfs-3g.secaudit: OK
+/bin/ntfs-3g.usermap: OK
+/bin/ntfscat: OK
+/bin/ntfsck: OK
+/bin/ntfscluster: OK
+/bin/ntfscmp: OK
+/bin/ntfsdump_logfile: OK
+/bin/ntfsfix: OK
+/bin/ntfsinfo: OK
+/bin/ntfsls: OK
+/bin/ntfsmftalloc: OK
+/bin/ntfsmove: OK
+/bin/ntfstruncate: OK
+/bin/ntfswipe: OK
+/bin/open: OK
+/bin/openvt: OK
+/bin/pidof: OK
+/bin/ping: OK
+/bin/ping6: OK
+/bin/ps: OK
+/bin/pwd: OK
+/bin/rbash: OK
+/bin/readlink: OK
+/bin/rm: OK
+/bin/rmdir: OK
+/bin/rnano: OK
+/bin/run-parts: OK
+/bin/sed: OK
+/bin/setfacl: OK
+/bin/setfont: OK
+/bin/setupcon: OK
+/bin/sh: OK
+/bin/sh.distrib: OK
+/bin/sleep: OK
+/bin/ss: OK
+/bin/stty: OK
+/bin/su: OK
+/bin/sync: OK
+/bin/tailf: OK
+/bin/tar: OK
+/bin/tempfile: OK
+/bin/touch: OK
+/bin/true: OK
+/bin/ulockmgr_server: OK
+/bin/umount: OK
+/bin/uname: OK
+/bin/uncompress: OK
+/bin/unicode_start: OK
+/bin/vdir: OK
+/bin/vmmouse_detect: OK
+/bin/which: OK
+/bin/ypdomainname: OK
+/bin/zcat: OK
+/bin/zcmp: OK
+/bin/zdiff: OK
+/bin/zegrep: OK
+/bin/zfgrep: OK
+/bin/zforce: OK
+/bin/zgrep: OK
+/bin/zless: OK
+/bin/zmore: OK
+/home/moyix/LAVA-M/md5sum/coreutils-8.24-lava-safe/lava-install/bin/md5sum: WARNING: 1 line is improperly formatted
+Successfully triggered bug 571, crashing now!
+Successfully triggered bug 571, crashing now!
+
+Program received signal SIGSEGV, Segmentation fault.
+_IO_fflush (fp=0x60537ab8) at iofflush.c:42
+42	iofflush.c: No such file or directory.
+
+Thread 1 (process 20960):
+#0  _IO_fflush (fp=0x60537ab8) at iofflush.c:42
+        result = <optimized out>
+#1  0x0804f23e in rpl_fflush (stream=0x60537ab8, stream@entry=0xb7fc54c0) at lib/fflush.c:156
+No locals.
+#2  0x0804ef52 in rpl_fclose (fp=fp@entry=0xb7fc54c0) at lib/fclose.c:72
+        saved_errno = 0
+        fd = <optimized out>
+        result = 0
+#3  0x080508dc in close_stream (stream=0xb7fc54c0) at lib/close-stream.c:61
+        some_pending = false
+        prev_fail = <optimized out>
+        fclose_fail = <optimized out>
+#4  0x0804b8d8 in close_stdout () at lib/closeout.c:109
+No locals.
+#5  0xb7ea8f3f in __run_exit_handlers (status=0, listp=0xb7fc5304, run_list_atexit=true) at exit.c:78
+        atfct = <optimized out>
+        onfct = <optimized out>
+        cxafct = 0
+#6  0xb7ea8faf in *__GI_exit (status=0) at exit.c:100
+No locals.
+#7  0xb7e90e1e in __libc_start_main (main=0x8049c70 <main>, argc=3, ubp_av=0xbffff214, init=0x8050e80 <__libc_csu_init>, fini=0x8050e70 <__libc_csu_fini>, rtld_fini=0xb7ff0590, stack_end=0xbffff20c) at libc-start.c:276
+        result = 1818326054
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {-1208201228, 0, 0, -1073745432, -297086733, -1011644701}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x3, 0x8049450}, data = {prev = 0x0, cleanup = 0x0, canceltype = 3}}}
+        not_first_call = <optimized out>
+#8  0x08049471 in _start ()
+No symbol table info available.
+A debugging session is active.
+
+	Inferior 1 [process 20960] will be killed.
+
+Quit anyway? (y or n) [answered Y; input not from terminal]

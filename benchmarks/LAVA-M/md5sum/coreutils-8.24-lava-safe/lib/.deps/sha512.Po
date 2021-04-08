@@ -1,0 +1,135 @@
+lib/sha512.o: lib/sha512.c lib/config.h lib/sha512.h lib/stdio.h \
+  /usr/include/stdio.h /usr/include/features.h \
+  /usr/include/stdc-predef.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/lib/llvm-3.6/bin/../lib/clang/3.6.2/include/stddef.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/libio.h \
+  /usr/include/_G_config.h lib/wchar.h /usr/include/wchar.h \
+  /usr/lib/llvm-3.6/bin/../lib/clang/3.6.2/include/stdarg.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+  /usr/lib/llvm-3.6/bin/../lib/clang/3.6.2/include/__stddef_max_align_t.h \
+  lib/sys/types.h /usr/include/x86_64-linux-gnu/sys/types.h lib/time.h \
+  /usr/include/time.h /usr/include/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap-16.h lib/sys/select.h \
+  /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/sigset.h \
+  /usr/include/x86_64-linux-gnu/bits/time.h \
+  /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h lib/u64.h \
+  /usr/lib/llvm-3.6/bin/../lib/clang/3.6.2/include/stdint.h \
+  /usr/include/stdint.h /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/lib/llvm-3.6/bin/../lib/clang/3.6.2/include/stdalign.h \
+  lib/stdlib.h /usr/include/stdlib.h \
+  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+  /usr/include/x86_64-linux-gnu/bits/waitstatus.h /usr/include/xlocale.h \
+  lib/alloca.h /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  lib/string.h /usr/include/string.h lib/unlocked-io.h
+
+lib/config.h:
+
+lib/sha512.h:
+
+lib/stdio.h:
+
+/usr/include/stdio.h:
+
+/usr/include/features.h:
+
+/usr/include/stdc-predef.h:
+
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:
+
+/usr/include/x86_64-linux-gnu/bits/wordsize.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
+
+/usr/lib/llvm-3.6/bin/../lib/clang/3.6.2/include/stddef.h:
+
+/usr/include/x86_64-linux-gnu/bits/types.h:
+
+/usr/include/x86_64-linux-gnu/bits/typesizes.h:
+
+/usr/include/libio.h:
+
+/usr/include/_G_config.h:
+
+lib/wchar.h:
+
+/usr/include/wchar.h:
+
+/usr/lib/llvm-3.6/bin/../lib/clang/3.6.2/include/stdarg.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
+
+/usr/include/x86_64-linux-gnu/bits/sys_errlist.h:
+
+/usr/lib/llvm-3.6/bin/../lib/clang/3.6.2/include/__stddef_max_align_t.h:
+
+lib/sys/types.h:
+
+/usr/include/x86_64-linux-gnu/sys/types.h:
+
+lib/time.h:
+
+/usr/include/time.h:
+
+/usr/include/endian.h:
+
+/usr/include/x86_64-linux-gnu/bits/endian.h:
+
+/usr/include/x86_64-linux-gnu/bits/byteswap.h:
+
+/usr/include/x86_64-linux-gnu/bits/byteswap-16.h:
+
+lib/sys/select.h:
+
+/usr/include/x86_64-linux-gnu/sys/select.h:
+
+/usr/include/x86_64-linux-gnu/bits/select.h:
+
+/usr/include/x86_64-linux-gnu/bits/sigset.h:
+
+/usr/include/x86_64-linux-gnu/bits/time.h:
+
+/usr/include/x86_64-linux-gnu/sys/sysmacros.h:
+
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
+
+lib/u64.h:
+
+/usr/lib/llvm-3.6/bin/../lib/clang/3.6.2/include/stdint.h:
+
+/usr/include/stdint.h:
+
+/usr/include/x86_64-linux-gnu/bits/wchar.h:
+
+/usr/lib/llvm-3.6/bin/../lib/clang/3.6.2/include/stdalign.h:
+
+lib/stdlib.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/x86_64-linux-gnu/bits/waitflags.h:
+
+/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
+
+/usr/include/xlocale.h:
+
+lib/alloca.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
+
+lib/string.h:
+
+/usr/include/string.h:
+
+lib/unlocked-io.h:

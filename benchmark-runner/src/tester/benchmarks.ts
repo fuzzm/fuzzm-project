@@ -42,4 +42,20 @@ export const benchmarks = {
     cmd: '-t png -o ##.dec @@',
     outputFile: '##.dec',
   },
+  base64: {
+    binName: 'coreutils-8.24-lava-safe/base64.wasm',
+    cmd: '--decode @@',
+    outputFile: 'stdout',
+  },
+  md5sum: {
+    binName: 'coreutils-8.24-lava-safe/md5sum.wasm',
+    cmd: '-c @@',
+    outputFile: 'stdout',
+    useRelativeInput: true,
+  },
+  uniq: {
+    binName: 'coreutils-8.24-lava-safe/uniq.wasm',
+    outputFile: 'stdout',
+    cmd: '@@',
+  },
 };

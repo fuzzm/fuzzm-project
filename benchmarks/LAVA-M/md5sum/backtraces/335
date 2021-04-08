@@ -1,0 +1,64 @@
+Successfully triggered bug 335, crashing now!
+Successfully triggered bug 335, crashing now!
+
+Program received signal SIGSEGV, Segmentation fault.
+md5_process_block (buffer=buffer@entry=0x8425c08, len=len@entry=1818356544, ctx=ctx@entry=0xbfffef74) at lib/md5.c:386
+386	      OP (C, D, A, B, 17, 0xa679438e);
+
+Thread 1 (process 20832):
+#0  md5_process_block (buffer=buffer@entry=0x8425c08, len=len@entry=1818356544, ctx=ctx@entry=0xbfffef74) at lib/md5.c:386
+        B_save = 3569900134
+        D_save = 1310879698
+        cwp = <optimized out>
+        A_save = 2515601509
+        C_save = 3164386324
+        words = 0x8445ffc
+        nwords = 454589136
+        endp = 0x74a44748
+        A = 2631015979
+        B = 3192681570
+        C = 2683756612
+        D = <optimized out>
+        lolen = 1818356544
+#1  0x0804c4dc in md5_process_bytes (buffer=buffer@entry=0x8425c08, len=<optimized out>, ctx=ctx@entry=0xbfffef74) at lib/md5.c:275
+No locals.
+#2  0x0804c90e in md5_stream (stream=stream@entry=0x8425aa0, resblock=resblock@entry=0xbffff13c) at lib/md5.c:203
+        ctx = {A = 1732584193, B = 4023233417, C = 2562383102, D = 271733878, total = {1818356544, 0}, buflen = 0, buffer = {1, 3221221328, 3086941206, 3087006400, 3086879640, 1, 1, 0, 1, 134514316, 134562164, 0, 3085462896, 8, 0, 1818326290, 0, 3086965184, 0, 1818326290, 0, 8, 0, 134531741, 8, 0, 0, 0, 0, 2, 3221221736, 134532244}}
+        sum = 30268
+        buffer = 0x8425c08 "\177ELF\001\001\001"
+#3  0x08049782 in digest_file (filename=0x8425a42 "/bin/bunzip2", bin_result=bin_result@entry=0xbffff13c "\313\016\005\b\003", binary=<error reading variable: Unhandled dwarf expression opcode 0xfa>) at src/md5sum.c:485
+        fp = 0x8425aa0
+        err = <optimized out>
+        is_stdin = <optimized out>
+#4  0x0804ae75 in digest_check (checkfile_name=0xbffff39b "inputs/bin-ls-md5s-fuzzed-335") at src/md5sum.c:694
+        kbcieiubweuhc521595368 = <optimized out>
+        ok = <optimized out>
+        filename = 0x8425a42 "/bin/bunzip2"
+        binary = 0
+        hex_digest = 0x8425a20 "23e3debe890f5504315af539d75ab146"
+        line_length = <optimized out>
+        n_misformatted_lines = <optimized out>
+        line = 0x8425a20 "23e3debe890f5504315af539d75ab146"
+        line_chars_allocated = 120
+        n_properly_formatted_lines = 1
+        n_improperly_formatted_lines = <optimized out>
+        n_mismatched_checksums = <optimized out>
+        n_open_or_read_failures = <optimized out>
+        bin_buffer = 0xbffff13c "\313\016\005\b\003"
+        checkfile_stream = 0x84258b8
+        bin_buffer_unaligned = "\313\016\005\b\003\000\000\000\024\362\377\277$\362\377\277h\361\377\277"
+        line_number = <optimized out>
+        is_stdin = <optimized out>
+#5  main (argc=<optimized out>, argv=0xbffff214) at src/md5sum.c:952
+        file = 0xbffff39b "inputs/bin-ls-md5s-fuzzed-335"
+        bin_buffer_unaligned = "\300\\\374\267,\220\004\b\220\005\377\267\370@\005\bh\361\377\277"
+        do_check = true
+        opt = <optimized out>
+        ok = <optimized out>
+        binary = <optimized out>
+        prefix_tag = false
+A debugging session is active.
+
+	Inferior 1 [process 20832] will be killed.
+
+Quit anyway? (y or n) [answered Y; input not from terminal]

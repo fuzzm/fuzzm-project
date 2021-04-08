@@ -1,0 +1,43 @@
+Successfully triggered bug 222, crashing now!
+Successfully triggered bug 222, crashing now!
+
+Program received signal SIGSEGV, Segmentation fault.
+x2nrealloc (s=1, pn=0x7185c760, p=0x84248f8) at lib/xalloc.h:181
+181	  size_t n = *pn;
+
+Thread 1 (process 11247):
+#0  x2nrealloc (s=1, pn=0x7185c760, p=0x84248f8) at lib/xalloc.h:181
+        n = <optimized out>
+#1  x2realloc (p=p@entry=0x84248f8, pn=pn@entry=0x7185c760) at lib/xmalloc.c:77
+No locals.
+#2  0x0804b436 in readlinebuffer_delim (linebuffer=linebuffer@entry=0xbffff154, stream=stream@entry=0xb7fc5420, delimiter=delimiter@entry=10 '\n') at lib/linebuffer.c:94
+        kbcieiubweuhc1681692777 = <optimized out>
+        oldsize = 64
+        c = <optimized out>
+        buffer = 0x84248f8 ' ' <repeats 11 times>, "Adds an implicit #define into the predefines buffer w"
+        p = <optimized out>
+        end = <optimized out>
+#3  0x0804a63c in check_file (delimiter=10 '\n', outfile=<optimized out>, infile=0xbffff39b "inputs/man-clang3-sorted-fuzzed-222") at src/uniq.c:387
+        thislen = <optimized out>
+        new_group = <optimized out>
+        thisfield = <optimized out>
+        prevfield = 0x8424940 "\203ual       Adds an implicit #define into the predefines buffer which is read before the source file is preprocessed.\n"
+        prevlen = 116
+        first_group_printed = true
+        lb1 = {size = 146, length = 117, buffer = 0x8424940 "\203ual       Adds an implicit #define into the predefines buffer which is read before the source file is preprocessed.\n"}
+        thisline = 0xbffff154
+        lb2 = {size = 64, length = 12, buffer = 0x84248f8 ' ' <repeats 11 times>, "Adds an implicit #define into the predefines buffer w"}
+        prevline = 0xbffff148
+#4  main (argc=2, argv=0xbffff224) at src/uniq.c:722
+        optc = <optimized out>
+        posixly_correct = 72
+        skip_field_option_type = <optimized out>
+        nfiles = <optimized out>
+        file = {0xbffff39b "inputs/man-clang3-sorted-fuzzed-222", 0x80502aa "-"}
+        delimiter = 10 '\n'
+        output_option_used = <optimized out>
+A debugging session is active.
+
+	Inferior 1 [process 11247] will be killed.
+
+Quit anyway? (y or n) [answered Y; input not from terminal]

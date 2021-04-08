@@ -1,0 +1,43 @@
+Successfully triggered bug 1, crashing now!
+Successfully triggered bug 1, crashing now!
+
+Program received signal SIGSEGV, Segmentation fault.
+split_3 (file_name=0xbffff11c, binary=0xbffff120, hex_digest=0x7185caa4, s_len=43, s=0x8425a20 "`val6f2703899e99c62328cff4a2e87d  /bin/bash") at src/md5sum.c:382
+382	  *hex_digest = (unsigned char *) &s[i];
+
+Thread 1 (process 20631):
+#0  split_3 (file_name=0xbffff11c, binary=0xbffff120, hex_digest=0x7185caa4, s_len=43, s=0x8425a20 "`val6f2703899e99c62328cff4a2e87d  /bin/bash") at src/md5sum.c:382
+        escaped_filename = false
+        i = 32
+        algo_name_len = 3
+#1  digest_check (checkfile_name=0xbffff39d "inputs/bin-ls-md5s-fuzzed-1") at src/md5sum.c:629
+        kbcieiubweuhc304089172 = false
+        filename = 0xb7fc4ff4 "|\255\024"
+        binary = 0
+        hex_digest = 0xbffff1c0 ""
+        line_length = <optimized out>
+        n_misformatted_lines = <optimized out>
+        line = 0x8425a20 "`val6f2703899e99c62328cff4a2e87d  /bin/bash"
+        line_chars_allocated = 120
+        n_properly_formatted_lines = <optimized out>
+        n_improperly_formatted_lines = <optimized out>
+        n_mismatched_checksums = <optimized out>
+        n_open_or_read_failures = <optimized out>
+        bin_buffer = 0xbffff13c "\313\016\005\b\003"
+        checkfile_stream = 0x84258b8
+        bin_buffer_unaligned = "\313\016\005\b\003\000\000\000\024\362\377\277$\362\377\277h\361\377\277"
+        line_number = <optimized out>
+        is_stdin = <optimized out>
+#2  main (argc=<optimized out>, argv=0xbffff214) at src/md5sum.c:952
+        file = 0xbffff39d "inputs/bin-ls-md5s-fuzzed-1"
+        bin_buffer_unaligned = "\300\\\374\267,\220\004\b\220\005\377\267\370@\005\bh\361\377\277"
+        do_check = true
+        opt = <optimized out>
+        ok = <optimized out>
+        binary = <optimized out>
+        prefix_tag = false
+A debugging session is active.
+
+	Inferior 1 [process 20631] will be killed.
+
+Quit anyway? (y or n) [answered Y; input not from terminal]

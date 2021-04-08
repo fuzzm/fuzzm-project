@@ -1,0 +1,50 @@
+Successfully triggered bug 374, crashing now!
+Successfully triggered bug 374, crashing now!
+
+Program received signal SIGSEGV, Segmentation fault.
+*__GI_fileno (fp=0xb099f27c) at fileno.c:37
+37	fileno.c: No such file or directory.
+
+Thread 1 (process 20893):
+#0  *__GI_fileno (fp=0xb099f27c) at fileno.c:37
+No locals.
+#1  0x0804eee0 in rpl_fclose (fp=fp@entry=0x8425aa0) at lib/fclose.c:71
+        saved_errno = 0
+        fd = <optimized out>
+        result = 0
+#2  0x080497e0 in digest_file (filename=0x8425a42 "/bin/bunzip2", bin_result=bin_result@entry=0xbffff13c "#\343\336\276\211\017U\004\061Z\365\071\327Z\261Fh\361\377\277%\222귐\005\377\267\213\016\005\b\364", <incomplete sequence \374\267>, binary=<error reading variable: Unhandled dwarf expression opcode 0xfa>) at src/md5sum.c:494
+        fp = 0x8425aa0
+        err = <optimized out>
+        is_stdin = <optimized out>
+#3  0x0804ae75 in digest_check (checkfile_name=0xbffff39b "inputs/bin-ls-md5s-fuzzed-374") at src/md5sum.c:694
+        kbcieiubweuhc521595368 = <optimized out>
+        ok = <optimized out>
+        filename = 0x8425a42 "/bin/bunzip2"
+        binary = 0
+        hex_digest = 0x8425a20 "23e3debe890f5504315af539d75ab146"
+        line_length = <optimized out>
+        n_misformatted_lines = <optimized out>
+        line = 0x8425a20 "23e3debe890f5504315af539d75ab146"
+        line_chars_allocated = 120
+        n_properly_formatted_lines = 1
+        n_improperly_formatted_lines = <optimized out>
+        n_mismatched_checksums = <optimized out>
+        n_open_or_read_failures = <optimized out>
+        bin_buffer = 0xbffff13c "#\343\336\276\211\017U\004\061Z\365\071\327Z\261Fh\361\377\277%\222귐\005\377\267\213\016\005\b\364", <incomplete sequence \374\267>
+        checkfile_stream = 0x84258b8
+        bin_buffer_unaligned = "#\343\336\276\211\017U\004\061Z\365\071\327Z\261Fh\361\377\277"
+        line_number = <optimized out>
+        is_stdin = <optimized out>
+#4  main (argc=<optimized out>, argv=0xbffff214) at src/md5sum.c:952
+        file = 0xbffff39b "inputs/bin-ls-md5s-fuzzed-374"
+        bin_buffer_unaligned = "\300\\\374\267,\220\004\b\220\005\377\267\370@\005\bh\361\377\277"
+        do_check = true
+        opt = <optimized out>
+        ok = <optimized out>
+        binary = <optimized out>
+        prefix_tag = false
+A debugging session is active.
+
+	Inferior 1 [process 20893] will be killed.
+
+Quit anyway? (y or n) [answered Y; input not from terminal]

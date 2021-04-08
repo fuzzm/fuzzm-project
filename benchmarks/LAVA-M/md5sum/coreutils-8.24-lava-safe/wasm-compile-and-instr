@@ -1,0 +1,4 @@
+#!/bin/bash
+./wasm-compile
+../../../../wasm_instrumenter/target/release/afl_branch md5sum.wasm md5sum.instr.wasm
+../../../../wasm_instrumenter/target/release/canaries --skip-print md5sum.instr.wasm md5sum.instr.wasm

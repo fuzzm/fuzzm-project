@@ -1,0 +1,66 @@
+lib/rand-isaac.o: lib/rand-isaac.c lib/config.h lib/rand-isaac.h \
+  /usr/lib/llvm-3.6/bin/../lib/clang/3.6.2/include/stddef.h \
+  /usr/lib/llvm-3.6/bin/../lib/clang/3.6.2/include/__stddef_max_align_t.h \
+  /usr/lib/llvm-3.6/bin/../lib/clang/3.6.2/include/stdint.h \
+  /usr/include/stdint.h /usr/include/features.h \
+  /usr/include/stdc-predef.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/lib/llvm-3.6/bin/../lib/clang/3.6.2/include/limits.h \
+  /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+  /usr/include/linux/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h lib/string.h \
+  /usr/include/string.h /usr/include/xlocale.h
+
+lib/config.h:
+
+lib/rand-isaac.h:
+
+/usr/lib/llvm-3.6/bin/../lib/clang/3.6.2/include/stddef.h:
+
+/usr/lib/llvm-3.6/bin/../lib/clang/3.6.2/include/__stddef_max_align_t.h:
+
+/usr/lib/llvm-3.6/bin/../lib/clang/3.6.2/include/stdint.h:
+
+/usr/include/stdint.h:
+
+/usr/include/features.h:
+
+/usr/include/stdc-predef.h:
+
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:
+
+/usr/include/x86_64-linux-gnu/bits/wordsize.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
+
+/usr/include/x86_64-linux-gnu/bits/wchar.h:
+
+/usr/lib/llvm-3.6/bin/../lib/clang/3.6.2/include/limits.h:
+
+/usr/include/limits.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
+
+/usr/include/x86_64-linux-gnu/bits/local_lim.h:
+
+/usr/include/linux/limits.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
+
+/usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
+
+lib/string.h:
+
+/usr/include/string.h:
+
+/usr/include/xlocale.h:

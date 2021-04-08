@@ -1,0 +1,16 @@
+There is an unintentional use-after-free in lib/linebuffer.c line 94.
+
+Depending on what tool you are testing, you may need to remove the
+following code from that file:
+
+if (((buffer)) && ((buffer)))  {int lava_166 = 0;
+lava_166 |= ((unsigned char *) (buffer))[8] << (0*8);lava_166 |= ((unsigned char *) (buffer))[9] << (1*8);lava_166 |= ((unsigned char *) (buffer))[10] << (2*8);lava_166 |= ((unsigned char *) (buffer))[11] << (3*8);lava_set(166,lava_166);
+int lava_171 = 0;         
+lava_171 |= ((unsigned char *) (buffer))[8] << (0*8);lava_171 |= ((unsigned char *) (buffer))[9] << (1*8);lava_171 |= ((unsigned char *) (buffer))[10] << (2*8);lava_171 |= ((unsigned char *) (buffer))[11] << (3*8);lava_set(171,lava_171);
+int lava_227 = 0;         
+lava_227 |= ((unsigned char *) (buffer))[0] << (0*8);lava_227 |= ((unsigned char *) (buffer))[1] << (1*8);lava_227 |= ((unsigned char *) (buffer))[2] << (2*8);lava_227 |= ((unsigned char *) (buffer))[3] << (3*8);lava_set(227,lava_227);
+int lava_222 = 0;         
+lava_222 |= ((unsigned char *) (buffer))[0] << (0*8);lava_222 |= ((unsigned char *) (buffer))[1] << (1*8);lava_222 |= ((unsigned char *) (buffer))[2] << (2*8);lava_222 |= ((unsigned char *) (buffer))[3] << (3*8);lava_set(222,lava_222);
+int lava_170 = 0;         
+lava_170 |= ((unsigned char *) (buffer))[0] << (0*8);lava_170 |= ((unsigned char *) (buffer))[1] << (1*8);lava_170 |= ((unsigned char *) (buffer))[2] << (2*8);lava_170 |= ((unsigned char *) (buffer))[3] << (3*8);lava_set(170,lava_170);
+}
