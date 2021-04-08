@@ -1,0 +1,40 @@
+Successfully triggered bug 1, crashing now!
+Successfully triggered bug 1, crashing now!
+
+Program received signal SIGSEGV, Segmentation fault.
+decode_4 (in=in@entry=0x2c615760 <Address 0x2c615760 out of bounds>, inlen=inlen@entry=4096, outp=outp@entry=0xbfffd4cc, outleft=outleft@entry=0xbfffd49c) at lib/base64.c:417
+417	  lava_776 |= ((unsigned char *) (in))[0] << (0*8);lava_776 |= ((unsigned char *) (in))[1] << (1*8);lava_776 |= ((unsigned char *) (in))[2] << (2*8);lava_776 |= ((unsigned char *) (in))[3] << (3*8);lava_set(776,lava_776);
+
+Thread 1 (process 2436):
+#0  decode_4 (in=in@entry=0x2c615760 <Address 0x2c615760 out of bounds>, inlen=inlen@entry=4096, outp=outp@entry=0xbfffd4cc, outleft=outleft@entry=0xbfffd49c) at lib/base64.c:417
+        lava_776 = <error reading variable lava_776 (Cannot access memory at address 0x2c615761)>
+        lava_554 = <optimized out>
+        lava_813 = <optimized out>
+        out = 0xbfffd500 ""
+#1  0x0804ae1a in base64_decode_ctx (ctx=ctx@entry=0xbfffd4f8, in=in@entry=0xbfffe100 "`valAJIB", 'A' <repeats 45 times>, "HNp", 'A' <repeats 20 times>, "\n", 'A' <repeats 76 times>, "\n", 'A' <repeats 46 times>..., inlen=inlen@entry=4096, out=out@entry=0xbfffd500 "", outlen=outlen@entry=0xbfffd4f4) at lib/base64.c:584
+        kbcieiubweuhc233665123 = <optimized out>
+        outleft_save = 3072
+        outleft = 3072
+        ignore_newlines = true
+        flush_ctx = <optimized out>
+        ctx_i = <optimized out>
+#2  0x08049a6b in do_decode (in=in@entry=0x84248b8, out=0xb7fc54c0, ignore_garbage=ignore_garbage@entry=false) at src/base64.c:245
+        ok = <optimized out>
+        n = 3072
+        k = 0
+        inbuf = "`valAJIB", 'A' <repeats 45 times>, "HNp", 'A' <repeats 20 times>, "\n", 'A' <repeats 76 times>, "\n", 'A' <repeats 76 times>, "\n", 'A' <repeats 76 times>, "\n", 'A' <repeats 76 times>, "\n", 'A' <repeats 73 times>, "Gqd\n4FWgtAk", 'A' <repeats 50 times>, "gAAAAAAAAB+AAAAAAAA\n", 'A' <repeats 33 times>, "H5+AAByZWJvb3Q", 'A' <repeats 29 times>, "\n", 'A' <repeats 76 times>, "\n", 'A' <repeats 76 times>, "\n", 'A' <repeats 76 times>, "\n", 'A' <repeats 76 times>...
+        outbuf = '\000' <repeats 3071 times>
+        sum = 4096
+        ctx = {i = 0, buf = "\000\000\000"}
+#3  0x0804a1fe in main (argc=3, argv=0xbffff224) at src/base64.c:332
+        opt = <optimized out>
+        input_fh = 0x84248b8
+        infile = 0xbffff3a0 "inputs/utmp-fuzzed-1.b64"
+        decode = true
+        ignore_garbage = false
+        wrap_column = 76
+A debugging session is active.
+
+	Inferior 1 [process 2436] will be killed.
+
+Quit anyway? (y or n) [answered Y; input not from terminal]

@@ -1,5 +1,4 @@
 *.cmake
-libtiff
 CMakeCache.txt
 CMakeFiles
 contrib/

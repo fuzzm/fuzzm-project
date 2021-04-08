@@ -1,0 +1,972 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       -###
+       -###
+       -###
+           Adds an implicit #define into the predefines buffer which is read before the source file is preprocessed.
+           Adds an implicit #define into the predefines buffer which is read before the source file is preprocessed.
+           Adds an implicit #define into the predefines buffer which is read before the source file is preprocessed.
+           Adds an implicit #include into the predefines buffer which is read before the source file is preprocessed.
+           Adds an implicit #include into the predefines buffer which is read before the source file is preprocessed.
+           Adds an implicit #include into the predefines buffer which is read before the source file is preprocessed.
+           Adds an implicit #undef into the predefines buffer which is read before the source file is preprocessed.
+           Adds an implicit #undef into the predefines buffer which is read before the source file is preprocessed.
+           Adds an implicit #undef into the predefines buffer which is read before the source file is preprocessed.
+           Add the specified directory to the search path for framework include files.
+           Add the specified directory to the search path for framework include files.
+           Add the specified directory to the search path for framework include files.
+           Add the specified directory to the search path for include files.
+           Add the specified directory to the search path for include files.
+           Add the specified directory to the search path for include files.
+           affects darwin targets.
+           affects darwin targets.
+           affects darwin targets.
+           Allow loose type checking rules for implicit vector conversions.
+           Allow loose type checking rules for implicit vector conversions.
+           Allow loose type checking rules for implicit vector conversions.
+       --analyze
+       --analyze
+       --analyze
+       and the full output of the compiler, along with information to reproduce.
+       and the full output of the compiler, along with information to reproduce.
+       and the full output of the compiler, along with information to reproduce.
+       -ansi
+       -ansi
+       -ansi
+           applies semantic analysis to compute types for expressions as well and determine whether the code is well formed. This stage is
+           applies semantic analysis to compute types for expressions as well and determine whether the code is well formed. This stage is
+           applies semantic analysis to compute types for expressions as well and determine whether the code is well formed. This stage is
+       -arch architecture
+       -arch architecture
+       -arch architecture
+        as(1), ld(1)
+        as(1), ld(1)
+        as(1), ld(1)
+       Assembler
+       Assembler
+       Assembler
+           assembler and linker.  Typically you do not need to interact with the driver, but you transparently use it to run the other tools.
+           assembler and linker.  Typically you do not need to interact with the driver, but you transparently use it to run the other tools.
+           assembler and linker.  Typically you do not need to interact with the driver, but you transparently use it to run the other tools.
+           assembly file.
+           assembly file.
+           assembly file.
+AUTHOR
+AUTHOR
+AUTHOR
+BUGS
+BUGS
+BUGS
+           called a ".s" file or "assembly" file.
+           called a ".s" file or "assembly" file.
+           called a ".s" file or "assembly" file.
+       C_INCLUDE_PATH, OBJC_INCLUDE_PATH, CPLUS_INCLUDE_PATH, OBJCPLUS_INCLUDE_PATH
+       C_INCLUDE_PATH, OBJC_INCLUDE_PATH, CPLUS_INCLUDE_PATH, OBJCPLUS_INCLUDE_PATH
+       C_INCLUDE_PATH, OBJC_INCLUDE_PATH, CPLUS_INCLUDE_PATH, OBJCPLUS_INCLUDE_PATH
+CLANG(1)                                                  Clang Tools Documentation                                                  CLANG(1)
+CLANG(1)                                                  Clang Tools Documentation                                                  CLANG(1)
+CLANG(1)                                                  Clang Tools Documentation                                                  CLANG(1)
+clang 3.0                                                         2011-10-11                                                         CLANG(1)
+clang 3.0                                                         2011-10-11                                                         CLANG(1)
+clang 3.0                                                         2011-10-11                                                         CLANG(1)
+           Clang also supports the use of an integrated assembler, in which the code generator produces object files directly. This avoids
+           Clang also supports the use of an integrated assembler, in which the code generator produces object files directly. This avoids
+           Clang also supports the use of an integrated assembler, in which the code generator produces object files directly. This avoids
+       Clang and is built into the same driver.
+       Clang and is built into the same driver.
+       Clang and is built into the same driver.
+       clang [-c|-S|-E] -std=standard -g
+       clang [-c|-S|-E] -std=standard -g
+       clang [-c|-S|-E] -std=standard -g
+       Clang fully supports cross compilation as an inherent part of its design.  Depending on how your version of Clang is configured, it
+       Clang fully supports cross compilation as an inherent part of its design.  Depending on how your version of Clang is configured, it
+       Clang fully supports cross compilation as an inherent part of its design.  Depending on how your version of Clang is configured, it
+       clang is a C, C++, and Objective-C compiler which encompasses preprocessing, parsing, optimization, code generation, assembly, and
+       clang is a C, C++, and Objective-C compiler which encompasses preprocessing, parsing, optimization, code generation, assembly, and
+       clang is a C, C++, and Objective-C compiler which encompasses preprocessing, parsing, optimization, code generation, assembly, and
+       Clang Static Analyzer
+       Clang Static Analyzer
+       Clang Static Analyzer
+       clang - the Clang C, C++, and Objective-C compiler
+       clang - the Clang C, C++, and Objective-C compiler
+       clang - the Clang C, C++, and Objective-C compiler
+       Code Generation and Optimization
+       Code Generation and Optimization
+       Code Generation and Optimization
+   Code Generation Options
+   Code Generation Options
+   Code Generation Options
+       CPATH
+       CPATH
+       CPATH
+       -c  Run all of the above, plus the assembler, generating a target ".o" object file.
+       -c  Run all of the above, plus the assembler, generating a target ".o" object file.
+       -c  Run all of the above, plus the assembler, generating a target ".o" object file.
+           debuggable code.  -O2 is a moderate level of optimization which enables most optimizations.  -Os is like -O2 with extra
+           debuggable code.  -O2 is a moderate level of optimization which enables most optimizations.  -Os is like -O2 with extra
+           debuggable code.  -O2 is a moderate level of optimization which enables most optimizations.  -Os is like -O2 with extra
+           default in x86-64.
+           default in x86-64.
+           default in x86-64.
+DESCRIPTION
+DESCRIPTION
+DESCRIPTION
+   Diagnostics Options
+   Diagnostics Options
+   Diagnostics Options
+           directives.  The output of this stage is typically called a ".i" (for C), ".ii" (for C++), ".mi" (for Objective-C) , or ".mii"
+           directives.  The output of this stage is typically called a ".i" (for C), ".ii" (for C++), ".mi" (for Objective-C) , or ".mii"
+           directives.  The output of this stage is typically called a ".i" (for C), ".ii" (for C++), ".mi" (for Objective-C) , or ".mii"
+           Disable special handling and optimizations of builtin functions like strlen and malloc.
+           Disable special handling and optimizations of builtin functions like strlen and malloc.
+           Disable special handling and optimizations of builtin functions like strlen and malloc.
+           Display available options.
+           Display available options.
+           Display available options.
+         -Dmacro[=defn]
+         -Dmacro[=defn]
+         -Dmacro[=defn]
+       -Dmacroname=value
+       -Dmacroname=value
+       -Dmacroname=value
+           Do not search clang's builtin directory for include files.
+           Do not search clang's builtin directory for include files.
+           Do not search clang's builtin directory for include files.
+           Do not search the standard system directories for include files, but do search compiler builting include directories.
+           Do not search the standard system directories for include files, but do search compiler builting include directories.
+           Do not search the standard system directories for include files, but do search compiler builting include directories.
+           Do not search the standard system directories or compiler builtin directories for include files.
+           Do not search the standard system directories or compiler builtin directories for include files.
+           Do not search the standard system directories or compiler builtin directories for include files.
+           Don't emit warning for unused driver arguments.
+           Don't emit warning for unused driver arguments.
+           Don't emit warning for unused driver arguments.
+       Driver
+       Driver
+       Driver
+   Driver Options
+   Driver Options
+   Driver Options
+           Empty components in the environment variable are ignored.
+           Empty components in the environment variable are ignored.
+           Empty components in the environment variable are ignored.
+           enabled.
+           enabled.
+           enabled.
+           Enable generation of unwind information, this allows exceptions to be thrown through Clang compiled stack frames.  This is on by
+           Enable generation of unwind information, this allows exceptions to be thrown through Clang compiled stack frames.  This is on by
+           Enable generation of unwind information, this allows exceptions to be thrown through Clang compiled stack frames.  This is on by
+           Enable support for Borland extensions.
+           Enable support for Borland extensions.
+           Enable support for Borland extensions.
+           Enable support for Microsoft extensions.
+           Enable support for Microsoft extensions.
+           Enable support for Microsoft extensions.
+           Enable support for Pascal-style strings with "\pfoo".
+           Enable support for Pascal-style strings with "\pfoo".
+           Enable support for Pascal-style strings with "\pfoo".
+           Enable the "Blocks" language feature.
+           Enable the "Blocks" language feature.
+           Enable the "Blocks" language feature.
+           Enable trigraphs.
+           Enable trigraphs.
+           Enable trigraphs.
+           Enable use of the Objective-C non-fragile ABI. On platforms for which this is the default ABI, it can be disabled with
+           Enable use of the Objective-C non-fragile ABI. On platforms for which this is the default ABI, it can be disabled with
+           Enable use of the Objective-C non-fragile ABI. On platforms for which this is the default ABI, it can be disabled with
+ENVIRONMENT
+ENVIRONMENT
+ENVIRONMENT
+       -E  Run the preprocessor stage.
+       -E  Run the preprocessor stage.
+       -E  Run the preprocessor stage.
+           executable or shared library.
+           executable or shared library.
+           executable or shared library.
+           faster).  On supported platforms, -O4 enables link-time optimization; object files are stored in the LLVM bitcode file format and
+           faster).  On supported platforms, -O4 enables link-time optimization; object files are stored in the LLVM bitcode file format and
+           faster).  On supported platforms, -O4 enables link-time optimization; object files are stored in the LLVM bitcode file format and
+       -fblocks
+       -fblocks
+       -fblocks
+       -fborland-extensions
+       -fborland-extensions
+       -fborland-extensions
+       -fcommon
+       -fcommon
+       -fcommon
+       -fdiagnostics-print-source-range-info -fprint-source-range-info -fdiagnostics-show-option -fmessage-length
+       -fdiagnostics-print-source-range-info -fprint-source-range-info -fdiagnostics-show-option -fmessage-length
+       -fdiagnostics-print-source-range-info -fprint-source-range-info -fdiagnostics-show-option -fmessage-length
+       -Fdirectory
+       -Fdirectory
+       -Fdirectory
+       -fexceptions
+       -fexceptions
+       -fexceptions
+         -ffeature-option...
+         -ffeature-option...
+         -ffeature-option...
+       -ffreestanding
+       -ffreestanding
+       -ffreestanding
+       -flax-vector-conversions
+       -flax-vector-conversions
+       -flax-vector-conversions
+       -flto -emit-llvm
+       -flto -emit-llvm
+       -flto -emit-llvm
+       -fmath-errno
+       -fmath-errno
+       -fmath-errno
+       -fmsc-version=
+       -fmsc-version=
+       -fmsc-version=
+       -fms-extensions
+       -fms-extensions
+       -fms-extensions
+       -fno-builtin
+       -fno-builtin
+       -fno-builtin
+           -fno-objc-nonfragile-abi.
+           -fno-objc-nonfragile-abi.
+           -fno-objc-nonfragile-abi.
+       -fobjc-abi-version=version
+       -fobjc-abi-version=version
+       -fobjc-abi-version=version
+       -fobjc-gc
+       -fobjc-gc
+       -fobjc-gc
+       -fobjc-gc-only
+       -fobjc-gc-only
+       -fobjc-gc-only
+       -fobjc-nonfragile-abi
+       -fobjc-nonfragile-abi
+       -fobjc-nonfragile-abi
+       -fobjc-nonfragile-abi-version=version
+       -fobjc-nonfragile-abi-version=version
+       -fobjc-nonfragile-abi-version=version
+           (for Objective-C++) file.
+           (for Objective-C++) file.
+           (for Objective-C++) file.
+       -fpascal-strings
+       -fpascal-strings
+       -fpascal-strings
+           fragile ABI 2).
+           fragile ABI 2).
+           fragile ABI 2).
+           fragile ABI is enabled (either via -fobjc-nonfragile-abi, or because it is the platform default).
+           fragile ABI is enabled (either via -fobjc-nonfragile-abi, or because it is the platform default).
+           fragile ABI is enabled (either via -fobjc-nonfragile-abi, or because it is the platform default).
+       -fshow-column -fshow-source-location -fcaret-diagnostics -fdiagnostics-fixit-info -fdiagnostics-parseable-fixits
+       -fshow-column -fshow-source-location -fcaret-diagnostics -fdiagnostics-fixit-info -fdiagnostics-parseable-fixits
+       -fshow-column -fshow-source-location -fcaret-diagnostics -fdiagnostics-fixit-info -fdiagnostics-parseable-fixits
+       -fsyntax-only
+       -fsyntax-only
+       -fsyntax-only
+       -ftime-report
+       -ftime-report
+       -ftime-report
+       -ftrapv
+       -ftrapv
+       -ftrapv
+       -fvisibility
+       -fvisibility
+       -fvisibility
+       -fwritable-strings
+       -fwritable-strings
+       -fwritable-strings
+           Generate code to catch integer overflow errors.  Signed integer overflow is undefined in C, with this flag, extra code is
+           Generate code to catch integer overflow errors.  Signed integer overflow is undefined in C, with this flag, extra code is
+           Generate code to catch integer overflow errors.  Signed integer overflow is undefined in C, with this flag, extra code is
+           generated to detect this and abort when it happens.
+           generated to detect this and abort when it happens.
+           generated to detect this and abort when it happens.
+           Generate output files in LLVM formats, suitable for link time optimization. When used with -S this generates LLVM intermediate
+           Generate output files in LLVM formats, suitable for link time optimization. When used with -S this generates LLVM intermediate
+           Generate output files in LLVM formats, suitable for link time optimization. When used with -S this generates LLVM intermediate
+       -g  Generate debug information.  Note that Clang debug information works best at -O0.  At higher optimization levels, only line number
+       -g  Generate debug information.  Note that Clang debug information works best at -O0.  At higher optimization levels, only line number
+       -g  Generate debug information.  Note that Clang debug information works best at -O0.  At higher optimization levels, only line number
+       --help
+       --help
+       --help
+       -Idirectory
+       -Idirectory
+       -Idirectory
+         -Idir... -Ldir...
+         -Idir... -Ldir...
+         -Idir... -Ldir...
+           If -mmacosx-version-min is unspecified, the default deployment target is read from this environment variable.  This option only
+           If -mmacosx-version-min is unspecified, the default deployment target is read from this environment variable.  This option only
+           If -mmacosx-version-min is unspecified, the default deployment target is read from this environment variable.  This option only
+           If no stage selection option is specified, all stages above are run, and the linker is run to combine the results into an
+           If no stage selection option is specified, all stages above are run, and the linker is run to combine the results into an
+           If no stage selection option is specified, all stages above are run, and the linker is run to combine the results into an
+           If this environment variable is present, it is treated as a delimited list of paths to be added to the default system include path
+           If this environment variable is present, it is treated as a delimited list of paths to be added to the default system include path
+           If this environment variable is present, it is treated as a delimited list of paths to be added to the default system include path
+       -include filename
+       -include filename
+       -include filename
+           Indicate that math functions should be treated as updating errno.
+           Indicate that math functions should be treated as updating errno.
+           Indicate that math functions should be treated as updating errno.
+           Indicate that Objective-C code should be compiled in GC-only mode, which only works when Objective-C Garbage Collection is
+           Indicate that Objective-C code should be compiled in GC-only mode, which only works when Objective-C Garbage Collection is
+           Indicate that Objective-C code should be compiled in GC-only mode, which only works when Objective-C Garbage Collection is
+           Indicate that Objective-C code should be compiled in hybrid-GC mode, which works with both GC and non-GC mode.
+           Indicate that Objective-C code should be compiled in hybrid-GC mode, which works with both GC and non-GC mode.
+           Indicate that Objective-C code should be compiled in hybrid-GC mode, which works with both GC and non-GC mode.
+           Indicate that the file should be compiled for a freestanding, not a hosted, environment.
+           Indicate that the file should be compiled for a freestanding, not a hosted, environment.
+           Indicate that the file should be compiled for a freestanding, not a hosted, environment.
+           information is currently available.
+           information is currently available.
+           information is currently available.
+         input-filenames
+         input-filenames
+         input-filenames
+       -integrated-as -no-integrated-as
+       -integrated-as -no-integrated-as
+       -integrated-as -no-integrated-as
+       integrated, it is important to understand the stages of compilation, to understand how to invoke it.  These stages are:
+       integrated, it is important to understand the stages of compilation, to understand how to invoke it.  These stages are:
+       integrated, it is important to understand the stages of compilation, to understand how to invoke it.  These stages are:
+           is target dependent.
+           is target dependent.
+           is target dependent.
+           is typically called an "a.out", ".dylib" or ".so" file.
+           is typically called an "a.out", ".dylib" or ".so" file.
+           is typically called an "a.out", ".dylib" or ".so" file.
+           is typically called a ".o" file or "object" file.
+           is typically called a ".o" file or "object" file.
+           is typically called a ".o" file or "object" file.
+           it enables optimizations that take longer to perform or that may generate larger code (in an attempt to make the program run
+           it enables optimizations that take longer to perform or that may generate larger code (in an attempt to make the program run
+           it enables optimizations that take longer to perform or that may generate larger code (in an attempt to make the program run
+           language assembly files, otherwise this generates LLVM bitcode format object files (which may be passed to the linker depending on
+           language assembly files, otherwise this generates LLVM bitcode format object files (which may be passed to the linker depending on
+           language assembly files, otherwise this generates LLVM bitcode format object files (which may be passed to the linker depending on
+   Language Selection and Mode Options
+   Language Selection and Mode Options
+   Language Selection and Mode Options
+       Linker
+       Linker
+       Linker
+       linking.  Depending on which high-level mode setting is passed, Clang will stop before doing a full link.  While Clang is highly
+       linking.  Depending on which high-level mode setting is passed, Clang will stop before doing a full link.  While Clang is highly
+       linking.  Depending on which high-level mode setting is passed, Clang will stop before doing a full link.  While Clang is highly
+           list. The delimiter is the platform dependent delimitor, as used in the PATH environment variable.
+           list. The delimiter is the platform dependent delimitor, as used in the PATH environment variable.
+           list. The delimiter is the platform dependent delimitor, as used in the PATH environment variable.
+       MACOSX_DEPLOYMENT_TARGET
+       MACOSX_DEPLOYMENT_TARGET
+       MACOSX_DEPLOYMENT_TARGET
+       Maintained by the Clang / LLVM Team (<http://clang.llvm.org>).
+       Maintained by the Clang / LLVM Team (<http://clang.llvm.org>).
+       Maintained by the Clang / LLVM Team (<http://clang.llvm.org>).
+           Make all string literals default to writable.  This disables uniquing of strings and other optimizations.
+           Make all string literals default to writable.  This disables uniquing of strings and other optimizations.
+           Make all string literals default to writable.  This disables uniquing of strings and other optimizations.
+           Manual for more information.
+           Manual for more information.
+           Manual for more information.
+       -march=cpu
+       -march=cpu
+       -march=cpu
+           -march=i486, the compiler is allowed to generate instructions that are valid on i486 and later processors, but which may not exist
+           -march=i486, the compiler is allowed to generate instructions that are valid on i486 and later processors, but which may not exist
+           -march=i486, the compiler is allowed to generate instructions that are valid on i486 and later processors, but which may not exist
+       may have support for a number of cross compilers, or may only support a native target.
+       may have support for a number of cross compilers, or may only support a native target.
+       may have support for a number of cross compilers, or may only support a native target.
+       -miphoneos-version-min
+       -miphoneos-version-min
+       -miphoneos-version-min
+         -mmachine-option...
+         -mmachine-option...
+         -mmachine-option...
+       -mmacosx-version-min=version
+       -mmacosx-version-min=version
+       -mmacosx-version-min=version
+NAME
+NAME
+NAME
+       -nobuiltininc
+       -nobuiltininc
+       -nobuiltininc
+       no stage selection option
+       no stage selection option
+       no stage selection option
+       -nostdinc
+       -nostdinc
+       -nostdinc
+       -nostdlibinc
+       -nostdlibinc
+       -nostdlibinc
+         [-O0|-O1|-O2|-Os|-Oz|-O3|-O4]
+         [-O0|-O1|-O2|-Os|-Oz|-O3|-O4]
+         [-O0|-O1|-O2|-Os|-Oz|-O3|-O4]
+       -O0 -O1 -O2 -Os -Oz -O3 -O4
+       -O0 -O1 -O2 -Os -Oz -O3 -O4
+       -O0 -O1 -O2 -Os -Oz -O3 -O4
+       -ObjC
+       -ObjC
+       -ObjC
+       -ObjC++
+       -ObjC++
+       -ObjC++
+       -o file
+       -o file
+       -o file
+           on earlier ones.
+           on earlier ones.
+           on earlier ones.
+         -o output-file
+         -o output-file
+         -o output-file
+           optimizations to reduce code size.  -Oz is like -Os (and thus -O2), but reduces code size further.  -O3 is like -O2, except that
+           optimizations to reduce code size.  -Oz is like -Os (and thus -O2), but reduces code size further.  -O3 is like -O2, except that
+           optimizations to reduce code size.  -Oz is like -Os (and thus -O2), but reduces code size further.  -O3 is like -O2, except that
+OPTIONS
+OPTIONS
+OPTIONS
+       Parsing and Semantic Analysis
+       Parsing and Semantic Analysis
+       Parsing and Semantic Analysis
+           Pass arg to the assembler.
+           Pass arg to the assembler.
+           Pass arg to the assembler.
+           Pass arg to the linker.
+           Pass arg to the linker.
+           Pass arg to the linker.
+           Pass arg to the preprocessor.
+           Pass arg to the preprocessor.
+           Pass arg to the preprocessor.
+           Pass arg to the static analyzer.
+           Pass arg to the static analyzer.
+           Pass arg to the static analyzer.
+           Pass the comma separated arguments in args to the assembler.
+           Pass the comma separated arguments in args to the assembler.
+           Pass the comma separated arguments in args to the assembler.
+           Pass the comma separated arguments in args to the linker.
+           Pass the comma separated arguments in args to the linker.
+           Pass the comma separated arguments in args to the linker.
+           Pass the comma separated arguments in args to the preprocessor.
+           Pass the comma separated arguments in args to the preprocessor.
+           Pass the comma separated arguments in args to the preprocessor.
+       Preprocessing
+       Preprocessing
+       Preprocessing
+   Preprocessor Options
+   Preprocessor Options
+   Preprocessor Options
+       -print-file-name=file
+       -print-file-name=file
+       -print-file-name=file
+       -print-libgcc-file-name
+       -print-libgcc-file-name
+       -print-libgcc-file-name
+       -print-prog-name=name
+       -print-prog-name=name
+       -print-prog-name=name
+       -print-search-dirs
+       -print-search-dirs
+       -print-search-dirs
+           Print the commands to run for this compilation.
+           Print the commands to run for this compilation.
+           Print the commands to run for this compilation.
+           Print the full library path of file.
+           Print the full library path of file.
+           Print the full library path of file.
+           Print the full program path of name.
+           Print the full program path of name.
+           Print the full program path of name.
+           Print the library path for "libgcc.a".
+           Print the library path for "libgcc.a".
+           Print the library path for "libgcc.a".
+           Print the paths used for finding libraries and programs.
+           Print the paths used for finding libraries and programs.
+           Print the paths used for finding libraries and programs.
+           Print timing summary of each stage of compilation.
+           Print timing summary of each stage of compilation.
+           Print timing summary of each stage of compilation.
+       -Qunused-arguments
+       -Qunused-arguments
+       -Qunused-arguments
+           responsible for generating most of the compiler warnings as well as parse errors.  The output of this stage is an "Abstract Syntax
+           responsible for generating most of the compiler warnings as well as parse errors.  The output of this stage is an "Abstract Syntax
+           responsible for generating most of the compiler warnings as well as parse errors.  The output of this stage is an "Abstract Syntax
+           responsible for optimizing the generated code and handling target-specific code generation.  The output of this stage is typically
+           responsible for optimizing the generated code and handling target-specific code generation.  The output of this stage is typically
+           responsible for optimizing the generated code and handling target-specific code generation.  The output of this stage is typically
+           Run the Clang Static Analyzer.
+           Run the Clang Static Analyzer.
+           Run the Clang Static Analyzer.
+           Run the preprocessor, parser and type checking stages.
+           Run the preprocessor, parser and type checking stages.
+           Run the preprocessor, parser and type checking stages.
+           Same as -std=c89.
+           Same as -std=c89.
+           Same as -std=c89.
+           Save intermediate compilation results.
+           Save intermediate compilation results.
+           Save intermediate compilation results.
+       -save-temps
+       -save-temps
+       -save-temps
+SEE ALSO
+SEE ALSO
+SEE ALSO
+           Select the Objective-C ABI version to use. Available versions are 1 (legacy "fragile" ABI), 2 (non-fragile ABI 1), and 3 (non-
+           Select the Objective-C ABI version to use. Available versions are 1 (legacy "fragile" ABI), 2 (non-fragile ABI 1), and 3 (non-
+           Select the Objective-C ABI version to use. Available versions are 1 (legacy "fragile" ABI), 2 (non-fragile ABI 1), and 3 (non-
+           Select the Objective-C non-fragile ABI version to use by default. This will only be used as the Objective-C ABI when the non-
+           Select the Objective-C non-fragile ABI version to use by default. This will only be used as the Objective-C ABI when the non-
+           Select the Objective-C non-fragile ABI version to use by default. This will only be used as the Objective-C ABI when the non-
+           Set _MSC_VER. Defaults to 1300 on Windows. Not set otherwise.
+           Set _MSC_VER. Defaults to 1300 on Windows. Not set otherwise.
+           Set _MSC_VER. Defaults to 1300 on Windows. Not set otherwise.
+           Specify that Clang should generate code for a specific processor family member and later.  For example, if you specify
+           Specify that Clang should generate code for a specific processor family member and later.  For example, if you specify
+           Specify that Clang should generate code for a specific processor family member and later.  For example, if you specify
+           Specify the architecture to build for.
+           Specify the architecture to build for.
+           Specify the architecture to build for.
+           Specify the C++ standard library to use; supported options are libstdc++ and libc++.
+           Specify the C++ standard library to use; supported options are libstdc++ and libc++.
+           Specify the C++ standard library to use; supported options are libstdc++ and libc++.
+           Specify the language standard to compile for.
+           Specify the language standard to compile for.
+           Specify the language standard to compile for.
+           Specify which optimization level to use.  -O0 means "no optimization": this level compiles the fastest and generates the most
+           Specify which optimization level to use.  -O0 means "no optimization": this level compiles the fastest and generates the most
+           Specify which optimization level to use.  -O0 means "no optimization": this level compiles the fastest and generates the most
+       -S  Run the previous stages as well as LLVM generation and optimization stages and target-specific code generation, producing an
+       -S  Run the previous stages as well as LLVM generation and optimization stages and target-specific code generation, producing an
+       -S  Run the previous stages as well as LLVM generation and optimization stages and target-specific code generation, producing an
+   Stage Selection Options
+   Stage Selection Options
+   Stage Selection Options
+       -std=language
+       -std=language
+       -std=language
+       -stdlib=language
+       -stdlib=language
+       -stdlib=language
+         -stdlib=library
+         -stdlib=library
+         -stdlib=library
+       supports other tools:
+       supports other tools:
+       supports other tools:
+SYNOPSIS
+SYNOPSIS
+SYNOPSIS
+   Target Selection Options
+   Target Selection Options
+   Target Selection Options
+       The Clang compiler supports a large number of options to control each of these stages.  In addition to compilation of code, Clang also
+       The Clang compiler supports a large number of options to control each of these stages.  In addition to compilation of code, Clang also
+       The Clang compiler supports a large number of options to control each of these stages.  In addition to compilation of code, Clang also
+           The clang executable is actually a small driver which controls the overall execution of other tools such as the compiler,
+           The clang executable is actually a small driver which controls the overall execution of other tools such as the compiler,
+           The clang executable is actually a small driver which controls the overall execution of other tools such as the compiler,
+       The Clang Static Analyzer is a tool that scans source code to try to find bugs through code analysis.  This tool uses many parts of
+       The Clang Static Analyzer is a tool that scans source code to try to find bugs through code analysis.  This tool uses many parts of
+       The Clang Static Analyzer is a tool that scans source code to try to find bugs through code analysis.  This tool uses many parts of
+           the overhead of generating the ".s" file and of calling the target assembler.
+           the overhead of generating the ".s" file and of calling the target assembler.
+           the overhead of generating the ".s" file and of calling the target assembler.
+           These environment variables are checked, in order, for the location to write temporary files used during the compilation process.
+           These environment variables are checked, in order, for the location to write temporary files used during the compilation process.
+           These environment variables are checked, in order, for the location to write temporary files used during the compilation process.
+           These environment variables specify additional paths, as for CPATH, which are only used when processing the appropriate language.
+           These environment variables specify additional paths, as for CPATH, which are only used when processing the appropriate language.
+           These environment variables specify additional paths, as for CPATH, which are only used when processing the appropriate language.
+           These options control how Clang prints out information about diagnostics (errors and warnings).  Please see the Clang User's
+           These options control how Clang prints out information about diagnostics (errors and warnings).  Please see the Clang User's
+           These options control how Clang prints out information about diagnostics (errors and warnings).  Please see the Clang User's
+           the stage selection options).
+           the stage selection options).
+           the stage selection options).
+           This flag sets the default visibility level.
+           This flag sets the default visibility level.
+           This flag sets the default visibility level.
+           This flag specifies that variables without initializers get common linkage.  It can be disabled with -fno-common.
+           This flag specifies that variables without initializers get common linkage.  It can be disabled with -fno-common.
+           This flag specifies that variables without initializers get common linkage.  It can be disabled with -fno-common.
+           This stage handles tokenization of the input source file, macro expansion, #include expansion and handling of other preprocessor
+           This stage handles tokenization of the input source file, macro expansion, #include expansion and handling of other preprocessor
+           This stage handles tokenization of the input source file, macro expansion, #include expansion and handling of other preprocessor
+           This stage parses the input file, translating preprocessor tokens into a parse tree.  Once in the form of a parser tree, it
+           This stage parses the input file, translating preprocessor tokens into a parse tree.  Once in the form of a parser tree, it
+           This stage parses the input file, translating preprocessor tokens into a parse tree.  Once in the form of a parser tree, it
+           This stage runs the target assembler to translate the output of the compiler into a target object file.  The output of this stage
+           This stage runs the target assembler to translate the output of the compiler into a target object file.  The output of this stage
+           This stage runs the target assembler to translate the output of the compiler into a target object file.  The output of this stage
+           This stage runs the target linker to merge multiple object files into an executable or dynamic library.  The output of this stage
+           This stage runs the target linker to merge multiple object files into an executable or dynamic library.  The output of this stage
+           This stage runs the target linker to merge multiple object files into an executable or dynamic library.  The output of this stage
+           This stage translates an AST into low-level intermediate code (known as "LLVM IR") and ultimately to machine code.  This phase is
+           This stage translates an AST into low-level intermediate code (known as "LLVM IR") and ultimately to machine code.  This phase is
+           This stage translates an AST into low-level intermediate code (known as "LLVM IR") and ultimately to machine code.  This phase is
+       -time
+       -time
+       -time
+           Time individual commands.
+           Time individual commands.
+           Time individual commands.
+       TMPDIR, TEMP, TMP
+       TMPDIR, TEMP, TMP
+       TMPDIR, TEMP, TMP
+       To report bugs, please visit <http://llvm.org/bugs/>.  Most bug reports should include preprocessed source files (use the -E option)
+       To report bugs, please visit <http://llvm.org/bugs/>.  Most bug reports should include preprocessed source files (use the -E option)
+       To report bugs, please visit <http://llvm.org/bugs/>.  Most bug reports should include preprocessed source files (use the -E option)
+           Treat source input files as Objective-C inputs.
+           Treat source input files as Objective-C inputs.
+           Treat source input files as Objective-C inputs.
+           Treat source input files as Objective-C++ inputs.
+           Treat source input files as Objective-C++ inputs.
+           Treat source input files as Objective-C++ inputs.
+           Treat subsequent input files as having type language.
+           Treat subsequent input files as having type language.
+           Treat subsequent input files as having type language.
+           Tree" (AST).
+           Tree" (AST).
+           Tree" (AST).
+       -trigraphs
+       -trigraphs
+       -trigraphs
+       -Umacroname
+       -Umacroname
+       -Umacroname
+           Used to enable and disable, respectively, the use of the integrated assembler. Whether the integrated assembler is on by default
+           Used to enable and disable, respectively, the use of the integrated assembler. Whether the integrated assembler is on by default
+           Used to enable and disable, respectively, the use of the integrated assembler. Whether the integrated assembler is on by default
+       -v  Show commands to run and use verbose output.
+       -v  Show commands to run and use verbose output.
+       -v  Show commands to run and use verbose output.
+       -Wa,args
+       -Wa,args
+       -Wa,args
+           When building for iPhone OS, specify the minimum version supported by your application.
+           When building for iPhone OS, specify the minimum version supported by your application.
+           When building for iPhone OS, specify the minimum version supported by your application.
+           When building for Mac OS/X, specify the minimum version supported by your application.
+           When building for Mac OS/X, specify the minimum version supported by your application.
+           When building for Mac OS/X, specify the minimum version supported by your application.
+           whole program optimization is done at link time. -O1 is somewhere between -O0 and -O2.
+           whole program optimization is done at link time. -O1 is somewhere between -O0 and -O2.
+           whole program optimization is done at link time. -O1 is somewhere between -O0 and -O2.
+       -Wl,args
+       -Wl,args
+       -Wl,args
+       -Wp,args
+       -Wp,args
+       -Wp,args
+           Write output to file.
+           Write output to file.
+           Write output to file.
+         -Wwarnings... -pedantic
+         -Wwarnings... -pedantic
+         -Wwarnings... -pedantic
+       -Xanalyzer arg
+       -Xanalyzer arg
+       -Xanalyzer arg
+       -Xassembler arg
+       -Xassembler arg
+       -Xassembler arg
+       -x language
+       -x language
+       -x language
+       -Xlinker arg
+       -Xlinker arg
+       -Xlinker arg
+       -Xpreprocessor arg
+       -Xpreprocessor arg
+       -Xpreprocessor arg

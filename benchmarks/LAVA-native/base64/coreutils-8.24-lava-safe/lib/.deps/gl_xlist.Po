@@ -1,0 +1,21 @@
+lib/gl_xlist.o: lib/gl_xlist.c /usr/include/stdc-predef.h lib/config.h \
+ lib/gl_xlist.h lib/gl_list.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/stdbool.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h lib/xalloc.h \
+ lib/xalloc-oversized.h
+
+/usr/include/stdc-predef.h:
+
+lib/config.h:
+
+lib/gl_xlist.h:
+
+lib/gl_list.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/9/include/stdbool.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h:
+
+lib/xalloc.h:
+
+lib/xalloc-oversized.h:
