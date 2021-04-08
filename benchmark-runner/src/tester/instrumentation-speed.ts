@@ -93,7 +93,7 @@ const NUM_RUNS = 25;
     // all
     const allBin = `${rawBin}.all`;
     await insertCanaries(aflBin, allBin, false, false);
-    const totalTimeAll = await measurePerformance(aflBin);
+    const totalTimeAll = await measurePerformance(allBin);
 
     const meanRawTime = conf(totalTimeRaw).mean;
     const ratio = (t: number[]) => {
