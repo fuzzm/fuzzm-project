@@ -4,7 +4,7 @@ import { basename, resolve } from 'path';
 import { Dirent, readdirSync, readFileSync, writeFileSync } from 'fs';
 import { Options } from '../options';
 import { conf, constructionLatexTable, isDirectory } from '../util';
-import { PAPER_FIGURE_FOLDER, RESULTS_DIR } from '../constants';
+import { PLOT_FOLDER, RESULTS_DIR } from '../constants';
 import { execSync } from 'child_process';
 import { dirSync } from 'tmp';
 import { Logger } from 'winston';
@@ -334,17 +334,18 @@ function plot(metric: RowProperty, repeats: Repeat[], name: string, platform: st
   const plot = meanWithConfidencePlot(repeats, metric);
 
   const outputFileName = `${name}-${platform}-${metric}.dat`;
-  const dataFile = resolve(PAPER_FIGURE_FOLDER, outputFileName);
+  const dataFile = resolve(PLOT_FOLDER, outputFileName);
   writeFileSync(dataFile, plot);
 
   // create the plot
-  const plotFile = resolve(PAPER_FIGURE_FOLDER, `${name}-${platform}-${metric}.png`);
-  const title = `${name} ${repeats.length}*${timeMinutes / 60}H`;
+  const plotFile = resolve(PLOT_FOLDER, `${name}-${platform}-${metric}.png`);
+  //const title = `${name} ${repeats.length}*${timeMinutes / 60}H`;
+  const title = name.replace('_', '\\_');
   const createPlotCmd = `gnuplot -e "datafile='${dataFile}'"\
    -e "outfile='${plotFile}'"\
-   -e "metric='${metric == 'pathsTotal' ? 'paths' : metric}'"\
+   -e "metric='${metric == 'pathsTotal' ? 'Paths' : metric === 'uniqueCrashes' ? 'Crashes' : metric}'"\
    -e "plottitle='${title}'" plot-with-conf.plg`;
-  execSync(createPlotCmd, { cwd: PAPER_FIGURE_FOLDER, stdio: 'ignore' });
+  execSync(createPlotCmd, { cwd: PLOT_FOLDER, stdio: 'ignore' });
 }
 
 type RowProperty =

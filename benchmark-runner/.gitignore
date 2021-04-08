@@ -4,3 +4,5 @@ logs
 node_modules
 results/**/repeat*/
 results/**/options.json
+plots/*.dat
+plots/*.png
