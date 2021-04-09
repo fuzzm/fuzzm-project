@@ -43,7 +43,7 @@ It uses the same test cases as the instrumentation speed experiment.
 # Adding a new benchmark
 
 Put the benchmarks in the [benchmarks](../benchmarks) folder.
-Add a new entry to the `FUZZ_COMMANDS_WASM` object in [src/constants.ts](src/constants.ts).
+Add a new entry to the `FUZZ_COMMANDS_WASM` object in [src/constants.ts](src/constants.ts), and rebuild the project `npm run build`.
 Run the benchmark using the approach described in [Running a benchmark](#run).
 
 
