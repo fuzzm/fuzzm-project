@@ -1,0 +1,1832 @@
+[
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/copy-acl.o -MD -MP -MF lib/.deps/copy-acl.Tpo -c -o lib/copy-acl.o lib/copy-acl.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/copy-acl.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/set-acl.o -MD -MP -MF lib/.deps/set-acl.Tpo -c -o lib/set-acl.o lib/set-acl.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/set-acl.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/acl-errno-valid.o -MD -MP -MF lib/.deps/acl-errno-valid.Tpo -c -o lib/acl-errno-valid.o lib/acl-errno-valid.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/acl-errno-valid.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/acl-internal.o -MD -MP -MF lib/.deps/acl-internal.Tpo -c -o lib/acl-internal.o lib/acl-internal.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/acl-internal.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/get-permissions.o -MD -MP -MF lib/.deps/get-permissions.Tpo -c -o lib/get-permissions.o lib/get-permissions.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/get-permissions.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/set-permissions.o -MD -MP -MF lib/.deps/set-permissions.Tpo -c -o lib/set-permissions.o lib/set-permissions.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/set-permissions.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/allocator.o -MD -MP -MF lib/.deps/allocator.Tpo -c -o lib/allocator.o lib/allocator.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/allocator.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/areadlink.o -MD -MP -MF lib/.deps/areadlink.Tpo -c -o lib/areadlink.o lib/areadlink.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/areadlink.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/areadlink-with-size.o -MD -MP -MF lib/.deps/areadlink-with-size.Tpo -c -o lib/areadlink-with-size.o lib/areadlink-with-size.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/areadlink-with-size.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/areadlinkat.o -MD -MP -MF lib/.deps/areadlinkat.Tpo -c -o lib/areadlinkat.o lib/areadlinkat.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/areadlinkat.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/argmatch.o -MD -MP -MF lib/.deps/argmatch.Tpo -c -o lib/argmatch.o lib/argmatch.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/argmatch.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/argv-iter.o -MD -MP -MF lib/.deps/argv-iter.Tpo -c -o lib/argv-iter.o lib/argv-iter.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/argv-iter.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/backupfile.o -MD -MP -MF lib/.deps/backupfile.Tpo -c -o lib/backupfile.o lib/backupfile.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/backupfile.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/base64.o -MD -MP -MF lib/.deps/base64.Tpo -c -o lib/base64.o lib/base64.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/base64.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/bitrotate.o -MD -MP -MF lib/.deps/bitrotate.Tpo -c -o lib/bitrotate.o lib/bitrotate.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/bitrotate.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/buffer-lcm.o -MD -MP -MF lib/.deps/buffer-lcm.Tpo -c -o lib/buffer-lcm.o lib/buffer-lcm.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/buffer-lcm.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/c-ctype.o -MD -MP -MF lib/.deps/c-ctype.Tpo -c -o lib/c-ctype.o lib/c-ctype.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/c-ctype.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/c-strcasecmp.o -MD -MP -MF lib/.deps/c-strcasecmp.Tpo -c -o lib/c-strcasecmp.o lib/c-strcasecmp.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/c-strcasecmp.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/c-strncasecmp.o -MD -MP -MF lib/.deps/c-strncasecmp.Tpo -c -o lib/c-strncasecmp.o lib/c-strncasecmp.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/c-strncasecmp.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/c-strtod.o -MD -MP -MF lib/.deps/c-strtod.Tpo -c -o lib/c-strtod.o lib/c-strtod.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/c-strtod.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/c-strtold.o -MD -MP -MF lib/.deps/c-strtold.Tpo -c -o lib/c-strtold.o lib/c-strtold.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/c-strtold.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/canon-host.o -MD -MP -MF lib/.deps/canon-host.Tpo -c -o lib/canon-host.o lib/canon-host.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/canon-host.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/canonicalize.o -MD -MP -MF lib/.deps/canonicalize.Tpo -c -o lib/canonicalize.o lib/canonicalize.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/canonicalize.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/careadlinkat.o -MD -MP -MF lib/.deps/careadlinkat.Tpo -c -o lib/careadlinkat.o lib/careadlinkat.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/careadlinkat.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/cloexec.o -MD -MP -MF lib/.deps/cloexec.Tpo -c -o lib/cloexec.o lib/cloexec.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/cloexec.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/close-stream.o -MD -MP -MF lib/.deps/close-stream.Tpo -c -o lib/close-stream.o lib/close-stream.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/close-stream.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/closein.o -MD -MP -MF lib/.deps/closein.Tpo -c -o lib/closein.o lib/closein.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/closein.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/closeout.o -MD -MP -MF lib/.deps/closeout.Tpo -c -o lib/closeout.o lib/closeout.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/closeout.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/md5.o -MD -MP -MF lib/.deps/md5.Tpo -c -o lib/md5.o lib/md5.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/md5.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/sha1.o -MD -MP -MF lib/.deps/sha1.Tpo -c -o lib/sha1.o lib/sha1.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/sha1.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/sha256.o -MD -MP -MF lib/.deps/sha256.Tpo -c -o lib/sha256.o lib/sha256.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/sha256.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/sha512.o -MD -MP -MF lib/.deps/sha512.Tpo -c -o lib/sha512.o lib/sha512.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/sha512.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/cycle-check.o -MD -MP -MF lib/.deps/cycle-check.Tpo -c -o lib/cycle-check.o lib/cycle-check.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/cycle-check.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/di-set.o -MD -MP -MF lib/.deps/di-set.Tpo -c -o lib/di-set.o lib/di-set.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/di-set.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/diacrit.o -MD -MP -MF lib/.deps/diacrit.Tpo -c -o lib/diacrit.o lib/diacrit.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/diacrit.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/opendir-safer.o -MD -MP -MF lib/.deps/opendir-safer.Tpo -c -o lib/opendir-safer.o lib/opendir-safer.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/opendir-safer.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/dirname.o -MD -MP -MF lib/.deps/dirname.Tpo -c -o lib/dirname.o lib/dirname.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/dirname.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/basename.o -MD -MP -MF lib/.deps/basename.Tpo -c -o lib/basename.o lib/basename.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/basename.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/dirname-lgpl.o -MD -MP -MF lib/.deps/dirname-lgpl.Tpo -c -o lib/dirname-lgpl.o lib/dirname-lgpl.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/dirname-lgpl.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/basename-lgpl.o -MD -MP -MF lib/.deps/basename-lgpl.Tpo -c -o lib/basename-lgpl.o lib/basename-lgpl.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/basename-lgpl.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/stripslash.o -MD -MP -MF lib/.deps/stripslash.Tpo -c -o lib/stripslash.o lib/stripslash.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/stripslash.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/dtoastr.o -MD -MP -MF lib/.deps/dtoastr.Tpo -c -o lib/dtoastr.o lib/dtoastr.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/dtoastr.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/dtotimespec.o -MD -MP -MF lib/.deps/dtotimespec.Tpo -c -o lib/dtotimespec.o lib/dtotimespec.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/dtotimespec.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/exclude.o -MD -MP -MF lib/.deps/exclude.Tpo -c -o lib/exclude.o lib/exclude.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/exclude.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/exitfail.o -MD -MP -MF lib/.deps/exitfail.Tpo -c -o lib/exitfail.o lib/exitfail.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/exitfail.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/fadvise.o -MD -MP -MF lib/.deps/fadvise.Tpo -c -o lib/fadvise.o lib/fadvise.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/fadvise.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/chmodat.o -MD -MP -MF lib/.deps/chmodat.Tpo -c -o lib/chmodat.o lib/chmodat.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/chmodat.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/chownat.o -MD -MP -MF lib/.deps/chownat.Tpo -c -o lib/chownat.o lib/chownat.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/chownat.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/creat-safer.o -MD -MP -MF lib/.deps/creat-safer.Tpo -c -o lib/creat-safer.o lib/creat-safer.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/creat-safer.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/open-safer.o -MD -MP -MF lib/.deps/open-safer.Tpo -c -o lib/open-safer.o lib/open-safer.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/open-safer.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/fd-hook.o -MD -MP -MF lib/.deps/fd-hook.Tpo -c -o lib/fd-hook.o lib/fd-hook.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/fd-hook.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/fd-reopen.o -MD -MP -MF lib/.deps/fd-reopen.Tpo -c -o lib/fd-reopen.o lib/fd-reopen.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/fd-reopen.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/fd-safer-flag.o -MD -MP -MF lib/.deps/fd-safer-flag.Tpo -c -o lib/fd-safer-flag.o lib/fd-safer-flag.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/fd-safer-flag.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/dup-safer-flag.o -MD -MP -MF lib/.deps/dup-safer-flag.Tpo -c -o lib/dup-safer-flag.o lib/dup-safer-flag.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/dup-safer-flag.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/fdutimensat.o -MD -MP -MF lib/.deps/fdutimensat.Tpo -c -o lib/fdutimensat.o lib/fdutimensat.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/fdutimensat.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/file-has-acl.o -MD -MP -MF lib/.deps/file-has-acl.Tpo -c -o lib/file-has-acl.o lib/file-has-acl.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/file-has-acl.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/file-set.o -MD -MP -MF lib/.deps/file-set.Tpo -c -o lib/file-set.o lib/file-set.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/file-set.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/file-type.o -MD -MP -MF lib/.deps/file-type.Tpo -c -o lib/file-type.o lib/file-type.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/file-type.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/filemode.o -MD -MP -MF lib/.deps/filemode.Tpo -c -o lib/filemode.o lib/filemode.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/filemode.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/filenamecat.o -MD -MP -MF lib/.deps/filenamecat.Tpo -c -o lib/filenamecat.o lib/filenamecat.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/filenamecat.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/filenamecat-lgpl.o -MD -MP -MF lib/.deps/filenamecat-lgpl.Tpo -c -o lib/filenamecat-lgpl.o lib/filenamecat-lgpl.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/filenamecat-lgpl.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/filevercmp.o -MD -MP -MF lib/.deps/filevercmp.Tpo -c -o lib/filevercmp.o lib/filevercmp.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/filevercmp.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/fopen-safer.o -MD -MP -MF lib/.deps/fopen-safer.Tpo -c -o lib/fopen-safer.o lib/fopen-safer.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/fopen-safer.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/fprintftime.o -MD -MP -MF lib/.deps/fprintftime.Tpo -c -o lib/fprintftime.o lib/fprintftime.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/fprintftime.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/freading.o -MD -MP -MF lib/.deps/freading.Tpo -c -o lib/freading.o lib/freading.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/freading.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/freadseek.o -MD -MP -MF lib/.deps/freadseek.Tpo -c -o lib/freadseek.o lib/freadseek.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/freadseek.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/freopen-safer.o -MD -MP -MF lib/.deps/freopen-safer.Tpo -c -o lib/freopen-safer.o lib/freopen-safer.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/freopen-safer.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/ftoastr.o -MD -MP -MF lib/.deps/ftoastr.Tpo -c -o lib/ftoastr.o lib/ftoastr.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/ftoastr.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/full-read.o -MD -MP -MF lib/.deps/full-read.Tpo -c -o lib/full-read.o lib/full-read.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/full-read.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/full-write.o -MD -MP -MF lib/.deps/full-write.Tpo -c -o lib/full-write.o lib/full-write.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/full-write.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/gethrxtime.o -MD -MP -MF lib/.deps/gethrxtime.Tpo -c -o lib/gethrxtime.o lib/gethrxtime.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/gethrxtime.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/xtime.o -MD -MP -MF lib/.deps/xtime.Tpo -c -o lib/xtime.o lib/xtime.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/xtime.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/getndelim2.o -MD -MP -MF lib/.deps/getndelim2.Tpo -c -o lib/getndelim2.o lib/getndelim2.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/getndelim2.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/gettime.o -MD -MP -MF lib/.deps/gettime.Tpo -c -o lib/gettime.o lib/gettime.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/gettime.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/getugroups.o -MD -MP -MF lib/.deps/getugroups.Tpo -c -o lib/getugroups.o lib/getugroups.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/getugroups.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/hard-locale.o -MD -MP -MF lib/.deps/hard-locale.Tpo -c -o lib/hard-locale.o lib/hard-locale.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/hard-locale.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/hash.o -MD -MP -MF lib/.deps/hash.Tpo -c -o lib/hash.o lib/hash.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/hash.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/hash-pjw.o -MD -MP -MF lib/.deps/hash-pjw.Tpo -c -o lib/hash-pjw.o lib/hash-pjw.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/hash-pjw.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/hash-triple.o -MD -MP -MF lib/.deps/hash-triple.Tpo -c -o lib/hash-triple.o lib/hash-triple.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/hash-triple.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/heap.o -MD -MP -MF lib/.deps/heap.Tpo -c -o lib/heap.o lib/heap.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/heap.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/human.o -MD -MP -MF lib/.deps/human.Tpo -c -o lib/human.o lib/human.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/human.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/i-ring.o -MD -MP -MF lib/.deps/i-ring.Tpo -c -o lib/i-ring.o lib/i-ring.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/i-ring.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/idcache.o -MD -MP -MF lib/.deps/idcache.Tpo -c -o lib/idcache.o lib/idcache.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/idcache.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/ino-map.o -MD -MP -MF lib/.deps/ino-map.Tpo -c -o lib/ino-map.o lib/ino-map.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/ino-map.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/imaxtostr.o -MD -MP -MF lib/.deps/imaxtostr.Tpo -c -o lib/imaxtostr.o lib/imaxtostr.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/imaxtostr.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/inttostr.o -MD -MP -MF lib/.deps/inttostr.Tpo -c -o lib/inttostr.o lib/inttostr.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/inttostr.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/offtostr.o -MD -MP -MF lib/.deps/offtostr.Tpo -c -o lib/offtostr.o lib/offtostr.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/offtostr.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/uinttostr.o -MD -MP -MF lib/.deps/uinttostr.Tpo -c -o lib/uinttostr.o lib/uinttostr.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/uinttostr.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/umaxtostr.o -MD -MP -MF lib/.deps/umaxtostr.Tpo -c -o lib/umaxtostr.o lib/umaxtostr.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/umaxtostr.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/ldtoastr.o -MD -MP -MF lib/.deps/ldtoastr.Tpo -c -o lib/ldtoastr.o lib/ldtoastr.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/ldtoastr.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/linebuffer.o -MD -MP -MF lib/.deps/linebuffer.Tpo -c -o lib/linebuffer.o lib/linebuffer.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/linebuffer.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/gl_linked_list.o -MD -MP -MF lib/.deps/gl_linked_list.Tpo -c -o lib/gl_linked_list.o lib/gl_linked_list.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/gl_linked_list.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/gl_list.o -MD -MP -MF lib/.deps/gl_list.Tpo -c -o lib/gl_list.o lib/gl_list.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/gl_list.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/localcharset.o -MD -MP -MF lib/.deps/localcharset.Tpo -c -o lib/localcharset.o lib/localcharset.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/localcharset.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/glthread/lock.o -MD -MP -MF lib/glthread/.deps/lock.Tpo -c -o lib/glthread/lock.o lib/glthread/lock.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/glthread/lock.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/long-options.o -MD -MP -MF lib/.deps/long-options.Tpo -c -o lib/long-options.o lib/long-options.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/long-options.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/malloca.o -MD -MP -MF lib/.deps/malloca.Tpo -c -o lib/malloca.o lib/malloca.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/malloca.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/math.o -MD -MP -MF lib/.deps/math.Tpo -c -o lib/math.o lib/math.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/math.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/mbchar.o -MD -MP -MF lib/.deps/mbchar.Tpo -c -o lib/mbchar.o lib/mbchar.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/mbchar.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/mbiter.o -MD -MP -MF lib/.deps/mbiter.Tpo -c -o lib/mbiter.o lib/mbiter.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/mbiter.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/mbsalign.o -MD -MP -MF lib/.deps/mbsalign.Tpo -c -o lib/mbsalign.o lib/mbsalign.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/mbsalign.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/mbscasecmp.o -MD -MP -MF lib/.deps/mbscasecmp.Tpo -c -o lib/mbscasecmp.o lib/mbscasecmp.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/mbscasecmp.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/mbslen.o -MD -MP -MF lib/.deps/mbslen.Tpo -c -o lib/mbslen.o lib/mbslen.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/mbslen.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/mbsstr.o -MD -MP -MF lib/.deps/mbsstr.Tpo -c -o lib/mbsstr.o lib/mbsstr.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/mbsstr.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/mbswidth.o -MD -MP -MF lib/.deps/mbswidth.Tpo -c -o lib/mbswidth.o lib/mbswidth.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/mbswidth.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/mbuiter.o -MD -MP -MF lib/.deps/mbuiter.Tpo -c -o lib/mbuiter.o lib/mbuiter.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/mbuiter.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/memcasecmp.o -MD -MP -MF lib/.deps/memcasecmp.Tpo -c -o lib/memcasecmp.o lib/memcasecmp.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/memcasecmp.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/memchr2.o -MD -MP -MF lib/.deps/memchr2.Tpo -c -o lib/memchr2.o lib/memchr2.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/memchr2.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/memcmp2.o -MD -MP -MF lib/.deps/memcmp2.Tpo -c -o lib/memcmp2.o lib/memcmp2.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/memcmp2.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/memcoll.o -MD -MP -MF lib/.deps/memcoll.Tpo -c -o lib/memcoll.o lib/memcoll.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/memcoll.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/mgetgroups.o -MD -MP -MF lib/.deps/mgetgroups.Tpo -c -o lib/mgetgroups.o lib/mgetgroups.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/mgetgroups.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/mkancesdirs.o -MD -MP -MF lib/.deps/mkancesdirs.Tpo -c -o lib/mkancesdirs.o lib/mkancesdirs.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/mkancesdirs.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/dirchownmod.o -MD -MP -MF lib/.deps/dirchownmod.Tpo -c -o lib/dirchownmod.o lib/dirchownmod.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/dirchownmod.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/mkdir-p.o -MD -MP -MF lib/.deps/mkdir-p.Tpo -c -o lib/mkdir-p.o lib/mkdir-p.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/mkdir-p.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/modechange.o -MD -MP -MF lib/.deps/modechange.Tpo -c -o lib/modechange.o lib/modechange.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/modechange.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/mpsort.o -MD -MP -MF lib/.deps/mpsort.Tpo -c -o lib/mpsort.o lib/mpsort.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/mpsort.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/nproc.o -MD -MP -MF lib/.deps/nproc.Tpo -c -o lib/nproc.o lib/nproc.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/nproc.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/openat-die.o -MD -MP -MF lib/.deps/openat-die.Tpo -c -o lib/openat-die.o lib/openat-die.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/openat-die.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/openat-safer.o -MD -MP -MF lib/.deps/openat-safer.Tpo -c -o lib/openat-safer.o lib/openat-safer.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/openat-safer.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/parse-datetime.o -MD -MP -MF lib/.deps/parse-datetime.Tpo -c -o lib/parse-datetime.o lib/parse-datetime.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/parse-datetime.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/physmem.o -MD -MP -MF lib/.deps/physmem.Tpo -c -o lib/physmem.o lib/physmem.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/physmem.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/posixtm.o -MD -MP -MF lib/.deps/posixtm.Tpo -c -o lib/posixtm.o lib/posixtm.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/posixtm.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/posixver.o -MD -MP -MF lib/.deps/posixver.Tpo -c -o lib/posixver.o lib/posixver.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/posixver.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/printf-frexp.o -MD -MP -MF lib/.deps/printf-frexp.Tpo -c -o lib/printf-frexp.o lib/printf-frexp.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/printf-frexp.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/printf-frexpl.o -MD -MP -MF lib/.deps/printf-frexpl.Tpo -c -o lib/printf-frexpl.o lib/printf-frexpl.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/printf-frexpl.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/priv-set.o -MD -MP -MF lib/.deps/priv-set.Tpo -c -o lib/priv-set.o lib/priv-set.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/priv-set.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/progname.o -MD -MP -MF lib/.deps/progname.Tpo -c -o lib/progname.o lib/progname.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/progname.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/propername.o -MD -MP -MF lib/.deps/propername.Tpo -c -o lib/propername.o lib/propername.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/propername.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/qcopy-acl.o -MD -MP -MF lib/.deps/qcopy-acl.Tpo -c -o lib/qcopy-acl.o lib/qcopy-acl.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/qcopy-acl.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/qset-acl.o -MD -MP -MF lib/.deps/qset-acl.Tpo -c -o lib/qset-acl.o lib/qset-acl.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/qset-acl.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/quotearg.o -MD -MP -MF lib/.deps/quotearg.Tpo -c -o lib/quotearg.o lib/quotearg.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/quotearg.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/randint.o -MD -MP -MF lib/.deps/randint.Tpo -c -o lib/randint.o lib/randint.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/randint.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/randperm.o -MD -MP -MF lib/.deps/randperm.Tpo -c -o lib/randperm.o lib/randperm.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/randperm.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/randread.o -MD -MP -MF lib/.deps/randread.Tpo -c -o lib/randread.o lib/randread.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/randread.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/rand-isaac.o -MD -MP -MF lib/.deps/rand-isaac.Tpo -c -o lib/rand-isaac.o lib/rand-isaac.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/rand-isaac.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/read-file.o -MD -MP -MF lib/.deps/read-file.Tpo -c -o lib/read-file.o lib/read-file.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/read-file.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/readtokens.o -MD -MP -MF lib/.deps/readtokens.Tpo -c -o lib/readtokens.o lib/readtokens.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/readtokens.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/readtokens0.o -MD -MP -MF lib/.deps/readtokens0.Tpo -c -o lib/readtokens0.o lib/readtokens0.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/readtokens0.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/root-dev-ino.o -MD -MP -MF lib/.deps/root-dev-ino.Tpo -c -o lib/root-dev-ino.o lib/root-dev-ino.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/root-dev-ino.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/safe-read.o -MD -MP -MF lib/.deps/safe-read.Tpo -c -o lib/safe-read.o lib/safe-read.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/safe-read.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/safe-write.o -MD -MP -MF lib/.deps/safe-write.Tpo -c -o lib/safe-write.o lib/safe-write.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/safe-write.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/same.o -MD -MP -MF lib/.deps/same.Tpo -c -o lib/same.o lib/same.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/same.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/save-cwd.o -MD -MP -MF lib/.deps/save-cwd.Tpo -c -o lib/save-cwd.o lib/save-cwd.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/save-cwd.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/savedir.o -MD -MP -MF lib/.deps/savedir.Tpo -c -o lib/savedir.o lib/savedir.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/savedir.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/savewd.o -MD -MP -MF lib/.deps/savewd.Tpo -c -o lib/savewd.o lib/savewd.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/savewd.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/se-context.o -MD -MP -MF lib/.deps/se-context.Tpo -c -o lib/se-context.o lib/se-context.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/se-context.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/se-selinux.o -MD -MP -MF lib/.deps/se-selinux.Tpo -c -o lib/se-selinux.o lib/se-selinux.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/se-selinux.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/settime.o -MD -MP -MF lib/.deps/settime.Tpo -c -o lib/settime.o lib/settime.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/settime.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/sig-handler.o -MD -MP -MF lib/.deps/sig-handler.Tpo -c -o lib/sig-handler.o lib/sig-handler.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/sig-handler.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/sockets.o -MD -MP -MF lib/.deps/sockets.Tpo -c -o lib/sockets.o lib/sockets.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/sockets.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/stat-time.o -MD -MP -MF lib/.deps/stat-time.Tpo -c -o lib/stat-time.o lib/stat-time.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/stat-time.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/statat.o -MD -MP -MF lib/.deps/statat.Tpo -c -o lib/statat.o lib/statat.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/statat.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/mkstemp-safer.o -MD -MP -MF lib/.deps/mkstemp-safer.Tpo -c -o lib/mkstemp-safer.o lib/mkstemp-safer.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/mkstemp-safer.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/strftime.o -MD -MP -MF lib/.deps/strftime.Tpo -c -o lib/strftime.o lib/strftime.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/strftime.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/striconv.o -MD -MP -MF lib/.deps/striconv.Tpo -c -o lib/striconv.o lib/striconv.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/striconv.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/strnlen1.o -MD -MP -MF lib/.deps/strnlen1.Tpo -c -o lib/strnlen1.o lib/strnlen1.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/strnlen1.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/strintcmp.o -MD -MP -MF lib/.deps/strintcmp.Tpo -c -o lib/strintcmp.o lib/strintcmp.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/strintcmp.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/strnumcmp.o -MD -MP -MF lib/.deps/strnumcmp.Tpo -c -o lib/strnumcmp.o lib/strnumcmp.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/strnumcmp.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/sys_socket.o -MD -MP -MF lib/.deps/sys_socket.Tpo -c -o lib/sys_socket.o lib/sys_socket.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/sys_socket.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/tempname.o -MD -MP -MF lib/.deps/tempname.Tpo -c -o lib/tempname.o lib/tempname.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/tempname.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/glthread/threadlib.o -MD -MP -MF lib/glthread/.deps/threadlib.Tpo -c -o lib/glthread/threadlib.o lib/glthread/threadlib.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/glthread/threadlib.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/timespec.o -MD -MP -MF lib/.deps/timespec.Tpo -c -o lib/timespec.o lib/timespec.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/timespec.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/glthread/tls.o -MD -MP -MF lib/glthread/.deps/tls.Tpo -c -o lib/glthread/tls.o lib/glthread/tls.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/glthread/tls.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/trim.o -MD -MP -MF lib/.deps/trim.Tpo -c -o lib/trim.o lib/trim.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/trim.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/u64.o -MD -MP -MF lib/.deps/u64.Tpo -c -o lib/u64.o lib/u64.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/u64.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/unicodeio.o -MD -MP -MF lib/.deps/unicodeio.Tpo -c -o lib/unicodeio.o lib/unicodeio.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/unicodeio.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/unistd.o -MD -MP -MF lib/.deps/unistd.Tpo -c -o lib/unistd.o lib/unistd.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/unistd.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/dup-safer.o -MD -MP -MF lib/.deps/dup-safer.Tpo -c -o lib/dup-safer.o lib/dup-safer.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/dup-safer.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/fd-safer.o -MD -MP -MF lib/.deps/fd-safer.Tpo -c -o lib/fd-safer.o lib/fd-safer.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/fd-safer.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/pipe-safer.o -MD -MP -MF lib/.deps/pipe-safer.Tpo -c -o lib/pipe-safer.o lib/pipe-safer.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/pipe-safer.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/unistr/u8-mbtoucr.o -MD -MP -MF lib/unistr/.deps/u8-mbtoucr.Tpo -c -o lib/unistr/u8-mbtoucr.o lib/unistr/u8-mbtoucr.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/unistr/u8-mbtoucr.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/unistr/u8-uctomb.o -MD -MP -MF lib/unistr/.deps/u8-uctomb.Tpo -c -o lib/unistr/u8-uctomb.o lib/unistr/u8-uctomb.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/unistr/u8-uctomb.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/unistr/u8-uctomb-aux.o -MD -MP -MF lib/unistr/.deps/u8-uctomb-aux.Tpo -c -o lib/unistr/u8-uctomb-aux.o lib/unistr/u8-uctomb-aux.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/unistr/u8-uctomb-aux.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/uniwidth/width.o -MD -MP -MF lib/uniwidth/.deps/width.Tpo -c -o lib/uniwidth/width.o lib/uniwidth/width.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/uniwidth/width.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/userspec.o -MD -MP -MF lib/.deps/userspec.Tpo -c -o lib/userspec.o lib/userspec.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/userspec.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/utimecmp.o -MD -MP -MF lib/.deps/utimecmp.Tpo -c -o lib/utimecmp.o lib/utimecmp.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/utimecmp.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/utimens.o -MD -MP -MF lib/.deps/utimens.Tpo -c -o lib/utimens.o lib/utimens.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/utimens.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/verror.o -MD -MP -MF lib/.deps/verror.Tpo -c -o lib/verror.o lib/verror.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/verror.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/version-etc.o -MD -MP -MF lib/.deps/version-etc.Tpo -c -o lib/version-etc.o lib/version-etc.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/version-etc.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/version-etc-fsf.o -MD -MP -MF lib/.deps/version-etc-fsf.Tpo -c -o lib/version-etc-fsf.o lib/version-etc-fsf.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/version-etc-fsf.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/wctype-h.o -MD -MP -MF lib/.deps/wctype-h.Tpo -c -o lib/wctype-h.o lib/wctype-h.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/wctype-h.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/write-any-file.o -MD -MP -MF lib/.deps/write-any-file.Tpo -c -o lib/write-any-file.o lib/write-any-file.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/write-any-file.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/xmalloc.o -MD -MP -MF lib/.deps/xmalloc.Tpo -c -o lib/xmalloc.o lib/xmalloc.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/xmalloc.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/xalloc-die.o -MD -MP -MF lib/.deps/xalloc-die.Tpo -c -o lib/xalloc-die.o lib/xalloc-die.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/xalloc-die.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/xdectoimax.o -MD -MP -MF lib/.deps/xdectoimax.Tpo -c -o lib/xdectoimax.o lib/xdectoimax.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/xdectoimax.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/xdectoumax.o -MD -MP -MF lib/.deps/xdectoumax.Tpo -c -o lib/xdectoumax.o lib/xdectoumax.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/xdectoumax.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/xfreopen.o -MD -MP -MF lib/.deps/xfreopen.Tpo -c -o lib/xfreopen.o lib/xfreopen.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/xfreopen.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/xfts.o -MD -MP -MF lib/.deps/xfts.Tpo -c -o lib/xfts.o lib/xfts.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/xfts.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/xgetcwd.o -MD -MP -MF lib/.deps/xgetcwd.Tpo -c -o lib/xgetcwd.o lib/xgetcwd.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/xgetcwd.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/xgetgroups.o -MD -MP -MF lib/.deps/xgetgroups.Tpo -c -o lib/xgetgroups.o lib/xgetgroups.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/xgetgroups.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/xgethostname.o -MD -MP -MF lib/.deps/xgethostname.Tpo -c -o lib/xgethostname.o lib/xgethostname.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/xgethostname.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/gl_xlist.o -MD -MP -MF lib/.deps/gl_xlist.Tpo -c -o lib/gl_xlist.o lib/gl_xlist.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/gl_xlist.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/xmemcoll.o -MD -MP -MF lib/.deps/xmemcoll.Tpo -c -o lib/xmemcoll.o lib/xmemcoll.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/xmemcoll.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/xnanosleep.o -MD -MP -MF lib/.deps/xnanosleep.Tpo -c -o lib/xnanosleep.o lib/xnanosleep.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/xnanosleep.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/xprintf.o -MD -MP -MF lib/.deps/xprintf.Tpo -c -o lib/xprintf.o lib/xprintf.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/xprintf.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/xreadlink.o -MD -MP -MF lib/.deps/xreadlink.Tpo -c -o lib/xreadlink.o lib/xreadlink.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/xreadlink.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/xsize.o -MD -MP -MF lib/.deps/xsize.Tpo -c -o lib/xsize.o lib/xsize.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/xsize.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/xstriconv.o -MD -MP -MF lib/.deps/xstriconv.Tpo -c -o lib/xstriconv.o lib/xstriconv.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/xstriconv.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/xstrndup.o -MD -MP -MF lib/.deps/xstrndup.Tpo -c -o lib/xstrndup.o lib/xstrndup.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/xstrndup.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/xstrtod.o -MD -MP -MF lib/.deps/xstrtod.Tpo -c -o lib/xstrtod.o lib/xstrtod.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/xstrtod.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/xstrtoimax.o -MD -MP -MF lib/.deps/xstrtoimax.Tpo -c -o lib/xstrtoimax.o lib/xstrtoimax.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/xstrtoimax.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/xstrtol.o -MD -MP -MF lib/.deps/xstrtol.Tpo -c -o lib/xstrtol.o lib/xstrtol.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/xstrtol.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/xstrtoul.o -MD -MP -MF lib/.deps/xstrtoul.Tpo -c -o lib/xstrtoul.o lib/xstrtoul.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/xstrtoul.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/xstrtol-error.o -MD -MP -MF lib/.deps/xstrtol-error.Tpo -c -o lib/xstrtol-error.o lib/xstrtol-error.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/xstrtol-error.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/xstrtold.o -MD -MP -MF lib/.deps/xstrtold.Tpo -c -o lib/xstrtold.o lib/xstrtold.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/xstrtold.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/xstrtoumax.o -MD -MP -MF lib/.deps/xstrtoumax.Tpo -c -o lib/xstrtoumax.o lib/xstrtoumax.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/xstrtoumax.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/xvasprintf.o -MD -MP -MF lib/.deps/xvasprintf.Tpo -c -o lib/xvasprintf.o lib/xvasprintf.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/xvasprintf.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/xasprintf.o -MD -MP -MF lib/.deps/xasprintf.Tpo -c -o lib/xasprintf.o lib/xasprintf.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/xasprintf.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/yesno.o -MD -MP -MF lib/.deps/yesno.Tpo -c -o lib/yesno.o lib/yesno.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/yesno.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/asnprintf.o -MD -MP -MF lib/.deps/asnprintf.Tpo -c -o lib/asnprintf.o lib/asnprintf.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/asnprintf.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/at-func2.o -MD -MP -MF lib/.deps/at-func2.Tpo -c -o lib/at-func2.o lib/at-func2.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/at-func2.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/chdir-long.o -MD -MP -MF lib/.deps/chdir-long.Tpo -c -o lib/chdir-long.o lib/chdir-long.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/chdir-long.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/fclose.o -MD -MP -MF lib/.deps/fclose.Tpo -c -o lib/fclose.o lib/fclose.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/fclose.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/fcntl.o -MD -MP -MF lib/.deps/fcntl.Tpo -c -o lib/fcntl.o lib/fcntl.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/fcntl.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/fflush.o -MD -MP -MF lib/.deps/fflush.Tpo -c -o lib/fflush.o lib/fflush.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/fflush.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/fpurge.o -MD -MP -MF lib/.deps/fpurge.Tpo -c -o lib/fpurge.o lib/fpurge.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/fpurge.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/freadahead.o -MD -MP -MF lib/.deps/freadahead.Tpo -c -o lib/freadahead.o lib/freadahead.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/freadahead.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/freadptr.o -MD -MP -MF lib/.deps/freadptr.Tpo -c -o lib/freadptr.o lib/freadptr.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/freadptr.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/fseek.o -MD -MP -MF lib/.deps/fseek.Tpo -c -o lib/fseek.o lib/fseek.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/fseek.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/fseeko.o -MD -MP -MF lib/.deps/fseeko.Tpo -c -o lib/fseeko.o lib/fseeko.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/fseeko.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/fseterr.o -MD -MP -MF lib/.deps/fseterr.Tpo -c -o lib/fseterr.o lib/fseterr.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/fseterr.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/fsusage.o -MD -MP -MF lib/.deps/fsusage.Tpo -c -o lib/fsusage.o lib/fsusage.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/fsusage.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/fts.o -MD -MP -MF lib/.deps/fts.Tpo -c -o lib/fts.o lib/fts.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/fts.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/futimens.o -MD -MP -MF lib/.deps/futimens.Tpo -c -o lib/futimens.o lib/futimens.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/futimens.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/getcwd.o -MD -MP -MF lib/.deps/getcwd.Tpo -c -o lib/getcwd.o lib/getcwd.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/getcwd.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/getcwd-lgpl.o -MD -MP -MF lib/.deps/getcwd-lgpl.Tpo -c -o lib/getcwd-lgpl.o lib/getcwd-lgpl.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/getcwd-lgpl.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/getfilecon.o -MD -MP -MF lib/.deps/getfilecon.Tpo -c -o lib/getfilecon.o lib/getfilecon.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/getfilecon.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/getopt.o -MD -MP -MF lib/.deps/getopt.Tpo -c -o lib/getopt.o lib/getopt.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/getopt.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/getopt1.o -MD -MP -MF lib/.deps/getopt1.Tpo -c -o lib/getopt1.o lib/getopt1.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/getopt1.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/getpass.o -MD -MP -MF lib/.deps/getpass.Tpo -c -o lib/getpass.o lib/getpass.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/getpass.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/isapipe.o -MD -MP -MF lib/.deps/isapipe.Tpo -c -o lib/isapipe.o lib/isapipe.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/isapipe.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/linkat.o -MD -MP -MF lib/.deps/linkat.Tpo -c -o lib/linkat.o lib/linkat.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/linkat.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/mbrlen.o -MD -MP -MF lib/.deps/mbrlen.Tpo -c -o lib/mbrlen.o lib/mbrlen.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/mbrlen.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/mbrtowc.o -MD -MP -MF lib/.deps/mbrtowc.Tpo -c -o lib/mbrtowc.o lib/mbrtowc.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/mbrtowc.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/mountlist.o -MD -MP -MF lib/.deps/mountlist.Tpo -c -o lib/mountlist.o lib/mountlist.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/mountlist.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/obstack.o -MD -MP -MF lib/.deps/obstack.Tpo -c -o lib/obstack.o lib/obstack.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/obstack.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/openat-proc.o -MD -MP -MF lib/.deps/openat-proc.Tpo -c -o lib/openat-proc.o lib/openat-proc.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/openat-proc.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/printf-args.o -MD -MP -MF lib/.deps/printf-args.Tpo -c -o lib/printf-args.o lib/printf-args.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/printf-args.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/printf-parse.o -MD -MP -MF lib/.deps/printf-parse.Tpo -c -o lib/printf-parse.o lib/printf-parse.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/printf-parse.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/readutmp.o -MD -MP -MF lib/.deps/readutmp.Tpo -c -o lib/readutmp.o lib/readutmp.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/readutmp.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/secure_getenv.o -MD -MP -MF lib/.deps/secure_getenv.Tpo -c -o lib/secure_getenv.o lib/secure_getenv.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/secure_getenv.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/selinux-at.o -MD -MP -MF lib/.deps/selinux-at.Tpo -c -o lib/selinux-at.o lib/selinux-at.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/selinux-at.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/sig2str.o -MD -MP -MF lib/.deps/sig2str.Tpo -c -o lib/sig2str.o lib/sig2str.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/sig2str.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/strerror.o -MD -MP -MF lib/.deps/strerror.Tpo -c -o lib/strerror.o lib/strerror.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/strerror.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/utimensat.o -MD -MP -MF lib/.deps/utimensat.Tpo -c -o lib/utimensat.o lib/utimensat.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/utimensat.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT lib/vasnprintf.o -MD -MP -MF lib/.deps/vasnprintf.Tpo -c -o lib/vasnprintf.o lib/vasnprintf.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "lib/vasnprintf.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/version.o -MD -MP -MF src/.deps/version.Tpo -c -o src/version.o src/version.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/version.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/chroot.o -MD -MP -MF src/.deps/chroot.Tpo -c -o src/chroot.o src/chroot.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/chroot.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/hostid.o -MD -MP -MF src/.deps/hostid.Tpo -c -o src/hostid.o src/hostid.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/hostid.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/nice.o -MD -MP -MF src/.deps/nice.Tpo -c -o src/nice.o src/nice.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/nice.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/who.o -MD -MP -MF src/.deps/who.Tpo -c -o src/who.o src/who.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/who.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/users.o -MD -MP -MF src/.deps/users.Tpo -c -o src/users.o src/users.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/users.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/pinky.o -MD -MP -MF src/.deps/pinky.Tpo -c -o src/pinky.o src/pinky.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/pinky.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/uptime.o -MD -MP -MF src/.deps/uptime.Tpo -c -o src/uptime.o src/uptime.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/uptime.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/stty.o -MD -MP -MF src/.deps/stty.Tpo -c -o src/stty.o src/stty.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/stty.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/df.o -MD -MP -MF src/.deps/df.Tpo -c -o src/df.o src/df.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/df.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/find-mount-point.o -MD -MP -MF src/.deps/find-mount-point.Tpo -c -o src/find-mount-point.o src/find-mount-point.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/find-mount-point.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/stdbuf.o -MD -MP -MF src/.deps/stdbuf.Tpo -c -o src/stdbuf.o src/stdbuf.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/stdbuf.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/lbracket.o -MD -MP -MF src/.deps/lbracket.Tpo -c -o src/lbracket.o src/lbracket.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/lbracket.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/base64.o -MD -MP -MF src/.deps/base64.Tpo -c -o src/base64.o src/base64.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/base64.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/basename.o -MD -MP -MF src/.deps/basename.Tpo -c -o src/basename.o src/basename.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/basename.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/cat.o -MD -MP -MF src/.deps/cat.Tpo -c -o src/cat.o src/cat.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/cat.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/chcon.o -MD -MP -MF src/.deps/chcon.Tpo -c -o src/chcon.o src/chcon.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/chcon.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/chgrp.o -MD -MP -MF src/.deps/chgrp.Tpo -c -o src/chgrp.o src/chgrp.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/chgrp.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/chown-core.o -MD -MP -MF src/.deps/chown-core.Tpo -c -o src/chown-core.o src/chown-core.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/chown-core.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/chmod.o -MD -MP -MF src/.deps/chmod.Tpo -c -o src/chmod.o src/chmod.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/chmod.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/chown.o -MD -MP -MF src/.deps/chown.Tpo -c -o src/chown.o src/chown.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/chown.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/cksum.o -MD -MP -MF src/.deps/cksum.Tpo -c -o src/cksum.o src/cksum.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/cksum.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/comm.o -MD -MP -MF src/.deps/comm.Tpo -c -o src/comm.o src/comm.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/comm.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/cp.o -MD -MP -MF src/.deps/cp.Tpo -c -o src/cp.o src/cp.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/cp.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/copy.o -MD -MP -MF src/.deps/copy.Tpo -c -o src/copy.o src/copy.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/copy.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/cp-hash.o -MD -MP -MF src/.deps/cp-hash.Tpo -c -o src/cp-hash.o src/cp-hash.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/cp-hash.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/extent-scan.o -MD -MP -MF src/.deps/extent-scan.Tpo -c -o src/extent-scan.o src/extent-scan.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/extent-scan.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/selinux.o -MD -MP -MF src/.deps/selinux.Tpo -c -o src/selinux.o src/selinux.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/selinux.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/csplit.o -MD -MP -MF src/.deps/csplit.Tpo -c -o src/csplit.o src/csplit.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/csplit.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/cut.o -MD -MP -MF src/.deps/cut.Tpo -c -o src/cut.o src/cut.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/cut.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/date.o -MD -MP -MF src/.deps/date.Tpo -c -o src/date.o src/date.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/date.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/dd.o -MD -MP -MF src/.deps/dd.Tpo -c -o src/dd.o src/dd.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/dd.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/ls.o -MD -MP -MF src/.deps/ls.Tpo -c -o src/ls.o src/ls.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/ls.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/ls-dir.o -MD -MP -MF src/.deps/ls-dir.Tpo -c -o src/ls-dir.o src/ls-dir.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/ls-dir.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/dircolors.o -MD -MP -MF src/.deps/dircolors.Tpo -c -o src/dircolors.o src/dircolors.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/dircolors.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/dirname.o -MD -MP -MF src/.deps/dirname.Tpo -c -o src/dirname.o src/dirname.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/dirname.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/du.o -MD -MP -MF src/.deps/du.Tpo -c -o src/du.o src/du.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/du.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/echo.o -MD -MP -MF src/.deps/echo.Tpo -c -o src/echo.o src/echo.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/echo.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/env.o -MD -MP -MF src/.deps/env.Tpo -c -o src/env.o src/env.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/env.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/expand.o -MD -MP -MF src/.deps/expand.Tpo -c -o src/expand.o src/expand.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/expand.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/expr.o -MD -MP -MF src/.deps/expr.Tpo -c -o src/expr.o src/expr.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/expr.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/factor.o -MD -MP -MF src/.deps/factor.Tpo -c -o src/factor.o src/factor.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/factor.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/false.o -MD -MP -MF src/.deps/false.Tpo -c -o src/false.o src/false.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/false.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/fmt.o -MD -MP -MF src/.deps/fmt.Tpo -c -o src/fmt.o src/fmt.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/fmt.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/fold.o -MD -MP -MF src/.deps/fold.Tpo -c -o src/fold.o src/fold.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/fold.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -DENABLE_MATCHPATHCON=1 -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/src_ginstall-install.o -MD -MP -MF src/.deps/src_ginstall-install.Tpo -c -o src/src_ginstall-install.o src/install.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/install.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -DENABLE_MATCHPATHCON=1 -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/src_ginstall-prog-fprintf.o -MD -MP -MF src/.deps/src_ginstall-prog-fprintf.Tpo -c -o src/src_ginstall-prog-fprintf.o src/prog-fprintf.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/prog-fprintf.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -DENABLE_MATCHPATHCON=1 -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/src_ginstall-copy.o -MD -MP -MF src/.deps/src_ginstall-copy.Tpo -c -o src/src_ginstall-copy.o src/copy.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/copy.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -DENABLE_MATCHPATHCON=1 -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/src_ginstall-cp-hash.o -MD -MP -MF src/.deps/src_ginstall-cp-hash.Tpo -c -o src/src_ginstall-cp-hash.o src/cp-hash.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/cp-hash.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -DENABLE_MATCHPATHCON=1 -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/src_ginstall-extent-scan.o -MD -MP -MF src/.deps/src_ginstall-extent-scan.Tpo -c -o src/src_ginstall-extent-scan.o src/extent-scan.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/extent-scan.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -DENABLE_MATCHPATHCON=1 -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/src_ginstall-selinux.o -MD -MP -MF src/.deps/src_ginstall-selinux.Tpo -c -o src/src_ginstall-selinux.o src/selinux.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/selinux.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/groups.o -MD -MP -MF src/.deps/groups.Tpo -c -o src/groups.o src/groups.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/groups.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/group-list.o -MD -MP -MF src/.deps/group-list.Tpo -c -o src/group-list.o src/group-list.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/group-list.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/head.o -MD -MP -MF src/.deps/head.Tpo -c -o src/head.o src/head.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/head.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/id.o -MD -MP -MF src/.deps/id.Tpo -c -o src/id.o src/id.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/id.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/join.o -MD -MP -MF src/.deps/join.Tpo -c -o src/join.o src/join.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/join.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/kill.o -MD -MP -MF src/.deps/kill.Tpo -c -o src/kill.o src/kill.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/kill.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/operand2sig.o -MD -MP -MF src/.deps/operand2sig.Tpo -c -o src/operand2sig.o src/operand2sig.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/operand2sig.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/link.o -MD -MP -MF src/.deps/link.Tpo -c -o src/link.o src/link.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/link.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/ln.o -MD -MP -MF src/.deps/ln.Tpo -c -o src/ln.o src/ln.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/ln.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/relpath.o -MD -MP -MF src/.deps/relpath.Tpo -c -o src/relpath.o src/relpath.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/relpath.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/logname.o -MD -MP -MF src/.deps/logname.Tpo -c -o src/logname.o src/logname.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/logname.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/ls-ls.o -MD -MP -MF src/.deps/ls-ls.Tpo -c -o src/ls-ls.o src/ls-ls.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/ls-ls.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -DHASH_ALGO_MD5=1 -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/src_md5sum-md5sum.o -MD -MP -MF src/.deps/src_md5sum-md5sum.Tpo -c -o src/src_md5sum-md5sum.o src/md5sum.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/md5sum.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/mkdir.o -MD -MP -MF src/.deps/mkdir.Tpo -c -o src/mkdir.o src/mkdir.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/mkdir.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/prog-fprintf.o -MD -MP -MF src/.deps/prog-fprintf.Tpo -c -o src/prog-fprintf.o src/prog-fprintf.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/prog-fprintf.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/mkfifo.o -MD -MP -MF src/.deps/mkfifo.Tpo -c -o src/mkfifo.o src/mkfifo.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/mkfifo.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/mknod.o -MD -MP -MF src/.deps/mknod.Tpo -c -o src/mknod.o src/mknod.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/mknod.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/mktemp.o -MD -MP -MF src/.deps/mktemp.Tpo -c -o src/mktemp.o src/mktemp.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/mktemp.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/mv.o -MD -MP -MF src/.deps/mv.Tpo -c -o src/mv.o src/mv.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/mv.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/remove.o -MD -MP -MF src/.deps/remove.Tpo -c -o src/remove.o src/remove.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/remove.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/nl.o -MD -MP -MF src/.deps/nl.Tpo -c -o src/nl.o src/nl.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/nl.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/nproc.o -MD -MP -MF src/.deps/nproc.Tpo -c -o src/nproc.o src/nproc.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/nproc.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/nohup.o -MD -MP -MF src/.deps/nohup.Tpo -c -o src/nohup.o src/nohup.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/nohup.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/numfmt.o -MD -MP -MF src/.deps/numfmt.Tpo -c -o src/numfmt.o src/numfmt.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/numfmt.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/od.o -MD -MP -MF src/.deps/od.Tpo -c -o src/od.o src/od.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/od.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/paste.o -MD -MP -MF src/.deps/paste.Tpo -c -o src/paste.o src/paste.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/paste.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/pathchk.o -MD -MP -MF src/.deps/pathchk.Tpo -c -o src/pathchk.o src/pathchk.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/pathchk.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/pr.o -MD -MP -MF src/.deps/pr.Tpo -c -o src/pr.o src/pr.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/pr.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/printenv.o -MD -MP -MF src/.deps/printenv.Tpo -c -o src/printenv.o src/printenv.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/printenv.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/printf.o -MD -MP -MF src/.deps/printf.Tpo -c -o src/printf.o src/printf.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/printf.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/ptx.o -MD -MP -MF src/.deps/ptx.Tpo -c -o src/ptx.o src/ptx.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/ptx.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/pwd.o -MD -MP -MF src/.deps/pwd.Tpo -c -o src/pwd.o src/pwd.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/pwd.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/readlink.o -MD -MP -MF src/.deps/readlink.Tpo -c -o src/readlink.o src/readlink.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/readlink.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/realpath.o -MD -MP -MF src/.deps/realpath.Tpo -c -o src/realpath.o src/realpath.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/realpath.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/rm.o -MD -MP -MF src/.deps/rm.Tpo -c -o src/rm.o src/rm.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/rm.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/rmdir.o -MD -MP -MF src/.deps/rmdir.Tpo -c -o src/rmdir.o src/rmdir.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/rmdir.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/runcon.o -MD -MP -MF src/.deps/runcon.Tpo -c -o src/runcon.o src/runcon.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/runcon.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/seq.o -MD -MP -MF src/.deps/seq.Tpo -c -o src/seq.o src/seq.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/seq.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/shred.o -MD -MP -MF src/.deps/shred.Tpo -c -o src/shred.o src/shred.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/shred.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/shuf.o -MD -MP -MF src/.deps/shuf.Tpo -c -o src/shuf.o src/shuf.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/shuf.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/sleep.o -MD -MP -MF src/.deps/sleep.Tpo -c -o src/sleep.o src/sleep.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/sleep.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/sort.o -MD -MP -MF src/.deps/sort.Tpo -c -o src/sort.o src/sort.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/sort.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/split.o -MD -MP -MF src/.deps/split.Tpo -c -o src/split.o src/split.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/split.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/stat.o -MD -MP -MF src/.deps/stat.Tpo -c -o src/stat.o src/stat.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/stat.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/sum.o -MD -MP -MF src/.deps/sum.Tpo -c -o src/sum.o src/sum.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/sum.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/sync.o -MD -MP -MF src/.deps/sync.Tpo -c -o src/sync.o src/sync.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/sync.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/tac.o -MD -MP -MF src/.deps/tac.Tpo -c -o src/tac.o src/tac.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/tac.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/tail.o -MD -MP -MF src/.deps/tail.Tpo -c -o src/tail.o src/tail.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/tail.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/tee.o -MD -MP -MF src/.deps/tee.Tpo -c -o src/tee.o src/tee.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/tee.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/test.o -MD -MP -MF src/.deps/test.Tpo -c -o src/test.o src/test.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/test.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/timeout.o -MD -MP -MF src/.deps/timeout.Tpo -c -o src/timeout.o src/timeout.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/timeout.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/touch.o -MD -MP -MF src/.deps/touch.Tpo -c -o src/touch.o src/touch.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/touch.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/tr.o -MD -MP -MF src/.deps/tr.Tpo -c -o src/tr.o src/tr.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/tr.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/true.o -MD -MP -MF src/.deps/true.Tpo -c -o src/true.o src/true.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/true.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/truncate.o -MD -MP -MF src/.deps/truncate.Tpo -c -o src/truncate.o src/truncate.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/truncate.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/tsort.o -MD -MP -MF src/.deps/tsort.Tpo -c -o src/tsort.o src/tsort.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/tsort.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/tty.o -MD -MP -MF src/.deps/tty.Tpo -c -o src/tty.o src/tty.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/tty.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/uname.o -MD -MP -MF src/.deps/uname.Tpo -c -o src/uname.o src/uname.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/uname.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/uname-uname.o -MD -MP -MF src/.deps/uname-uname.Tpo -c -o src/uname-uname.o src/uname-uname.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/uname-uname.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/unexpand.o -MD -MP -MF src/.deps/unexpand.Tpo -c -o src/unexpand.o src/unexpand.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/unexpand.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/uniq.o -MD -MP -MF src/.deps/uniq.Tpo -c -o src/uniq.o src/uniq.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/uniq.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/unlink.o -MD -MP -MF src/.deps/unlink.Tpo -c -o src/unlink.o src/unlink.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/unlink.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/ls-vdir.o -MD -MP -MF src/.deps/ls-vdir.Tpo -c -o src/ls-vdir.o src/ls-vdir.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/ls-vdir.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/wc.o -MD -MP -MF src/.deps/wc.Tpo -c -o src/wc.o src/wc.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/wc.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/whoami.o -MD -MP -MF src/.deps/whoami.Tpo -c -o src/whoami.o src/whoami.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/whoami.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/yes.o -MD -MP -MF src/.deps/yes.Tpo -c -o src/yes.o src/yes.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/yes.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/getlimits.o -MD -MP -MF src/.deps/getlimits.Tpo -c -o src/getlimits.o src/getlimits.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/getlimits.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -g -O2 -MT src/make-prime-list.o -MD -MP -MF src/.deps/make-prime-list.Tpo -c -o src/make-prime-list.o src/make-prime-list.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/make-prime-list.c"
+},
+{
+  "directory" : "/nas/tleek/lava/md5sum/md5sum/bugs/0/coreutils-8.24-lava-safe",
+  "command" : "gcc -std=gnu99 -I. -I./lib -Ilib -I./lib -Isrc -I./src -fPIC -g -O2 -MT src/src_libstdbuf_so-libstdbuf.o -MD -MP -MF src/.deps/src_libstdbuf_so-libstdbuf.Tpo -c -o src/src_libstdbuf_so-libstdbuf.o src/libstdbuf.c -I/home/moyix/git/llvm/Debug+Asserts/lib/clang/3.6.1/include",
+  "file" : "src/libstdbuf.c"
+}
+]

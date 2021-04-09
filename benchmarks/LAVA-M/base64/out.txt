@@ -1,0 +1,2 @@
+Successfully triggered bug 222, crashing now!
+Successfully triggered bug 222, crashing now!

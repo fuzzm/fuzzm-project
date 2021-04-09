@@ -1,0 +1,42 @@
+
+CHANGES BETWEEN V1.6.1 & V1.6
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+	Changes to abc notation (see userguide for full details)
+	~~~~~~~~~~~~~~~~~~~~~~~
+
+Completely general tuplets are now available. The syntax is backwards
+compatible with previous versions.
+
+The possible modes and scales that can be specified in the K: field has now
+been augmented by major, minor, lydian, ionian, aeolian, phrygian, locrian.
+In addition global accidentals can be specifed in the K: field.
+
+	New features (see userguide for full details)
+	~~~~~~~~~~~~
+
+Unisons (or double stopping) can be specified with the chord notation,
+e.g. [DD].
+
+The automatic beaming feature (previously available with the -c option)
+has been restored, although it is now switched on with a user switch
+rather than a command line option.
+
+Guitar chords can be placed above the staff rather than below with a user
+switch.
+
+	Bugs fixed
+	~~~~~~~~~~
+
+Changes in meter in the middle of a bar now show up in the output.
+
+It is now legal to use a broken symbol > after a close slur ).
+
+	COMPATIBILITY
+	~~~~~~~~~~~~~
+
+This version of abc2mtex is designed to be compatible with Daniel Taupin's
+MusicTeX 5.20 & MusiXTeX T0.67 and Andreas Egler's MusiXTeX 0.51. Note that
+to use Andreas Egler's version of MusiXTeX you will have to change some of
+the comments in the file header.tex. The lines are clearly marked.
+

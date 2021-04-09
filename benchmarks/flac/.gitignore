@@ -1,0 +1,5 @@
+src/flac/flac
+src/flac/flac.wasm
+*.o
+*.zip
+*.wav

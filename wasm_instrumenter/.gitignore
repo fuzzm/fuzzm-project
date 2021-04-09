@@ -1,0 +1,11 @@
+*.js
+node_modules
+*.log
+tmp/
+dist/
+*.wasm
+*.wat
+*.ogg
+*.txt
+*.html
+target/

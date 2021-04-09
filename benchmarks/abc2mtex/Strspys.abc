@@ -1,0 +1,27 @@
+M:4/4
+O:S
+R:Ss
+
+X:1
+T:A. A. Cameron's
+K:D
+e<A A2 B>G d>B|e<A A2 d>g (3fed|e<A A2 B>G d>B|B<G G>B d>g (3fed:|
+B<e e>f g>e a>f|B<e e>f g>e (3fed|B<e e>f g>e a>f|d<B G>B d>g (3fed:|
+
+X:2
+T:Atholl Brose
+E:7
+K:D
+{gcd}c<{e}A {gAGAG}A2 {gef}e>A {gAGAG}Ad|\
+{gcd}c<{e}A {gAGAG}A>e {ag}a>f {gef}e>d|\
+{gcd}c<{e}A {gAGAG}A2 {gef}e>A {gAGAG}Ad|\
+{g}c/d/e {g}G>{d}B {gf}gG {dc}d>B:|\
+{g}c<e {gf}g>e {ag}a>e {gf}g>e|\
+{g}c<e {gf}g>e {ag}a2 {GdG}a>d|\
+{g}c<e {gf}g>e {ag}a>e {gf}g>f|\
+{gef}e>d {gf}g>d {gBd}B<{e}G {dc}d>B|\
+{g}c<e {gf}g>e {ag}a>e {gf}g>e|\
+{g}c<e {gf}g>e {ag}a2 {GdG}ad|\
+{g}c<{GdG}e {gf}ga {f}g>e {g}f>d|\
+{g}e/f/g {Gdc}d>c {gBd}B<{e}G {dc}d2|]\
+

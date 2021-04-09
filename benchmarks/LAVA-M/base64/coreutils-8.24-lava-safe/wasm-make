@@ -1,0 +1,57 @@
+#!/bin/bash
+#export CC="../../../../wasi-sdk-11.0/bin/clang --sysroot=../../../../wasi-sdk-11.0/share/wasi-sysroot"
+export CC="../../../../wasi-sdk-11.0/bin/clang --sysroot=/home/foo/development/wasi-libc/sysroot"
+export CXX=../../../../wasi-sdk-11.0/bin/clang++
+export LD=../../../../wasi-sdk-11.0/bin/ranlib
+export AR=../../../../wasi-sdk-11.0/bin/ar
+export RANLIB=../../../../wasi-sdk-11.0/bin/ranlib
+
+# copy configure config files with wasm32 target
+cp ../../../../wasi-sdk-11.0/share/misc/config.guess build-aux/
+cp ../../../../wasi-sdk-11.0/share/misc/config.sub build-aux/
+
+# enable emulated signal handling
+export CFLAGS="-D_WASI_EMULATED_SIGNAL"
+
+# specify that sigset_t is already defined in libc.
+# otherwise a compiler error occurs in ./lib/signal.h:401
+#export CFLAGS="-DGNULIB_defined_sigset_t $CFLAGS"
+
+# something with signal handling that must be set.
+# see ./lib/signal.h:505 for more info
+export CFLAGS="-DGNULIB_defined_verify_NSIG_constraint $CFLAGS"
+
+# use the alternative wasi libc headers
+# export CFLAGS="-D__wasilibc_unmodified_upstream $CFLAGS"
+
+# avoid redefinition of the sigaction struct.
+# otherwise an error occurs in ./lib/signal.h:719
+#export CFLAGS="-DGNULIB_defined_struct_sigaction $CFLAGS"
+
+# avoid redefinition of the timeval struct.
+# otherwise an error occurs in ./lib/sys/time.h:387
+export CFLAGS="-DGNULIB_defined_struct_timeval $CFLAGS"
+
+# this timespec struct is defined twice when the alternative libc headers are enabled.
+# in include/bits/alltypes.h and include/__struct_timespec.h
+# it seems like a bug that __DEFINED_struct_timespec isn't set at the first definition
+#export CFLAGS="-D__wasilibc___struct_timespec_h $CFLAGS"
+
+# import extra libc files 
+# bits/errno.h.
+# pwd.h.
+# grp.h
+# sys/wait.h
+export CFLAGS="$CFLAGS -I../../../../libs"
+
+# avoid issues when compiling unistd.h
+export CFLAGS="-D_GL_INCLUDING_UNISTD_H $CFLAGS"
+
+# describe
+# export CFLAGS="-DHAVE_STRUCT_DIRENT_D_TYPE $CFLAGS"
+
+export LDFLAGS="-lwasi-emulated-signal"
+
+# run configure script
+./configure --host=wasm32
+#make src/base64

@@ -1,0 +1,6 @@
+lib/se-context.o: lib/se-context.c lib/config.h \
+  /usr/include/selinux/context.h
+
+lib/config.h:
+
+/usr/include/selinux/context.h:

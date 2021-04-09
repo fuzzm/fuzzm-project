@@ -1,0 +1,4 @@
+#!/bin/bash
+./wasm-compile
+../../../../wasm_instrumenter/target/release/afl_branch uniq.wasm uniq.instr.wasm
+../../../../wasm_instrumenter/target/release/canaries --skip-print uniq.instr.wasm uniq.instr.wasm

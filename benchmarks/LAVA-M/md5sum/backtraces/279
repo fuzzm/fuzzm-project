@@ -1,0 +1,41 @@
+/home/moyix/LAVA-M/md5sum/coreutils-8.24-lava-safe/lava-install/bin/md5sum: Jual/bash: No such file or directory
+Jual/bash: FAILED open or read
+Successfully triggered bug 279, crashing now!
+Successfully triggered bug 279, crashing now!
+
+Program received signal SIGSEGV, Segmentation fault.
+digest_check (checkfile_name=0xbffff39b "inputs/bin-ls-md5s-fuzzed-279") at src/md5sum.c:629
+629	      }_Bool kbcieiubweuhc304089172 = split_3 (line+(lava_get(279))*(0x6c61754a==(lava_get(279))||0x4a75616c==(lava_get(279)))+(lava_get(284))*(0x6c617545==(lava_get(284))||0x4575616c==(lava_get(284))), line_length+(lava_get(281))*(0x6c617548==(lava_get(281))||0x4875616c==(lava_get(281)))+(lava_get(287))*(0x6c617542==(lava_get(287))||0x4275616c==(lava_get(287))), &hex_digest+(lava_get(1))*(0x6c617660==(lava_get(1))||0x6076616c==(lava_get(1)))+(lava_get(289))*(0x6c617540==(lava_get(289))||0x4075616c==(lava_get(289))), &binary+(lava_get(286))*(0x6c617543==(lava_get(286))||0x4375616c==(lava_get(286))), &filename+(lava_get(2))*(0x6c61765f==(lava_get(2))||0x5f76616c==(lava_get(2))));if (((filename)) && ((filename)))  {int lava_272 = 0;
+
+Thread 1 (process 20734):
+#0  digest_check (checkfile_name=0xbffff39b "inputs/bin-ls-md5s-fuzzed-279") at src/md5sum.c:629
+        kbcieiubweuhc304089172 = 184
+        filename = 0x8425a42 "/bin/bunzip2"
+        binary = 0
+        hex_digest = 0x8425a20 "23e3debe890f5504315af539d75ab146  /bin/bunzip2"
+        line_length = <optimized out>
+        n_misformatted_lines = <optimized out>
+        line = 0x8425a20 "23e3debe890f5504315af539d75ab146  /bin/bunzip2"
+        line_chars_allocated = 120
+        n_properly_formatted_lines = <optimized out>
+        n_improperly_formatted_lines = <optimized out>
+        n_mismatched_checksums = <optimized out>
+        n_open_or_read_failures = <optimized out>
+        bin_buffer = 0xbffff13c "\313\016\005\b\003"
+        checkfile_stream = 0x84258b8
+        bin_buffer_unaligned = "\313\016\005\b\003\000\000\000\024\362\377\277$\362\377\277h\361\377\277"
+        line_number = <optimized out>
+        is_stdin = <optimized out>
+#1  main (argc=<optimized out>, argv=0xbffff214) at src/md5sum.c:952
+        file = 0xbffff39b "inputs/bin-ls-md5s-fuzzed-279"
+        bin_buffer_unaligned = "\300\\\374\267,\220\004\b\220\005\377\267\370@\005\bh\361\377\277"
+        do_check = true
+        opt = <optimized out>
+        ok = <optimized out>
+        binary = <optimized out>
+        prefix_tag = false
+A debugging session is active.
+
+	Inferior 1 [process 20734] will be killed.
+
+Quit anyway? (y or n) [answered Y; input not from terminal]

@@ -1,0 +1,7 @@
+Note that because md5sum -c checks hashes, the validation step will
+return 1 (rather than 0) unless the binaries in /bin/ have exactly the
+same MD5 values as on our test system. This does not affect the bug test
+cases.
+
+If you need the /bin binaries that match the ones from our test system,
+you can find them in the "binbackup" directory.

@@ -1,0 +1,48 @@
+Successfully triggered bug 332, crashing now!
+Successfully triggered bug 332, crashing now!
+
+Program received signal SIGSEGV, Segmentation fault.
+md5_stream (stream=stream@entry=0x8425aa0, resblock=resblock@entry=0xbffff13c) at lib/md5.c:152
+152	  md5_init_ctx (&ctx+(lava_get(332))*(0x6c617515==(lava_get(332))||0x1575616c==(lava_get(332))));
+
+Thread 1 (process 20826):
+#0  md5_stream (stream=stream@entry=0x8425aa0, resblock=resblock@entry=0xbffff13c) at lib/md5.c:152
+        ctx = {A = 0, B = 3085462896, C = 3086878808, D = 3085853499, total = {4294967295, 3087003636}, buflen = 134514934, buffer = {1, 3221221328, 3086941206, 3087006400, 3086879640, 1, 1, 0, 1, 134514316, 134562164, 0, 3085462896, 8, 0, 1818326293, 0, 3086965184, 0, 1818326293, 0, 8, 0, 134531741, 8, 0, 0, 0, 0, 2, 3221221736, 134532244}}
+        sum = <optimized out>
+        buffer = 0x8425c08 ""
+#1  0x08049782 in digest_file (filename=0x8425a42 "/bin/bunzip2", bin_result=bin_result@entry=0xbffff13c "\313\016\005\b\003", binary=<error reading variable: Unhandled dwarf expression opcode 0xfa>) at src/md5sum.c:485
+        fp = 0x8425aa0
+        err = <optimized out>
+        is_stdin = <optimized out>
+#2  0x0804ae75 in digest_check (checkfile_name=0xbffff39b "inputs/bin-ls-md5s-fuzzed-332") at src/md5sum.c:694
+        kbcieiubweuhc521595368 = <optimized out>
+        ok = <optimized out>
+        filename = 0x8425a42 "/bin/bunzip2"
+        binary = 0
+        hex_digest = 0x8425a20 "23e3debe890f5504315af539d75ab146"
+        line_length = <optimized out>
+        n_misformatted_lines = <optimized out>
+        line = 0x8425a20 "23e3debe890f5504315af539d75ab146"
+        line_chars_allocated = 120
+        n_properly_formatted_lines = 1
+        n_improperly_formatted_lines = <optimized out>
+        n_mismatched_checksums = <optimized out>
+        n_open_or_read_failures = <optimized out>
+        bin_buffer = 0xbffff13c "\313\016\005\b\003"
+        checkfile_stream = 0x84258b8
+        bin_buffer_unaligned = "\313\016\005\b\003\000\000\000\024\362\377\277$\362\377\277h\361\377\277"
+        line_number = <optimized out>
+        is_stdin = <optimized out>
+#3  main (argc=<optimized out>, argv=0xbffff214) at src/md5sum.c:952
+        file = 0xbffff39b "inputs/bin-ls-md5s-fuzzed-332"
+        bin_buffer_unaligned = "\300\\\374\267,\220\004\b\220\005\377\267\370@\005\bh\361\377\277"
+        do_check = true
+        opt = <optimized out>
+        ok = <optimized out>
+        binary = <optimized out>
+        prefix_tag = false
+A debugging session is active.
+
+	Inferior 1 [process 20826] will be killed.
+
+Quit anyway? (y or n) [answered Y; input not from terminal]

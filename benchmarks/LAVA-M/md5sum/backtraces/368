@@ -1,0 +1,60 @@
+Successfully triggered bug 368, crashing now!
+Successfully triggered bug 368, crashing now!
+
+Program received signal SIGSEGV, Segmentation fault.
+0xb7ef39d7 in *__GI_memcpy (dstpp=dstpp@entry=0x2c616639, srcpp=srcpp@entry=0xbfffef1c, len=4) at memcpy.c:61
+61	memcpy.c: No such file or directory.
+
+Thread 1 (process 20881):
+#0  0xb7ef39d7 in *__GI_memcpy (dstpp=dstpp@entry=0x2c616639, srcpp=srcpp@entry=0xbfffef1c, len=4) at memcpy.c:61
+        __d0 = 4
+        dstp = 744580665
+        srcp = 3221221148
+#1  0x0804ba01 in memcpy (__len=<optimized out>, __src=0xbfffef1c, __dest=0x2c616639) at /usr/include/i386-linux-gnu/bits/string3.h:52
+No locals.
+#2  set_uint32 (cp=0x2c616639 <Address 0x2c616639 out of bounds>, v=v@entry=1186028247) at lib/md5.c:94
+No locals.
+#3  0x0804bb91 in md5_read_ctx (ctx=0xbfffef74, resbuf=0xbffff13c) at lib/md5.c:106
+        r = 0xbffff13c "#\343\336\276\211\017U\004\061Z\365\071$\362\377\277h\361\377\277%\222귐\005\377\267\213\016\005\b\364", <incomplete sequence \374\267>
+#4  0x0804c6f5 in md5_finish_ctx (ctx=ctx@entry=0xbfffef74, resbuf=resbuf@entry=0xbffff13c) at lib/md5.c:134
+        bytes = <optimized out>
+#5  0x0804c881 in md5_stream (stream=stream@entry=0x8425aa0, resblock=resblock@entry=0xbffff13c) at lib/md5.c:206
+        ctx = {A = 3202278179, B = 72683401, C = 972380721, D = 1186028247, total = {30396, 0}, buflen = 60, buffer = {4408, 0, 0, 32, 0, 1, 3, 0, 0, 28908, 237, 0, 0, 1, 0, 128, 0 <repeats 14 times>, 242144, 0}}
+        sum = 30268
+        buffer = 0x8425c08 "\177ELF\001\001\001"
+#6  0x08049782 in digest_file (filename=0x8425a42 "/bin/bunzip2", bin_result=bin_result@entry=0xbffff13c "#\343\336\276\211\017U\004\061Z\365\071$\362\377\277h\361\377\277%\222귐\005\377\267\213\016\005\b\364", <incomplete sequence \374\267>, binary=<error reading variable: Unhandled dwarf expression opcode 0xfa>) at src/md5sum.c:485
+        fp = 0x8425aa0
+        err = <optimized out>
+        is_stdin = <optimized out>
+#7  0x0804ae75 in digest_check (checkfile_name=0xbffff39b "inputs/bin-ls-md5s-fuzzed-368") at src/md5sum.c:694
+        kbcieiubweuhc521595368 = <optimized out>
+        ok = <optimized out>
+        filename = 0x8425a42 "/bin/bunzip2"
+        binary = 0
+        hex_digest = 0x8425a20 "23e3debe890f5504315af539d75ab146"
+        line_length = <optimized out>
+        n_misformatted_lines = <optimized out>
+        line = 0x8425a20 "23e3debe890f5504315af539d75ab146"
+        line_chars_allocated = 120
+        n_properly_formatted_lines = 1
+        n_improperly_formatted_lines = <optimized out>
+        n_mismatched_checksums = <optimized out>
+        n_open_or_read_failures = <optimized out>
+        bin_buffer = 0xbffff13c "#\343\336\276\211\017U\004\061Z\365\071$\362\377\277h\361\377\277%\222귐\005\377\267\213\016\005\b\364", <incomplete sequence \374\267>
+        checkfile_stream = 0x84258b8
+        bin_buffer_unaligned = "#\343\336\276\211\017U\004\061Z\365\071$\362\377\277h\361\377\277"
+        line_number = <optimized out>
+        is_stdin = <optimized out>
+#8  main (argc=<optimized out>, argv=0xbffff214) at src/md5sum.c:952
+        file = 0xbffff39b "inputs/bin-ls-md5s-fuzzed-368"
+        bin_buffer_unaligned = "\300\\\374\267,\220\004\b\220\005\377\267\370@\005\bh\361\377\277"
+        do_check = true
+        opt = <optimized out>
+        ok = <optimized out>
+        binary = <optimized out>
+        prefix_tag = false
+A debugging session is active.
+
+	Inferior 1 [process 20881] will be killed.
+
+Quit anyway? (y or n) [answered Y; input not from terminal]

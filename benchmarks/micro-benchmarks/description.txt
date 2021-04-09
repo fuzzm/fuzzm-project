@@ -1,0 +1,15 @@
+- juliet-stack-large
+Input is an index used to write 1 into a buffer of size 10.
+Hence, we have a direct-write buffer overflow when index < 0 or index > 9.
+
+- juliet-stack-char-overrun
+Input is a string, which is copied into a buffer field of a struct.
+If the string is larger than 16 bytes, then it overflows into the succeeding pointer field, which then crashes the program when that pointer is derefed.
+
+- juliet-stack-wide-char-overrun
+Input is a string and an integer.
+The integer has to be 6 for the vulnerable code to run.
+If the string input is sufficiently large (around 380 bytes), then a buffer overrun similar to the one from juliet-stack-char-overrun occurs.
+This test uses the 32 bit wchar_t wide char type, but that isn't really important for the test.
+Had a normal char been used instead, the a smaller input would have been required, but buffer overflow would still be there.
+

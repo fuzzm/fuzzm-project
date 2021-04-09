@@ -1,0 +1,38 @@
+Successfully triggered bug 215, crashing now!
+Successfully triggered bug 215, crashing now!
+
+Program received signal SIGSEGV, Segmentation fault.
+readlinebuffer_delim (linebuffer=linebuffer@entry=0xd49173cc, stream=stream@entry=0xb7fc5420, delimiter=delimiter@entry=10 '\n') at lib/linebuffer.c:65
+warning: Source file is more recent than executable.
+65	  char *buffer = linebuffer->buffer;
+
+Thread 1 (process 11284):
+#0  readlinebuffer_delim (linebuffer=linebuffer@entry=0xd49173cc, stream=stream@entry=0xb7fc5420, delimiter=delimiter@entry=10 '\n') at lib/linebuffer.c:65
+        c = <optimized out>
+        buffer = <optimized out>
+        p = <optimized out>
+        end = <optimized out>
+#1  0x0804a63c in check_file (delimiter=10 '\n', outfile=<optimized out>, infile=0xbffff39b "inputs/man-clang3-sorted-fuzzed-215") at src/uniq.c:387
+        thislen = <optimized out>
+        new_group = <optimized out>
+        thisfield = <optimized out>
+        prevfield = 0x8424940 "\212ual       Adds an implicit #define into the predefines buffer which is read before the source file is preprocessed.\n"
+        prevlen = 116
+        first_group_printed = true
+        lb1 = {size = 146, length = 117, buffer = 0x8424940 "\212ual       Adds an implicit #define into the predefines buffer which is read before the source file is preprocessed.\n"}
+        thisline = 0xbffff154
+        lb2 = {size = 64, length = 12, buffer = 0x84248f8 "       -###\n"}
+        prevline = 0xbffff148
+#2  main (argc=2, argv=0xbffff224) at src/uniq.c:722
+        optc = <optimized out>
+        posixly_correct = 72
+        skip_field_option_type = <optimized out>
+        nfiles = <optimized out>
+        file = {0xbffff39b "inputs/man-clang3-sorted-fuzzed-215", 0x80502aa "-"}
+        delimiter = 10 '\n'
+        output_option_used = <optimized out>
+A debugging session is active.
+
+	Inferior 1 [process 11284] will be killed.
+
+Quit anyway? (y or n) [answered Y; input not from terminal]

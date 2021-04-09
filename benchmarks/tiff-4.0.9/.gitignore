@@ -1,0 +1,11 @@
+*.cmake
+CMakeCache.txt
+CMakeFiles
+contrib/
+build/
+html/
+man/
+port/
+test/
+tools/pal2rgb
+*.o

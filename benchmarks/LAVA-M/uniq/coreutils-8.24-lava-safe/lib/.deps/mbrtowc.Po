@@ -1,0 +1,41 @@
+lib/mbrtowc.o: lib/mbrtowc.c lib/config.h lib/wchar.h \
+  /usr/include/features.h /usr/include/stdc-predef.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h /usr/include/wchar.h \
+  lib/stdio.h /usr/include/stdio.h \
+  /usr/lib/llvm-3.6/bin/../lib/clang/3.6.2/include/stdarg.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/lib/llvm-3.6/bin/../lib/clang/3.6.2/include/stddef.h \
+  /usr/include/xlocale.h
+
+lib/config.h:
+
+lib/wchar.h:
+
+/usr/include/features.h:
+
+/usr/include/stdc-predef.h:
+
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:
+
+/usr/include/x86_64-linux-gnu/bits/wordsize.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
+
+/usr/include/wchar.h:
+
+lib/stdio.h:
+
+/usr/include/stdio.h:
+
+/usr/lib/llvm-3.6/bin/../lib/clang/3.6.2/include/stdarg.h:
+
+/usr/include/x86_64-linux-gnu/bits/wchar.h:
+
+/usr/lib/llvm-3.6/bin/../lib/clang/3.6.2/include/stddef.h:
+
+/usr/include/xlocale.h:

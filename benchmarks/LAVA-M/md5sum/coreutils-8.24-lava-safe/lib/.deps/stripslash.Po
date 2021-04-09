@@ -1,0 +1,17 @@
+lib/stripslash.o: lib/stripslash.c lib/config.h lib/dirname.h \
+  /usr/lib/llvm-3.6/bin/../lib/clang/3.6.2/include/stdbool.h \
+  /usr/lib/llvm-3.6/bin/../lib/clang/3.6.2/include/stddef.h \
+  /usr/lib/llvm-3.6/bin/../lib/clang/3.6.2/include/__stddef_max_align_t.h \
+  lib/dosname.h
+
+lib/config.h:
+
+lib/dirname.h:
+
+/usr/lib/llvm-3.6/bin/../lib/clang/3.6.2/include/stdbool.h:
+
+/usr/lib/llvm-3.6/bin/../lib/clang/3.6.2/include/stddef.h:
+
+/usr/lib/llvm-3.6/bin/../lib/clang/3.6.2/include/__stddef_max_align_t.h:
+
+lib/dosname.h:

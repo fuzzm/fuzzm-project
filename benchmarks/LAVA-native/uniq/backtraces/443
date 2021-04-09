@@ -1,0 +1,233 @@
+
+       -###
+           Adds an implicit #define into the predefines buffer which is read before the source file is preprocessed.
+           Adds an implicit #include into the predefines buffer which is read before the source file is preprocessed.
+           Adds an implicit #undef into the predefines buffer which is read before the source file is preprocessed.
+           Add the specified directory to the search path for framework include files.
+           Add the specified directory to the search path for include files.
+           affects darwin targets.
+           Allow loose type checking rules for implicit vector conversions.
+       --analyze
+       and the full output of the compiler, along with information to reproduce.
+       -ansi
+           applies semantic analysis to compute types for expressions as well and determine whether the code is well formed. This stage is
+       -arch architecture
+        as(1), ld(1)
+       Assembler
+           assembler and linker.  Typically you do not need to interact with the driver, but you transparently use it to run the other tools.
+           assembly file.
+AUTHOR
+BUGS
+           called a ".s" file or "assembly" file.
+       C_INCLUDE_PATH, OBJC_INCLUDE_PATH, CPLUS_INCLUDE_PATH, OBJCPLUS_INCLUDE_PATH
+CLANG(1)                                                  Clang Tools Documentation                                                  CLANG(1)
+clang 3.0                                                         2011-10-11                                                         CLANG(1)
+           Clang also supports the use of an integrated assembler, in which the code generator produces object files directly. This avoids
+       Clang and is built into the same driver.
+       clang [-c|-S|-E] -std=standard -g
+       Clang fully supports cross compilation as an inherent part of its design.  Depending on how your version of Clang is configured, it
+       clang is a C, C++, and Objective-C compiler which encompasses preprocessing, parsing, optimization, code generation, assembly, and
+       Clang Static Analyzer
+       clang - the Clang C, C++, and Objective-C compiler
+       Code Generation and Optimization
+   Code Generation Options
+       CPATH
+       -c  Run all of the above, plus the assembler, generating a target ".o" object file.
+           debuggable code.  -O2 is a moderate level of optimization which enables most optimizations.  -Os is like -O2 with extra
+           default in x86-64.
+DESCRIPTION
+   Diagnostics Options
+           directives.  The output of this stage is typically called a ".i" (for C), ".ii" (for C++), ".mi" (for Objective-C) , or ".mii"
+           Disable special handling and optimizations of builtin functions like strlen and malloc.
+           Display available options.
+         -Dmacro[=defn]
+       -Dmacroname=value
+           Do not search clang's builtin directory for include files.
+           Do not search the standard system directories for include files, but do search compiler builting include directories.
+           Do not search the standard system directories or compiler builtin directories for include files.
+           Don't emit warning for unused driver arguments.
+       Driver
+   Driver Options
+           Empty components in the environment variable are ignored.
+           enabled.
+           Enable generation of unwind information, this allows exceptions to be thrown through Clang compiled stack frames.  This is on by
+           Enable support for Borland extensions.
+           Enable support for Microsoft extensions.
+           Enable support for Pascal-style strings with "\pfoo".
+           Enable the "Blocks" language feature.
+           Enable trigraphs.
+           Enable use of the Objective-C non-fragile ABI. On platforms for which this is the default ABI, it can be disabled with
+ENVIRONMENT
+       -E  Run the preprocessor stage.
+           executable or shared library.
+           faster).  On supported platforms, -O4 enables link-time optimization; object files are stored in the LLVM bitcode file format and
+       -fblocks
+       -fborland-extensions
+       -fcommon
+       -fdiagnostics-print-source-range-info -fprint-source-range-info -fdiagnostics-show-option -fmessage-length
+       -Fdirectory
+       -fexceptions
+         -ffeature-option...
+       -ffreestanding
+       -flax-vector-conversions
+       -flto -emit-llvm
+       -fmath-errno
+       -fmsc-version=
+       -fms-extensions
+       -fno-builtin
+           -fno-objc-nonfragile-abi.
+       -fobjc-abi-version=version
+       -fobjc-gc
+       -fobjc-gc-only
+       -fobjc-nonfragile-abi
+       -fobjc-nonfragile-abi-version=version
+           (for Objective-C++) file.
+       -fpascal-strings
+           fragile ABI 2).
+           fragile ABI is enabled (either via -fobjc-nonfragile-abi, or because it is the platform default).
+       -fshow-column -fshow-source-location -fcaret-diagnostics -fdiagnostics-fixit-info -fdiagnostics-parseable-fixits
+       -fsyntax-only
+       -ftime-report
+       -ftrapv
+       -fvisibility
+       -fwritable-strings
+           Generate code to catch integer overflow errors.  Signed integer overflow is undefined in C, with this flag, extra code is
+           generated to detect this and abort when it happens.
+           Generate output files in LLVM formats, suitable for link time optimization. When used with -S this generates LLVM intermediate
+       -g  Generate debug information.  Note that Clang debug information works best at -O0.  At higher optimization levels, only line number
+       --help
+       -Idirectory
+         -Idir... -Ldir...
+           If -mmacosx-version-min is unspecified, the default deployment target is read from this environment variable.  This option only
+           If no stage selection option is specified, all stages above are run, and the linker is run to combine the results into an
+           If this environment variable is present, it is treated as a delimited list of paths to be added to the default system include path
+       -include filename
+           Indicate that math functions should be treated as updating errno.
+           Indicate that Objective-C code should be compiled in GC-only mode, which only works when Objective-C Garbage Collection is
+           Indicate that Objective-C code should be compiled in hybrid-GC mode, which works with both GC and non-GC mode.
+           Indicate that the file should be compiled for a freestanding, not a hosted, environment.
+           information is currently available.
+         input-filenames
+       -integrated-as -no-integrated-as
+       integrated, it is important to understand the stages of compilation, to understand how to invoke it.  These stages are:
+           is target dependent.
+           is typically called an "a.out", ".dylib" or ".so" file.
+           is typically called a ".o" file or "object" file.
+           it enables optimizations that take longer to perform or that may generate larger code (in an attempt to make the program run
+           language assembly files, otherwise this generates LLVM bitcode format object files (which may be passed to the linker depending on
+   Language Selection and Mode Options
+       Linker
+       linking.  Depending on which high-level mode setting is passed, Clang will stop before doing a full link.  While Clang is highly
+           list. The delimiter is the platform dependent delimitor, as used in the PATH environment variable.
+       MACOSX_DEPLOYMENT_TARGET
+       Maintained by the Clang / LLVM Team (<http://clang.llvm.org>).
+           Make all string literals default to writable.  This disables uniquing of strings and other optimizations.
+           Manual for more information.
+       -march=cpu
+           -march=i486, the compiler is allowed to generate instructions that are valid on i486 and later processors, but which may not exist
+       may have support for a number of cross compilers, or may only support a native target.
+       -miphoneos-version-min
+         -mmachine-option...
+       -mmacosx-version-min=version
+NAME
+       -nobuiltininc
+       no stage selection option
+       -nostdinc
+       -nostdlibinc
+         [-O0|-O1|-O2|-Os|-Oz|-O3|-O4]
+       -O0 -O1 -O2 -Os -Oz -O3 -O4
+       -ObjC
+       -ObjC++
+       -o file
+           on earlier ones.
+         -o output-file
+           optimizations to reduce code size.  -Oz is like -Os (and thus -O2), but reduces code size further.  -O3 is like -O2, except that
+OPTIONS
+       Parsing and Semantic Analysis
+           Pass arg to the assembler.
+           Pass arg to the linker.
+           Pass arg to the preprocessor.
+           Pass arg to the static analyzer.
+           Pass the comma separated arguments in args to the assembler.
+           Pass the comma separated arguments in args to the linker.
+           Pass the comma separated arguments in args to the preprocessor.
+       Preprocessing
+   Preprocessor Options
+       -print-file-name=file
+       -print-libgcc-file-name
+       -print-prog-name=name
+       -print-search-dirs
+           Print the commands to run for this compilation.
+           Print the full library path of file.
+           Print the full program path of name.
+           Print the library path for "libgcc.a".
+           Print the paths used for finding libraries and programs.
+           Print timing summary of each stage of compilation.
+       -Qunused-arguments
+           responsible for generating most of the compiler warnings as well as parse errors.  The output of this stage is an "Abstract Syntax
+           responsible for optimizing the generated code and handling target-specific code generation.  The output of this stage is typically
+           Run the Clang Static Analyzer.
+           Run the preprocessor, parser and type checking stages.
+           Same as -std=c89.
+           Save intermediate compilation results.
+       -save-temps
+SEE ALSO
+           Select the Objective-C ABI version to use. Available versions are 1 (legacy "fragile" ABI), 2 (non-fragile ABI 1), and 3 (non-
+           Select the Objective-C non-fragile ABI version to use by default. This will only be used as the Objective-C ABI when the non-
+           Set _MSC_VER. Defaults to 1300 on Windows. Not set otherwise.
+           Specify that Clang should generate code for a specific processor family member and later.  For example, if you specify
+           Specify the architecture to build for.
+           Specify the C++ standard library to use; supported options are libstdc++ and libc++.
+           Specify the language standard to compile for.
+           Specify which optimization level to use.  -O0 means "no optimization": this level compiles the fastest and generates the most
+       -S  Run the previous stages as well as LLVM generation and optimization stages and target-specific code generation, producing an
+   Stage Selection Options
+       -std=language
+       -stdlib=language
+         -stdlib=library
+       supports other tools:
+SYNOPSIS
+   Target Selection Options
+       The Clang compiler supports a large number of options to control each of these stages.  In addition to compilation of code, Clang also
+           The clang executable is actually a small driver which controls the overall execution of other tools such as the compiler,
+       The Clang Static Analyzer is a tool that scans source code to try to find bugs through code analysis.  This tool uses many parts of
+           the overhead of generating the ".s" file and of calling the target assembler.
+           These environment variables are checked, in order, for the location to write temporary files used during the compilation process.
+           These environment variables specify additional paths, as for CPATH, which are only used when processing the appropriate language.
+           These options control how Clang prints out information about diagnostics (errors and warnings).  Please see the Clang User's
+           the stage selection options).
+           This flag sets the default visibility level.
+           This flag specifies that variables without initializers get common linkage.  It can be disabled with -fno-common.
+           This stage handles tokenization of the input source file, macro expansion, #include expansion and handlSuccessfully triggered bug 443, crashing now!
+Successfully triggered bug 443, crashing now!
+
+Program received signal SIGSEGV, Segmentation fault.
+__fpending (fp=fp@entry=0x6053c4b8) at __fpending.c:24
+24	__fpending.c: No such file or directory.
+
+Thread 1 (process 11278):
+#0  __fpending (fp=fp@entry=0x6053c4b8) at __fpending.c:24
+No locals.
+#1  0x0804fafb in close_stream (stream=0xb7fc54c0) at lib/close-stream.c:59
+        some_pending = <optimized out>
+        prev_fail = <optimized out>
+        fclose_fail = <optimized out>
+#2  0x0804ae38 in close_stdout () at lib/closeout.c:109
+No locals.
+#3  0xb7ea8f3f in __run_exit_handlers (status=0, listp=0xb7fc5304, run_list_atexit=true) at exit.c:78
+        atfct = <optimized out>
+        onfct = <optimized out>
+        cxafct = 0x6053c4b8
+#4  0xb7ea8faf in *__GI_exit (status=0) at exit.c:100
+No locals.
+#5  0xb7e90e1e in __libc_start_main (main=0x8049c90 <main>, argc=2, ubp_av=0xbffff224, init=0x8050110 <__libc_csu_init>, fini=0x8050100 <__libc_csu_fini>, rtld_fini=0xb7ff0590, stack_end=0xbffff21c) at libc-start.c:276
+        result = 1818326182
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {-1208201228, 0, 0, -1073745416, -1411842454, -2044704646}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x2, 0x8049450}, data = {prev = 0x0, cleanup = 0x0, canceltype = 2}}}
+        not_first_call = <optimized out>
+#6  0x08049471 in _start ()
+No symbol table info available.
+A debugging session is active.
+
+	Inferior 1 [process 11278] will be killed.
+
+Quit anyway? (y or n) [answered Y; input not from terminal]

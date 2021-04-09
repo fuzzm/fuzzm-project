@@ -1,0 +1,14 @@
+lib/gl_list.o: lib/gl_list.c lib/config.h lib/gl_list.h \
+  /usr/lib/llvm-3.6/bin/../lib/clang/3.6.2/include/stdbool.h \
+  /usr/lib/llvm-3.6/bin/../lib/clang/3.6.2/include/stddef.h \
+  /usr/lib/llvm-3.6/bin/../lib/clang/3.6.2/include/__stddef_max_align_t.h
+
+lib/config.h:
+
+lib/gl_list.h:
+
+/usr/lib/llvm-3.6/bin/../lib/clang/3.6.2/include/stdbool.h:
+
+/usr/lib/llvm-3.6/bin/../lib/clang/3.6.2/include/stddef.h:
+
+/usr/lib/llvm-3.6/bin/../lib/clang/3.6.2/include/__stddef_max_align_t.h:

@@ -1,0 +1,2 @@
+--- SIGABRT (Aborted) ---
++++ killed by SIGABRT +++

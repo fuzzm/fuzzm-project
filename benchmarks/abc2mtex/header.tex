@@ -1,0 +1,207 @@
+% Many of the following parameters can be changed to
+% customise the music output. Experiment!
+
+% Input files
+% ~~~~~~~~~~~
+\if Y\abcmusix% MusiXTeX version
+\input musixtex
+\else% MusicTeX version
+\input musicnft
+\input musictex
+\input musicvbm
+\input musictrp
+\fi
+
+% Page set-up
+% ~~~~~~~~~~~
+
+% page length
+\vsize=10.5in
+% page width
+\hsize=7.7in
+% top margin
+\voffset=-0.75in
+% left margin
+\hoffset=-0.75in
+
+\raggedbottom
+\nopagenumbers
+
+% Fonts set-up
+% ~~~~~~~~~~~~
+
+% the font names correspond to fields in abc notation
+% thus Tfont controls the T: field output
+
+\font\Xfont=cmr10
+\font\Tfont=cmr10
+\font\Tafont=cmr7  %for up to six alternative titles
+\font\Tbfont=cmr7  %for six or more alternative titles
+\font\Tifont=cmr10 %for titles within tunes
+\font\Wfont=cmr10
+\font\Sfont=cmti10
+\font\Cfont=cmsl8
+\font\Afont=cmsl8
+\font\Nfont=cmr7
+\font\Pfont=cmr7
+\font\gfont=cmr7   %for guitar chords
+
+% Music set-up
+% ~~~~~~~~~~~~
+
+% music size
+\if Y\abcmusix% MusiXTeX version
+\smallmusicsize
+% no bar numbering
+\nobarnumbers
+\else% MusicTeX version
+\musicsize=17\relax
+% no bar numbering
+\def\freqbarno{99}
+\fi
+% space between bar and next note
+\def\stdafterruleskip{2\Internote}
+% no indenting
+\parindent 0pt
+
+% these lines prevent/allow pagebreaking in the middle of tunes
+\let\tune=\vbox
+%\let\tune=\empty
+
+
+% Tune header set-up
+% ~~~~~~~~~~~~~~~~~~
+
+% You will probably need some knowledge of TeX to customise this
+%  - however header1.tex contains another example.
+
+\def\header{%
+\hbox to\hsize{\hfil\Tfont \Xstring.\ \Tstring\ %
+\if Y\Strue{\Sfont(\Sstring)}\ \fi%
+\hfil%
+\if Y\Ctrue{\Cfont\Cstring}\ \fi%
+\if Y\Atrue{\Afont(\Astring)}\fi%
+}\nobreak%
+\if Y\Ntrue{\centerline{\Nfont \Nstring}\nobreak}\fi%
+\if Y\Tatrue{\centerline{\Tafont AKA \Tastring}\nobreak}\fi%
+\if Y\Tbtrue{\Tbfont AKA \Tbstring}\fi%
+%\if Y\Wtrue{\centerline{\Wfont \Wstring}}\fi%
+\if Y\Ptrue{\line{\Pfont Play \Pstring\hfil}\nobreak}\fi%
+}
+
+% Text within tunes
+% ~~~~~~~~~~~~~~~~~
+\def\Tline#1{\medskip\line{\Tifont #1\hfil}}
+\def\Wline#1{\smallskip\line{\Wfont #1\hfil}}
+\def\Pline#1{\notes\uptext{\Pfont #1}\enotes\relax}
+
+
+% Miscellaneous
+% ~~~~~~~~~~~~~
+
+%don't change this
+\def\nbinstruments{1}
+
+%rolls
+\def\uroll#1{\zcharnote{#1}{\raise -3.0\internote\hbox to 2.5\internote%
+ {\hss$\smile$\hss}}}
+\def\lroll#1{\zcharnote{#1}{\raise  1.0\internote\hbox to 2.5\internote%
+ {\hss$\frown$\hss}}}
+
+% the following four lines are an old version of rolls
+% uncomment them if you prefer, but they are not compatible with MusiXTeX
+%\def\uroll#1{\zcharnote{#1}{\raise -1.0\internote\hbox to 2.5\internote%
+% {\hss\hdslur{2.8\internote}\hss}}}
+%\def\lroll#1{\zcharnote{#1}{\raise  1.0\internote\hbox to 2.5\internote%
+% {\hss\huslur{2.8\internote}\hss}}}
+
+%ties
+\def\ltie#1{\zcharnote #1{\huslur{0.6\noteskip}}}
+\def\utie#1{\zcharnote #1{\hdslur{0.6\noteskip}}}
+\def\ltiein#1{\zcharnote #1{\huslur{0.8\noteskip}}%
+ \kern 1.2\noteskip\enotes\notes}
+\def\utiein#1{\zcharnote #1{\hdslur{0.8\noteskip}}%
+ \kern 1.2\noteskip\enotes\notes}
+
+%first/second repeat
+\def\rpt#1{\zcharnote n{\kern -\afterruleskip\sevenrm #1}}
+
+% gracing macros
+\def\grace{\tinynotesize\vnotes 0.7\elemskip\off\Internote}
+\def\egrace{\off\Internote\enotes\normalnotesize}
+\if Y\abcmusix% MusiXTeX version
+\def\grace{\notes\multnoteskip\tinyvalue\tinynotesize}
+\let\egrace=\enotes
+\else
+
+% up/downbow
+\def\ubow#1{\zcharnote#1{$\sqcap$}}
+\def\vbow#1{\zcharnote#1{$\vee$}}
+\fi
+
+% sharps/flats in guitar chords
+\let\Zsh=\#
+%\def\Zsh{$\sharp$}
+\def\Zfl{$\flat$}
+
+\if Y\abcmusix% MusiXTeX version
+% To use Andreas Egler's version of MusiXTeX comment out these lines
+% ==================================================================
+\input musixeng
+\def\ubow#1{\zcharnote#1{\upbow}}
+\def\vbow#1{\zcharnote#1{\downbow}}
+\let\beginHp=\empty
+\let\endHp=\empty
+% ==================================================================
+
+% To use Andreas Egler's version of MusiXTeX uncomment these lines
+% ================================================================
+%\let\startmuflex=\empty
+%\let\endmuflex=\empty
+%\let\stoppiece=\endpiece
+%\let\zstoppiece=\zendpiece
+%\let\alaligne=\nextline
+%\let\zalaligne=\znextline
+%\input musixtri
+%\input musixsig
+%\def\beginHp{\setcustomsign1\customsharp 8\customsharp 5\customnatural 9}
+%\let\endHp=\resetcustomsign
+%\let\vbow=\dbow
+%\let\qsk=\empty
+%\let\ql=\qd
+%\let\hl=\hd
+%\let\cl=\cd
+%\let\ccl=\ccd
+%\let\cccl=\cccd
+%\def\zwh#1{}
+%\let\zql=\zqd
+%\let\zhl=\zhd
+%\let\zcl=\zcd
+%\let\zccl=\zccd
+%\let\zcccl=\zcccd
+%\let\Ibl=\Ibd
+%\let\Ibbl=\Ibbd
+%\let\Ibbbl=\Ibbbd
+%\let\tbl=\tbd
+%\let\tbbl=\tbbd
+%\let\tbbbl=\tbbbd
+%\let\nbl=\nbd
+%\let\nbbl=\nbbd
+%\let\nbbbl=\nbbbd
+%\let\lpz=\dpz
+% ================================================================
+\else
+
+% these commands are for MusicTeX
+
+\let\beginHp=\empty
+\let\endHp=\empty
+
+\fi
+
+\edef\catcodeat{\the\catcode`\@}\catcode`\@=11
+%
+\def\d@oubleRAB{\thickvrule\nobreak\hskip%
+0.6\Internote\global\advance\x@skip0.6\Internote%
+\nobreak\thinvrule}%
+\def\setdoubleRAB{\def\barvrule{\d@oubleRAB}}%

@@ -1,0 +1,39 @@
+Successfully triggered bug 235, crashing now!
+Successfully triggered bug 235, crashing now!
+
+Program received signal SIGSEGV, Segmentation fault.
+get_4 (n_non_newline=<synthetic pointer>, in_end=0xbffff100 "", in=0x7185aa9c, ctx=0xbfffd4f8) at lib/base64.c:360
+360	      char const *t = *in;
+
+Thread 1 (process 2449):
+#0  get_4 (n_non_newline=<synthetic pointer>, in_end=0xbffff100 "", in=0x7185aa9c, ctx=0xbfffd4f8) at lib/base64.c:360
+        t = <optimized out>
+#1  base64_decode_ctx (ctx=ctx@entry=0xbfffd4f8, in=0xbffff0fd "4FV", in@entry=0xbfffe100 "CAAAAJIB", 'A' <repeats 45 times>, "HNp", 'A' <repeats 20 times>, "\n", 'A' <repeats 76 times>, "\n", 'A' <repeats 46 times>..., inlen=<optimized out>, inlen@entry=4096, out=0xbfffe0d6 "\340U", out@entry=0xbfffd500 "\b", outlen=outlen@entry=0xbfffd4f4) at lib/base64.c:627
+        kbcieiubweuhc2145174067 = 0x6c617576 <Address 0x6c617576 out of bounds>
+        in_end = 0xbffff100 ""
+        non_nl = <optimized out>
+        outleft_save = 3221221632
+        outleft = 42
+        ignore_newlines = true
+        flush_ctx = <optimized out>
+        ctx_i = <optimized out>
+#2  0x08049a6b in do_decode (in=in@entry=0x84248b8, out=0xb7fc54c0, ignore_garbage=ignore_garbage@entry=false) at src/base64.c:245
+        ok = <optimized out>
+        n = 3072
+        k = 0
+        inbuf = "CAAAAJIB", 'A' <repeats 45 times>, "HNp", 'A' <repeats 20 times>, "\n", 'A' <repeats 76 times>, "\n", 'A' <repeats 76 times>, "\n", 'A' <repeats 76 times>, "\n", 'A' <repeats 76 times>, "\n", 'A' <repeats 73 times>, "Gqd\n4FWgtAk", 'A' <repeats 50 times>, "gAAAAAAAAB+AAAAAAAA\n", 'A' <repeats 33 times>, "H5+AAByZWJvb3Q", 'A' <repeats 29 times>, "\n", 'A' <repeats 76 times>, "\n", 'A' <repeats 76 times>, "\n", 'A' <repeats 76 times>, "\n", 'A' <repeats 76 times>...
+        outbuf = "\b\000\000\000\222\001", '\000' <repeats 34 times>, "si", '\000' <repeats 298 times>, "j\235\340U\240\264\t", '\000' <repeats 37 times>, "\002\000\000\000\000\000\000\000~", '\000' <repeats 31 times>, "~~\000\000reboot", '\000' <repeats 290 times>, "j\235\340U\f\267\t", '\000' <repeats 37 times>, "\001\000\000\000\062N\000\000~", '\000' <repeats 31 times>, "~~\000\000runlevel", '\000' <repeats 288 times>, "j\235\340U\032\322\t", '\000' <repeats 37 times>, "\b\000\000\000\366\t", '\000' <repeats 34 times>, "l2", '\000' <repeats 298 times>, "{\235\340U\205\070\005", '\000' <repeats 37 times>, "\b\000\000\000\233\v\000\000pts/"...
+        sum = 4096
+        ctx = {i = 0, buf = "\000\000\000"}
+#3  0x0804a1fe in main (argc=3, argv=0xbffff224) at src/base64.c:332
+        opt = <optimized out>
+        input_fh = 0x84248b8
+        infile = 0xbffff39e "inputs/utmp-fuzzed-235.b64"
+        decode = true
+        ignore_garbage = false
+        wrap_column = 76
+A debugging session is active.
+
+	Inferior 1 [process 2449] will be killed.
+
+Quit anyway? (y or n) [answered Y; input not from terminal]

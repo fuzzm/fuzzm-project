@@ -1,0 +1,14 @@
+X: 1
+T: Let's Sing
+Z: John Chambers <jc:trillian.mit.edu>
+N: Let us sing together, sing halleluia.
+M: C|
+L: 1/4
+F:http://trillian.mit.edu/~jc/music/abc/Klezmer/HavaNashiraSong.abc	 2021-02-23 205742 UT
+K: Bb
+"1"[| "Bb"B,2 "F7"FG | "F7"F2 "Bb"B,2 | "Eb"E2 "Bb"DC/B,/ | "F7"C2 "Bb"B,2 |]
+w: Ha-va na-shi-ra, shir ha-le-*lu-ia!
+"2"[| "Bb"B2 "F7"AB | "F7"c2 "Bb"d2 | "Eb"B2 "Bb"cd    | "F7"e2 "Bb"d2 |]
+w: Ha-va na-shi-ra, shir ha-le-lu-ia!
+"3"[| "Bb"d2 "F7"cB | "F7"A2 "Bb"B2 | "Eb"G2 "Bb"FB    | "F7"B/A/G/A/ "Bb"B2 |]
+w: Ha-va na-shi-ra, shir ha-le-lu-___ia!
