@@ -9,7 +9,7 @@ npm run build
 
 # Running a benchmark
 <a name="run">
-Notice, the benchmarks must be compiled first - see the [init-workspace.sh](../init-workspace.sh) script.
+Notice, the benchmarks must be compiled first (see the [init-workspace.sh](../init-workspace.sh) script).
 
 Run the `opj_compress` benchmark once for 60 minutes.
 
