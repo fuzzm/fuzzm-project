@@ -11,6 +11,6 @@ Fuzzm is run the same way as AFL (See [AFL](https://github.com/google/AFL) and [
 
 For example, run the [prepare.js](../prepare.js) script to copy the benchmarks into the programs folder and then start the fuzzer with:
 
-```WASM_MODE=1 ./afl-fuzz -m8000M -i programs/opj_compress-wasm/test-case -o programs/opj_compress-wasm/findings -f programs/opj_compress-wasm/input.bmp -- programs/opj_compress-wasm/prog.wasm.instr -i /home/torp/development/fuzzing-workspace/AFL-wasm/programs/opj_compress-wasm/input.bmp -o /home/torp/development/fuzzing-workspace/AFL-wasm/programs/opj_compress-wasm/out.jp2```
+`WASM_MODE=1 ./afl-fuzz -m8000M -i programs/pal2rgb-wasm/test-case -o programs/pal2rgb-wasm/findings -x programs/pdfresurrect-wasm/dictionary/d.dict -- programs/pal2rgb-wasm/prog.wasm.instr @@ /dev/null`
 
 All target programs must be instrumented with the `afl_branch` program of the [wasm_instrumenter](../wasm_instrumenter).
