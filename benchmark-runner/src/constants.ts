@@ -41,7 +41,7 @@ export const FUZZ_COMMANDS_WASM: { [index: string]: Benchmark } = {
   pal2rgb: {
     name: 'pal2rgb-wasm',
     cmd: '@@ /dev/null',
-    dictionary: 'programs/pdfresurrect-wasm/dictionary/d.dict',
+    dictionary: 'programs/pal2rgb-wasm/dictionary/d.dict',
   },
   pdfresurrect: {
     name: 'pdfresurrect-wasm',
