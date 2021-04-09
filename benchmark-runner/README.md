@@ -1,4 +1,4 @@
-This folder contains a number of auxiliary scripts for running Fuzzm, aggregating results, generating tables etc.
+This folder contains auxiliary scripts for running Fuzzm, aggregating results, generating tables, etc.
 
 # Installation
 

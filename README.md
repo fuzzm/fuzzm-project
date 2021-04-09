@@ -5,8 +5,8 @@ The structure of the folders is as follows:
  * [AFL-wasm](AFL-wasm) contains the ported version of AFL. 
  * [wasm_instrumenter](wasm_instrumenter) contains the instrumentation tools for inserting (1) AFL-compatible coverage instrumentation and (2) stack and heap canaries. 
  * [benchmarks](benchmarks) contains the 10 benchmarks used in the evaluation of Fuzzm.
- * [benchmark-runner](benchmark-runner) contains a set of scripts for running the benchmarks, measuring performance of the instrumentation, aggregating results over multiple runs and generating tables and plots for the paper.
- * [results](results) contains the results from running the 10 benchmarks with both Fuzzm and AFL. This is also where the benchmark runner will store new results and where the aggregation script expect the results to be.
+ * [benchmark-runner](benchmark-runner) contains a set of scripts for running the benchmarks, measuring the performance of the instrumentation, aggregating results from multiple runs and generating tables and plots for the paper.
+ * [results](results) contains the results from running the 10 benchmarks with both Fuzzm and AFL. This is also where the benchmark runner will store new results and where the aggregation script expects the results to be.
 
 # Requirements
 
@@ -18,7 +18,4 @@ The structure of the folders is as follows:
 # Installation
 `./init-workspace.sh`
 
-Builds all subproject and the benchmarks. 
-
-
-
+Builds all subprojects and the benchmarks. 
