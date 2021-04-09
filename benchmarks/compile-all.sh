@@ -7,13 +7,3 @@
 (cd flac && ./compile.sh && ./wasm-compile.sh)
 (cd jbig2dec && ./compile.sh && ./wasm-compile.sh)
 ./compile-lava.sh
-#(cd ubuntu-pkg-benchmarks/palbart && ./compile.sh && ./wasm-compile.sh)
-#(cd ubuntu-pkg-benchmarks/pdi2iso && ./compile.sh && ./wasm-compile.sh)
-#(cd ubuntu-pkg-benchmarks/qflow && ./compile.sh && ./wasm-compile.sh)
-#(cd ubuntu-pkg-benchmarks/wzip && ./compile.sh && ./wasm-compile.sh)
-#(cd ubuntu-pkg-benchmarks/aha && ./compile.sh && ./wasm-compile.sh)
-#(cd ubuntu-pkg-benchmarks/basez && ./compile.sh && ./wasm-compile.sh)
-#(cd ubuntu-pkg-benchmarks/bpm-tools && ./compile.sh && ./wasm-compile.sh)
-#(cd ubuntu-pkg-benchmarks/midicsv && ./compile.sh && ./wasm-compile.sh)
-#(cd ubuntu-pkg-benchmarks/zenlisp && ./compile.sh && ./wasm-compile.sh)
-#(cd ubuntu-pkg-benchmarks/codegroup && ./compile.sh && ./wasm-compile.sh)

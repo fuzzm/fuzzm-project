@@ -9,7 +9,7 @@ npm run build
 
 # Running a benchmark
 <a name="run"></a>
-Notice, the benchmarks must be compiled first - see the [../benchmarks/compile-all.sh](../benchmarks/compile-all.sh) script).
+Notice, the benchmarks must be compiled first - see the [benchmarks/compile-all.sh](../benchmarks/compile-all.sh) script).
 
 Run the `opj_compress` benchmark once for 60 minutes.
 

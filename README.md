@@ -18,5 +18,7 @@ The structure of the folders is as follows:
 # Installation
 `./init-workspace.sh`
 
+Builds all subproject and the benchmarks. 
+
 
 
