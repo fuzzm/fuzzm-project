@@ -5,10 +5,14 @@
 set style fill transparent solid 0.2 noborder
 set term png font "Helvetica,22"
 set output outfile
-set xlabel "Hours"
+set tmargin 1.8
+set bmargin 1.5
+#set xlabel "Hours"
 set ylabel metric
-set title plottitle
+set title plottitle offset 0,-0.8
 set yrange [0:]
+set xrange [0:24]
+
 plot datafile using ($1/3600):3:4 with filledcurves notitle, \
      '' using ($1/3600):2 with lp lt -1 lc rgb "red" lw 3 notitle
      #'' using ($1/3600):2 with lp lt 1 ps 1.5 lw 3 title 'mean value'
