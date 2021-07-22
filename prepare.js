@@ -138,4 +138,17 @@ commander
     const jbig2decFuzzerInput=path.resolve(aflFolder, 'testcases/images/jbig2/');
     prepareBenchmark(jbig2dec, 'jbig2dec.wasm', jbig2decFuzzerInput);
     prepareBenchmark(jbig2dec, 'jbig2dec', jbig2decFuzzerInput);
+
+
+    /////// WASM-bench benchmarks ///////
+    const wasmBenchDir = 'wasm-bench';
+    fs.readdirSync(wasmBenchDir, 'utf-8').forEach(f => {
+      try {
+      prepareBenchmark(wasmBenchDir, f);
+        console.log(`file ${f} succeeded`);
+      } catch (e) {
+        console.log(`file ${f} failed`);
+      }
+    });
+
   }).parse(process.argv);
