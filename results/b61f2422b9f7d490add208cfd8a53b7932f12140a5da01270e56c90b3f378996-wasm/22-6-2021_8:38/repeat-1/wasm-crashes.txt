@@ -1,0 +1,765 @@
+programs/b61f2422b9f7d490add208cfd8a53b7932f12140a5da01270e56c90b3f378996-wasm/findings/crashes/id:000000,sig:00,src:000000,op:flip1,pos:0: wasm trap: unreachable
+wasm backtrace:
+  0: 0xb9ef9 - <unknown>!__rust_start_panic
+  1: 0xb95f6 - <unknown>!rust_panic
+  2: 0xb8f72 - <unknown>!std::panicking::rust_panic_with_hook::h8ad053d77cc20a20
+  3: 0xb7c5e - <unknown>!std::panicking::begin_panic_handler::{{closure}}::h60b24b441bb27bdd
+  4: 0xb7bd3 - <unknown>!std::sys_common::backtrace::__rust_end_short_backtrace::h537cc37d8501ac0d
+  5: 0xb8c48 - <unknown>!rust_begin_unwind
+  6: 0xc9aaf - <unknown>!core::panicking::panic_fmt::ha4cbfe39ae9ea3c9
+  7: 0xcc905 - <unknown>!core::option::expect_none_failed::h152d592dba3b4951
+  8: 0x2c0a - <unknown>!wasi_example::main::h49084332f58e06a2
+  9: 0x4281 - <unknown>!std::sys_common::backtrace::__rust_begin_short_backtrace::hb8f28bbacdb7af14
+  10: 0x42f9 - <unknown>!std::rt::lang_start::{{closure}}::hb9e36748cbcd9577
+  11: 0xb97db - <unknown>!std::rt::lang_start_internal::hd68a6a98c158ed91
+  12: 0x2d10 - <unknown>!__original_main
+  13:  0x9cb - <unknown>!_start
+
+programs/b61f2422b9f7d490add208cfd8a53b7932f12140a5da01270e56c90b3f378996-wasm/findings/crashes/id:000001,sig:00,src:000000,op:flip1,pos:1: wasm trap: unreachable
+wasm backtrace:
+  0: 0xb9ef9 - <unknown>!__rust_start_panic
+  1: 0xb95f6 - <unknown>!rust_panic
+  2: 0xb8f72 - <unknown>!std::panicking::rust_panic_with_hook::h8ad053d77cc20a20
+  3: 0xb7c5e - <unknown>!std::panicking::begin_panic_handler::{{closure}}::h60b24b441bb27bdd
+  4: 0xb7bd3 - <unknown>!std::sys_common::backtrace::__rust_end_short_backtrace::h537cc37d8501ac0d
+  5: 0xb8c48 - <unknown>!rust_begin_unwind
+  6: 0xc9aaf - <unknown>!core::panicking::panic_fmt::ha4cbfe39ae9ea3c9
+  7: 0xcc905 - <unknown>!core::option::expect_none_failed::h152d592dba3b4951
+  8: 0x2c0a - <unknown>!wasi_example::main::h49084332f58e06a2
+  9: 0x4281 - <unknown>!std::sys_common::backtrace::__rust_begin_short_backtrace::hb8f28bbacdb7af14
+  10: 0x42f9 - <unknown>!std::rt::lang_start::{{closure}}::hb9e36748cbcd9577
+  11: 0xb97db - <unknown>!std::rt::lang_start_internal::hd68a6a98c158ed91
+  12: 0x2d10 - <unknown>!__original_main
+  13:  0x9cb - <unknown>!_start
+
+programs/b61f2422b9f7d490add208cfd8a53b7932f12140a5da01270e56c90b3f378996-wasm/findings/crashes/id:000002,sig:00,src:000000,op:flip2,pos:0: wasm trap: unreachable
+wasm backtrace:
+  0: 0xb9ef9 - <unknown>!__rust_start_panic
+  1: 0xb95f6 - <unknown>!rust_panic
+  2: 0xb8f72 - <unknown>!std::panicking::rust_panic_with_hook::h8ad053d77cc20a20
+  3: 0xb7c5e - <unknown>!std::panicking::begin_panic_handler::{{closure}}::h60b24b441bb27bdd
+  4: 0xb7bd3 - <unknown>!std::sys_common::backtrace::__rust_end_short_backtrace::h537cc37d8501ac0d
+  5: 0xb8c48 - <unknown>!rust_begin_unwind
+  6: 0xc9aaf - <unknown>!core::panicking::panic_fmt::ha4cbfe39ae9ea3c9
+  7: 0xcc905 - <unknown>!core::option::expect_none_failed::h152d592dba3b4951
+  8: 0x2c0a - <unknown>!wasi_example::main::h49084332f58e06a2
+  9: 0x4281 - <unknown>!std::sys_common::backtrace::__rust_begin_short_backtrace::hb8f28bbacdb7af14
+  10: 0x42f9 - <unknown>!std::rt::lang_start::{{closure}}::hb9e36748cbcd9577
+  11: 0xb97db - <unknown>!std::rt::lang_start_internal::hd68a6a98c158ed91
+  12: 0x2d10 - <unknown>!__original_main
+  13:  0x9cb - <unknown>!_start
+
+programs/b61f2422b9f7d490add208cfd8a53b7932f12140a5da01270e56c90b3f378996-wasm/findings/crashes/id:000003,sig:00,src:000000,op:flip2,pos:1: wasm trap: unreachable
+wasm backtrace:
+  0: 0xb9ef9 - <unknown>!__rust_start_panic
+  1: 0xb95f6 - <unknown>!rust_panic
+  2: 0xb8f72 - <unknown>!std::panicking::rust_panic_with_hook::h8ad053d77cc20a20
+  3: 0xb7c5e - <unknown>!std::panicking::begin_panic_handler::{{closure}}::h60b24b441bb27bdd
+  4: 0xb7bd3 - <unknown>!std::sys_common::backtrace::__rust_end_short_backtrace::h537cc37d8501ac0d
+  5: 0xb8c48 - <unknown>!rust_begin_unwind
+  6: 0xc9aaf - <unknown>!core::panicking::panic_fmt::ha4cbfe39ae9ea3c9
+  7: 0xcc905 - <unknown>!core::option::expect_none_failed::h152d592dba3b4951
+  8: 0x2c0a - <unknown>!wasi_example::main::h49084332f58e06a2
+  9: 0x4281 - <unknown>!std::sys_common::backtrace::__rust_begin_short_backtrace::hb8f28bbacdb7af14
+  10: 0x42f9 - <unknown>!std::rt::lang_start::{{closure}}::hb9e36748cbcd9577
+  11: 0xb97db - <unknown>!std::rt::lang_start_internal::hd68a6a98c158ed91
+  12: 0x2d10 - <unknown>!__original_main
+  13:  0x9cb - <unknown>!_start
+
+programs/b61f2422b9f7d490add208cfd8a53b7932f12140a5da01270e56c90b3f378996-wasm/findings/crashes/id:000004,sig:00,src:000000,op:flip4,pos:0: wasm trap: unreachable
+wasm backtrace:
+  0: 0xb9ef9 - <unknown>!__rust_start_panic
+  1: 0xb95f6 - <unknown>!rust_panic
+  2: 0xb8f72 - <unknown>!std::panicking::rust_panic_with_hook::h8ad053d77cc20a20
+  3: 0xb7c5e - <unknown>!std::panicking::begin_panic_handler::{{closure}}::h60b24b441bb27bdd
+  4: 0xb7bd3 - <unknown>!std::sys_common::backtrace::__rust_end_short_backtrace::h537cc37d8501ac0d
+  5: 0xb8c48 - <unknown>!rust_begin_unwind
+  6: 0xc9aaf - <unknown>!core::panicking::panic_fmt::ha4cbfe39ae9ea3c9
+  7: 0xcc905 - <unknown>!core::option::expect_none_failed::h152d592dba3b4951
+  8: 0x2c0a - <unknown>!wasi_example::main::h49084332f58e06a2
+  9: 0x4281 - <unknown>!std::sys_common::backtrace::__rust_begin_short_backtrace::hb8f28bbacdb7af14
+  10: 0x42f9 - <unknown>!std::rt::lang_start::{{closure}}::hb9e36748cbcd9577
+  11: 0xb97db - <unknown>!std::rt::lang_start_internal::hd68a6a98c158ed91
+  12: 0x2d10 - <unknown>!__original_main
+  13:  0x9cb - <unknown>!_start
+
+programs/b61f2422b9f7d490add208cfd8a53b7932f12140a5da01270e56c90b3f378996-wasm/findings/crashes/id:000005,sig:00,src:000000,op:flip8,pos:0: wasm trap: unreachable
+wasm backtrace:
+  0: 0xb9ef9 - <unknown>!__rust_start_panic
+  1: 0xb95f6 - <unknown>!rust_panic
+  2: 0xb8f72 - <unknown>!std::panicking::rust_panic_with_hook::h8ad053d77cc20a20
+  3: 0xb7c5e - <unknown>!std::panicking::begin_panic_handler::{{closure}}::h60b24b441bb27bdd
+  4: 0xb7bd3 - <unknown>!std::sys_common::backtrace::__rust_end_short_backtrace::h537cc37d8501ac0d
+  5: 0xb8c48 - <unknown>!rust_begin_unwind
+  6: 0xc9aaf - <unknown>!core::panicking::panic_fmt::ha4cbfe39ae9ea3c9
+  7: 0xcc905 - <unknown>!core::option::expect_none_failed::h152d592dba3b4951
+  8: 0x2c0a - <unknown>!wasi_example::main::h49084332f58e06a2
+  9: 0x4281 - <unknown>!std::sys_common::backtrace::__rust_begin_short_backtrace::hb8f28bbacdb7af14
+  10: 0x42f9 - <unknown>!std::rt::lang_start::{{closure}}::hb9e36748cbcd9577
+  11: 0xb97db - <unknown>!std::rt::lang_start_internal::hd68a6a98c158ed91
+  12: 0x2d10 - <unknown>!__original_main
+  13:  0x9cb - <unknown>!_start
+
+programs/b61f2422b9f7d490add208cfd8a53b7932f12140a5da01270e56c90b3f378996-wasm/findings/crashes/id:000006,sig:00,src:000000,op:arith8,pos:1,val:-22: wasm trap: unreachable
+wasm backtrace:
+  0: 0xb9ef9 - <unknown>!__rust_start_panic
+  1: 0xb95f6 - <unknown>!rust_panic
+  2: 0xb8f72 - <unknown>!std::panicking::rust_panic_with_hook::h8ad053d77cc20a20
+  3: 0xb7c5e - <unknown>!std::panicking::begin_panic_handler::{{closure}}::h60b24b441bb27bdd
+  4: 0xb7bd3 - <unknown>!std::sys_common::backtrace::__rust_end_short_backtrace::h537cc37d8501ac0d
+  5: 0xb8c48 - <unknown>!rust_begin_unwind
+  6: 0xc9aaf - <unknown>!core::panicking::panic_fmt::ha4cbfe39ae9ea3c9
+  7: 0xcc905 - <unknown>!core::option::expect_none_failed::h152d592dba3b4951
+  8: 0x2c0a - <unknown>!wasi_example::main::h49084332f58e06a2
+  9: 0x4281 - <unknown>!std::sys_common::backtrace::__rust_begin_short_backtrace::hb8f28bbacdb7af14
+  10: 0x42f9 - <unknown>!std::rt::lang_start::{{closure}}::hb9e36748cbcd9577
+  11: 0xb97db - <unknown>!std::rt::lang_start_internal::hd68a6a98c158ed91
+  12: 0x2d10 - <unknown>!__original_main
+  13:  0x9cb - <unknown>!_start
+
+programs/b61f2422b9f7d490add208cfd8a53b7932f12140a5da01270e56c90b3f378996-wasm/findings/crashes/id:000007,sig:00,src:000000,op:int16,pos:0,val:+1000: wasm trap: unreachable
+wasm backtrace:
+  0: 0xb9ef9 - <unknown>!__rust_start_panic
+  1: 0xb95f6 - <unknown>!rust_panic
+  2: 0xb8f72 - <unknown>!std::panicking::rust_panic_with_hook::h8ad053d77cc20a20
+  3: 0xb7c5e - <unknown>!std::panicking::begin_panic_handler::{{closure}}::h60b24b441bb27bdd
+  4: 0xb7bd3 - <unknown>!std::sys_common::backtrace::__rust_end_short_backtrace::h537cc37d8501ac0d
+  5: 0xb8c48 - <unknown>!rust_begin_unwind
+  6: 0xc9aaf - <unknown>!core::panicking::panic_fmt::ha4cbfe39ae9ea3c9
+  7: 0xcc905 - <unknown>!core::option::expect_none_failed::h152d592dba3b4951
+  8: 0x2c0a - <unknown>!wasi_example::main::h49084332f58e06a2
+  9: 0x4281 - <unknown>!std::sys_common::backtrace::__rust_begin_short_backtrace::hb8f28bbacdb7af14
+  10: 0x42f9 - <unknown>!std::rt::lang_start::{{closure}}::hb9e36748cbcd9577
+  11: 0xb97db - <unknown>!std::rt::lang_start_internal::hd68a6a98c158ed91
+  12: 0x2d10 - <unknown>!__original_main
+  13:  0x9cb - <unknown>!_start
+
+programs/b61f2422b9f7d490add208cfd8a53b7932f12140a5da01270e56c90b3f378996-wasm/findings/crashes/id:000008,sig:00,src:000000,op:havoc,rep:16: wasm trap: unreachable
+wasm backtrace:
+  0: 0xb9ef9 - <unknown>!__rust_start_panic
+  1: 0xb95f6 - <unknown>!rust_panic
+  2: 0xb8f72 - <unknown>!std::panicking::rust_panic_with_hook::h8ad053d77cc20a20
+  3: 0xb7c5e - <unknown>!std::panicking::begin_panic_handler::{{closure}}::h60b24b441bb27bdd
+  4: 0xb7bd3 - <unknown>!std::sys_common::backtrace::__rust_end_short_backtrace::h537cc37d8501ac0d
+  5: 0xb8c48 - <unknown>!rust_begin_unwind
+  6: 0xc9aaf - <unknown>!core::panicking::panic_fmt::ha4cbfe39ae9ea3c9
+  7: 0xcc905 - <unknown>!core::option::expect_none_failed::h152d592dba3b4951
+  8: 0x2c0a - <unknown>!wasi_example::main::h49084332f58e06a2
+  9: 0x4281 - <unknown>!std::sys_common::backtrace::__rust_begin_short_backtrace::hb8f28bbacdb7af14
+  10: 0x42f9 - <unknown>!std::rt::lang_start::{{closure}}::hb9e36748cbcd9577
+  11: 0xb97db - <unknown>!std::rt::lang_start_internal::hd68a6a98c158ed91
+  12: 0x2d10 - <unknown>!__original_main
+  13:  0x9cb - <unknown>!_start
+
+programs/b61f2422b9f7d490add208cfd8a53b7932f12140a5da01270e56c90b3f378996-wasm/findings/crashes/id:000009,sig:00,src:000000,op:havoc,rep:128: wasm trap: unreachable
+wasm backtrace:
+  0: 0xb9ef9 - <unknown>!__rust_start_panic
+  1: 0xb95f6 - <unknown>!rust_panic
+  2: 0xb8f72 - <unknown>!std::panicking::rust_panic_with_hook::h8ad053d77cc20a20
+  3: 0xb7c5e - <unknown>!std::panicking::begin_panic_handler::{{closure}}::h60b24b441bb27bdd
+  4: 0xb7bd3 - <unknown>!std::sys_common::backtrace::__rust_end_short_backtrace::h537cc37d8501ac0d
+  5: 0xb8c48 - <unknown>!rust_begin_unwind
+  6: 0xc9aaf - <unknown>!core::panicking::panic_fmt::ha4cbfe39ae9ea3c9
+  7: 0xcc905 - <unknown>!core::option::expect_none_failed::h152d592dba3b4951
+  8: 0x2c0a - <unknown>!wasi_example::main::h49084332f58e06a2
+  9: 0x4281 - <unknown>!std::sys_common::backtrace::__rust_begin_short_backtrace::hb8f28bbacdb7af14
+  10: 0x42f9 - <unknown>!std::rt::lang_start::{{closure}}::hb9e36748cbcd9577
+  11: 0xb97db - <unknown>!std::rt::lang_start_internal::hd68a6a98c158ed91
+  12: 0x2d10 - <unknown>!__original_main
+  13:  0x9cb - <unknown>!_start
+
+programs/b61f2422b9f7d490add208cfd8a53b7932f12140a5da01270e56c90b3f378996-wasm/findings/crashes/id:000010,sig:00,src:000000,op:havoc,rep:64: wasm trap: unreachable
+wasm backtrace:
+  0: 0xb9ef9 - <unknown>!__rust_start_panic
+  1: 0xb95f6 - <unknown>!rust_panic
+  2: 0xb8f72 - <unknown>!std::panicking::rust_panic_with_hook::h8ad053d77cc20a20
+  3: 0xb7c5e - <unknown>!std::panicking::begin_panic_handler::{{closure}}::h60b24b441bb27bdd
+  4: 0xb7bd3 - <unknown>!std::sys_common::backtrace::__rust_end_short_backtrace::h537cc37d8501ac0d
+  5: 0xb8c48 - <unknown>!rust_begin_unwind
+  6: 0xc9aaf - <unknown>!core::panicking::panic_fmt::ha4cbfe39ae9ea3c9
+  7: 0xcc905 - <unknown>!core::option::expect_none_failed::h152d592dba3b4951
+  8: 0x2c0a - <unknown>!wasi_example::main::h49084332f58e06a2
+  9: 0x4281 - <unknown>!std::sys_common::backtrace::__rust_begin_short_backtrace::hb8f28bbacdb7af14
+  10: 0x42f9 - <unknown>!std::rt::lang_start::{{closure}}::hb9e36748cbcd9577
+  11: 0xb97db - <unknown>!std::rt::lang_start_internal::hd68a6a98c158ed91
+  12: 0x2d10 - <unknown>!__original_main
+  13:  0x9cb - <unknown>!_start
+
+programs/b61f2422b9f7d490add208cfd8a53b7932f12140a5da01270e56c90b3f378996-wasm/findings/crashes/id:000011,sig:00,src:000000,op:havoc,rep:16: wasm trap: unreachable
+wasm backtrace:
+  0: 0xb9ef9 - <unknown>!__rust_start_panic
+  1: 0xb95f6 - <unknown>!rust_panic
+  2: 0xb8f72 - <unknown>!std::panicking::rust_panic_with_hook::h8ad053d77cc20a20
+  3: 0xb7c5e - <unknown>!std::panicking::begin_panic_handler::{{closure}}::h60b24b441bb27bdd
+  4: 0xb7bd3 - <unknown>!std::sys_common::backtrace::__rust_end_short_backtrace::h537cc37d8501ac0d
+  5: 0xb8c48 - <unknown>!rust_begin_unwind
+  6: 0xc9aaf - <unknown>!core::panicking::panic_fmt::ha4cbfe39ae9ea3c9
+  7: 0xcc905 - <unknown>!core::option::expect_none_failed::h152d592dba3b4951
+  8: 0x2c0a - <unknown>!wasi_example::main::h49084332f58e06a2
+  9: 0x4281 - <unknown>!std::sys_common::backtrace::__rust_begin_short_backtrace::hb8f28bbacdb7af14
+  10: 0x42f9 - <unknown>!std::rt::lang_start::{{closure}}::hb9e36748cbcd9577
+  11: 0xb97db - <unknown>!std::rt::lang_start_internal::hd68a6a98c158ed91
+  12: 0x2d10 - <unknown>!__original_main
+  13:  0x9cb - <unknown>!_start
+
+programs/b61f2422b9f7d490add208cfd8a53b7932f12140a5da01270e56c90b3f378996-wasm/findings/crashes/id:000012,sig:00,src:000000,op:havoc,rep:64: wasm trap: unreachable
+wasm backtrace:
+  0: 0xb9ef9 - <unknown>!__rust_start_panic
+  1: 0xb95f6 - <unknown>!rust_panic
+  2: 0xb8f72 - <unknown>!std::panicking::rust_panic_with_hook::h8ad053d77cc20a20
+  3: 0xb7c5e - <unknown>!std::panicking::begin_panic_handler::{{closure}}::h60b24b441bb27bdd
+  4: 0xb7bd3 - <unknown>!std::sys_common::backtrace::__rust_end_short_backtrace::h537cc37d8501ac0d
+  5: 0xb8c48 - <unknown>!rust_begin_unwind
+  6: 0xc9aaf - <unknown>!core::panicking::panic_fmt::ha4cbfe39ae9ea3c9
+  7: 0xcc905 - <unknown>!core::option::expect_none_failed::h152d592dba3b4951
+  8: 0x2c0a - <unknown>!wasi_example::main::h49084332f58e06a2
+  9: 0x4281 - <unknown>!std::sys_common::backtrace::__rust_begin_short_backtrace::hb8f28bbacdb7af14
+  10: 0x42f9 - <unknown>!std::rt::lang_start::{{closure}}::hb9e36748cbcd9577
+  11: 0xb97db - <unknown>!std::rt::lang_start_internal::hd68a6a98c158ed91
+  12: 0x2d10 - <unknown>!__original_main
+  13:  0x9cb - <unknown>!_start
+
+programs/b61f2422b9f7d490add208cfd8a53b7932f12140a5da01270e56c90b3f378996-wasm/findings/crashes/id:000013,sig:00,src:000000,op:havoc,rep:64: wasm trap: unreachable
+wasm backtrace:
+  0: 0xb9ef9 - <unknown>!__rust_start_panic
+  1: 0xb95f6 - <unknown>!rust_panic
+  2: 0xb8f72 - <unknown>!std::panicking::rust_panic_with_hook::h8ad053d77cc20a20
+  3: 0xb7c5e - <unknown>!std::panicking::begin_panic_handler::{{closure}}::h60b24b441bb27bdd
+  4: 0xb7bd3 - <unknown>!std::sys_common::backtrace::__rust_end_short_backtrace::h537cc37d8501ac0d
+  5: 0xb8c48 - <unknown>!rust_begin_unwind
+  6: 0xc9aaf - <unknown>!core::panicking::panic_fmt::ha4cbfe39ae9ea3c9
+  7: 0xcc905 - <unknown>!core::option::expect_none_failed::h152d592dba3b4951
+  8: 0x2c0a - <unknown>!wasi_example::main::h49084332f58e06a2
+  9: 0x4281 - <unknown>!std::sys_common::backtrace::__rust_begin_short_backtrace::hb8f28bbacdb7af14
+  10: 0x42f9 - <unknown>!std::rt::lang_start::{{closure}}::hb9e36748cbcd9577
+  11: 0xb97db - <unknown>!std::rt::lang_start_internal::hd68a6a98c158ed91
+  12: 0x2d10 - <unknown>!__original_main
+  13:  0x9cb - <unknown>!_start
+
+programs/b61f2422b9f7d490add208cfd8a53b7932f12140a5da01270e56c90b3f378996-wasm/findings/crashes/id:000014,sig:00,src:000000,op:havoc,rep:8: wasm trap: unreachable
+wasm backtrace:
+  0: 0xb9ef9 - <unknown>!__rust_start_panic
+  1: 0xb95f6 - <unknown>!rust_panic
+  2: 0xb8f72 - <unknown>!std::panicking::rust_panic_with_hook::h8ad053d77cc20a20
+  3: 0xb7c5e - <unknown>!std::panicking::begin_panic_handler::{{closure}}::h60b24b441bb27bdd
+  4: 0xb7bd3 - <unknown>!std::sys_common::backtrace::__rust_end_short_backtrace::h537cc37d8501ac0d
+  5: 0xb8c48 - <unknown>!rust_begin_unwind
+  6: 0xc9aaf - <unknown>!core::panicking::panic_fmt::ha4cbfe39ae9ea3c9
+  7: 0xcc905 - <unknown>!core::option::expect_none_failed::h152d592dba3b4951
+  8: 0x2c0a - <unknown>!wasi_example::main::h49084332f58e06a2
+  9: 0x4281 - <unknown>!std::sys_common::backtrace::__rust_begin_short_backtrace::hb8f28bbacdb7af14
+  10: 0x42f9 - <unknown>!std::rt::lang_start::{{closure}}::hb9e36748cbcd9577
+  11: 0xb97db - <unknown>!std::rt::lang_start_internal::hd68a6a98c158ed91
+  12: 0x2d10 - <unknown>!__original_main
+  13:  0x9cb - <unknown>!_start
+
+programs/b61f2422b9f7d490add208cfd8a53b7932f12140a5da01270e56c90b3f378996-wasm/findings/crashes/id:000015,sig:00,src:000000,op:havoc,rep:128: wasm trap: unreachable
+wasm backtrace:
+  0: 0xb9ef9 - <unknown>!__rust_start_panic
+  1: 0xb95f6 - <unknown>!rust_panic
+  2: 0xb8f72 - <unknown>!std::panicking::rust_panic_with_hook::h8ad053d77cc20a20
+  3: 0xb7c5e - <unknown>!std::panicking::begin_panic_handler::{{closure}}::h60b24b441bb27bdd
+  4: 0xb7bd3 - <unknown>!std::sys_common::backtrace::__rust_end_short_backtrace::h537cc37d8501ac0d
+  5: 0xb8c48 - <unknown>!rust_begin_unwind
+  6: 0xc9aaf - <unknown>!core::panicking::panic_fmt::ha4cbfe39ae9ea3c9
+  7: 0xcc905 - <unknown>!core::option::expect_none_failed::h152d592dba3b4951
+  8: 0x2c0a - <unknown>!wasi_example::main::h49084332f58e06a2
+  9: 0x4281 - <unknown>!std::sys_common::backtrace::__rust_begin_short_backtrace::hb8f28bbacdb7af14
+  10: 0x42f9 - <unknown>!std::rt::lang_start::{{closure}}::hb9e36748cbcd9577
+  11: 0xb97db - <unknown>!std::rt::lang_start_internal::hd68a6a98c158ed91
+  12: 0x2d10 - <unknown>!__original_main
+  13:  0x9cb - <unknown>!_start
+
+programs/b61f2422b9f7d490add208cfd8a53b7932f12140a5da01270e56c90b3f378996-wasm/findings/crashes/id:000016,sig:00,src:000000,op:havoc,rep:16: wasm trap: unreachable
+wasm backtrace:
+  0: 0xb9ef9 - <unknown>!__rust_start_panic
+  1: 0xb95f6 - <unknown>!rust_panic
+  2: 0xb8f72 - <unknown>!std::panicking::rust_panic_with_hook::h8ad053d77cc20a20
+  3: 0xb7c5e - <unknown>!std::panicking::begin_panic_handler::{{closure}}::h60b24b441bb27bdd
+  4: 0xb7bd3 - <unknown>!std::sys_common::backtrace::__rust_end_short_backtrace::h537cc37d8501ac0d
+  5: 0xb8c48 - <unknown>!rust_begin_unwind
+  6: 0xc9aaf - <unknown>!core::panicking::panic_fmt::ha4cbfe39ae9ea3c9
+  7: 0xcc905 - <unknown>!core::option::expect_none_failed::h152d592dba3b4951
+  8: 0x2c0a - <unknown>!wasi_example::main::h49084332f58e06a2
+  9: 0x4281 - <unknown>!std::sys_common::backtrace::__rust_begin_short_backtrace::hb8f28bbacdb7af14
+  10: 0x42f9 - <unknown>!std::rt::lang_start::{{closure}}::hb9e36748cbcd9577
+  11: 0xb97db - <unknown>!std::rt::lang_start_internal::hd68a6a98c158ed91
+  12: 0x2d10 - <unknown>!__original_main
+  13:  0x9cb - <unknown>!_start
+
+programs/b61f2422b9f7d490add208cfd8a53b7932f12140a5da01270e56c90b3f378996-wasm/findings/crashes/id:000017,sig:00,src:000000,op:havoc,rep:64: wasm trap: unreachable
+wasm backtrace:
+  0: 0xb9ef9 - <unknown>!__rust_start_panic
+  1: 0xb95f6 - <unknown>!rust_panic
+  2: 0xb8f72 - <unknown>!std::panicking::rust_panic_with_hook::h8ad053d77cc20a20
+  3: 0xb7c5e - <unknown>!std::panicking::begin_panic_handler::{{closure}}::h60b24b441bb27bdd
+  4: 0xb7bd3 - <unknown>!std::sys_common::backtrace::__rust_end_short_backtrace::h537cc37d8501ac0d
+  5: 0xb8c48 - <unknown>!rust_begin_unwind
+  6: 0xc9aaf - <unknown>!core::panicking::panic_fmt::ha4cbfe39ae9ea3c9
+  7: 0xcc905 - <unknown>!core::option::expect_none_failed::h152d592dba3b4951
+  8: 0x2c0a - <unknown>!wasi_example::main::h49084332f58e06a2
+  9: 0x4281 - <unknown>!std::sys_common::backtrace::__rust_begin_short_backtrace::hb8f28bbacdb7af14
+  10: 0x42f9 - <unknown>!std::rt::lang_start::{{closure}}::hb9e36748cbcd9577
+  11: 0xb97db - <unknown>!std::rt::lang_start_internal::hd68a6a98c158ed91
+  12: 0x2d10 - <unknown>!__original_main
+  13:  0x9cb - <unknown>!_start
+
+programs/b61f2422b9f7d490add208cfd8a53b7932f12140a5da01270e56c90b3f378996-wasm/findings/crashes/id:000018,sig:00,src:000000,op:havoc,rep:128: wasm trap: unreachable
+wasm backtrace:
+  0: 0xb9ef9 - <unknown>!__rust_start_panic
+  1: 0xb95f6 - <unknown>!rust_panic
+  2: 0xb8f72 - <unknown>!std::panicking::rust_panic_with_hook::h8ad053d77cc20a20
+  3: 0xb7c5e - <unknown>!std::panicking::begin_panic_handler::{{closure}}::h60b24b441bb27bdd
+  4: 0xb7bd3 - <unknown>!std::sys_common::backtrace::__rust_end_short_backtrace::h537cc37d8501ac0d
+  5: 0xb8c48 - <unknown>!rust_begin_unwind
+  6: 0xc9aaf - <unknown>!core::panicking::panic_fmt::ha4cbfe39ae9ea3c9
+  7: 0xcc905 - <unknown>!core::option::expect_none_failed::h152d592dba3b4951
+  8: 0x2c0a - <unknown>!wasi_example::main::h49084332f58e06a2
+  9: 0x4281 - <unknown>!std::sys_common::backtrace::__rust_begin_short_backtrace::hb8f28bbacdb7af14
+  10: 0x42f9 - <unknown>!std::rt::lang_start::{{closure}}::hb9e36748cbcd9577
+  11: 0xb97db - <unknown>!std::rt::lang_start_internal::hd68a6a98c158ed91
+  12: 0x2d10 - <unknown>!__original_main
+  13:  0x9cb - <unknown>!_start
+
+programs/b61f2422b9f7d490add208cfd8a53b7932f12140a5da01270e56c90b3f378996-wasm/findings/crashes/id:000019,sig:00,src:000000,op:havoc,rep:128: wasm trap: unreachable
+wasm backtrace:
+  0: 0xb9ef9 - <unknown>!__rust_start_panic
+  1: 0xb95f6 - <unknown>!rust_panic
+  2: 0xb8f72 - <unknown>!std::panicking::rust_panic_with_hook::h8ad053d77cc20a20
+  3: 0xb7c5e - <unknown>!std::panicking::begin_panic_handler::{{closure}}::h60b24b441bb27bdd
+  4: 0xb7bd3 - <unknown>!std::sys_common::backtrace::__rust_end_short_backtrace::h537cc37d8501ac0d
+  5: 0xb8c48 - <unknown>!rust_begin_unwind
+  6: 0xc9aaf - <unknown>!core::panicking::panic_fmt::ha4cbfe39ae9ea3c9
+  7: 0xcc905 - <unknown>!core::option::expect_none_failed::h152d592dba3b4951
+  8: 0x2c0a - <unknown>!wasi_example::main::h49084332f58e06a2
+  9: 0x4281 - <unknown>!std::sys_common::backtrace::__rust_begin_short_backtrace::hb8f28bbacdb7af14
+  10: 0x42f9 - <unknown>!std::rt::lang_start::{{closure}}::hb9e36748cbcd9577
+  11: 0xb97db - <unknown>!std::rt::lang_start_internal::hd68a6a98c158ed91
+  12: 0x2d10 - <unknown>!__original_main
+  13:  0x9cb - <unknown>!_start
+
+programs/b61f2422b9f7d490add208cfd8a53b7932f12140a5da01270e56c90b3f378996-wasm/findings/crashes/id:000020,sig:00,src:000000,op:havoc,rep:128: wasm trap: unreachable
+wasm backtrace:
+  0: 0xb9ef9 - <unknown>!__rust_start_panic
+  1: 0xb95f6 - <unknown>!rust_panic
+  2: 0xb8f72 - <unknown>!std::panicking::rust_panic_with_hook::h8ad053d77cc20a20
+  3: 0xb7c5e - <unknown>!std::panicking::begin_panic_handler::{{closure}}::h60b24b441bb27bdd
+  4: 0xb7bd3 - <unknown>!std::sys_common::backtrace::__rust_end_short_backtrace::h537cc37d8501ac0d
+  5: 0xb8c48 - <unknown>!rust_begin_unwind
+  6: 0xc9aaf - <unknown>!core::panicking::panic_fmt::ha4cbfe39ae9ea3c9
+  7: 0xcc905 - <unknown>!core::option::expect_none_failed::h152d592dba3b4951
+  8: 0x2c0a - <unknown>!wasi_example::main::h49084332f58e06a2
+  9: 0x4281 - <unknown>!std::sys_common::backtrace::__rust_begin_short_backtrace::hb8f28bbacdb7af14
+  10: 0x42f9 - <unknown>!std::rt::lang_start::{{closure}}::hb9e36748cbcd9577
+  11: 0xb97db - <unknown>!std::rt::lang_start_internal::hd68a6a98c158ed91
+  12: 0x2d10 - <unknown>!__original_main
+  13:  0x9cb - <unknown>!_start
+
+programs/b61f2422b9f7d490add208cfd8a53b7932f12140a5da01270e56c90b3f378996-wasm/findings/crashes/id:000021,sig:00,src:000000,op:havoc,rep:128: wasm trap: unreachable
+wasm backtrace:
+  0: 0xb9ef9 - <unknown>!__rust_start_panic
+  1: 0xb95f6 - <unknown>!rust_panic
+  2: 0xb8f72 - <unknown>!std::panicking::rust_panic_with_hook::h8ad053d77cc20a20
+  3: 0xb7c5e - <unknown>!std::panicking::begin_panic_handler::{{closure}}::h60b24b441bb27bdd
+  4: 0xb7bd3 - <unknown>!std::sys_common::backtrace::__rust_end_short_backtrace::h537cc37d8501ac0d
+  5: 0xb8c48 - <unknown>!rust_begin_unwind
+  6: 0xc9aaf - <unknown>!core::panicking::panic_fmt::ha4cbfe39ae9ea3c9
+  7: 0xcc905 - <unknown>!core::option::expect_none_failed::h152d592dba3b4951
+  8: 0x2c0a - <unknown>!wasi_example::main::h49084332f58e06a2
+  9: 0x4281 - <unknown>!std::sys_common::backtrace::__rust_begin_short_backtrace::hb8f28bbacdb7af14
+  10: 0x42f9 - <unknown>!std::rt::lang_start::{{closure}}::hb9e36748cbcd9577
+  11: 0xb97db - <unknown>!std::rt::lang_start_internal::hd68a6a98c158ed91
+  12: 0x2d10 - <unknown>!__original_main
+  13:  0x9cb - <unknown>!_start
+
+programs/b61f2422b9f7d490add208cfd8a53b7932f12140a5da01270e56c90b3f378996-wasm/findings/crashes/id:000022,sig:00,src:000000,op:havoc,rep:64: wasm trap: unreachable
+wasm backtrace:
+  0: 0xb9ef9 - <unknown>!__rust_start_panic
+  1: 0xb95f6 - <unknown>!rust_panic
+  2: 0xb8f72 - <unknown>!std::panicking::rust_panic_with_hook::h8ad053d77cc20a20
+  3: 0xb7c5e - <unknown>!std::panicking::begin_panic_handler::{{closure}}::h60b24b441bb27bdd
+  4: 0xb7bd3 - <unknown>!std::sys_common::backtrace::__rust_end_short_backtrace::h537cc37d8501ac0d
+  5: 0xb8c48 - <unknown>!rust_begin_unwind
+  6: 0xc9aaf - <unknown>!core::panicking::panic_fmt::ha4cbfe39ae9ea3c9
+  7: 0xcc905 - <unknown>!core::option::expect_none_failed::h152d592dba3b4951
+  8: 0x2c0a - <unknown>!wasi_example::main::h49084332f58e06a2
+  9: 0x4281 - <unknown>!std::sys_common::backtrace::__rust_begin_short_backtrace::hb8f28bbacdb7af14
+  10: 0x42f9 - <unknown>!std::rt::lang_start::{{closure}}::hb9e36748cbcd9577
+  11: 0xb97db - <unknown>!std::rt::lang_start_internal::hd68a6a98c158ed91
+  12: 0x2d10 - <unknown>!__original_main
+  13:  0x9cb - <unknown>!_start
+
+programs/b61f2422b9f7d490add208cfd8a53b7932f12140a5da01270e56c90b3f378996-wasm/findings/crashes/id:000023,sig:00,src:000000,op:havoc,rep:16: wasm trap: unreachable
+wasm backtrace:
+  0: 0xb9ef9 - <unknown>!__rust_start_panic
+  1: 0xb95f6 - <unknown>!rust_panic
+  2: 0xb8f72 - <unknown>!std::panicking::rust_panic_with_hook::h8ad053d77cc20a20
+  3: 0xb7c5e - <unknown>!std::panicking::begin_panic_handler::{{closure}}::h60b24b441bb27bdd
+  4: 0xb7bd3 - <unknown>!std::sys_common::backtrace::__rust_end_short_backtrace::h537cc37d8501ac0d
+  5: 0xb8c48 - <unknown>!rust_begin_unwind
+  6: 0xc9aaf - <unknown>!core::panicking::panic_fmt::ha4cbfe39ae9ea3c9
+  7: 0xcc905 - <unknown>!core::option::expect_none_failed::h152d592dba3b4951
+  8: 0x2c0a - <unknown>!wasi_example::main::h49084332f58e06a2
+  9: 0x4281 - <unknown>!std::sys_common::backtrace::__rust_begin_short_backtrace::hb8f28bbacdb7af14
+  10: 0x42f9 - <unknown>!std::rt::lang_start::{{closure}}::hb9e36748cbcd9577
+  11: 0xb97db - <unknown>!std::rt::lang_start_internal::hd68a6a98c158ed91
+  12: 0x2d10 - <unknown>!__original_main
+  13:  0x9cb - <unknown>!_start
+
+programs/b61f2422b9f7d490add208cfd8a53b7932f12140a5da01270e56c90b3f378996-wasm/findings/crashes/id:000024,sig:00,src:000000,op:havoc,rep:16: wasm trap: unreachable
+wasm backtrace:
+  0: 0xb9ef9 - <unknown>!__rust_start_panic
+  1: 0xb95f6 - <unknown>!rust_panic
+  2: 0xb8f72 - <unknown>!std::panicking::rust_panic_with_hook::h8ad053d77cc20a20
+  3: 0xb7c5e - <unknown>!std::panicking::begin_panic_handler::{{closure}}::h60b24b441bb27bdd
+  4: 0xb7bd3 - <unknown>!std::sys_common::backtrace::__rust_end_short_backtrace::h537cc37d8501ac0d
+  5: 0xb8c48 - <unknown>!rust_begin_unwind
+  6: 0xc9aaf - <unknown>!core::panicking::panic_fmt::ha4cbfe39ae9ea3c9
+  7: 0xcc905 - <unknown>!core::option::expect_none_failed::h152d592dba3b4951
+  8: 0x2c0a - <unknown>!wasi_example::main::h49084332f58e06a2
+  9: 0x4281 - <unknown>!std::sys_common::backtrace::__rust_begin_short_backtrace::hb8f28bbacdb7af14
+  10: 0x42f9 - <unknown>!std::rt::lang_start::{{closure}}::hb9e36748cbcd9577
+  11: 0xb97db - <unknown>!std::rt::lang_start_internal::hd68a6a98c158ed91
+  12: 0x2d10 - <unknown>!__original_main
+  13:  0x9cb - <unknown>!_start
+
+programs/b61f2422b9f7d490add208cfd8a53b7932f12140a5da01270e56c90b3f378996-wasm/findings/crashes/id:000025,sig:00,src:000000,op:havoc,rep:2: wasm trap: unreachable
+wasm backtrace:
+  0: 0xb9ef9 - <unknown>!__rust_start_panic
+  1: 0xb95f6 - <unknown>!rust_panic
+  2: 0xb8f72 - <unknown>!std::panicking::rust_panic_with_hook::h8ad053d77cc20a20
+  3: 0xb7c5e - <unknown>!std::panicking::begin_panic_handler::{{closure}}::h60b24b441bb27bdd
+  4: 0xb7bd3 - <unknown>!std::sys_common::backtrace::__rust_end_short_backtrace::h537cc37d8501ac0d
+  5: 0xb8c48 - <unknown>!rust_begin_unwind
+  6: 0xc9aaf - <unknown>!core::panicking::panic_fmt::ha4cbfe39ae9ea3c9
+  7: 0xcc905 - <unknown>!core::option::expect_none_failed::h152d592dba3b4951
+  8: 0x2c0a - <unknown>!wasi_example::main::h49084332f58e06a2
+  9: 0x4281 - <unknown>!std::sys_common::backtrace::__rust_begin_short_backtrace::hb8f28bbacdb7af14
+  10: 0x42f9 - <unknown>!std::rt::lang_start::{{closure}}::hb9e36748cbcd9577
+  11: 0xb97db - <unknown>!std::rt::lang_start_internal::hd68a6a98c158ed91
+  12: 0x2d10 - <unknown>!__original_main
+  13:  0x9cb - <unknown>!_start
+
+programs/b61f2422b9f7d490add208cfd8a53b7932f12140a5da01270e56c90b3f378996-wasm/findings/crashes/id:000026,sig:00,src:000000,op:havoc,rep:128: wasm trap: unreachable
+wasm backtrace:
+  0: 0xb9ef9 - <unknown>!__rust_start_panic
+  1: 0xb95f6 - <unknown>!rust_panic
+  2: 0xb8f72 - <unknown>!std::panicking::rust_panic_with_hook::h8ad053d77cc20a20
+  3: 0xb7c5e - <unknown>!std::panicking::begin_panic_handler::{{closure}}::h60b24b441bb27bdd
+  4: 0xb7bd3 - <unknown>!std::sys_common::backtrace::__rust_end_short_backtrace::h537cc37d8501ac0d
+  5: 0xb8c48 - <unknown>!rust_begin_unwind
+  6: 0xc9aaf - <unknown>!core::panicking::panic_fmt::ha4cbfe39ae9ea3c9
+  7: 0xcc905 - <unknown>!core::option::expect_none_failed::h152d592dba3b4951
+  8: 0x2c0a - <unknown>!wasi_example::main::h49084332f58e06a2
+  9: 0x4281 - <unknown>!std::sys_common::backtrace::__rust_begin_short_backtrace::hb8f28bbacdb7af14
+  10: 0x42f9 - <unknown>!std::rt::lang_start::{{closure}}::hb9e36748cbcd9577
+  11: 0xb97db - <unknown>!std::rt::lang_start_internal::hd68a6a98c158ed91
+  12: 0x2d10 - <unknown>!__original_main
+  13:  0x9cb - <unknown>!_start
+
+programs/b61f2422b9f7d490add208cfd8a53b7932f12140a5da01270e56c90b3f378996-wasm/findings/crashes/id:000027,sig:00,src:000000,op:havoc,rep:2: wasm trap: unreachable
+wasm backtrace:
+  0: 0xb9ef9 - <unknown>!__rust_start_panic
+  1: 0xb95f6 - <unknown>!rust_panic
+  2: 0xb8f72 - <unknown>!std::panicking::rust_panic_with_hook::h8ad053d77cc20a20
+  3: 0xb7c5e - <unknown>!std::panicking::begin_panic_handler::{{closure}}::h60b24b441bb27bdd
+  4: 0xb7bd3 - <unknown>!std::sys_common::backtrace::__rust_end_short_backtrace::h537cc37d8501ac0d
+  5: 0xb8c48 - <unknown>!rust_begin_unwind
+  6: 0xc9aaf - <unknown>!core::panicking::panic_fmt::ha4cbfe39ae9ea3c9
+  7: 0xcc905 - <unknown>!core::option::expect_none_failed::h152d592dba3b4951
+  8: 0x2c0a - <unknown>!wasi_example::main::h49084332f58e06a2
+  9: 0x4281 - <unknown>!std::sys_common::backtrace::__rust_begin_short_backtrace::hb8f28bbacdb7af14
+  10: 0x42f9 - <unknown>!std::rt::lang_start::{{closure}}::hb9e36748cbcd9577
+  11: 0xb97db - <unknown>!std::rt::lang_start_internal::hd68a6a98c158ed91
+  12: 0x2d10 - <unknown>!__original_main
+  13:  0x9cb - <unknown>!_start
+
+programs/b61f2422b9f7d490add208cfd8a53b7932f12140a5da01270e56c90b3f378996-wasm/findings/crashes/id:000028,sig:00,src:000000,op:havoc,rep:32: wasm trap: unreachable
+wasm backtrace:
+  0: 0xb9ef9 - <unknown>!__rust_start_panic
+  1: 0xb95f6 - <unknown>!rust_panic
+  2: 0xb8f72 - <unknown>!std::panicking::rust_panic_with_hook::h8ad053d77cc20a20
+  3: 0xb7c5e - <unknown>!std::panicking::begin_panic_handler::{{closure}}::h60b24b441bb27bdd
+  4: 0xb7bd3 - <unknown>!std::sys_common::backtrace::__rust_end_short_backtrace::h537cc37d8501ac0d
+  5: 0xb8c48 - <unknown>!rust_begin_unwind
+  6: 0xc9aaf - <unknown>!core::panicking::panic_fmt::ha4cbfe39ae9ea3c9
+  7: 0xcc905 - <unknown>!core::option::expect_none_failed::h152d592dba3b4951
+  8: 0x2c0a - <unknown>!wasi_example::main::h49084332f58e06a2
+  9: 0x4281 - <unknown>!std::sys_common::backtrace::__rust_begin_short_backtrace::hb8f28bbacdb7af14
+  10: 0x42f9 - <unknown>!std::rt::lang_start::{{closure}}::hb9e36748cbcd9577
+  11: 0xb97db - <unknown>!std::rt::lang_start_internal::hd68a6a98c158ed91
+  12: 0x2d10 - <unknown>!__original_main
+  13:  0x9cb - <unknown>!_start
+
+programs/b61f2422b9f7d490add208cfd8a53b7932f12140a5da01270e56c90b3f378996-wasm/findings/crashes/id:000029,sig:00,src:000000,op:havoc,rep:16: wasm trap: unreachable
+wasm backtrace:
+  0: 0xb9ef9 - <unknown>!__rust_start_panic
+  1: 0xb95f6 - <unknown>!rust_panic
+  2: 0xb8f72 - <unknown>!std::panicking::rust_panic_with_hook::h8ad053d77cc20a20
+  3: 0xb7c5e - <unknown>!std::panicking::begin_panic_handler::{{closure}}::h60b24b441bb27bdd
+  4: 0xb7bd3 - <unknown>!std::sys_common::backtrace::__rust_end_short_backtrace::h537cc37d8501ac0d
+  5: 0xb8c48 - <unknown>!rust_begin_unwind
+  6: 0xc9aaf - <unknown>!core::panicking::panic_fmt::ha4cbfe39ae9ea3c9
+  7: 0xcc905 - <unknown>!core::option::expect_none_failed::h152d592dba3b4951
+  8: 0x2c0a - <unknown>!wasi_example::main::h49084332f58e06a2
+  9: 0x4281 - <unknown>!std::sys_common::backtrace::__rust_begin_short_backtrace::hb8f28bbacdb7af14
+  10: 0x42f9 - <unknown>!std::rt::lang_start::{{closure}}::hb9e36748cbcd9577
+  11: 0xb97db - <unknown>!std::rt::lang_start_internal::hd68a6a98c158ed91
+  12: 0x2d10 - <unknown>!__original_main
+  13:  0x9cb - <unknown>!_start
+
+programs/b61f2422b9f7d490add208cfd8a53b7932f12140a5da01270e56c90b3f378996-wasm/findings/crashes/id:000030,sig:00,src:000000,op:havoc,rep:32: wasm trap: unreachable
+wasm backtrace:
+  0: 0xb9ef9 - <unknown>!__rust_start_panic
+  1: 0xb95f6 - <unknown>!rust_panic
+  2: 0xb8f72 - <unknown>!std::panicking::rust_panic_with_hook::h8ad053d77cc20a20
+  3: 0xb7c5e - <unknown>!std::panicking::begin_panic_handler::{{closure}}::h60b24b441bb27bdd
+  4: 0xb7bd3 - <unknown>!std::sys_common::backtrace::__rust_end_short_backtrace::h537cc37d8501ac0d
+  5: 0xb8c48 - <unknown>!rust_begin_unwind
+  6: 0xc9aaf - <unknown>!core::panicking::panic_fmt::ha4cbfe39ae9ea3c9
+  7: 0xcc905 - <unknown>!core::option::expect_none_failed::h152d592dba3b4951
+  8: 0x2c0a - <unknown>!wasi_example::main::h49084332f58e06a2
+  9: 0x4281 - <unknown>!std::sys_common::backtrace::__rust_begin_short_backtrace::hb8f28bbacdb7af14
+  10: 0x42f9 - <unknown>!std::rt::lang_start::{{closure}}::hb9e36748cbcd9577
+  11: 0xb97db - <unknown>!std::rt::lang_start_internal::hd68a6a98c158ed91
+  12: 0x2d10 - <unknown>!__original_main
+  13:  0x9cb - <unknown>!_start
+
+programs/b61f2422b9f7d490add208cfd8a53b7932f12140a5da01270e56c90b3f378996-wasm/findings/crashes/id:000031,sig:00,src:000000,op:havoc,rep:64: wasm trap: unreachable
+wasm backtrace:
+  0: 0xb9ef9 - <unknown>!__rust_start_panic
+  1: 0xb95f6 - <unknown>!rust_panic
+  2: 0xb8f72 - <unknown>!std::panicking::rust_panic_with_hook::h8ad053d77cc20a20
+  3: 0xb7c5e - <unknown>!std::panicking::begin_panic_handler::{{closure}}::h60b24b441bb27bdd
+  4: 0xb7bd3 - <unknown>!std::sys_common::backtrace::__rust_end_short_backtrace::h537cc37d8501ac0d
+  5: 0xb8c48 - <unknown>!rust_begin_unwind
+  6: 0xc9aaf - <unknown>!core::panicking::panic_fmt::ha4cbfe39ae9ea3c9
+  7: 0xcc905 - <unknown>!core::option::expect_none_failed::h152d592dba3b4951
+  8: 0x2c0a - <unknown>!wasi_example::main::h49084332f58e06a2
+  9: 0x4281 - <unknown>!std::sys_common::backtrace::__rust_begin_short_backtrace::hb8f28bbacdb7af14
+  10: 0x42f9 - <unknown>!std::rt::lang_start::{{closure}}::hb9e36748cbcd9577
+  11: 0xb97db - <unknown>!std::rt::lang_start_internal::hd68a6a98c158ed91
+  12: 0x2d10 - <unknown>!__original_main
+  13:  0x9cb - <unknown>!_start
+
+programs/b61f2422b9f7d490add208cfd8a53b7932f12140a5da01270e56c90b3f378996-wasm/findings/crashes/id:000032,sig:00,src:000000,op:havoc,rep:128: wasm trap: unreachable
+wasm backtrace:
+  0: 0xb9ef9 - <unknown>!__rust_start_panic
+  1: 0xb95f6 - <unknown>!rust_panic
+  2: 0xb8f72 - <unknown>!std::panicking::rust_panic_with_hook::h8ad053d77cc20a20
+  3: 0xb7c5e - <unknown>!std::panicking::begin_panic_handler::{{closure}}::h60b24b441bb27bdd
+  4: 0xb7bd3 - <unknown>!std::sys_common::backtrace::__rust_end_short_backtrace::h537cc37d8501ac0d
+  5: 0xb8c48 - <unknown>!rust_begin_unwind
+  6: 0xc9aaf - <unknown>!core::panicking::panic_fmt::ha4cbfe39ae9ea3c9
+  7: 0xcc905 - <unknown>!core::option::expect_none_failed::h152d592dba3b4951
+  8: 0x2c0a - <unknown>!wasi_example::main::h49084332f58e06a2
+  9: 0x4281 - <unknown>!std::sys_common::backtrace::__rust_begin_short_backtrace::hb8f28bbacdb7af14
+  10: 0x42f9 - <unknown>!std::rt::lang_start::{{closure}}::hb9e36748cbcd9577
+  11: 0xb97db - <unknown>!std::rt::lang_start_internal::hd68a6a98c158ed91
+  12: 0x2d10 - <unknown>!__original_main
+  13:  0x9cb - <unknown>!_start
+
+programs/b61f2422b9f7d490add208cfd8a53b7932f12140a5da01270e56c90b3f378996-wasm/findings/crashes/id:000033,sig:00,src:000000,op:havoc,rep:128: wasm trap: unreachable
+wasm backtrace:
+  0: 0xb9ef9 - <unknown>!__rust_start_panic
+  1: 0xb95f6 - <unknown>!rust_panic
+  2: 0xb8f72 - <unknown>!std::panicking::rust_panic_with_hook::h8ad053d77cc20a20
+  3: 0xb7c5e - <unknown>!std::panicking::begin_panic_handler::{{closure}}::h60b24b441bb27bdd
+  4: 0xb7bd3 - <unknown>!std::sys_common::backtrace::__rust_end_short_backtrace::h537cc37d8501ac0d
+  5: 0xb8c48 - <unknown>!rust_begin_unwind
+  6: 0xc9aaf - <unknown>!core::panicking::panic_fmt::ha4cbfe39ae9ea3c9
+  7: 0xcc905 - <unknown>!core::option::expect_none_failed::h152d592dba3b4951
+  8: 0x2c0a - <unknown>!wasi_example::main::h49084332f58e06a2
+  9: 0x4281 - <unknown>!std::sys_common::backtrace::__rust_begin_short_backtrace::hb8f28bbacdb7af14
+  10: 0x42f9 - <unknown>!std::rt::lang_start::{{closure}}::hb9e36748cbcd9577
+  11: 0xb97db - <unknown>!std::rt::lang_start_internal::hd68a6a98c158ed91
+  12: 0x2d10 - <unknown>!__original_main
+  13:  0x9cb - <unknown>!_start
+
+programs/b61f2422b9f7d490add208cfd8a53b7932f12140a5da01270e56c90b3f378996-wasm/findings/crashes/id:000034,sig:00,src:000000,op:havoc,rep:128: wasm trap: unreachable
+wasm backtrace:
+  0: 0xb9ef9 - <unknown>!__rust_start_panic
+  1: 0xb95f6 - <unknown>!rust_panic
+  2: 0xb8f72 - <unknown>!std::panicking::rust_panic_with_hook::h8ad053d77cc20a20
+  3: 0xb7c5e - <unknown>!std::panicking::begin_panic_handler::{{closure}}::h60b24b441bb27bdd
+  4: 0xb7bd3 - <unknown>!std::sys_common::backtrace::__rust_end_short_backtrace::h537cc37d8501ac0d
+  5: 0xb8c48 - <unknown>!rust_begin_unwind
+  6: 0xc9aaf - <unknown>!core::panicking::panic_fmt::ha4cbfe39ae9ea3c9
+  7: 0xcc905 - <unknown>!core::option::expect_none_failed::h152d592dba3b4951
+  8: 0x2c0a - <unknown>!wasi_example::main::h49084332f58e06a2
+  9: 0x4281 - <unknown>!std::sys_common::backtrace::__rust_begin_short_backtrace::hb8f28bbacdb7af14
+  10: 0x42f9 - <unknown>!std::rt::lang_start::{{closure}}::hb9e36748cbcd9577
+  11: 0xb97db - <unknown>!std::rt::lang_start_internal::hd68a6a98c158ed91
+  12: 0x2d10 - <unknown>!__original_main
+  13:  0x9cb - <unknown>!_start
+
+programs/b61f2422b9f7d490add208cfd8a53b7932f12140a5da01270e56c90b3f378996-wasm/findings/crashes/id:000035,sig:00,src:000000,op:havoc,rep:128: wasm trap: unreachable
+wasm backtrace:
+  0: 0xb9ef9 - <unknown>!__rust_start_panic
+  1: 0xb95f6 - <unknown>!rust_panic
+  2: 0xb8f72 - <unknown>!std::panicking::rust_panic_with_hook::h8ad053d77cc20a20
+  3: 0xb7c5e - <unknown>!std::panicking::begin_panic_handler::{{closure}}::h60b24b441bb27bdd
+  4: 0xb7bd3 - <unknown>!std::sys_common::backtrace::__rust_end_short_backtrace::h537cc37d8501ac0d
+  5: 0xb8c48 - <unknown>!rust_begin_unwind
+  6: 0xc9aaf - <unknown>!core::panicking::panic_fmt::ha4cbfe39ae9ea3c9
+  7: 0xcc905 - <unknown>!core::option::expect_none_failed::h152d592dba3b4951
+  8: 0x2c0a - <unknown>!wasi_example::main::h49084332f58e06a2
+  9: 0x4281 - <unknown>!std::sys_common::backtrace::__rust_begin_short_backtrace::hb8f28bbacdb7af14
+  10: 0x42f9 - <unknown>!std::rt::lang_start::{{closure}}::hb9e36748cbcd9577
+  11: 0xb97db - <unknown>!std::rt::lang_start_internal::hd68a6a98c158ed91
+  12: 0x2d10 - <unknown>!__original_main
+  13:  0x9cb - <unknown>!_start
+
+programs/b61f2422b9f7d490add208cfd8a53b7932f12140a5da01270e56c90b3f378996-wasm/findings/crashes/id:000036,sig:00,src:000018,op:havoc,rep:32: wasm trap: unreachable
+wasm backtrace:
+  0: 0xb9ef9 - <unknown>!__rust_start_panic
+  1: 0xb95f6 - <unknown>!rust_panic
+  2: 0xb8f72 - <unknown>!std::panicking::rust_panic_with_hook::h8ad053d77cc20a20
+  3: 0xb7c5e - <unknown>!std::panicking::begin_panic_handler::{{closure}}::h60b24b441bb27bdd
+  4: 0xb7bd3 - <unknown>!std::sys_common::backtrace::__rust_end_short_backtrace::h537cc37d8501ac0d
+  5: 0xb8c48 - <unknown>!rust_begin_unwind
+  6: 0xc9aaf - <unknown>!core::panicking::panic_fmt::ha4cbfe39ae9ea3c9
+  7: 0xcc905 - <unknown>!core::option::expect_none_failed::h152d592dba3b4951
+  8: 0x2c0a - <unknown>!wasi_example::main::h49084332f58e06a2
+  9: 0x4281 - <unknown>!std::sys_common::backtrace::__rust_begin_short_backtrace::hb8f28bbacdb7af14
+  10: 0x42f9 - <unknown>!std::rt::lang_start::{{closure}}::hb9e36748cbcd9577
+  11: 0xb97db - <unknown>!std::rt::lang_start_internal::hd68a6a98c158ed91
+  12: 0x2d10 - <unknown>!__original_main
+  13:  0x9cb - <unknown>!_start
+
+programs/b61f2422b9f7d490add208cfd8a53b7932f12140a5da01270e56c90b3f378996-wasm/findings/crashes/id:000037,sig:00,src:000031,op:havoc,rep:64: wasm trap: unreachable
+wasm backtrace:
+  0: 0xb9ef9 - <unknown>!__rust_start_panic
+  1: 0xb95f6 - <unknown>!rust_panic
+  2: 0xb8f72 - <unknown>!std::panicking::rust_panic_with_hook::h8ad053d77cc20a20
+  3: 0xb7c5e - <unknown>!std::panicking::begin_panic_handler::{{closure}}::h60b24b441bb27bdd
+  4: 0xb7bd3 - <unknown>!std::sys_common::backtrace::__rust_end_short_backtrace::h537cc37d8501ac0d
+  5: 0xb8c48 - <unknown>!rust_begin_unwind
+  6: 0xc9aaf - <unknown>!core::panicking::panic_fmt::ha4cbfe39ae9ea3c9
+  7: 0xcc905 - <unknown>!core::option::expect_none_failed::h152d592dba3b4951
+  8: 0x2c0a - <unknown>!wasi_example::main::h49084332f58e06a2
+  9: 0x4281 - <unknown>!std::sys_common::backtrace::__rust_begin_short_backtrace::hb8f28bbacdb7af14
+  10: 0x42f9 - <unknown>!std::rt::lang_start::{{closure}}::hb9e36748cbcd9577
+  11: 0xb97db - <unknown>!std::rt::lang_start_internal::hd68a6a98c158ed91
+  12: 0x2d10 - <unknown>!__original_main
+  13:  0x9cb - <unknown>!_start
+
+programs/b61f2422b9f7d490add208cfd8a53b7932f12140a5da01270e56c90b3f378996-wasm/findings/crashes/id:000038,sig:00,src:000003,op:havoc,rep:128: wasm trap: unreachable
+wasm backtrace:
+  0: 0xb9ef9 - <unknown>!__rust_start_panic
+  1: 0xb95f6 - <unknown>!rust_panic
+  2: 0xb8f72 - <unknown>!std::panicking::rust_panic_with_hook::h8ad053d77cc20a20
+  3: 0xb7c5e - <unknown>!std::panicking::begin_panic_handler::{{closure}}::h60b24b441bb27bdd
+  4: 0xb7bd3 - <unknown>!std::sys_common::backtrace::__rust_end_short_backtrace::h537cc37d8501ac0d
+  5: 0xb8c48 - <unknown>!rust_begin_unwind
+  6: 0xc9aaf - <unknown>!core::panicking::panic_fmt::ha4cbfe39ae9ea3c9
+  7: 0xcc905 - <unknown>!core::option::expect_none_failed::h152d592dba3b4951
+  8: 0x2c0a - <unknown>!wasi_example::main::h49084332f58e06a2
+  9: 0x4281 - <unknown>!std::sys_common::backtrace::__rust_begin_short_backtrace::hb8f28bbacdb7af14
+  10: 0x42f9 - <unknown>!std::rt::lang_start::{{closure}}::hb9e36748cbcd9577
+  11: 0xb97db - <unknown>!std::rt::lang_start_internal::hd68a6a98c158ed91
+  12: 0x2d10 - <unknown>!__original_main
+  13:  0x9cb - <unknown>!_start
+
+programs/b61f2422b9f7d490add208cfd8a53b7932f12140a5da01270e56c90b3f378996-wasm/findings/crashes/id:000039,sig:00,src:000003,op:havoc,rep:16: wasm trap: unreachable
+wasm backtrace:
+  0: 0xb9ef9 - <unknown>!__rust_start_panic
+  1: 0xb95f6 - <unknown>!rust_panic
+  2: 0xb8f72 - <unknown>!std::panicking::rust_panic_with_hook::h8ad053d77cc20a20
+  3: 0xb7c5e - <unknown>!std::panicking::begin_panic_handler::{{closure}}::h60b24b441bb27bdd
+  4: 0xb7bd3 - <unknown>!std::sys_common::backtrace::__rust_end_short_backtrace::h537cc37d8501ac0d
+  5: 0xb8c48 - <unknown>!rust_begin_unwind
+  6: 0xc9aaf - <unknown>!core::panicking::panic_fmt::ha4cbfe39ae9ea3c9
+  7: 0xcc905 - <unknown>!core::option::expect_none_failed::h152d592dba3b4951
+  8: 0x2c0a - <unknown>!wasi_example::main::h49084332f58e06a2
+  9: 0x4281 - <unknown>!std::sys_common::backtrace::__rust_begin_short_backtrace::hb8f28bbacdb7af14
+  10: 0x42f9 - <unknown>!std::rt::lang_start::{{closure}}::hb9e36748cbcd9577
+  11: 0xb97db - <unknown>!std::rt::lang_start_internal::hd68a6a98c158ed91
+  12: 0x2d10 - <unknown>!__original_main
+  13:  0x9cb - <unknown>!_start
+
+programs/b61f2422b9f7d490add208cfd8a53b7932f12140a5da01270e56c90b3f378996-wasm/findings/crashes/id:000040,sig:00,src:000116,op:havoc,rep:8: wasm trap: unreachable
+wasm backtrace:
+  0: 0xb9ef9 - <unknown>!__rust_start_panic
+  1: 0xb95f6 - <unknown>!rust_panic
+  2: 0xb8f72 - <unknown>!std::panicking::rust_panic_with_hook::h8ad053d77cc20a20
+  3: 0xb7c5e - <unknown>!std::panicking::begin_panic_handler::{{closure}}::h60b24b441bb27bdd
+  4: 0xb7bd3 - <unknown>!std::sys_common::backtrace::__rust_end_short_backtrace::h537cc37d8501ac0d
+  5: 0xb8c48 - <unknown>!rust_begin_unwind
+  6: 0xc9aaf - <unknown>!core::panicking::panic_fmt::ha4cbfe39ae9ea3c9
+  7: 0xcc905 - <unknown>!core::option::expect_none_failed::h152d592dba3b4951
+  8: 0x2c0a - <unknown>!wasi_example::main::h49084332f58e06a2
+  9: 0x4281 - <unknown>!std::sys_common::backtrace::__rust_begin_short_backtrace::hb8f28bbacdb7af14
+  10: 0x42f9 - <unknown>!std::rt::lang_start::{{closure}}::hb9e36748cbcd9577
+  11: 0xb97db - <unknown>!std::rt::lang_start_internal::hd68a6a98c158ed91
+  12: 0x2d10 - <unknown>!__original_main
+  13:  0x9cb - <unknown>!_start
+
+programs/b61f2422b9f7d490add208cfd8a53b7932f12140a5da01270e56c90b3f378996-wasm/findings/crashes/id:000041,sig:00,src:000144,op:havoc,rep:128: wasm trap: unreachable
+wasm backtrace:
+  0: 0xb9ef9 - <unknown>!__rust_start_panic
+  1: 0xb95f6 - <unknown>!rust_panic
+  2: 0xb8f72 - <unknown>!std::panicking::rust_panic_with_hook::h8ad053d77cc20a20
+  3: 0xb7c5e - <unknown>!std::panicking::begin_panic_handler::{{closure}}::h60b24b441bb27bdd
+  4: 0xb7bd3 - <unknown>!std::sys_common::backtrace::__rust_end_short_backtrace::h537cc37d8501ac0d
+  5: 0xb8c48 - <unknown>!rust_begin_unwind
+  6: 0xc9aaf - <unknown>!core::panicking::panic_fmt::ha4cbfe39ae9ea3c9
+  7: 0xcc905 - <unknown>!core::option::expect_none_failed::h152d592dba3b4951
+  8: 0x2c0a - <unknown>!wasi_example::main::h49084332f58e06a2
+  9: 0x4281 - <unknown>!std::sys_common::backtrace::__rust_begin_short_backtrace::hb8f28bbacdb7af14
+  10: 0x42f9 - <unknown>!std::rt::lang_start::{{closure}}::hb9e36748cbcd9577
+  11: 0xb97db - <unknown>!std::rt::lang_start_internal::hd68a6a98c158ed91
+  12: 0x2d10 - <unknown>!__original_main
+  13:  0x9cb - <unknown>!_start
+
+programs/b61f2422b9f7d490add208cfd8a53b7932f12140a5da01270e56c90b3f378996-wasm/findings/crashes/id:000042,sig:00,src:000162,op:havoc,rep:16: wasm trap: unreachable
+wasm backtrace:
+  0: 0xb9ef9 - <unknown>!__rust_start_panic
+  1: 0xb95f6 - <unknown>!rust_panic
+  2: 0xb8f72 - <unknown>!std::panicking::rust_panic_with_hook::h8ad053d77cc20a20
+  3: 0xb7c5e - <unknown>!std::panicking::begin_panic_handler::{{closure}}::h60b24b441bb27bdd
+  4: 0xb7bd3 - <unknown>!std::sys_common::backtrace::__rust_end_short_backtrace::h537cc37d8501ac0d
+  5: 0xb8c48 - <unknown>!rust_begin_unwind
+  6: 0xc9aaf - <unknown>!core::panicking::panic_fmt::ha4cbfe39ae9ea3c9
+  7: 0xcc905 - <unknown>!core::option::expect_none_failed::h152d592dba3b4951
+  8: 0x2c0a - <unknown>!wasi_example::main::h49084332f58e06a2
+  9: 0x4281 - <unknown>!std::sys_common::backtrace::__rust_begin_short_backtrace::hb8f28bbacdb7af14
+  10: 0x42f9 - <unknown>!std::rt::lang_start::{{closure}}::hb9e36748cbcd9577
+  11: 0xb97db - <unknown>!std::rt::lang_start_internal::hd68a6a98c158ed91
+  12: 0x2d10 - <unknown>!__original_main
+  13:  0x9cb - <unknown>!_start
+
+programs/b61f2422b9f7d490add208cfd8a53b7932f12140a5da01270e56c90b3f378996-wasm/findings/crashes/id:000043,sig:00,src:000167,op:flip1,pos:3488: wasm trap: unreachable
+wasm backtrace:
+  0: 0xb9ef9 - <unknown>!__rust_start_panic
+  1: 0xb95f6 - <unknown>!rust_panic
+  2: 0xb8f72 - <unknown>!std::panicking::rust_panic_with_hook::h8ad053d77cc20a20
+  3: 0xb7c5e - <unknown>!std::panicking::begin_panic_handler::{{closure}}::h60b24b441bb27bdd
+  4: 0xb7bd3 - <unknown>!std::sys_common::backtrace::__rust_end_short_backtrace::h537cc37d8501ac0d
+  5: 0xb8c48 - <unknown>!rust_begin_unwind
+  6: 0xc9aaf - <unknown>!core::panicking::panic_fmt::ha4cbfe39ae9ea3c9
+  7: 0xcc905 - <unknown>!core::option::expect_none_failed::h152d592dba3b4951
+  8: 0x2c0a - <unknown>!wasi_example::main::h49084332f58e06a2
+  9: 0x4281 - <unknown>!std::sys_common::backtrace::__rust_begin_short_backtrace::hb8f28bbacdb7af14
+  10: 0x42f9 - <unknown>!std::rt::lang_start::{{closure}}::hb9e36748cbcd9577
+  11: 0xb97db - <unknown>!std::rt::lang_start_internal::hd68a6a98c158ed91
+  12: 0x2d10 - <unknown>!__original_main
+  13:  0x9cb - <unknown>!_start
+
+programs/b61f2422b9f7d490add208cfd8a53b7932f12140a5da01270e56c90b3f378996-wasm/findings/crashes/id:000044,sig:00,src:000175,op:flip1,pos:5833: wasm trap: unreachable
+wasm backtrace:
+  0: 0xb9ef9 - <unknown>!__rust_start_panic
+  1: 0xb95f6 - <unknown>!rust_panic
+  2: 0xb8f72 - <unknown>!std::panicking::rust_panic_with_hook::h8ad053d77cc20a20
+  3: 0xb7c5e - <unknown>!std::panicking::begin_panic_handler::{{closure}}::h60b24b441bb27bdd
+  4: 0xb7bd3 - <unknown>!std::sys_common::backtrace::__rust_end_short_backtrace::h537cc37d8501ac0d
+  5: 0xb8c48 - <unknown>!rust_begin_unwind
+  6: 0xc9aaf - <unknown>!core::panicking::panic_fmt::ha4cbfe39ae9ea3c9
+  7: 0xcc905 - <unknown>!core::option::expect_none_failed::h152d592dba3b4951
+  8: 0x2c0a - <unknown>!wasi_example::main::h49084332f58e06a2
+  9: 0x4281 - <unknown>!std::sys_common::backtrace::__rust_begin_short_backtrace::hb8f28bbacdb7af14
+  10: 0x42f9 - <unknown>!std::rt::lang_start::{{closure}}::hb9e36748cbcd9577
+  11: 0xb97db - <unknown>!std::rt::lang_start_internal::hd68a6a98c158ed91
+  12: 0x2d10 - <unknown>!__original_main
+  13:  0x9cb - <unknown>!_start
+

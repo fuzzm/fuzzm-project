@@ -1,0 +1,6 @@
+{
+  "repeat": 1,
+  "time": 1440,
+  "native": false,
+  "dictionary": "programs/pal2rgb-wasm/dictionary/d.dict"
+}

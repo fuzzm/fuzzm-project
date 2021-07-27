@@ -1,0 +1,30 @@
+start_time        : 1626935979
+last_update       : 1627022378
+fuzzer_pid        : 9328
+cycles_done       : 4
+execs_done        : 13271611
+execs_per_sec     : 96.10
+paths_total       : 262
+paths_favored     : 41
+paths_found       : 261
+paths_imported    : 0
+max_depth         : 8
+cur_path          : 245
+pending_favs      : 0
+pending_total     : 115
+variable_paths    : 0
+stability         : 100.00%
+bitmap_cvg        : 2.25%
+unique_crashes    : 0
+unique_hangs      : 1
+last_path         : 1627011755
+last_crash        : 0
+last_hang         : 1626939285
+execs_since_crash : 13271611
+exec_timeout      : 20
+afl_banner        : 5d913289af2f0ac09bca73b620e0bcc563327a94...
+afl_version       : 2.57b
+target_mode       : default
+command_line      : ./afl-fuzz -m8000M -i programs/5d913289af2f0ac09bca73b620e0bcc563327a94535494b9e0ca9e474cabff4c-wasm/test-case -o programs/5d913289af2f0ac09bca73b620e0bcc563327a94535494b9e0ca9e474cabff4c-wasm/findings -- programs/5d913289af2f0ac09bca73b620e0bcc563327a94535494b9e0ca9e474cabff4c-wasm/prog.wasm.instr @@ output.wasm
+slowest_exec_ms   : 0
+peak_rss_mb       : not available while afl is running

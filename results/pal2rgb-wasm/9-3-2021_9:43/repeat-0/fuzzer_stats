@@ -1,0 +1,30 @@
+start_time        : 1617956663
+last_update       : 1618043063
+fuzzer_pid        : 22509
+cycles_done       : 7
+execs_done        : 81088304
+execs_per_sec     : 898.39
+paths_total       : 1533
+paths_favored     : 396
+paths_found       : 1532
+paths_imported    : 0
+max_depth         : 10
+cur_path          : 1257
+pending_favs      : 0
+pending_total     : 526
+variable_paths    : 0
+stability         : 100.00%
+bitmap_cvg        : 5.73%
+unique_crashes    : 0
+unique_hangs      : 1
+last_path         : 1618043035
+last_crash        : 0
+last_hang         : 1617993343
+execs_since_crash : 81088304
+exec_timeout      : 20
+afl_banner        : pal2rgb-wasm/prog.wasm.instr
+afl_version       : 2.57b
+target_mode       : default
+command_line      : ./afl-fuzz -m8000M -i programs/pal2rgb-wasm/test-case -o programs/pal2rgb-wasm/findings -x programs/pal2rgb-wasm/dictionary/d.dict -- programs/pal2rgb-wasm/prog.wasm.instr @@ /dev/null
+slowest_exec_ms   : 0
+peak_rss_mb       : not available while afl is running
