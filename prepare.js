@@ -155,6 +155,11 @@ commander
           seed = path.resolve(aflFolder, 'testcases/others/handlebars');
         }
 
+        if (f.includes('5c8b3eea45224e5929738e4c5c3d1d1a43ec263a60dd102a96161de6d7012ef0')) {
+          // rust-python
+          seed = path.resolve(aflFolder, 'testcases/others/rust-python');
+        }
+
         const dst = prepareBenchmark(wasmBenchDir, f, seed);
 
         if (f.includes('8d108de7e07ef1ee070ce2e1f057de253839d0be2c30a99f58889e85cf54449a')) {
