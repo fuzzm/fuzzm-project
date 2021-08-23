@@ -19,7 +19,7 @@ export type AnalyzedCrashesResults = {
 export async function analyzeCrashes(benchmark: string, crashFolder: string): Promise<AnalyzedCrashesResults> {
   let preFileArg = '';
   let args: string[] = [];
-  let nativeBinary: string;
+  let nativeBinary: string | undefined;
   let relativePath = false;
   let folder: string | undefined = undefined;
 
@@ -79,6 +79,37 @@ export async function analyzeCrashes(benchmark: string, crashFolder: string): Pr
       folder = 'programs/flac-wasm';
       nativeBinary = 'programs/flac/prog';
       args = ['-f', '-d'];
+      break;
+    case '2c980fcd46b027cd64d75d974ee48208868304873b6d1b1ad691c743fa3accc5':
+      // wq
+      folder = 'programs/2c980fcd46b027cd64d75d974ee48208868304873b6d1b1ad691c743fa3accc5-wasm';
+      break;
+    case '3318c71ea11c4a759fa406bd5dec2038245d6b47c55c50b5127368d31949c6a3':
+      // bfi
+      folder = 'programs/3318c71ea11c4a759fa406bd5dec2038245d6b47c55c50b5127368d31949c6a3-wasm';
+      break;
+    case '5d913289af2f0ac09bca73b620e0bcc563327a94535494b9e0ca9e474cabff4c':
+      // bf
+      folder = 'programs/5d913289af2f0ac09bca73b620e0bcc563327a94535494b9e0ca9e474cabff4c-wasm'
+      args = ['output.wasm']
+      break;
+    case 'b61f2422b9f7d490add208cfd8a53b7932f12140a5da01270e56c90b3f378996':
+      // wasi-example
+      folder = 'programs/b61f2422b9f7d490add208cfd8a53b7932f12140a5da01270e56c90b3f378996-wasm';
+      args = ['-f']
+      break;
+    case 'cfa2c75ab461c6f7cdc228ba1c98e22b18bf0e7df637d54bb8f32a6abf703915':
+      // wasi-example
+      folder = 'programs/cfa2c75ab461c6f7cdc228ba1c98e22b18bf0e7df637d54bb8f32a6abf703915-wasm';
+      break;
+    case '5c8b3eea45224e5929738e4c5c3d1d1a43ec263a60dd102a96161de6d7012ef0':
+      // rustpython
+      folder = 'programs/5c8b3eea45224e5929738e4c5c3d1d1a43ec263a60dd102a96161de6d7012ef0-wasm';
+      break;
+    case '8d108de7e07ef1ee070ce2e1f057de253839d0be2c30a99f58889e85cf54449a':
+      // handlebars-cli
+      folder = 'programs/8d108de7e07ef1ee070ce2e1f057de253839d0be2c30a99f58889e85cf54449a-wasm';
+      args = ['\'{"json": "data"}\''];
       break;
   }
 
@@ -173,7 +204,7 @@ export async function analyzeCrashes(benchmark: string, crashFolder: string): Pr
 
         res.wasm = getReason(...(await runWasmBin(wasmBinary, crashFileTmp)));
         res.wasmInstr = getReason(...(await runWasmBin(instrWasmBinary, crashFileTmp)));
-        res.native = (await runNativeBin(nativeBinary, crashFileTmp))[2];
+        res.native = nativeBinary ? (await runNativeBin(nativeBinary, crashFileTmp))[2] : NaN;
         results[crashFile] = res;
 
         const diff = res.wasm.reason !== res.wasmInstr.reason;

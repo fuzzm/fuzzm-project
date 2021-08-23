@@ -1,0 +1,10 @@
+{
+    "year": 2020,
+    "engine": "SomeEngine",
+    "teams": [
+        {
+            "name": "Team1",
+            "pts": 1337
+        }
+    ]
+}

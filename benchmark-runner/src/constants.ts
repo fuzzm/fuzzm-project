@@ -91,7 +91,7 @@ export const FUZZ_COMMANDS_WASM: { [index: string]: Benchmark } = {
   '8d108de7e07ef1ee070ce2e1f057de253839d0be2c30a99f58889e85cf54449a': {
     name: '8d108de7e07ef1ee070ce2e1f057de253839d0be2c30a99f58889e85cf54449a-wasm',
     originalName: 'handlebars-cli.wasm',
-    cmd: '@@ \'{"json": "data"}\'',
+    cmd: 'programs/8d108de7e07ef1ee070ce2e1f057de253839d0be2c30a99f58889e85cf54449a-wasm/template.hbs @@',
     problems: 'does not make progress. Probably because fuzzer cannot guess JSON input'
   },
   'a7a817db1c6c9fff26f005fd598cc28b15b35124927ec94822d8aa28cf824a7c': {

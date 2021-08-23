@@ -65,6 +65,7 @@ commander
         cp.execSync(`${canaries} ${instrBinDst} ${instrBinDst} --skip-print`);
         cp.execSync(`chmod +x ${instrBinDst}`);
       }
+      return dst;
     }
 
     /////// LAVA WASM ///////
@@ -143,8 +144,23 @@ commander
     /////// WASM-bench benchmarks ///////
     const wasmBenchDir = 'wasm-bench';
     fs.readdirSync(wasmBenchDir, 'utf-8').forEach(f => {
+      let seed;
       try {
-      prepareBenchmark(wasmBenchDir, f);
+        if (f.includes('template.hbs')) {
+          return;
+        }
+ 
+        if (f.includes('8d108de7e07ef1ee070ce2e1f057de253839d0be2c30a99f58889e85cf54449a')) {
+          // handlebare-cli
+          seed = path.resolve(aflFolder, 'testcases/others/handlebars');
+        }
+
+        const dst = prepareBenchmark(wasmBenchDir, f, seed);
+
+        if (f.includes('8d108de7e07ef1ee070ce2e1f057de253839d0be2c30a99f58889e85cf54449a')) {
+          cp.execSync(`cp ${path.resolve(wasmBenchDir, 'template.hbs')} ${dst}/`);
+        }
+
         console.log(`file ${f} succeeded`);
       } catch (e) {
         console.log(`file ${f} failed`);

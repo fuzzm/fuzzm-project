@@ -68,17 +68,23 @@ commander
     for (const gName in resultGroups) {
       if (ignored.some((i) => gName.includes(i))) continue;
       const g = resultGroups[gName];
-      if (g.length !== 2) {
-        throw new Error(`Unexpectedly found ${g.length} !== 2 platforms for benchmark ${gName}`);
+      if (g.length === 0) {
+        throw new Error(`Unexpectedly found no platforms for benchmark ${gName}`);
       }
+
       const wasmResultFolder = g.find((x) => x.name.includes('wasm'));
-      const nativeResultFolder = g.find((x) => x.name.includes('native'));
-      if (wasmResultFolder && nativeResultFolder) {
+
+      let nativeResultFolder;
+      if (g.length > 1) {
+        nativeResultFolder = g.find((x) => x.name.includes('native'));
+      }
+
+      if (wasmResultFolder) {
         crashResults.push(
           await processBenchmarkCrashes(
             gName,
             resolve(RESULTS_DIR, wasmResultFolder.name),
-            resolve(RESULTS_DIR, nativeResultFolder.name)
+            nativeResultFolder && resolve(RESULTS_DIR, nativeResultFolder.name)
           )
         );
       } else {
@@ -157,6 +163,11 @@ commander
     addRow('base64');
     addRow('md5sum');
     addRow('uniq');
+    addRow('2c980fcd46b027cd64d75d974ee48208868304873b6d1b1ad691c743fa3accc5');
+    addRow('3318c71ea11c4a759fa406bd5dec2038245d6b47c55c50b5127368d31949c6a3');
+    addRow('5d913289af2f0ac09bca73b620e0bcc563327a94535494b9e0ca9e474cabff4c');
+    addRow('b61f2422b9f7d490add208cfd8a53b7932f12140a5da01270e56c90b3f378996');
+    addRow('cfa2c75ab461c6f7cdc228ba1c98e22b18bf0e7df637d54bb8f32a6abf703915');
     strResultsTable.push([
       'Total',
       '',
@@ -258,16 +269,23 @@ type CrashResults = {
 async function processBenchmarkCrashes(
   name: string,
   wasmResultsDir: string,
-  nativeResultsDir: string
+  nativeResultsDir?: string
 ): Promise<CrashResults> {
   const newestWasmResults = getNewestResults(wasmResultsDir);
   const newestWasmResultsDir = resolve(newestWasmResults.tmpDir, basename(newestWasmResults.zipName, '.zip'));
-  const newestNativeResults = getNewestResults(nativeResultsDir);
-  const newestNativeResultsDir = resolve(newestNativeResults.tmpDir, basename(newestNativeResults.zipName, '.zip'));
+
+  let newestNativeResults;
+  let newestNativeResultsDir: string | undefined;
+  let nativeRepeatDirs;
+  if (nativeResultsDir) {
+    newestNativeResults = getNewestResults(nativeResultsDir);
+    newestNativeResultsDir = resolve(newestNativeResults.tmpDir, basename(newestNativeResults.zipName, '.zip'));
+    nativeRepeatDirs = readdirSync(newestNativeResultsDir).filter((x) =>
+      isDirectory(resolve(newestNativeResultsDir as string, x))
+    );
+  }
   const wasmRepeatDirs = readdirSync(newestWasmResultsDir).filter((x) => isDirectory(resolve(newestWasmResultsDir, x)));
-  const nativeRepeatDirs = readdirSync(newestNativeResultsDir).filter((x) =>
-    isDirectory(resolve(newestNativeResultsDir, x))
-  );
+
 
   let wasmCrashes: number[] = [];
   let wasmStackCanaryCrashes: number[] = [];
@@ -282,18 +300,29 @@ async function processBenchmarkCrashes(
   let nativePathsCovered: number[] = [];
 
   for (const rDir of wasmRepeatDirs) {
-    const nativeRDir = nativeRepeatDirs.find((d) => d === rDir);
-    if (!nativeRDir) {
-      throw new Error(`could not find corresponding native repeat directory for folder ${rDir}`);
+    let nativeRDir;
+    if (nativeRepeatDirs) {
+      nativeRDir = nativeRepeatDirs.find((d) => d === rDir);
+      if (!nativeRDir) {
+        throw new Error(`could not find corresponding native repeat directory for folder ${rDir}`);
+      }
     }
     const wasmFuzzerStats = readFileSync(resolve(newestWasmResultsDir, rDir, 'fuzzer_stats'), 'utf-8');
     wasmExecsPerSec.push(getFuzzStat(wasmFuzzerStats, 'execs_per_sec'));
     wasmCrashes.push(getFuzzStat(wasmFuzzerStats, 'unique_crashes'));
-    const nativeFuzzerStats = readFileSync(resolve(newestNativeResultsDir, nativeRDir, 'fuzzer_stats'), 'utf-8');
-    nativeExecsPerSec.push(getFuzzStat(nativeFuzzerStats, 'execs_per_sec'));
-    nativeCrashes.push(getFuzzStat(nativeFuzzerStats, 'unique_crashes'));
-    nativeRunningTime.push(getRunningTimeFromFuzzerStats(nativeFuzzerStats));
-    nativePathsCovered.push(getFuzzStat(nativeFuzzerStats, 'paths_total'));
+
+    if (newestNativeResultsDir && nativeRDir) {
+      const nativeFuzzerStats = readFileSync(resolve(newestNativeResultsDir, nativeRDir, 'fuzzer_stats'), 'utf-8');
+      nativeExecsPerSec.push(getFuzzStat(nativeFuzzerStats, 'execs_per_sec'));
+      nativeCrashes.push(getFuzzStat(nativeFuzzerStats, 'unique_crashes'));
+      nativeRunningTime.push(getRunningTimeFromFuzzerStats(nativeFuzzerStats));
+      nativePathsCovered.push(getFuzzStat(nativeFuzzerStats, 'paths_total'));
+    } else {
+      nativeExecsPerSec.push(NaN);
+      nativeCrashes.push(NaN);
+      nativeRunningTime.push(NaN);
+      nativePathsCovered.push(NaN);
+    }
 
     const rFolder = resolve(newestWasmResultsDir, rDir, 'crashes');
     const wasmRes = await analyzeCrashes(name, rFolder);
