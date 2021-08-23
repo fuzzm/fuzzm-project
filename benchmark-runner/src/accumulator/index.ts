@@ -126,6 +126,20 @@ commander
             return 'libtiff';
           case 'pnm2png':
             return 'libpng';
+          case '2c980fcd46b027cd64d75d974ee48208868304873b6d1b1ad691c743fa3accc5':
+            return 'wq';
+          case '3318c71ea11c4a759fa406bd5dec2038245d6b47c55c50b5127368d31949c6a3':
+            return 'bfi';
+          case '5d913289af2f0ac09bca73b620e0bcc563327a94535494b9e0ca9e474cabff4c':
+            return 'bf';
+          case 'b61f2422b9f7d490add208cfd8a53b7932f12140a5da01270e56c90b3f378996':
+            return 'wasi-example';
+          case 'cfa2c75ab461c6f7cdc228ba1c98e22b18bf0e7df637d54bb8f32a6abf703915':
+            return 'save';
+          case '5c8b3eea45224e5929738e4c5c3d1d1a43ec263a60dd102a96161de6d7012ef0':
+            return 'rust python';
+          case '8d108de7e07ef1ee070ce2e1f057de253839d0be2c30a99f58889e85cf54449a':
+            return 'handlebars-cli';
           default:
             return n;
         }
@@ -139,7 +153,7 @@ commander
       totalNativeExecs += r.nativeExecsPerSec.mean;
       totalNativePaths += r.nativePathsCovered.mean;
       strResultsTable.push([
-        b,
+        transformName(b),
         `${Math.round(r.wasmTimeSec.mean / (60 * 60))}H`,
         `${r.wasmCrashes.mean} +- ${r.wasmCrashes.conf95.toFixed(1)} ${
           r.wasmLavaCrashes.mean > 0 ? ` (LAVA ${r.wasmLavaCrashes.mean})` : ''
