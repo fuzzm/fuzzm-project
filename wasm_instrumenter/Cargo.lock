@@ -502,7 +502,7 @@ checksum = "cccddf32554fecc6acb585f82a32a72e28b48f8c4c1883ddfeeeaa96f7d8e519"
 [[package]]
 name = "wasm"
 version = "0.5.0"
-source = "git+https://github.com/danleh/wasabi#e3f968f3db984621ecc34269918570bbee61a037"
+source = "git+https://github.com/danleh/wasabi#afa3983c57fcfabb5214d36b1ad82cb3bc6fa05e"
 dependencies = [
  "binary_derive",
  "byteorder",
