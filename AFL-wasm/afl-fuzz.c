@@ -2535,7 +2535,7 @@ int exec_wasm(const char ** argv, u32 timeout) {
   // I'm a little unsure how this wasi instance is connected to the instance we create to run the app.
   // Creating the other instance is necessary since the wasi instance type is incompatible
   // with most of the APIs where an instance is required.
-  wasi = wasi_instance_new(store, "wasi_snapshot_preview1", wasi_config, &trap);
+  wasi = wasi_instance_new(store, "wasi_unstable", wasi_config, &trap);
   if (wasi == NULL)
     exit_with_error("failed to instantiate WASI", NULL, trap);
 
