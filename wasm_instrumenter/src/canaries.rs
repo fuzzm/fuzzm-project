@@ -401,13 +401,6 @@ pub fn instrument_with_stack_canary_check(m: &mut Module) {
         if requires_canary_check(f, &stack_ptr_idx) {
             let canary_value = distribution.sample(&mut rng);
            
-            let return_type = get_return_type(f);
-
-            // this local will temporarily hold the function return value while
-            // the canary is being checked.
-            // for void functions, the local is omitted.
-            let tmp_result_local = return_type.map(|t| f.add_fresh_local(t));
-
             if f.code().is_some() {
                 returns_to_outer_block_jmp(f);
 
@@ -436,10 +429,6 @@ pub fn instrument_with_stack_canary_check(m: &mut Module) {
                 // into this tmp local.
                 let mut post_fix: Vec<Instr> = vec![];
 
-                if let Some(idx) = tmp_result_local {
-                    post_fix.push(Instr::Local(LocalOp::Set, idx));
-                }
-
                 // create canary check instructions
                 post_fix.append(&mut vec![
                     Instr::Block(BlockType(None)),
@@ -461,11 +450,6 @@ pub fn instrument_with_stack_canary_check(m: &mut Module) {
                     Instr::Numeric(NumericOp::I32Add),
                     Instr::Global(GlobalOp::Set, stack_ptr_idx),
                 ]);
-
-                // read the tmp_result_local containing the function return value.
-                if let Some(idx) = tmp_result_local {
-                    post_fix.push(Instr::Local(LocalOp::Get, idx));
-                }
 
                 insert_postfix(f, &mut post_fix);
             }
