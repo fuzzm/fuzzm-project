@@ -86,6 +86,11 @@ switch (benchmark) {
   case "save":
     folder = "programs/cfa2c75ab461c6f7cdc228ba1c98e22b18bf0e7df637d54bb8f32a6abf703915-wasm";
     break;
+  case "handlebars":
+    folder = "programs/8d108de7e07ef1ee070ce2e1f057de253839d0be2c30a99f58889e85cf54449a-wasm";
+    // FIXME file name must start with @
+    args = ['programs/8d108de7e07ef1ee070ce2e1f057de253839d0be2c30a99f58889e85cf54449a-wasm/template.hbs']
+    break;
 }
 
 if (!folder) {

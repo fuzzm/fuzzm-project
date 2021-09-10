@@ -99,7 +99,7 @@ export async function analyzeCrashes(benchmark: string, crashFolder: string): Pr
       args = ['-f']
       break;
     case 'cfa2c75ab461c6f7cdc228ba1c98e22b18bf0e7df637d54bb8f32a6abf703915':
-      // wasi-example
+      // save
       folder = 'programs/cfa2c75ab461c6f7cdc228ba1c98e22b18bf0e7df637d54bb8f32a6abf703915-wasm';
       break;
     case '5c8b3eea45224e5929738e4c5c3d1d1a43ec263a60dd102a96161de6d7012ef0':
