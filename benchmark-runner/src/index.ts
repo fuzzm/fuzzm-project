@@ -75,6 +75,10 @@ commander
     }
     (env as any).AFL_SKIP_CPUFREQ = 1;
 
+    if (fuzzCmd.unstableWasiAPI) {
+      (env as any).WASI_VERSION = "wasi_unstable";
+    }
+
     for (let i = 0; i < options.repeat; i++) {
       let success = false;
       while (!success) {
