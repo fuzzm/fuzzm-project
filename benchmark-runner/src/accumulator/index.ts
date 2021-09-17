@@ -140,6 +140,41 @@ commander
             return 'rust python';
           case '8d108de7e07ef1ee070ce2e1f057de253839d0be2c30a99f58889e85cf54449a':
             return 'handlebars-cli';
+          case '310e582869203573dbbb7a06d8d5e8f9b457261f3b488bf2a37de85d227450ab':
+            return 'clang.wasm';
+          case 'a7a817db1c6c9fff26f005fd598cc28b15b35124927ec94822d8aa28cf824a7c':
+            return 'libxml2.wasm';
+          case '69286bc946266e89095151f5e12c77eae3824379b7b297141cc4cc7b5711832a':
+            return 'canonicaljson.wasm';
+          case '0a0f242b77afe39fa5ff0cd579d7f6378b5869feae7ee792f416c9df19a5caf1':
+            return 'zxing_barcode_reader.wasm';
+          case '992205b67977f9c7a0d1ea7568d745e055fa3015d1ab70428feed6d8da60d060':
+            return 'sqlite.wasm';
+          case '7e48bfd68f658ac4916c291b536e6756c173f6ba63311c67c11ffa4b111f0bff':
+            return 'viu.wasm';
+          case '6f62a6bc5c8f8e3e12a54e2ecbc5674ccfe1c75f91d8e4dd6ebb3fec422a4d6c':
+            return 'qjs.wasm';
+          case 'f2d833c3da9a7b149d3d4e39eef8a091b8231cd71ece3e57c4ceafb2dd9714cd':
+            return 'wasm-interface.wasm';
+          case '4165b9f433d19ee69c15ff5e87dac8ef7f04ce62be95c9a569a0a853048052de':
+            return 'qjs.wasm';
+          case '990040b990434ac4d48565af09f897c84ee02bf22f7e50e2091bb93b17a023db':
+            return 'duk1.wasm';
+          case '722665633c07c06ea5ff8bab0c78a1bdad0998b06c769cb27efe9834d60bca3c':
+            return 'jq.wasm';
+          case 'bf750dfa5ccc0f32f59c865d6581acaae2f07feb1919429f2aafc11199206c66':
+            return 'duk2.wasm';
+          case 'ee42716385c8c8b1d9ba916fcf52ff2a258a4152f4e54af2262425d1832671fe':
+            return 'qr2text.wasm';
+          case '674a17949619b77f26560d8fd48ac65fb700ae6eed998ff74d62ce444c387d2f':
+            return 'hq9_plus_rs.wasm';
+          case 'a5a3bb5ef3d679f84b66655696c28415da174242e3bdae99030c1682156c5d04':
+            return 'colcrt.wasm';
+          case '20cd76fa23f6760d8c4e94c861b93d3e316faaf7a464851a6b8b43db8ebb5cb6':
+            return 'rev.wasm';
+          case '65bb7368b55ebd366ce339cf58628750b203ea327e22c362f94dfa8bf8b55493':
+            return 'basic.wasm';
+
           default:
             return n;
         }
@@ -183,6 +218,23 @@ commander
     addRow('b61f2422b9f7d490add208cfd8a53b7932f12140a5da01270e56c90b3f378996');
     addRow('cfa2c75ab461c6f7cdc228ba1c98e22b18bf0e7df637d54bb8f32a6abf703915');
     addRow('8d108de7e07ef1ee070ce2e1f057de253839d0be2c30a99f58889e85cf54449a');
+    addRow('310e582869203573dbbb7a06d8d5e8f9b457261f3b488bf2a37de85d227450ab');
+    addRow('a7a817db1c6c9fff26f005fd598cc28b15b35124927ec94822d8aa28cf824a7c');
+    addRow('69286bc946266e89095151f5e12c77eae3824379b7b297141cc4cc7b5711832a');
+    addRow('0a0f242b77afe39fa5ff0cd579d7f6378b5869feae7ee792f416c9df19a5caf1');
+    addRow('992205b67977f9c7a0d1ea7568d745e055fa3015d1ab70428feed6d8da60d060');
+    addRow('7e48bfd68f658ac4916c291b536e6756c173f6ba63311c67c11ffa4b111f0bff');
+    addRow('6f62a6bc5c8f8e3e12a54e2ecbc5674ccfe1c75f91d8e4dd6ebb3fec422a4d6c');
+    addRow('f2d833c3da9a7b149d3d4e39eef8a091b8231cd71ece3e57c4ceafb2dd9714cd');
+    addRow('4165b9f433d19ee69c15ff5e87dac8ef7f04ce62be95c9a569a0a853048052de');
+    addRow('990040b990434ac4d48565af09f897c84ee02bf22f7e50e2091bb93b17a023db');
+    addRow('722665633c07c06ea5ff8bab0c78a1bdad0998b06c769cb27efe9834d60bca3c');
+    addRow('bf750dfa5ccc0f32f59c865d6581acaae2f07feb1919429f2aafc11199206c66');
+    addRow('ee42716385c8c8b1d9ba916fcf52ff2a258a4152f4e54af2262425d1832671fe');
+    addRow('674a17949619b77f26560d8fd48ac65fb700ae6eed998ff74d62ce444c387d2f');
+    addRow('a5a3bb5ef3d679f84b66655696c28415da174242e3bdae99030c1682156c5d04');
+    addRow('20cd76fa23f6760d8c4e94c861b93d3e316faaf7a464851a6b8b43db8ebb5cb6');
+    addRow('65bb7368b55ebd366ce339cf58628750b203ea327e22c362f94dfa8bf8b55493');
     strResultsTable.push([
       'Total',
       '',

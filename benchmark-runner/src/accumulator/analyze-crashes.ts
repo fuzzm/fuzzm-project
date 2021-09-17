@@ -111,6 +111,91 @@ export async function analyzeCrashes(benchmark: string, crashFolder: string): Pr
       folder = 'programs/8d108de7e07ef1ee070ce2e1f057de253839d0be2c30a99f58889e85cf54449a-wasm';
       args = ['\'{"json": "data"}\''];
       break;
+    case '310e582869203573dbbb7a06d8d5e8f9b457261f3b488bf2a37de85d227450ab':
+      // clang.wasm
+      folder = 'programs/310e582869203573dbbb7a06d8d5e8f9b457261f3b488bf2a37de85d227450ab-wasm';
+      args = [];
+      break;
+    case 'a7a817db1c6c9fff26f005fd598cc28b15b35124927ec94822d8aa28cf824a7c':
+      // libxml2.wasm
+      folder = 'programs/a7a817db1c6c9fff26f005fd598cc28b15b35124927ec94822d8aa28cf824a7c-wasm';
+      args = [];
+      break;
+    case '69286bc946266e89095151f5e12c77eae3824379b7b297141cc4cc7b5711832a':
+      // canonicaljson.wasm
+      folder = 'programs/69286bc946266e89095151f5e12c77eae3824379b7b297141cc4cc7b5711832a-wasm';
+      args = [];
+      break;
+    case '0a0f242b77afe39fa5ff0cd579d7f6378b5869feae7ee792f416c9df19a5caf1':
+      // zxing_barcode_reader.wasm
+      folder = 'programs/0a0f242b77afe39fa5ff0cd579d7f6378b5869feae7ee792f416c9df19a5caf1-wasm';
+      args = [];
+      break;
+    case '992205b67977f9c7a0d1ea7568d745e055fa3015d1ab70428feed6d8da60d060':
+      // sqlite.wasm
+      folder = 'programs/992205b67977f9c7a0d1ea7568d745e055fa3015d1ab70428feed6d8da60d060-wasm';
+      args = [];
+      break;
+    case '7e48bfd68f658ac4916c291b536e6756c173f6ba63311c67c11ffa4b111f0bff':
+      // viu.wasm
+      folder = 'programs/7e48bfd68f658ac4916c291b536e6756c173f6ba63311c67c11ffa4b111f0bff-wasm';
+      args = [];
+      break;
+    case '6f62a6bc5c8f8e3e12a54e2ecbc5674ccfe1c75f91d8e4dd6ebb3fec422a4d6c':
+      // qjs.wasm
+      folder = 'programs/6f62a6bc5c8f8e3e12a54e2ecbc5674ccfe1c75f91d8e4dd6ebb3fec422a4d6c-wasm';
+      args = [];
+      break;
+    case 'f2d833c3da9a7b149d3d4e39eef8a091b8231cd71ece3e57c4ceafb2dd9714cd':
+      // wasm-interface.wasm
+      folder = 'programs/f2d833c3da9a7b149d3d4e39eef8a091b8231cd71ece3e57c4ceafb2dd9714cd-wasm';
+      args = [];
+      break;
+    case '4165b9f433d19ee69c15ff5e87dac8ef7f04ce62be95c9a569a0a853048052de':
+      // qjs.wasm
+      folder = 'programs/4165b9f433d19ee69c15ff5e87dac8ef7f04ce62be95c9a569a0a853048052de-wasm';
+      args = [];
+      break;
+    case '990040b990434ac4d48565af09f897c84ee02bf22f7e50e2091bb93b17a023db':
+      // duk.wasm
+      folder = 'programs/990040b990434ac4d48565af09f897c84ee02bf22f7e50e2091bb93b17a023db-wasm';
+      args = [];
+      break;
+    case '722665633c07c06ea5ff8bab0c78a1bdad0998b06c769cb27efe9834d60bca3c':
+      // jq.wasm
+      folder = 'programs/722665633c07c06ea5ff8bab0c78a1bdad0998b06c769cb27efe9834d60bca3c-wasm';
+      args = [];
+      break;
+    case 'bf750dfa5ccc0f32f59c865d6581acaae2f07feb1919429f2aafc11199206c66':
+      // duk.wasm
+      folder = 'programs/bf750dfa5ccc0f32f59c865d6581acaae2f07feb1919429f2aafc11199206c66-wasm';
+      args = [];
+      break;
+    case 'ee42716385c8c8b1d9ba916fcf52ff2a258a4152f4e54af2262425d1832671fe':
+      // qr2text.wasm
+      folder = 'programs/ee42716385c8c8b1d9ba916fcf52ff2a258a4152f4e54af2262425d1832671fe-wasm';
+      args = [];
+      break;
+    case '674a17949619b77f26560d8fd48ac65fb700ae6eed998ff74d62ce444c387d2f':
+      // hq9_plus_rs.wasm
+      folder = 'programs/674a17949619b77f26560d8fd48ac65fb700ae6eed998ff74d62ce444c387d2f-wasm';
+      args = [];
+      break;
+    case 'a5a3bb5ef3d679f84b66655696c28415da174242e3bdae99030c1682156c5d04':
+      // colcrt.wasm
+      folder = 'programs/a5a3bb5ef3d679f84b66655696c28415da174242e3bdae99030c1682156c5d04-wasm';
+      args = [];
+      break;
+    case '20cd76fa23f6760d8c4e94c861b93d3e316faaf7a464851a6b8b43db8ebb5cb6':
+      // rev.wasm
+      folder = 'programs/20cd76fa23f6760d8c4e94c861b93d3e316faaf7a464851a6b8b43db8ebb5cb6-wasm';
+      args = [];
+      break;
+    case '65bb7368b55ebd366ce339cf58628750b203ea327e22c362f94dfa8bf8b55493':
+      // basic.wasm
+      folder = 'programs/65bb7368b55ebd366ce339cf58628750b203ea327e22c362f94dfa8bf8b55493-wasm';
+      args = [];
+      break;
   }
 
   if (!folder) {
