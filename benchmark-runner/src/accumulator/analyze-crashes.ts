@@ -195,6 +195,10 @@ export async function analyzeCrashes(benchmark: string, crashFolder: string): Pr
       // basic.wasm
       folder = 'programs/65bb7368b55ebd366ce339cf58628750b203ea327e22c362f94dfa8bf8b55493-wasm';
       args = [];
+    case '7e11233e9be20b791ca2584fb225a941357daa19b775a1dd16f18d57a2d21ab3':
+      // cat.wasm
+      folder = 'programs/7e11233e9be20b791ca2584fb225a941357daa19b775a1dd16f18d57a2d21ab3-wasm';
+      args = [];
       break;
   }
 

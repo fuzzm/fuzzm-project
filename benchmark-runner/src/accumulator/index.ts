@@ -212,7 +212,7 @@ commander
     addRow('base64');
     addRow('md5sum');
     addRow('uniq');
-    addRow('2c980fcd46b027cd64d75d974ee48208868304873b6d1b1ad691c743fa3accc5');
+    //addRow('2c980fcd46b027cd64d75d974ee48208868304873b6d1b1ad691c743fa3accc5');
     addRow('3318c71ea11c4a759fa406bd5dec2038245d6b47c55c50b5127368d31949c6a3');
     addRow('5d913289af2f0ac09bca73b620e0bcc563327a94535494b9e0ca9e474cabff4c');
     addRow('b61f2422b9f7d490add208cfd8a53b7932f12140a5da01270e56c90b3f378996');
@@ -224,7 +224,7 @@ commander
     addRow('0a0f242b77afe39fa5ff0cd579d7f6378b5869feae7ee792f416c9df19a5caf1');
     addRow('992205b67977f9c7a0d1ea7568d745e055fa3015d1ab70428feed6d8da60d060');
     addRow('7e48bfd68f658ac4916c291b536e6756c173f6ba63311c67c11ffa4b111f0bff');
-    addRow('6f62a6bc5c8f8e3e12a54e2ecbc5674ccfe1c75f91d8e4dd6ebb3fec422a4d6c');
+    //addRow('6f62a6bc5c8f8e3e12a54e2ecbc5674ccfe1c75f91d8e4dd6ebb3fec422a4d6c');
     addRow('f2d833c3da9a7b149d3d4e39eef8a091b8231cd71ece3e57c4ceafb2dd9714cd');
     addRow('4165b9f433d19ee69c15ff5e87dac8ef7f04ce62be95c9a569a0a853048052de');
     addRow('990040b990434ac4d48565af09f897c84ee02bf22f7e50e2091bb93b17a023db');
@@ -234,7 +234,7 @@ commander
     addRow('674a17949619b77f26560d8fd48ac65fb700ae6eed998ff74d62ce444c387d2f');
     addRow('a5a3bb5ef3d679f84b66655696c28415da174242e3bdae99030c1682156c5d04');
     addRow('20cd76fa23f6760d8c4e94c861b93d3e316faaf7a464851a6b8b43db8ebb5cb6');
-    addRow('65bb7368b55ebd366ce339cf58628750b203ea327e22c362f94dfa8bf8b55493');
+    //addRow('65bb7368b55ebd366ce339cf58628750b203ea327e22c362f94dfa8bf8b55493');
     strResultsTable.push([
       'Total',
       '',
