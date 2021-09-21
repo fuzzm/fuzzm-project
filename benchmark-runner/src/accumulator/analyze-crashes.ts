@@ -310,10 +310,10 @@ export async function analyzeCrashes(benchmark: string, crashFolder: string): Pr
   }
 
   return {
-    stackCanaryCrashes: stackCanaryCrashes,
-    heapCanaryCrashes: heapCanaryCrashes,
+    stackCanaryCrashes,
+    heapCanaryCrashes,
     crashes: count,
-    inconclusiveCrashes: diffCount - stackCanaryCrashes,
+    inconclusiveCrashes: diffCount - stackCanaryCrashes - heapCanaryCrashes,
     lavaCrashes,
   };
 }

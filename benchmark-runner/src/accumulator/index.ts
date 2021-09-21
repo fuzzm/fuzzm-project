@@ -21,16 +21,16 @@ interface Repeat {
 const log = console.log;
 
 const ignored: string[] = [
-  //'abc2mtex',
-  //'opj_compress',
-  //'pal2rgb',
-  //'pdfresurrect',
-  //'uniq',
-  //'md5sum',
-  //'base64',
-  //'jbig2dec',
-  //'pnm2png',
-  //'flac',
+  'abc2mtex',
+  'opj_compress',
+  'pal2rgb',
+  'pdfresurrect',
+  'uniq',
+  'md5sum',
+  'base64',
+  'jbig2dec',
+  'pnm2png',
+  'flac',
 ];
 const SKIP_NATIVE = true;
 let logger: Logger;
@@ -50,14 +50,14 @@ commander
     logger = createLogger('accumulator', options.debug ? 'debug' : 'info');
 
     // plots
-    for (const r of getResultsFolders(SKIP_NATIVE)) {
-      if (ignored.some((i) => r.name.includes(i))) continue;
-      logger.info(`processing ${r.name}`);
-      const [name, platform] = r.name.split('-');
-      const rFolder = resolve(RESULTS_DIR, r.name);
-      const res = getNewestResults(rFolder);
-      benchmarkPlots(resolve(res.tmpDir, basename(res.zipName, '.zip')), name, platform);
-    }
+    //for (const r of getResultsFolders(SKIP_NATIVE)) {
+    //  if (ignored.some((i) => r.name.includes(i))) continue;
+    //  logger.info(`processing ${r.name}`);
+    //  const [name, platform] = r.name.split('-');
+    //  const rFolder = resolve(RESULTS_DIR, r.name);
+    //  const res = getNewestResults(rFolder);
+    //  benchmarkPlots(resolve(res.tmpDir, basename(res.zipName, '.zip')), name, platform);
+    //}
 
     const resultGroups = groupBy(getResultsFolders(false), (d) => {
       const [name, platform] = d.name.split('-');
@@ -393,6 +393,7 @@ async function processBenchmarkCrashes(
 
     const rFolder = resolve(newestWasmResultsDir, rDir, 'crashes');
     const wasmRes = await analyzeCrashes(name, rFolder);
+    console.log(name, JSON.stringify(wasmRes));
     wasmStackCanaryCrashes.push(wasmRes.stackCanaryCrashes);
     wasmHeapCanaryCrashes.push(wasmRes.heapCanaryCrashes);
     wasmLavaCrashes.push(wasmRes.lavaCrashes);
