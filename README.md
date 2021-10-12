@@ -2,7 +2,7 @@
 This project contains the Fuzzm WebAssembly fuzzer based on [AFL](https://github.com/google/AFL).
 
 Here you can see a screenshot of it in action, finding the vulnerability in the motivating example from the overview section in the paper:
-![Fuzzm Screenshot](https://github.com/danleh/fuzzm/blob/main/screenshot.png)
+![Fuzzm Screenshot](https://github.com/danleh/fuzzm/blob/master/screenshot.png?raw=true)
 
 The structure of the folders is as follows:
  * [AFL-wasm](AFL-wasm) contains the adapted version of AFL, including the Wasmtime WebAssembly VM.
