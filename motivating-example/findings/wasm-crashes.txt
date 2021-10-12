@@ -1,0 +1,156 @@
+findings/crashes/id:000000,sig:00,src:000000,op:havoc,rep:64: wasm trap: unreachable
+wasm backtrace:
+  0:  0x3ec - <unknown>!vuln
+  1:  0x4f3 - <unknown>!__original_main
+  2:  0x59b - <unknown>!_start
+
+findings/crashes/id:000001,sig:00,src:000000,op:havoc,rep:16: wasm trap: unreachable
+wasm backtrace:
+  0:  0x3ec - <unknown>!vuln
+  1:  0x4f3 - <unknown>!__original_main
+  2:  0x59b - <unknown>!_start
+
+findings/crashes/id:000002,sig:00,src:000000,op:havoc,rep:128: wasm trap: unreachable
+wasm backtrace:
+  0:  0x3ec - <unknown>!vuln
+  1:  0x4f3 - <unknown>!__original_main
+  2:  0x59b - <unknown>!_start
+
+findings/crashes/id:000003,sig:00,src:000001,op:havoc,rep:8: wasm trap: unreachable
+wasm backtrace:
+  0:  0x3ec - <unknown>!vuln
+  1:  0x4f3 - <unknown>!__original_main
+  2:  0x59b - <unknown>!_start
+
+findings/crashes/id:000004,sig:00,src:000001,op:havoc,rep:4: wasm trap: unreachable
+wasm backtrace:
+  0:  0x3ec - <unknown>!vuln
+  1:  0x4f3 - <unknown>!__original_main
+  2:  0x59b - <unknown>!_start
+
+findings/crashes/id:000005,sig:00,src:000015,op:havoc,rep:16: wasm trap: unreachable
+wasm backtrace:
+  0:  0x3ec - <unknown>!vuln
+  1:  0x4f3 - <unknown>!__original_main
+  2:  0x59b - <unknown>!_start
+
+findings/crashes/id:000006,sig:00,src:000018,op:havoc,rep:8: wasm trap: unreachable
+wasm backtrace:
+  0:  0x3ec - <unknown>!vuln
+  1:  0x4f3 - <unknown>!__original_main
+  2:  0x59b - <unknown>!_start
+
+findings/crashes/id:000007,sig:00,src:000022,op:havoc,rep:64: wasm trap: unreachable
+wasm backtrace:
+  0:  0x3ec - <unknown>!vuln
+  1:  0x4f3 - <unknown>!__original_main
+  2:  0x59b - <unknown>!_start
+
+findings/crashes/id:000008,sig:00,src:000022,op:havoc,rep:32: wasm trap: unreachable
+wasm backtrace:
+  0:  0x3ec - <unknown>!vuln
+  1:  0x4f3 - <unknown>!__original_main
+  2:  0x59b - <unknown>!_start
+
+findings/crashes/id:000009,sig:00,src:000022,op:havoc,rep:128: wasm trap: unreachable
+wasm backtrace:
+  0:  0x3ec - <unknown>!vuln
+  1:  0x4f3 - <unknown>!__original_main
+  2:  0x59b - <unknown>!_start
+
+findings/crashes/id:000010,sig:00,src:000022,op:havoc,rep:8: wasm trap: unreachable
+wasm backtrace:
+  0:  0x3ec - <unknown>!vuln
+  1:  0x4f3 - <unknown>!__original_main
+  2:  0x59b - <unknown>!_start
+
+findings/crashes/id:000011,sig:00,src:000022,op:havoc,rep:16: wasm trap: unreachable
+wasm backtrace:
+  0:  0x3ec - <unknown>!vuln
+  1:  0x4f3 - <unknown>!__original_main
+  2:  0x59b - <unknown>!_start
+
+findings/crashes/id:000012,sig:00,src:000042,op:havoc,rep:8: wasm trap: unreachable
+wasm backtrace:
+  0:  0x3ec - <unknown>!vuln
+  1:  0x4f3 - <unknown>!__original_main
+  2:  0x59b - <unknown>!_start
+
+findings/crashes/id:000013,sig:00,src:000049,op:havoc,rep:2: wasm trap: unreachable
+wasm backtrace:
+  0:  0x3ec - <unknown>!vuln
+  1:  0x4f3 - <unknown>!__original_main
+  2:  0x59b - <unknown>!_start
+
+findings/crashes/id:000014,sig:00,src:000028,op:flip4,pos:1: wasm trap: unreachable
+wasm backtrace:
+  0:  0x3ec - <unknown>!vuln
+  1:  0x4f3 - <unknown>!__original_main
+  2:  0x59b - <unknown>!_start
+
+findings/crashes/id:000000,sig:00,src:000036,op:havoc,rep:16: wasm trap: unreachable
+wasm backtrace:
+  0:  0x3ea - <unknown>!vuln
+  1:  0x4ef - <unknown>!__original_main
+  2:  0x597 - <unknown>!_start
+
+findings/crashes/id:000001,sig:00,src:000036,op:havoc,rep:4: wasm trap: unreachable
+wasm backtrace:
+  0:  0x3ea - <unknown>!vuln
+  1:  0x4ef - <unknown>!__original_main
+  2:  0x597 - <unknown>!_start
+
+findings/crashes/id:000002,sig:00,src:000036,op:havoc,rep:4: wasm trap: unreachable
+wasm backtrace:
+  0:  0x3ea - <unknown>!vuln
+  1:  0x4ef - <unknown>!__original_main
+  2:  0x597 - <unknown>!_start
+
+findings/crashes/id:000003,sig:00,src:000036,op:havoc,rep:8: wasm trap: unreachable
+wasm backtrace:
+  0:  0x3ea - <unknown>!vuln
+  1:  0x4ef - <unknown>!__original_main
+  2:  0x597 - <unknown>!_start
+
+findings/crashes/id:000004,sig:00,src:000036,op:havoc,rep:8: wasm trap: unreachable
+wasm backtrace:
+  0:  0x3ea - <unknown>!vuln
+  1:  0x4ef - <unknown>!__original_main
+  2:  0x597 - <unknown>!_start
+
+findings/crashes/id:000005,sig:00,src:000036,op:havoc,rep:2: wasm trap: unreachable
+wasm backtrace:
+  0:  0x3ea - <unknown>!vuln
+  1:  0x4ef - <unknown>!__original_main
+  2:  0x597 - <unknown>!_start
+
+findings/crashes/id:000000,sig:00,src:000031+000019,op:splice,rep:32: wasm trap: unreachable
+wasm backtrace:
+  0:  0x3be - <unknown>!vuln
+  1:  0x4c3 - <unknown>!__original_main
+  2:  0x56b - <unknown>!_start
+
+findings/crashes/id:000001,sig:00,src:000039,op:havoc,rep:8: wasm trap: unreachable
+wasm backtrace:
+  0:  0x3be - <unknown>!vuln
+  1:  0x4c3 - <unknown>!__original_main
+  2:  0x56b - <unknown>!_start
+
+findings/crashes/id:000002,sig:00,src:000039,op:havoc,rep:4: wasm trap: unreachable
+wasm backtrace:
+  0:  0x3be - <unknown>!vuln
+  1:  0x4c3 - <unknown>!__original_main
+  2:  0x56b - <unknown>!_start
+
+findings/crashes/id:000003,sig:00,src:000039,op:havoc,rep:8: wasm trap: unreachable
+wasm backtrace:
+  0:  0x3be - <unknown>!vuln
+  1:  0x4c3 - <unknown>!__original_main
+  2:  0x56b - <unknown>!_start
+
+findings/crashes/id:000004,sig:00,src:000039+000005,op:splice,rep:2: wasm trap: unreachable
+wasm backtrace:
+  0:  0x3be - <unknown>!vuln
+  1:  0x4c3 - <unknown>!__original_main
+  2:  0x56b - <unknown>!_start
+
