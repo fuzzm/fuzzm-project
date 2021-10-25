@@ -2,7 +2,7 @@
 This project contains the Fuzzm WebAssembly fuzzer based on [AFL](https://github.com/google/AFL).
 
 Here you can see it in action, fuzzing the motivating example from the paper:
-![Fuzzm Screenshot](https://github.com/danleh/fuzzm/blob/master/screenshot.png?raw=true)
+![Fuzzm Screenshot](https://github.com/fuzzm/fuzzm-project/blob/master/screenshot.png?raw=true)
 
 The structure of the folders is as follows:
  * [AFL-wasm](AFL-wasm) contains the adapted version of AFL, including the Wasmtime WebAssembly VM.
