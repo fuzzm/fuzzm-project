@@ -3,7 +3,7 @@ use rand::distributions::{Distribution, Uniform};
 use rand::rngs::ThreadRng;
 use std::error::Error;
 use std::ffi::OsStr;
-use wasm::highlevel::{
+use wasm::{
     BinaryOp, FunctionType, Global, GlobalOp, ImportOrPresent, Instr, LoadOp, Local, LocalOp,
     Module, StoreOp,
 };
@@ -330,7 +330,7 @@ impl ShimCreator {
 }
 
 pub fn instrument_file(input_file: &OsStr, output_file: &OsStr) -> Result<(), Box<dyn Error>> {
-    let mut module = Module::from_file(&input_file)?;
+    let mut module = Module::from_file(&input_file)?.0;
 
     self::instrument_with_afl_branch_coverage(&mut module);
     println!("trace_bits size {}", MAP_SIZE);

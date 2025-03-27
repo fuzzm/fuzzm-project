@@ -1,5 +1,5 @@
-use wasm::highlevel::{Function, Instr, Local};
 use wasm::Idx;
+use wasm::{Function, Instr, Local};
 
 pub fn find_func_by_name<'a>(
     name: &str,

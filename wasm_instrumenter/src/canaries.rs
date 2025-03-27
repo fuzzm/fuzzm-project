@@ -2,7 +2,7 @@ use crate::shared::{find_func_by_name, get_param_n_idx, insert_postfix, insert_p
 use rand::distributions::{Distribution, Uniform};
 use std::error::Error;
 use std::ffi::OsStr;
-use wasm::highlevel::{
+use wasm::{
     BinaryOp, Function, FunctionType, Global, GlobalOp, Instr, LoadOp, Local, LocalOp, Module,
     StoreOp, UnaryOp,
 };
@@ -15,7 +15,7 @@ pub fn instrument_file(
     skip_stack: bool,
     skip_print: bool,
 ) -> Result<(), Box<dyn Error>> {
-    let mut module = Module::from_file(&input_file)?;
+    let mut module = Module::from_file(&input_file)?.0;
 
     if !skip_heap {
         self::instrument_with_heap_canary_check(&mut module);
