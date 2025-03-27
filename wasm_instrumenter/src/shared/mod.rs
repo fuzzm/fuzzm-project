@@ -1,5 +1,4 @@
-use wasm::highlevel::{Function, Instr, Local};
-use wasm::Idx;
+use wasabi_wasm::{Function, Idx, Instr, Local};
 
 pub fn find_func_by_name<'a>(
     name: &str,

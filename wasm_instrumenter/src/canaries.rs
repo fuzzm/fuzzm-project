@@ -1,11 +1,12 @@
 use crate::shared::{find_func_by_name, get_param_n_idx, insert_postfix, insert_prefix};
+use rand::distributions::{Distribution, Uniform};
 use std::error::Error;
 use std::ffi::OsStr;
-use wasm::highlevel::{
-    Function, Global, GlobalOp, Instr, LoadOp, Local, LocalOp, Module, NumericOp, StoreOp,
+use wasabi_wasm::{
+    BinaryOp, Function, FunctionType, Global, GlobalOp, Instr, LoadOp, Local, LocalOp, Module,
+    StoreOp, UnaryOp,
 };
-use rand::distributions::{Distribution, Uniform};
-use wasm::{BlockType, FunctionType, Idx, Label, Memarg, Mutability, Val, ValType};
+use wasabi_wasm::{Idx, Label, Memarg, Mutability, Val, ValType};
 
 pub fn instrument_file(
     input_file: &OsStr,
@@ -14,7 +15,7 @@ pub fn instrument_file(
     skip_stack: bool,
     skip_print: bool,
 ) -> Result<(), Box<dyn Error>> {
-    let mut module = Module::from_file(&input_file)?;
+    let mut module = Module::from_file(&input_file)?.0;
 
     if !skip_heap {
         self::instrument_with_heap_canary_check(&mut module);
@@ -78,16 +79,16 @@ pub fn instrument_with_heap_canary_check(m: &mut Module) {
         // resulting in canaries being placed unnecessarily far apart.
         vec![
             // check if canary insertion is disabled
-            Instr::Block(BlockType(None)),
+            Instr::Block(FunctionType::empty()),
             Instr::Global(GlobalOp::Get, disable_canary_insertion_in_malloc),
             Instr::Const(Val::I32(1)),
-            Instr::Numeric(NumericOp::I32Eq),
-            Instr::BrIf(Label(0)),
+            Instr::Binary(BinaryOp::I32Eq),
+            Instr::BrIf(Label::from(0u32)),
             Instr::Local(LocalOp::Get, malloc_p0),
             //TODO do we also need to 16 byte align the heap values?
             //I don't think that is necessary, but it might be worth while to check.
             Instr::Const(Val::I32(20)),
-            Instr::Numeric(NumericOp::I32Add),
+            Instr::Binary(BinaryOp::I32Add),
             // store the size in a fresh local in case the first parameter gets overwritten
             Instr::Local(LocalOp::Tee, malloc_size),
             Instr::Local(LocalOp::Set, malloc_p0),
@@ -104,12 +105,12 @@ pub fn instrument_with_heap_canary_check(m: &mut Module) {
         let tmp_result_local = func.add_fresh_local(ValType::I32);
         let mut postfix = vec![
             Instr::Local(LocalOp::Set, tmp_result_local),
-            Instr::Block(BlockType(Some(ValType::I32))),
+            Instr::Block(FunctionType::new(&[], &[ValType::I32])),
             // if result is NULL, then don't attempt to insert canaries.
             Instr::Local(LocalOp::Get, tmp_result_local),
             Instr::Local(LocalOp::Get, tmp_result_local),
-            Instr::Numeric(NumericOp::I32Eqz),
-            Instr::BrIf(Label(0)),
+            Instr::Unary(UnaryOp::I32Eqz),
+            Instr::BrIf(Label::from(0u32)),
         ];
         if disable_check.is_some() {
             postfix.append(&mut disable_check.unwrap());
@@ -140,10 +141,10 @@ pub fn instrument_with_heap_canary_check(m: &mut Module) {
             Instr::Local(LocalOp::Get, size_local),
             // add with x to get the index of the last data chunk
             Instr::Local(LocalOp::Get, tmp_result_local),
-            Instr::Numeric(NumericOp::I32Add),
+            Instr::Binary(BinaryOp::I32Add),
             // index (ptr + size - 8) where we want to place the canary
             Instr::Const(Val::I32(8)),
-            Instr::Numeric(NumericOp::I32Sub),
+            Instr::Binary(BinaryOp::I32Sub),
             // store post data canary
             Instr::Const(Val::I64(0)),
             Instr::Store(
@@ -156,7 +157,7 @@ pub fn instrument_with_heap_canary_check(m: &mut Module) {
             // return ptr + 12, i.e., ptr to first element after the first canary.
             Instr::Local(LocalOp::Get, tmp_result_local),
             Instr::Const(Val::I32(12)),
-            Instr::Numeric(NumericOp::I32Add),
+            Instr::Binary(BinaryOp::I32Add),
             Instr::End,
         ]);
         postfix
@@ -168,9 +169,9 @@ pub fn instrument_with_heap_canary_check(m: &mut Module) {
             // check if canary insertion is disabled
             Instr::Global(GlobalOp::Get, disable_canary_insertion_in_malloc),
             Instr::Const(Val::I32(1)),
-            Instr::Numeric(NumericOp::I32Eq),
+            Instr::Binary(BinaryOp::I32Eq),
             // returns tmp_result_local pushed in malloc postfix
-            Instr::BrIf(Label(0)),
+            Instr::BrIf(Label::from(0u32)),
         ]),
     );
     insert_postfix(malloc, &mut post_fix);
@@ -184,27 +185,27 @@ pub fn instrument_with_heap_canary_check(m: &mut Module) {
     ) -> Vec<Instr> {
         vec![
             // if disable_canary_glob then skip the checks
-            Instr::Block(BlockType(None)),
+            Instr::Block(FunctionType::empty()),
             Instr::Global(GlobalOp::Get, disable_canary_glob),
             Instr::Const(Val::I32(1)),
-            Instr::Numeric(NumericOp::I32Eq),
-            Instr::BrIf(Label(0)),
+            Instr::Binary(BinaryOp::I32Eq),
+            Instr::BrIf(Label::from(0u32)),
             // if ptr == NULL, then skip the canary checks
-            Instr::Block(BlockType(None)),
+            Instr::Block(FunctionType::empty()),
             Instr::Local(LocalOp::Get, chunk_data_ptr),
-            Instr::Numeric(NumericOp::I32Eqz),
-            Instr::BrIf(Label(0)),
+            Instr::Unary(UnaryOp::I32Eqz),
+            Instr::BrIf(Label::from(0u32)),
             // block to check first canary
-            Instr::Block(BlockType(None)),
+            Instr::Block(FunctionType::empty()),
             // decrease ptr by 12
             Instr::Local(LocalOp::Get, chunk_data_ptr),
             Instr::Const(Val::I32(12)),
-            Instr::Numeric(NumericOp::I32Sub),
+            Instr::Binary(BinaryOp::I32Sub),
             Instr::Local(LocalOp::Set, chunk_data_ptr),
             // retrieve ptr to first canary (param_0 - 8)
             Instr::Local(LocalOp::Get, chunk_data_ptr),
             Instr::Const(Val::I32(4)),
-            Instr::Numeric(NumericOp::I32Add),
+            Instr::Binary(BinaryOp::I32Add),
             // check first parameter
             Instr::Load(
                 LoadOp::I64Load,
@@ -213,12 +214,12 @@ pub fn instrument_with_heap_canary_check(m: &mut Module) {
                     offset: 0,
                 },
             ),
-            Instr::Numeric(NumericOp::I64Eqz),
-            Instr::BrIf(Label(0)),
+            Instr::Unary(UnaryOp::I64Eqz),
+            Instr::BrIf(Label::from(0u32)),
             Instr::Unreachable,
             Instr::End,
             // block to check the second canary
-            Instr::Block(BlockType(None)),
+            Instr::Block(FunctionType::empty()),
             // fetch the size of the chunk
             Instr::Local(LocalOp::Get, chunk_data_ptr),
             Instr::Load(
@@ -230,10 +231,10 @@ pub fn instrument_with_heap_canary_check(m: &mut Module) {
             ),
             // get the index of the last data item + 12 bytes (since param 0 is real data ptr + 12)
             Instr::Local(LocalOp::Get, chunk_data_ptr),
-            Instr::Numeric(NumericOp::I32Add),
+            Instr::Binary(BinaryOp::I32Add),
             // get the index of the post-chunk canary
             Instr::Const(Val::I32(8)),
-            Instr::Numeric(NumericOp::I32Sub),
+            Instr::Binary(BinaryOp::I32Sub),
             // check the canary value
             Instr::Load(
                 LoadOp::I64Load,
@@ -242,8 +243,8 @@ pub fn instrument_with_heap_canary_check(m: &mut Module) {
                     offset: 0,
                 },
             ),
-            Instr::Numeric(NumericOp::I64Eqz),
-            Instr::BrIf(Label(0)),
+            Instr::Unary(UnaryOp::I64Eqz),
+            Instr::BrIf(Label::from(0u32)),
             Instr::Unreachable,
             Instr::End,
             Instr::End,
@@ -276,7 +277,7 @@ pub fn instrument_with_heap_canary_check(m: &mut Module) {
                 // reserve another 20 bytes for the two canaries and the size
                 Instr::Local(LocalOp::Get, realloc_p1),
                 Instr::Const(Val::I32(20)),
-                Instr::Numeric(NumericOp::I32Add),
+                Instr::Binary(BinaryOp::I32Add),
                 Instr::Local(LocalOp::Tee, realloc_size),
                 Instr::Local(LocalOp::Set, realloc_p1),
                 // disable canary checking while the body of realloc is executing
@@ -322,13 +323,13 @@ pub fn instrument_with_heap_canary_check(m: &mut Module) {
                 // check if nitems * item_size overflows.
                 // In that case, calloc should fail, so it's essential we don't modify the args.
                 Instr::Local(LocalOp::Get, calloc_p0),
-                Instr::Numeric(NumericOp::I64ExtendI32U),
+                Instr::Unary(UnaryOp::I64ExtendI32U),
                 Instr::Local(LocalOp::Get, calloc_p1),
-                Instr::Numeric(NumericOp::I64ExtendI32U),
-                Instr::Numeric(NumericOp::I64Mul),
+                Instr::Unary(UnaryOp::I64ExtendI32U),
+                Instr::Binary(BinaryOp::I64Mul),
                 Instr::Const(Val::I64(0xFFFFFFFF)),
-                Instr::Numeric(NumericOp::I64GeU),
-                Instr::If(BlockType(None)),
+                Instr::Binary(BinaryOp::I64GeU),
+                Instr::If(FunctionType::empty()),
                 Instr::Const(Val::I32(1)),
                 Instr::Local(LocalOp::Set, calloc_overflow),
                 Instr::Else,
@@ -337,14 +338,14 @@ pub fn instrument_with_heap_canary_check(m: &mut Module) {
                 // calloc (nitems, item_size) = calloc (1, item_size * nitems)
                 Instr::Local(LocalOp::Get, calloc_p0),
                 Instr::Local(LocalOp::Get, calloc_p1),
-                Instr::Numeric(NumericOp::I32Mul),
+                Instr::Binary(BinaryOp::I32Mul),
                 Instr::Local(LocalOp::Set, calloc_p1),
                 Instr::Const(Val::I32(1)),
                 Instr::Local(LocalOp::Set, calloc_p0),
                 // reserve another 20 bytes for canaries and size
                 Instr::Local(LocalOp::Get, calloc_p1),
                 Instr::Const(Val::I32(20)),
-                Instr::Numeric(NumericOp::I32Add),
+                Instr::Binary(BinaryOp::I32Add),
                 Instr::Local(LocalOp::Tee, calloc_size),
                 Instr::Local(LocalOp::Set, calloc_p1),
                 Instr::End,
@@ -360,9 +361,9 @@ pub fn instrument_with_heap_canary_check(m: &mut Module) {
                     Instr::Local(LocalOp::Get, calloc_overflow),
                     // check for overflow
                     Instr::Const(Val::I32(1)),
-                    Instr::Numeric(NumericOp::I32Eq),
+                    Instr::Binary(BinaryOp::I32Eq),
                     // returns tmp_result_local pushed in malloc postfix
-                    Instr::BrIf(Label(0)),
+                    Instr::BrIf(Label::from(0u32)),
                 ]),
             );
             // re-enable the canary insertion in malloc
@@ -400,7 +401,7 @@ pub fn instrument_with_stack_canary_check(m: &mut Module) {
     m.functions_mut().for_each(|(_, f)| {
         if requires_canary_check(f, &stack_ptr_idx) {
             let canary_value = distribution.sample(&mut rng);
-           
+
             if f.code().is_some() {
                 returns_to_outer_block_jmp(f);
 
@@ -410,7 +411,7 @@ pub fn instrument_with_stack_canary_check(m: &mut Module) {
                     vec![
                         Instr::Global(GlobalOp::Get, stack_ptr_idx),
                         Instr::Const(Val::I32(CANARY_ALLOC_BLOCK_SIZE)),
-                        Instr::Numeric(NumericOp::I32Sub),
+                        Instr::Binary(BinaryOp::I32Sub),
                         Instr::Global(GlobalOp::Set, stack_ptr_idx),
                         Instr::Global(GlobalOp::Get, stack_ptr_idx),
                         Instr::Const(Val::I64(canary_value)),
@@ -431,7 +432,7 @@ pub fn instrument_with_stack_canary_check(m: &mut Module) {
 
                 // create canary check instructions
                 post_fix.append(&mut vec![
-                    Instr::Block(BlockType(None)),
+                    Instr::Block(FunctionType::empty()),
                     Instr::Global(GlobalOp::Get, stack_ptr_idx),
                     Instr::Load(
                         LoadOp::I64Load,
@@ -441,13 +442,13 @@ pub fn instrument_with_stack_canary_check(m: &mut Module) {
                         },
                     ),
                     Instr::Const(Val::I64(canary_value)),
-                    Instr::Numeric(NumericOp::I64Eq),
-                    Instr::BrIf(Label(0)),
+                    Instr::Binary(BinaryOp::I64Eq),
+                    Instr::BrIf(Label::from(0u32)),
                     Instr::Unreachable,
                     Instr::End,
                     Instr::Global(GlobalOp::Get, stack_ptr_idx),
                     Instr::Const(Val::I32(CANARY_ALLOC_BLOCK_SIZE)),
-                    Instr::Numeric(NumericOp::I32Add),
+                    Instr::Binary(BinaryOp::I32Add),
                     Instr::Global(GlobalOp::Set, stack_ptr_idx),
                 ]);
 
@@ -468,7 +469,7 @@ pub fn instrument_with_print_functions(m: &mut Module) {
 
     let mut printf_func = |name: &str, str_lit_bytes: i32| {
         let print32idx = m.add_function(FunctionType::new(&[ValType::I32], &[]), vec![], vec![]);
-        let mut print32 = m.function_mut(print32idx);
+        let print32 = m.function_mut(print32idx);
         print32.name = Some(String::from(name));
         // unwrap safe, since we created function with 1 param
         let (p0, _) = print32.params().next().unwrap();
@@ -477,7 +478,7 @@ pub fn instrument_with_print_functions(m: &mut Module) {
         print32.instrs_mut().unwrap().append(&mut vec![
             Instr::Global(GlobalOp::Get, stack_ptr_idx), //global.get 0
             Instr::Const(Val::I32(16)),                  //i32.const 16
-            Instr::Numeric(NumericOp::I32Sub),           //i32.sub
+            Instr::Binary(BinaryOp::I32Sub),             //i32.sub
             Instr::Local(LocalOp::Tee, l1),              //local.tee 1
             Instr::Global(GlobalOp::Set, stack_ptr_idx), //global.set 0
             Instr::Const(Val::I32(6)),                   //i32.const 6
@@ -515,7 +516,7 @@ pub fn instrument_with_print_functions(m: &mut Module) {
             Instr::Drop,                                 //drop
             Instr::Local(LocalOp::Get, l1),              //local.get 1
             Instr::Const(Val::I32(16)),                  //i32.const 16
-            Instr::Numeric(NumericOp::I32Add),           //i32.add
+            Instr::Binary(BinaryOp::I32Add),             //i32.add
             Instr::Global(GlobalOp::Set, stack_ptr_idx), //global.set 0,
             Instr::End,
         ]);
@@ -563,9 +564,9 @@ fn is_stack_alloc(f: &Function, stack_ptr: &Idx<Global>) -> bool {
         (
             Instr::Global(GlobalOp::Get, sp1),
             Instr::Local(LocalOp::Get, _),
-            Instr::Numeric(NumericOp::I32Sub),
+            Instr::Binary(BinaryOp::I32Sub),
             Instr::Const(Val::I32(-16)),
-            Instr::Numeric(NumericOp::I32And),
+            Instr::Binary(BinaryOp::I32And),
             Instr::Local(LocalOp::Tee, l1),
             Instr::Global(GlobalOp::Set, sp2),
             Instr::Local(LocalOp::Get, l1_alt),
@@ -593,9 +594,9 @@ fn is_stack_restore(f: &Function, stack_ptr: &Idx<Global>) -> bool {
  * Returns None for void functions
  */
 fn get_return_type(f: &Function) -> Option<ValType> {
-    if f.type_.results.len() > 0 {
+    if f.type_.results().len() > 0 {
         // There can always only be 1 return type.
-        Some(f.type_.results[0])
+        Some(f.type_.results()[0])
     } else {
         None
     }
@@ -619,11 +620,13 @@ fn returns_to_outer_block_jmp(f: &mut Function) {
         let return_locs = get_return_instr_locs(&instrs);
 
         for r_loc in return_locs {
-            instrs[r_loc.idx] = Instr::Br(Label(r_loc.level as u32));
+            instrs[r_loc.idx] = Instr::Br(Label::from(r_loc.level as u32));
         }
 
         // insert the block wrapper around the function body.
-        instrs.insert(0, Instr::Block(BlockType(return_type)));
+        let block_type =
+            return_type.map_or(FunctionType::empty(), |t| FunctionType::new(&[], &[t]));
+        instrs.insert(0, Instr::Block(block_type));
         instrs.push(Instr::End);
     }
 }

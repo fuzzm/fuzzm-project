@@ -3,10 +3,11 @@ use rand::distributions::{Distribution, Uniform};
 use rand::rngs::ThreadRng;
 use std::error::Error;
 use std::ffi::OsStr;
-use wasm::highlevel::{
-    Global, GlobalOp, ImportOrPresent, Instr, LoadOp, Local, LocalOp, Module, NumericOp, StoreOp,
+use wasabi_wasm::{
+    BinaryOp, FunctionType, Global, GlobalOp, ImportOrPresent, Instr, LoadOp, Local, LocalOp,
+    Module, StoreOp,
 };
-use wasm::{FunctionType, Idx, Label, Memarg, Mutability, Val, ValType};
+use wasabi_wasm::{Idx, Memarg, Mutability, Val, ValType};
 
 /// must be kept up-to-date with the AFL implementation
 const MAP_SIZE_POW2: u32 = 16;
@@ -161,11 +162,11 @@ pub fn instrument_with_afl_branch_coverage(m: &mut Module) {
                 let mut jmp_to_depths: Vec<i32> = vec![];
                 for (idx, instr) in instrs.iter_mut().enumerate() {
                     match instr {
-                        Instr::BrIf(Label(lvl)) => {
+                        Instr::BrIf(lvl) => {
                             shim_idxs.push(idx);
                             br_if_fallthrough_shims += 1;
 
-                            jmp_to_depths.push(current_depth - (*lvl as i32));
+                            jmp_to_depths.push(current_depth - (lvl.to_u32() as i32));
                         }
                         Instr::If(_) => {
                             current_depth += 1;
@@ -184,17 +185,17 @@ pub fn instrument_with_afl_branch_coverage(m: &mut Module) {
 
                         Instr::BrTable {
                             table,
-                            default: Label(default_lvl),
+                            default: default_lvl,
                         } => {
                             // No shim necessary, because execution always branches to a different block.
                             // While technically allowed, no useful instructions follow br_table.
 
                             // for every level which the br_table can jump to
-                            for Label(lvl) in table {
-                                jmp_to_depths.push(current_depth - (*lvl as i32));
+                            for lvl in table {
+                                jmp_to_depths.push(current_depth - (lvl.to_u32() as i32));
                             }
                             // also push the default level
-                            jmp_to_depths.push(current_depth - (*default_lvl as i32));
+                            jmp_to_depths.push(current_depth - (default_lvl.to_u32() as i32));
                             br_table_shims += 1;
                         }
                         Instr::Block(_) => {
@@ -295,9 +296,9 @@ impl ShimCreator {
             // compute and store address in the trace_bits_idx_local
             Instr::Const(Val::I32(cur_location as i32)),
             Instr::Global(GlobalOp::Get, self.prev_location),
-            Instr::Numeric(NumericOp::I32Xor),
+            Instr::Binary(BinaryOp::I32Xor),
             Instr::Global(GlobalOp::Get, self.trace_bits_ptr),
-            Instr::Numeric(NumericOp::I32Add),
+            Instr::Binary(BinaryOp::I32Add),
             Instr::Local(LocalOp::Tee, trace_bits_idx_local),
             // prepare the memory address for the store
             // TODO. There is no dup instruction, which is why we store
@@ -313,7 +314,7 @@ impl ShimCreator {
                 },
             ),
             Instr::Const(Val::I32(1)),
-            Instr::Numeric(NumericOp::I32Add),
+            Instr::Binary(BinaryOp::I32Add),
             Instr::Store(
                 StoreOp::I32Store8,
                 Memarg {
@@ -329,7 +330,7 @@ impl ShimCreator {
 }
 
 pub fn instrument_file(input_file: &OsStr, output_file: &OsStr) -> Result<(), Box<dyn Error>> {
-    let mut module = Module::from_file(&input_file)?;
+    let mut module = Module::from_file(&input_file)?.0;
 
     self::instrument_with_afl_branch_coverage(&mut module);
     println!("trace_bits size {}", MAP_SIZE);
