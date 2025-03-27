@@ -7,7 +7,7 @@ edition = "2018"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-wasabi_wasm = { git = "https://github.com/danleh/wasabi", rev = "d83e3211774b7476e519995d750b853a93e930cb" }
+wasabi_wasm = { git = "https://github.com/danleh/wasabi", rev = "bf7ea80e5f74b063e038add84e5fb06b4e49b4d1" }
 rand = "0.7.3"
 rand_distr = "0.3.0"
 clap = "2.33.3"

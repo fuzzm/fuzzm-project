@@ -6,7 +6,7 @@ use wasabi_wasm::{
     BinaryOp, Function, FunctionType, Global, GlobalOp, Instr, LoadOp, Local, LocalOp, Module,
     StoreOp, UnaryOp,
 };
-use wasabi_wasm::{BlockType, Idx, Label, Memarg, Mutability, Val, ValType};
+use wasabi_wasm::{Idx, Label, Memarg, Mutability, Val, ValType};
 
 pub fn instrument_file(
     input_file: &OsStr,
@@ -79,7 +79,7 @@ pub fn instrument_with_heap_canary_check(m: &mut Module) {
         // resulting in canaries being placed unnecessarily far apart.
         vec![
             // check if canary insertion is disabled
-            Instr::Block(BlockType(None)),
+            Instr::Block(FunctionType::empty()),
             Instr::Global(GlobalOp::Get, disable_canary_insertion_in_malloc),
             Instr::Const(Val::I32(1)),
             Instr::Binary(BinaryOp::I32Eq),
@@ -105,7 +105,7 @@ pub fn instrument_with_heap_canary_check(m: &mut Module) {
         let tmp_result_local = func.add_fresh_local(ValType::I32);
         let mut postfix = vec![
             Instr::Local(LocalOp::Set, tmp_result_local),
-            Instr::Block(BlockType(Some(ValType::I32))),
+            Instr::Block(FunctionType::new(&[], &[ValType::I32])),
             // if result is NULL, then don't attempt to insert canaries.
             Instr::Local(LocalOp::Get, tmp_result_local),
             Instr::Local(LocalOp::Get, tmp_result_local),
@@ -185,18 +185,18 @@ pub fn instrument_with_heap_canary_check(m: &mut Module) {
     ) -> Vec<Instr> {
         vec![
             // if disable_canary_glob then skip the checks
-            Instr::Block(BlockType(None)),
+            Instr::Block(FunctionType::empty()),
             Instr::Global(GlobalOp::Get, disable_canary_glob),
             Instr::Const(Val::I32(1)),
             Instr::Binary(BinaryOp::I32Eq),
             Instr::BrIf(Label::from(0u32)),
             // if ptr == NULL, then skip the canary checks
-            Instr::Block(BlockType(None)),
+            Instr::Block(FunctionType::empty()),
             Instr::Local(LocalOp::Get, chunk_data_ptr),
             Instr::Unary(UnaryOp::I32Eqz),
             Instr::BrIf(Label::from(0u32)),
             // block to check first canary
-            Instr::Block(BlockType(None)),
+            Instr::Block(FunctionType::empty()),
             // decrease ptr by 12
             Instr::Local(LocalOp::Get, chunk_data_ptr),
             Instr::Const(Val::I32(12)),
@@ -219,7 +219,7 @@ pub fn instrument_with_heap_canary_check(m: &mut Module) {
             Instr::Unreachable,
             Instr::End,
             // block to check the second canary
-            Instr::Block(BlockType(None)),
+            Instr::Block(FunctionType::empty()),
             // fetch the size of the chunk
             Instr::Local(LocalOp::Get, chunk_data_ptr),
             Instr::Load(
@@ -329,7 +329,7 @@ pub fn instrument_with_heap_canary_check(m: &mut Module) {
                 Instr::Binary(BinaryOp::I64Mul),
                 Instr::Const(Val::I64(0xFFFFFFFF)),
                 Instr::Binary(BinaryOp::I64GeU),
-                Instr::If(BlockType(None)),
+                Instr::If(FunctionType::empty()),
                 Instr::Const(Val::I32(1)),
                 Instr::Local(LocalOp::Set, calloc_overflow),
                 Instr::Else,
@@ -432,7 +432,7 @@ pub fn instrument_with_stack_canary_check(m: &mut Module) {
 
                 // create canary check instructions
                 post_fix.append(&mut vec![
-                    Instr::Block(BlockType(None)),
+                    Instr::Block(FunctionType::empty()),
                     Instr::Global(GlobalOp::Get, stack_ptr_idx),
                     Instr::Load(
                         LoadOp::I64Load,
@@ -624,7 +624,9 @@ fn returns_to_outer_block_jmp(f: &mut Function) {
         }
 
         // insert the block wrapper around the function body.
-        instrs.insert(0, Instr::Block(BlockType(return_type)));
+        let block_type =
+            return_type.map_or(FunctionType::empty(), |t| FunctionType::new(&[], &[t]));
+        instrs.insert(0, Instr::Block(block_type));
         instrs.push(Instr::End);
     }
 }
