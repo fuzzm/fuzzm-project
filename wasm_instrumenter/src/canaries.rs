@@ -2,11 +2,11 @@ use crate::shared::{find_func_by_name, get_param_n_idx, insert_postfix, insert_p
 use rand::distributions::{Distribution, Uniform};
 use std::error::Error;
 use std::ffi::OsStr;
-use wasm::{
+use wasabi_wasm::{
     BinaryOp, Function, FunctionType, Global, GlobalOp, Instr, LoadOp, Local, LocalOp, Module,
     StoreOp, UnaryOp,
 };
-use wasm::{BlockType, Idx, Label, Memarg, Mutability, Val, ValType};
+use wasabi_wasm::{BlockType, Idx, Label, Memarg, Mutability, Val, ValType};
 
 pub fn instrument_file(
     input_file: &OsStr,

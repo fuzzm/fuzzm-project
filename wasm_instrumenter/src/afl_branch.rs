@@ -3,11 +3,11 @@ use rand::distributions::{Distribution, Uniform};
 use rand::rngs::ThreadRng;
 use std::error::Error;
 use std::ffi::OsStr;
-use wasm::{
+use wasabi_wasm::{
     BinaryOp, FunctionType, Global, GlobalOp, ImportOrPresent, Instr, LoadOp, Local, LocalOp,
     Module, StoreOp,
 };
-use wasm::{Idx, Memarg, Mutability, Val, ValType};
+use wasabi_wasm::{Idx, Memarg, Mutability, Val, ValType};
 
 /// must be kept up-to-date with the AFL implementation
 const MAP_SIZE_POW2: u32 = 16;
